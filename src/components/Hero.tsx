@@ -10,9 +10,8 @@ export default function Hero() {
             <span className="italic">Adriana Sainz</span>
           </h1>
           <p className="animate-fade-in-up-delay-1 mt-6 max-w-md text-lg leading-relaxed text-muted">
-            A creative professional passionate about designing meaningful
-            experiences. I blend strategy, research, and design to craft
-            solutions that make a real impact.
+            I lead healthcare UX, translating clinical complexity into tools
+            that improve patient outcomes and accelerate scientific discovery.
           </p>
           <div className="animate-fade-in-up-delay-2 mt-8 flex gap-4">
             <a

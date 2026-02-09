@@ -9,21 +9,8 @@ export default function About() {
           </h1>
           <div className="animate-fade-in-up-delay-1 mt-8 space-y-6 text-muted leading-relaxed">
             <p>
-              I&apos;m a creative professional with a passion for crafting
-              meaningful digital experiences. With a background spanning
-              design, research, and development, I bring a holistic
-              perspective to every project.
-            </p>
-            <p>
-              My work sits at the intersection of strategy and execution —
-              transforming complex problems into elegant, user-centered
-              solutions. I believe the best design is invisible, seamlessly
-              guiding users toward their goals.
-            </p>
-            <p>
-              When I&apos;m not designing or coding, you&apos;ll find me
-              exploring new places, reading about cognitive science, or
-              experimenting with creative side projects.
+              I lead healthcare UX, translating clinical complexity into tools
+              that improve patient outcomes and accelerate scientific discovery.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Adriana Sainz | Portfolio",
   description:
-    "Portfolio of Adriana Sainz — Designer, developer, and creative thinker.",
+    "Portfolio of Adriana Sainz — Healthcare UX leader.",
 };
 
 export default function RootLayout({
