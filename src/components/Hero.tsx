@@ -5,9 +5,9 @@ export default function Hero() {
         {/* Text content */}
         <div>
           <h1 className="animate-fade-in-up font-serif text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Hola, I&apos;m
+            Hola, I am
             <br />
-            <span className="italic">A. Sainz</span>
+            <span className="italic">Adriana Sainz</span>
           </h1>
           <p className="animate-fade-in-up-delay-1 mt-6 max-w-md text-lg leading-relaxed text-muted">
             A creative professional passionate about designing meaningful
@@ -20,25 +20,6 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
             >
               View Work
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </a>
-            <a
-              href="/about"
-              className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-foreground hover:text-background"
-            >
-              About Me
             </a>
           </div>
         </div>
