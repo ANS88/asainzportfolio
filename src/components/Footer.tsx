@@ -68,7 +68,7 @@ export default function Footer() {
                 GitHub
               </a>
               <a
-                href="mailto:hello@asainz.com"
+                href="mailto:sainz.nag@gmail.com"
                 className="text-sm text-foreground hover:text-muted transition-colors"
               >
                 Email
