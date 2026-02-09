@@ -13,7 +13,7 @@ export default function Navigation() {
           href="/"
           className="font-serif text-xl font-semibold tracking-tight"
         >
-          A. Sainz
+          Adriana Sainz
         </Link>
 
         {/* Desktop nav */}

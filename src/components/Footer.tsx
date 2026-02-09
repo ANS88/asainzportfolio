@@ -11,7 +11,7 @@ export default function Footer() {
               href="/"
               className="font-serif text-xl font-semibold tracking-tight"
             >
-              A. Sainz
+              Adriana Sainz
             </Link>
             <p className="mt-3 text-sm text-muted">
               Designer, developer, and creative thinker.
@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-border pt-6">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} A. Sainz. All rights reserved.
+            &copy; {new Date().getFullYear()} Adriana Sainz. All rights reserved.
           </p>
         </div>
       </div>

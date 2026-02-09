@@ -4,9 +4,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "A. Sainz | Portfolio",
+  title: "Adriana Sainz | Portfolio",
   description:
-    "Portfolio of A. Sainz — Designer, developer, and creative thinker.",
+    "Portfolio of Adriana Sainz — Designer, developer, and creative thinker.",
 };
 
 export default function RootLayout({
