@@ -14,7 +14,7 @@ export default function Footer() {
               Adriana Sainz
             </Link>
             <p className="mt-3 text-sm text-muted">
-              Designer, developer, and creative thinker.
+              Healthcare UX leader.
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export default function Footer() {
                 GitHub
               </a>
               <a
-                href="mailto:hello@asainz.com"
+                href="mailto:sainz.nag@gmail.com"
                 className="text-sm text-foreground hover:text-muted transition-colors"
               >
                 Email
