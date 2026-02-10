@@ -1,56 +1,57 @@
 "use client";
 
 import { useState } from "react";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+} from "react-simple-maps";
+
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
 
 const locations = [
   {
     city: "Guadalajara",
     country: "Mexico",
     tags: ["Born", "Worked", "Lived"],
-    x: 21.3,
-    y: 55.2,
+    coordinates: [-103.35, 20.67] as [number, number],
   },
   {
     city: "Mexico City",
     country: "Mexico",
     tags: ["Worked", "Lived"],
-    x: 22.5,
-    y: 58.8,
+    coordinates: [-99.13, 19.43] as [number, number],
   },
   {
     city: "Cincinnati",
     country: "OH",
     tags: ["Worked", "Lived", "Studied"],
-    x: 26.5,
-    y: 39.5,
+    coordinates: [-84.51, 39.1] as [number, number],
   },
   {
     city: "Portland",
     country: "OR",
     tags: ["Worked", "Lived"],
-    x: 15.9,
-    y: 34.0,
+    coordinates: [-122.68, 45.52] as [number, number],
   },
   {
     city: "San Francisco",
     country: "CA",
     tags: ["Worked", "Lived"],
-    x: 14.8,
-    y: 40.5,
+    coordinates: [-122.42, 37.77] as [number, number],
   },
   {
     city: "Montreal",
     country: "Canada",
     tags: ["Worked", "Lived"],
-    x: 29.6,
-    y: 33.0,
+    coordinates: [-73.57, 45.5] as [number, number],
   },
   {
     city: "Valencia",
     country: "Spain",
     tags: ["Studied", "Lived"],
-    x: 49.9,
-    y: 39.8,
+    coordinates: [-0.38, 39.47] as [number, number],
   },
 ];
 
@@ -64,93 +65,75 @@ export default function MapSection() {
       </h2>
 
       <div className="relative mt-10 overflow-hidden rounded-2xl border border-border bg-stone-50">
-        <svg
-          viewBox="0 0 100 60"
-          className="h-auto w-full"
-          xmlns="http://www.w3.org/2000/svg"
+        <ComposableMap
+          projection="geoNaturalEarth1"
+          projectionConfig={{
+            scale: 160,
+            center: [-40, 30],
+          }}
+          width={900}
+          height={400}
+          style={{ width: "100%", height: "auto" }}
         >
-          {/* Grid lines */}
-          {Array.from({ length: 11 }).map((_, i) => (
-            <line
-              key={`v-${i}`}
-              x1={i * 10}
-              y1={0}
-              x2={i * 10}
-              y2={60}
-              stroke="#e5e5e5"
-              strokeWidth={0.1}
-            />
-          ))}
-          {Array.from({ length: 7 }).map((_, i) => (
-            <line
-              key={`h-${i}`}
-              x1={0}
-              y1={i * 10}
-              x2={100}
-              y2={i * 10}
-              stroke="#e5e5e5"
-              strokeWidth={0.1}
-            />
-          ))}
+          <Geographies geography={GEO_URL}>
+            {({ geographies }: { geographies: any[] }) =>
+              geographies.map((geo: any) => (
+                <Geography
+                  key={geo.rpiProperties?.name || geo.id || Math.random()}
+                  geography={geo}
+                  fill="#e7e5e4"
+                  stroke="#d6d3d1"
+                  strokeWidth={0.5}
+                  style={{
+                    default: { outline: "none" },
+                    hover: { outline: "none" },
+                    pressed: { outline: "none" },
+                  }}
+                />
+              ))
+            }
+          </Geographies>
 
-          {/* Connection lines between locations */}
-          {locations.map((loc, i) =>
-            locations.slice(i + 1).map((loc2, j) => (
-              <line
-                key={`line-${i}-${j}`}
-                x1={loc.x}
-                y1={loc.y}
-                x2={loc2.x}
-                y2={loc2.y}
-                stroke="#d6d3d1"
-                strokeWidth={0.08}
-                strokeDasharray="0.3 0.3"
-              />
-            ))
-          )}
-
-          {/* Location markers */}
           {locations.map((loc, i) => (
-            <g
+            <Marker
               key={loc.city}
+              coordinates={loc.coordinates}
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
-              className="cursor-pointer"
             >
-              {/* Pulse ring */}
+              {/* Outer ring */}
               <circle
-                cx={loc.x}
-                cy={loc.y}
-                r={active === i ? 1.8 : 1.2}
+                r={active === i ? 10 : 6}
                 fill="none"
                 stroke="#1a1a1a"
-                strokeWidth={0.08}
-                opacity={active === i ? 0.3 : 0.1}
-                className="transition-all duration-300"
+                strokeWidth={0.5}
+                opacity={active === i ? 0.4 : 0.15}
+                style={{ transition: "all 0.3s ease" }}
               />
               {/* Dot */}
               <circle
-                cx={loc.x}
-                cy={loc.y}
-                r={active === i ? 0.7 : 0.5}
-                fill={loc.tags.includes("Born") ? "#1a1a1a" : "#6b6b6b"}
-                className="transition-all duration-300"
+                r={active === i ? 5 : 3.5}
+                fill={loc.tags.includes("Born") ? "#1a1a1a" : "#78716c"}
+                stroke="#faf9f6"
+                strokeWidth={1}
+                style={{ transition: "all 0.3s ease", cursor: "pointer" }}
               />
               {/* Label */}
               <text
-                x={loc.x}
-                y={loc.y - 1.5}
                 textAnchor="middle"
-                fontSize={active === i ? 1.6 : 1.3}
-                fill="#1a1a1a"
-                fontWeight={active === i ? 600 : 400}
-                className="transition-all duration-300"
+                y={-12}
+                style={{
+                  fontSize: active === i ? 11 : 9,
+                  fill: "#1a1a1a",
+                  fontWeight: active === i ? 600 : 400,
+                  transition: "all 0.3s ease",
+                }}
               >
                 {loc.city}
               </text>
-            </g>
+            </Marker>
           ))}
-        </svg>
+        </ComposableMap>
 
         {/* Active location detail */}
         <div className="flex min-h-14 items-center justify-center border-t border-border px-6 py-3">
@@ -159,7 +142,7 @@ export default function MapSection() {
               <span className="font-medium">
                 {locations[active].city}, {locations[active].country}
               </span>
-              <span className="text-muted">—</span>
+              <span className="text-muted">&mdash;</span>
               {locations[active].tags.map((tag) => (
                 <span
                   key={tag}
