@@ -61,7 +61,7 @@ export default function Playground() {
         <div className="relative mt-6 overflow-hidden rounded-2xl border border-border bg-stone-50">
           <div className="aspect-video">
             <iframe
-              src="https://www.youtube.com/embed/BSWhGNXxT9A?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/0aF8elLpiMo?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0"
               title="Crissy Field — Golden Gate Bridge Live Camera"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
