@@ -8,11 +8,11 @@
   --ink3: #78716c;
   --paper: #fafaf9;
   --warm: #f5f5f0;
-  --cream: #fef7ed;
+  --cream: #eef0ff;
   --border: #e7e5e4;
-  --accent: #c2410c;
-  --accent2: #ea580c;
-  --accent-soft: #fed7aa;
+  --accent: #4b49f7;
+  --accent2: #6366f1;
+  --accent-soft: #c7d2fe;
   --green: #16a34a;
   --blue: #2563eb;
   --serif: 'Instrument Serif', Georgia, serif;
@@ -89,7 +89,7 @@ section { padding: 3.5rem 0; }
 .chip { background: var(--warm); border: 1px solid var(--border); border-radius: 14px; padding: .2rem .55rem; font-size: .65rem; color: var(--ink3); font-weight: 500; white-space: nowrap; }
 .chip.b { background: var(--accent); border-color: var(--accent); color: white; }
 .ca { color: #d6d3d1; font-size: .7rem; }
-.aside { font-family: var(--hand); color: var(--accent); font-size: 1.05rem; line-height: 1.35; border-left: 2px solid var(--accent); padding: .5rem .8rem; margin: .75rem 0; background: rgba(194,65,12,.025); border-radius: 0 4px 4px 0; }
+.aside { font-family: var(--hand); color: var(--accent); font-size: 1.05rem; line-height: 1.35; border-left: 2px solid var(--accent); padding: .5rem .8rem; margin: .75rem 0; background: rgba(75,73,247,.025); border-radius: 0 4px 4px 0; }
 .toggle-hint { font-family: var(--mono); font-size: .6rem; color: var(--ink3); text-align: right; white-space: nowrap; }
 .toggle-hint::after { content: ' +'; }
 .shipped-item.open .toggle-hint::after { content: ' −'; }
@@ -103,7 +103,7 @@ section { padding: 3.5rem 0; }
 /* ═══ INTERESTS MAP ═══ */
 .map-wrap { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; overflow: hidden; }
 .map-wrap svg .node-hover { cursor: pointer; transition: all .2s; }
-.map-wrap svg a:hover .node-hover { filter: drop-shadow(0 2px 8px rgba(194,65,12,.25)); stroke-width: 3; }
+.map-wrap svg a:hover .node-hover { filter: drop-shadow(0 2px 8px rgba(75,73,247,.25)); stroke-width: 3; }
 .map-wrap svg a { text-decoration: none; }
 
 /* Social cards */

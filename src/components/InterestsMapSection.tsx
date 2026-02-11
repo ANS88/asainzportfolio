@@ -40,39 +40,39 @@ export default function InterestsMapSection() {
           </g>
           {/* Primary nodes */}
           <a href="https://www.linkedin.com/in/adrianans/" target="_blank"><g>
-            <circle cx="200" cy="130" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="200" y="125" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Healthcare</text>
-            <text x="200" y="138" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">UX</text>
+            <circle cx="200" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="200" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Healthcare</text>
+            <text x="200" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">UX</text>
           </g></a>
           <a href="https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/" target="_blank"><g>
-            <circle cx="600" cy="130" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="600" y="125" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">AI +</text>
-            <text x="600" y="138" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Building</text>
+            <circle cx="600" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="600" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">AI +</text>
+            <text x="600" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Building</text>
           </g></a>
           <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
-            <circle cx="150" cy="320" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="150" y="315" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">{"Women's"}</text>
-            <text x="150" y="328" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Health</text>
+            <circle cx="150" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="150" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">{"Women's"}</text>
+            <text x="150" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Health</text>
           </g></a>
           <a href="http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724" target="_blank"><g>
-            <circle cx="650" cy="320" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="650" y="315" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Embodied</text>
-            <text x="650" y="328" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Design</text>
+            <circle cx="650" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="650" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Embodied</text>
+            <text x="650" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Design</text>
           </g></a>
           <a href="https://www.athenadao.co/" target="_blank"><g>
-            <circle cx="260" cy="450" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="260" y="445" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Community</text>
-            <text x="260" y="458" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">+ Life</text>
+            <circle cx="260" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="260" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Community</text>
+            <text x="260" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">+ Life</text>
           </g></a>
           <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
-            <circle cx="540" cy="450" r="34" fill="#fef7ed" stroke="#c2410c" strokeWidth="2" className="node-hover" />
-            <text x="540" y="445" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Writing +</text>
-            <text x="540" y="458" textAnchor="middle" fill="#c2410c" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Culture</text>
+            <circle cx="540" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
+            <text x="540" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Writing +</text>
+            <text x="540" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Culture</text>
           </g></a>
           {/* Center node */}
-          <circle cx="400" cy="260" r="48" fill="#c2410c" stroke="#991b06" strokeWidth="2.5" />
+          <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
           <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="DM Sans, sans-serif">Adriana</text>
-          <text x="400" y="270" textAnchor="middle" fill="#fed7aa" fontSize="8.5" fontFamily="JetBrains Mono, monospace">PhD &middot; Builder &middot; SF</text>
+          <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="JetBrains Mono, monospace">PhD &middot; Builder &middot; SF</text>
         </svg>
       </div>
 
@@ -87,7 +87,7 @@ export default function InterestsMapSection() {
           </div>
         </a>
         <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#ff6719" }}>✎</div>
+          <div className="sc-icon" style={{ background: "#4b49f7" }}>✎</div>
           <div className="sc-body">
             <div className="sc-name">Substack</div>
             <div className="sc-handle">Women&apos;s Health, Computed</div>
