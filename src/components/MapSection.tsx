@@ -59,12 +59,11 @@ export default function MapSection() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <h2 className="text-xs font-semibold uppercase tracking-widest text-muted">
-        Places I&apos;ve Called Home
-      </h2>
+    <section>
+      <div className="label">Places</div>
+      <div className="section-title">Places I&apos;ve Called Home</div>
 
-      <div className="relative mt-10 overflow-hidden rounded-2xl border border-border bg-stone-50">
+      <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden" }}>
         <ComposableMap
           projection="geoNaturalEarth1"
           projectionConfig={{
@@ -101,30 +100,27 @@ export default function MapSection() {
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
             >
-              {/* Outer ring */}
               <circle
                 r={active === i ? 10 : 6}
                 fill="none"
-                stroke="#1a1a1a"
+                stroke="#c2410c"
                 strokeWidth={0.5}
                 opacity={active === i ? 0.4 : 0.15}
                 style={{ transition: "all 0.3s ease" }}
               />
-              {/* Dot */}
               <circle
                 r={active === i ? 5 : 3.5}
-                fill={loc.tags.includes("Born") ? "#1a1a1a" : "#78716c"}
+                fill={loc.tags.includes("Born") ? "#c2410c" : "#78716c"}
                 stroke="#faf9f6"
                 strokeWidth={1}
                 style={{ transition: "all 0.3s ease", cursor: "pointer" }}
               />
-              {/* Label */}
               <text
                 textAnchor="middle"
                 y={-12}
                 style={{
                   fontSize: active === i ? 11 : 9,
-                  fill: "#1a1a1a",
+                  fill: "#1c1917",
                   fontWeight: active === i ? 600 : 400,
                   transition: "all 0.3s ease",
                 }}
@@ -135,25 +131,19 @@ export default function MapSection() {
           ))}
         </ComposableMap>
 
-        {/* Active location detail */}
-        <div className="flex min-h-14 items-center justify-center border-t border-border px-6 py-3">
+        <div style={{ display: "flex", minHeight: "3.5rem", alignItems: "center", justifyContent: "center", borderTop: "1px solid var(--border)", padding: ".5rem 1rem" }}>
           {active !== null ? (
-            <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
-              <span className="font-medium">
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: ".5rem", fontSize: ".85rem" }}>
+              <span style={{ fontWeight: 500 }}>
                 {locations[active].city}, {locations[active].country}
               </span>
-              <span className="text-muted">&mdash;</span>
+              <span style={{ color: "var(--ink3)" }}>&mdash;</span>
               {locations[active].tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-border px-3 py-0.5 text-xs text-muted"
-                >
-                  {tag}
-                </span>
+                <span key={tag} className="chip">{tag}</span>
               ))}
             </div>
           ) : (
-            <p className="text-sm text-muted">
+            <p style={{ fontSize: ".82rem", color: "var(--ink3)" }}>
               Hover over a location to learn more
             </p>
           )}
