@@ -1,42 +1,23 @@
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-32 pb-[80px] md:pt-44">
-      <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-        {/* Text content */}
-        <div>
-          <h1 className="animate-fade-in-up font-serif text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Hola, I am
-            <br />
-            <span className="italic">Adriana Sainz</span>
-          </h1>
-          <p className="animate-fade-in-up-delay-1 mt-6 max-w-md text-lg leading-relaxed text-muted">
-            I lead healthcare UX, translating clinical complexity into tools
-            that improve patient outcomes and accelerate scientific discovery.
-          </p>
-          <div className="animate-fade-in-up-delay-2 mt-8 flex gap-4">
-            <a
-              href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
-            >
-              View Work
-            </a>
-          </div>
-        </div>
-
-        {/* Visual element */}
-        <div className="animate-fade-in-up-delay-3 flex justify-center">
-          <div className="relative h-80 w-80 md:h-96 md:w-96">
-            {/* Abstract decorative shape */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-stone-200 to-stone-300 opacity-60" />
-            <div className="absolute inset-4 rounded-full border-2 border-stone-300" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-serif text-8xl italic text-stone-400 md:text-9xl">
-                AS
-              </span>
-            </div>
-          </div>
-        </div>
+    <div className="hero">
+      <div className="hero-tag">Adriana Navarro Sainz &middot; PhD in HCI &middot; San Francisco</div>
+      <div className="status"><span className="status-dot"></span> Currently building</div>
+      <h1>I build healthcare tools that work because <em>I studied the people using them first.</em></h1>
+      <p className="hero-sub">
+        Designer, researcher, and builder with 10+ years in clinical and biotech environments. At{" "}
+        <span className="tip">Natera<span className="tiptext">Genetic testing &amp; biotech &middot; 50+ laboratories</span></span>,
+        I design workflows for genetic testing labs. Before that,{" "}
+        <span className="tip">Cincinnati Children&apos;s Hospital<span className="tiptext">Pediatric genomics, clinical decision support, NIH-funded</span></span>.
+        I don&apos;t hand off research to designers — I am the designer.
+      </p>
+      <div className="hero-links">
+        <a href="mailto:sainz.nag@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+        <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Resume ↓</a>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Adriana Sainz | Portfolio",
+  title: "Adriana Navarro Sainz",
   description:
-    "Portfolio of Adriana Sainz — Healthcare UX leader.",
+    "Designer, researcher, and builder. Healthcare UX leader with 10+ years in clinical and biotech environments.",
 };
 
 export default function RootLayout({
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Navigation />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );
