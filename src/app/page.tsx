@@ -7,6 +7,7 @@ import CrissyFieldCam from "@/components/CrissyFieldCam";
 import MapSection from "@/components/MapSection";
 import DreamsSection from "@/components/DreamsSection";
 import PublicationsSection from "@/components/PublicationsSection";
+import FavoriteReads from "@/components/FavoriteReads";
 import ContactBlock from "@/components/ContactBlock";
 
 export default function Home() {
@@ -30,6 +31,8 @@ export default function Home() {
         <DreamsSection />
         <hr className="section-line" />
         <PublicationsSection />
+        <hr className="section-line" />
+        <FavoriteReads />
       </div>
       <ContactBlock />
     </>
