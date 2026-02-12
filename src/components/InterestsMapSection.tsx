@@ -76,7 +76,7 @@ export default function InterestsMapSection() {
           </g></a>
           {/* Center node */}
           <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
-          <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="DM Sans, sans-serif">Adriana</text>
+          <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
           <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="JetBrains Mono, monospace">PhD &middot; Builder &middot; SF</text>
         </svg>
       </div>
