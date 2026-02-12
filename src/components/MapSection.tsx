@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimateOnScroll from "./AnimateOnScroll";
 import {
   ComposableMap,
   Geographies,
@@ -60,10 +61,13 @@ export default function MapSection() {
 
   return (
     <section>
-      <div className="label">Places</div>
-      <div className="section-title">Places I&apos;ve Called Home</div>
+      <AnimateOnScroll>
+        <div className="label">Places</div>
+        <div className="section-title">Places I&apos;ve Called Home</div>
+      </AnimateOnScroll>
 
-      <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden" }}>
+      <AnimateOnScroll animation="scale-in" delay={100}>
+      <div style={{ background: "white", border: "1.5px solid var(--border)", borderRadius: "10px", overflow: "hidden", transition: "border-color .3s cubic-bezier(.4,0,.2,1)" }}>
         <ComposableMap
           projection="geoNaturalEarth1"
           projectionConfig={{
@@ -149,6 +153,7 @@ export default function MapSection() {
           )}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

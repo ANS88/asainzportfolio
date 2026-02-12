@@ -1,8 +1,13 @@
+import AnimateOnScroll from "./AnimateOnScroll";
+
 export default function InterestsMapSection() {
   return (
     <section>
-      <div className="label">Interests map</div>
-      <div className="section-title">How my worlds connect</div>
+      <AnimateOnScroll>
+        <div className="label">Interests map</div>
+        <div className="section-title">How my worlds connect</div>
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="scale-in">
       <div className="map-wrap">
         <svg viewBox="0 0 800 520" style={{ width: "100%", height: "auto", display: "block" }}>
           {/* Connection lines */}
@@ -75,9 +80,11 @@ export default function InterestsMapSection() {
           <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="JetBrains Mono, monospace">PhD &middot; Builder &middot; SF</text>
         </svg>
       </div>
+      </AnimateOnScroll>
 
       {/* Social network cards */}
       <div className="social-grid">
+        <AnimateOnScroll animation="fade-up">
         <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="social-card">
           <div className="sc-icon" style={{ background: "#0a66c2" }}>in</div>
           <div className="sc-body">
@@ -86,6 +93,8 @@ export default function InterestsMapSection() {
             <div className="sc-desc">Healthcare UX, career, industry connections</div>
           </div>
         </a>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-up">
         <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="social-card">
           <div className="sc-icon" style={{ background: "#4b49f7" }}>✎</div>
           <div className="sc-body">
@@ -94,6 +103,8 @@ export default function InterestsMapSection() {
             <div className="sc-desc">Academic HCI → accessible health tech analysis</div>
           </div>
         </a>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-up">
         <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="social-card">
           <div className="sc-icon" style={{ background: "#4285f4" }}>G</div>
           <div className="sc-body">
@@ -102,6 +113,8 @@ export default function InterestsMapSection() {
             <div className="sc-desc">Peer-reviewed HCI and health research</div>
           </div>
         </a>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-up">
         <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer" className="social-card">
           <div className="sc-icon" style={{ background: "#7c3aed" }}>Ξ</div>
           <div className="sc-body">
@@ -110,6 +123,8 @@ export default function InterestsMapSection() {
             <div className="sc-desc">Evaluating women&apos;s health research proposals</div>
           </div>
         </a>
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="fade-up">
         <a href="mailto:sainz.nag@gmail.com" className="social-card">
           <div className="sc-icon" style={{ background: "#1c1917" }}>@</div>
           <div className="sc-body">
@@ -118,6 +133,7 @@ export default function InterestsMapSection() {
             <div className="sc-desc">Best way to reach me</div>
           </div>
         </a>
+        </AnimateOnScroll>
       </div>
 
       <div style={{ marginTop: "1rem", fontFamily: "var(--hand)", fontSize: "1.05rem", color: "var(--accent)", textAlign: "center" as const }}>

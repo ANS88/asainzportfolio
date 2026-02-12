@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const items = [
   {
@@ -60,8 +61,10 @@ export default function ShippedSection() {
 
   return (
     <section>
-      <div className="label">Shipped</div>
-      <div className="section-title">Things that exist in the world because of me</div>
+      <AnimateOnScroll>
+        <div className="label">Shipped</div>
+        <div className="section-title">Things that exist in the world because of me</div>
+      </AnimateOnScroll>
 
       {items.map((item, i) => (
         <div
