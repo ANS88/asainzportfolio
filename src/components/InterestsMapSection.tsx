@@ -30,7 +30,7 @@ export default function InterestsMapSection() {
             <line x1="540" y1="450" x2="645" y2="495" stroke="#f0ebe3" /><line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
           </g>
           {/* Satellite nodes */}
-          <g fontFamily="JetBrains Mono, monospace" fontSize="7.5" fill="#a8a29e" textAnchor="middle">
+          <g fontFamily="Inter, sans-serif" fontSize="7.5" fill="#a8a29e" textAnchor="middle">
             <circle cx="80" cy="55" r="16" fill="white" stroke="#e7e5e4" /><text x="80" y="58" fill="#78716c">Natera</text>
             <circle cx="290" cy="45" r="16" fill="white" stroke="#e7e5e4" /><text x="290" y="48" fill="#78716c">CCHMC</text>
             <circle cx="505" cy="50" r="16" fill="white" stroke="#e7e5e4" /><text x="505" y="53" fill="#78716c">Claude</text>
@@ -46,38 +46,38 @@ export default function InterestsMapSection() {
           {/* Primary nodes */}
           <a href="https://www.linkedin.com/in/adrianans/" target="_blank"><g>
             <circle cx="200" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="200" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Healthcare</text>
-            <text x="200" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">UX</text>
+            <text x="200" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Healthcare</text>
+            <text x="200" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">UX</text>
           </g></a>
           <a href="https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/" target="_blank"><g>
             <circle cx="600" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="600" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">AI +</text>
-            <text x="600" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Building</text>
+            <text x="600" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">AI +</text>
+            <text x="600" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Building</text>
           </g></a>
           <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
             <circle cx="150" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="150" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">{"Women's"}</text>
-            <text x="150" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Health</text>
+            <text x="150" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{"Women's"}</text>
+            <text x="150" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Health</text>
           </g></a>
           <a href="http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724" target="_blank"><g>
             <circle cx="650" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="650" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Embodied</text>
-            <text x="650" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Design</text>
+            <text x="650" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Embodied</text>
+            <text x="650" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Design</text>
           </g></a>
           <a href="https://www.athenadao.co/" target="_blank"><g>
             <circle cx="260" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="260" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Community</text>
-            <text x="260" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">+ Life</text>
+            <text x="260" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Community</text>
+            <text x="260" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">+ Life</text>
           </g></a>
           <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
             <circle cx="540" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="540" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Writing +</text>
-            <text x="540" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="JetBrains Mono, monospace">Culture</text>
+            <text x="540" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Writing +</text>
+            <text x="540" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Culture</text>
           </g></a>
           {/* Center node */}
           <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
           <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
-          <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="JetBrains Mono, monospace">PhD &middot; Builder &middot; SF</text>
+          <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
         </svg>
       </div>
       </AnimateOnScroll>
