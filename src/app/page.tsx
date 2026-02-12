@@ -8,6 +8,7 @@ import MapSection from "@/components/MapSection";
 import DreamsSection from "@/components/DreamsSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import FavoriteReads from "@/components/FavoriteReads";
+import SiteNav from "@/components/SiteNav";
 import ContactBlock from "@/components/ContactBlock";
 
 export default function Home() {
@@ -33,6 +34,8 @@ export default function Home() {
         <PublicationsSection />
         <hr className="section-line" />
         <FavoriteReads />
+        <hr className="section-line" />
+        <SiteNav />
       </div>
       <ContactBlock />
     </>
