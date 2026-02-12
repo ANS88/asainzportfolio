@@ -1,3 +1,5 @@
+import AnimateOnScroll from "./AnimateOnScroll";
+
 export default function DreamsSection() {
   const dreams = [
     { text: "Finish a PhD while working full-time", done: true },
@@ -22,15 +24,20 @@ export default function DreamsSection() {
 
   return (
     <section>
-      <div className="label">Life dashboard</div>
-      <div className="dreams-header">
-        <div className="section-title">Things I&apos;m working toward</div>
-        <div className="dreams-pct">{pct}%</div>
-      </div>
+      <AnimateOnScroll>
+        <div className="label">Life dashboard</div>
+        <div className="dreams-header">
+          <div className="section-title">Things I&apos;m working toward</div>
+          <div className="dreams-pct">{pct}%</div>
+        </div>
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="fade-up" delay={100}>
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: `${pct}%`, background: "linear-gradient(90deg, var(--accent), var(--accent2))" }}></div>
       </div>
+      </AnimateOnScroll>
       <div style={{ height: ".75rem" }}></div>
+      <AnimateOnScroll animation="fade-up" delay={200}>
       <div className="dream-list">
         {dreams.map((dream, i) => (
           <div key={i} className={`dream${dream.done ? " done" : ""}`}>
@@ -39,6 +46,7 @@ export default function DreamsSection() {
           </div>
         ))}
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

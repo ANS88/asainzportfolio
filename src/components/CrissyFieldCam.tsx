@@ -1,9 +1,14 @@
+import AnimateOnScroll from "./AnimateOnScroll";
+
 export default function CrissyFieldCam() {
   return (
     <section>
-      <div className="label">Live</div>
-      <div className="section-title">Crissy Field, San Francisco</div>
-      <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "10px", overflow: "hidden" }}>
+      <AnimateOnScroll>
+        <div className="label">Live</div>
+        <div className="section-title">Crissy Field, San Francisco</div>
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="scale-in" delay={100}>
+      <div style={{ background: "white", border: "1.5px solid var(--border)", borderRadius: "10px", overflow: "hidden", transition: "border-color .3s cubic-bezier(.4,0,.2,1)" }}>
         <div style={{ aspectRatio: "16/9" }}>
           <iframe
             src="https://www.youtube.com/embed/0aF8elLpiMo?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0"
@@ -25,6 +30,7 @@ export default function CrissyFieldCam() {
           </a>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }
