@@ -80,6 +80,7 @@ a:hover { opacity: .85; }
   transition: all var(--transition-fast);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 .hero-links a::before {
   content: '';
@@ -89,7 +90,7 @@ a:hover { opacity: .85; }
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-medium);
-  z-index: 0;
+  z-index: -1;
   border-radius: 20px;
 }
 .hero-links a:hover {
@@ -97,7 +98,6 @@ a:hover { opacity: .85; }
   color: #ffffff;
   opacity: 1;
   box-shadow: var(--shadow-accent);
-  z-index: 1;
 }
 .hero-links a:hover::before { transform: scaleX(1); }
 
