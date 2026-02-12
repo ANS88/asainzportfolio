@@ -49,6 +49,58 @@ a:hover { opacity: .85; }
 
 .container { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
 
+/* ═══ TOP NAV ═══ */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250,250,249,.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.top-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.25rem;
+}
+.top-nav-logo {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -.02em;
+}
+.top-nav-logo:hover { color: var(--accent); opacity: 1; }
+.top-nav-links {
+  display: flex;
+  gap: 1.75rem;
+}
+.top-nav-links a {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink3);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+.top-nav-links a:hover { color: var(--ink); opacity: 1; }
+.top-nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-medium);
+}
+.top-nav-links a:hover::after { transform: scaleX(1); }
+
 /* ═══ SCROLL ANIMATIONS ═══ */
 .aos {
   opacity: 0;
