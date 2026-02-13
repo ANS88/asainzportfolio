@@ -49,57 +49,41 @@ a:hover { opacity: .85; }
 
 .container { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
 
-/* ═══ TOP NAV ═══ */
-.top-nav {
+/* ═══ SIDE NAV ═══ */
+.side-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  right: clamp(1rem, 2.5vw, 2.5rem);
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 100;
-  background: rgba(250,250,249,.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.top-nav-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 3.25rem;
+  flex-direction: column;
+  gap: 1.25rem;
 }
-.top-nav-logo {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -.02em;
-}
-.top-nav-logo:hover { color: var(--accent); opacity: 1; }
-.top-nav-links {
-  display: flex;
-  gap: 1.75rem;
-}
-.top-nav-links a {
-  font-size: .82rem;
+.side-nav a {
+  font-size: .75rem;
   font-weight: 500;
   color: var(--ink3);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   transition: color var(--transition-fast);
   position: relative;
+  letter-spacing: .04em;
 }
-.top-nav-links a:hover { color: var(--ink); opacity: 1; }
-.top-nav-links a::after {
+.side-nav a:hover { color: var(--accent); opacity: 1; }
+.side-nav a::before {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 1.5px;
+  left: -6px;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
   background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
+  transform: scaleY(0);
+  transform-origin: top;
   transition: transform var(--transition-medium);
 }
-.top-nav-links a:hover::after { transform: scaleX(1); }
+.side-nav a:hover::before { transform: scaleY(1); }
 
 /* ═══ SCROLL ANIMATIONS ═══ */
 .aos {
@@ -640,4 +624,5 @@ section:hover .label::after { transform: scaleX(1); }
   .social-grid { grid-template-columns: 1fr; }
   .cam-map-grid { grid-template-columns: 1fr; }
   .site-nav-grid { grid-template-columns: 1fr; }
+  .side-nav { display: none; }
 }
