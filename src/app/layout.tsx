@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
+import MoonflowerCursor from "@/components/MoonflowerCursor";
 
 export const metadata: Metadata = {
   title: "Adriana Navarro Sainz",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <MoonflowerCursor />
         <TopNav />
         <main>{children}</main>
       </body>
