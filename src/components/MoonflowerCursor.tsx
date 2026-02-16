@@ -1,9 +1,44 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
+
+interface DroppedFlower {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  rotation: number;
+  speed: number;
+}
+
+function MoonflowerSVG({ size = 40 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 40 40" width={size} height={size}>
+      <circle cx="20" cy="20" r="4" fill="#4b49f7" opacity=".9" />
+      <circle cx="20" cy="20" r="2" fill="#eef0ff" />
+      {[0, 72, 144, 216, 288].map((angle, i) => (
+        <g key={i} transform={`rotate(${angle} 20 20)`}>
+          <ellipse cx="20" cy="8" rx="5.5" ry="10" fill="white" stroke="#c7d2fe" strokeWidth=".5" opacity=".85" />
+          <ellipse cx="20" cy="9" rx="3" ry="6" fill="#eef0ff" opacity=".5" />
+        </g>
+      ))}
+      {[0, 60, 120, 180, 240, 300].map((angle, i) => (
+        <circle
+          key={`s${i}`}
+          cx={20 + 5.5 * Math.cos((angle * Math.PI) / 180)}
+          cy={20 + 5.5 * Math.sin((angle * Math.PI) / 180)}
+          r=".8"
+          fill="#c7d2fe"
+        />
+      ))}
+    </svg>
+  );
+}
 
 export default function MoonflowerCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [flowers, setFlowers] = useState<DroppedFlower[]>([]);
+  const nextId = useRef(0);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -35,53 +70,48 @@ export default function MoonflowerCursor() {
     };
   }, []);
 
+  const dropFlower = useCallback((e: React.MouseEvent) => {
+    const id = nextId.current++;
+    const size = 24 + Math.random() * 28;
+    const rotation = Math.random() * 360;
+    const speed = 4 + Math.random() * 6;
+
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+
+    setFlowers((prev) => {
+      const next = [...prev, { id, x: e.clientX + scrollX, y: e.clientY + scrollY, size, rotation, speed }];
+      if (next.length > 30) return next.slice(-30);
+      return next;
+    });
+  }, []);
+
   return (
-    <div ref={cursorRef} className="moonflower-cursor" aria-hidden="true">
-      <svg
-        viewBox="0 0 40 40"
-        width="40"
-        height="40"
-        className="moonflower-spin"
-      >
-        {/* Center */}
-        <circle cx="20" cy="20" r="4" fill="#4b49f7" opacity=".9" />
-        <circle cx="20" cy="20" r="2" fill="#eef0ff" />
+    <>
+      {/* Click catcher */}
+      <div className="flower-drop-zone" onClick={dropFlower} aria-hidden="true" />
 
-        {/* 5 petals - trumpet moonflower shape */}
-        {[0, 72, 144, 216, 288].map((angle, i) => (
-          <g key={i} transform={`rotate(${angle} 20 20)`}>
-            <ellipse
-              cx="20"
-              cy="8"
-              rx="5.5"
-              ry="10"
-              fill="white"
-              stroke="#c7d2fe"
-              strokeWidth=".5"
-              opacity=".85"
-            />
-            <ellipse
-              cx="20"
-              cy="9"
-              rx="3"
-              ry="6"
-              fill="#eef0ff"
-              opacity=".5"
-            />
-          </g>
-        ))}
+      {/* Dropped flowers */}
+      {flowers.map((f) => (
+        <div
+          key={f.id}
+          className="dropped-flower"
+          style={{
+            left: f.x,
+            top: f.y,
+            animationDuration: `${f.speed}s`,
+          }}
+        >
+          <div style={{ transform: `rotate(${f.rotation}deg)` }}>
+            <MoonflowerSVG size={f.size} />
+          </div>
+        </div>
+      ))}
 
-        {/* Inner stamen dots */}
-        {[0, 60, 120, 180, 240, 300].map((angle, i) => (
-          <circle
-            key={`s${i}`}
-            cx={20 + 5.5 * Math.cos((angle * Math.PI) / 180)}
-            cy={20 + 5.5 * Math.sin((angle * Math.PI) / 180)}
-            r=".8"
-            fill="#c7d2fe"
-          />
-        ))}
-      </svg>
-    </div>
+      {/* Cursor */}
+      <div ref={cursorRef} className="moonflower-cursor" aria-hidden="true">
+        <MoonflowerSVG />
+      </div>
+    </>
   );
 }
