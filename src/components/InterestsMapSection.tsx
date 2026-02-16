@@ -1,6 +1,48 @@
+"use client";
+
+import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
+interface NodeInfo {
+  id: string;
+  cx: number;
+  cy: number;
+  label: [string, string];
+  href: string;
+  desc: string;
+}
+
+const PRIMARY_NODES: NodeInfo[] = [
+  { id: "hux", cx: 200, cy: 130, label: ["Healthcare", "UX"], href: "https://www.linkedin.com/in/adrianans/", desc: "10+ years designing clinical workflows, EHR integrations, and lab systems at Natera & CCHMC" },
+  { id: "ai", cx: 600, cy: 130, label: ["AI +", "Building"], href: "https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/", desc: "Rapid prototyping with Claude Code, A/B testing tools, and design system dashboards" },
+  { id: "wh", cx: 150, cy: 320, label: ["Women's", "Health"], href: "https://womenshealthcomputed.substack.com", desc: "Substack exploring femtech, perimenopause wearables, and whose bodies health tech serves" },
+  { id: "ed", cx: 650, cy: 320, label: ["Embodied", "Design"], href: "http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724", desc: "PhD research on somaesthetic design, body-aware interfaces, and sensory interaction" },
+  { id: "cl", cx: 260, cy: 450, label: ["Community", "+ Life"], href: "https://www.athenadao.co/", desc: "AthenaDAO dealflow fellow, wine lover, SF community builder" },
+  { id: "wc", cx: 540, cy: 450, label: ["Writing +", "Culture"], href: "https://womenshealthcomputed.substack.com", desc: "Academic HCI translated to accessible essays on health, tech, and Latin American identity" },
+];
+
+const SATELLITE_NODES = [
+  { cx: 80, cy: 55, label: "Natera" },
+  { cx: 290, cy: 45, label: "CCHMC" },
+  { cx: 505, cy: 50, label: "Claude" },
+  { cx: 710, cy: 55, label: "Figma" },
+  { cx: 55, cy: 240, label: "Diary" },
+  { cx: 48, cy: 380, label: "Oura" },
+  { cx: 752, cy: 250, label: "Sara A." },
+  { cx: 755, cy: 385, label: "Web3" },
+  { cx: 145, cy: 495, label: "Wine" },
+  { cx: 445, cy: 505, label: "LatAm" },
+  { cx: 645, cy: 495, label: "Music" },
+];
+
 export default function InterestsMapSection() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const toggleNode = (id: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setExpanded(expanded === id ? null : id);
+  };
+
   return (
     <section>
       <AnimateOnScroll>
@@ -29,55 +71,52 @@ export default function InterestsMapSection() {
             <line x1="260" y1="450" x2="145" y2="495" stroke="#f0ebe3" />
             <line x1="540" y1="450" x2="645" y2="495" stroke="#f0ebe3" /><line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
           </g>
+
           {/* Satellite nodes */}
-          <g fontFamily="Inter, sans-serif" fontSize="7.5" fill="#a8a29e" textAnchor="middle">
-            <circle cx="80" cy="55" r="16" fill="white" stroke="#e7e5e4" /><text x="80" y="58" fill="#78716c">Natera</text>
-            <circle cx="290" cy="45" r="16" fill="white" stroke="#e7e5e4" /><text x="290" y="48" fill="#78716c">CCHMC</text>
-            <circle cx="505" cy="50" r="16" fill="white" stroke="#e7e5e4" /><text x="505" y="53" fill="#78716c">Claude</text>
-            <circle cx="710" cy="55" r="16" fill="white" stroke="#e7e5e4" /><text x="710" y="58" fill="#78716c">Figma</text>
-            <circle cx="55" cy="240" r="16" fill="white" stroke="#e7e5e4" /><text x="55" y="243" fill="#78716c">Diary</text>
-            <circle cx="48" cy="380" r="16" fill="white" stroke="#e7e5e4" /><text x="48" y="383" fill="#78716c">Oura</text>
-            <circle cx="752" cy="250" r="16" fill="white" stroke="#e7e5e4" /><text x="752" y="253" fill="#78716c">Sara A.</text>
-            <circle cx="755" cy="385" r="16" fill="white" stroke="#e7e5e4" /><text x="755" y="388" fill="#78716c">Web3</text>
-            <circle cx="145" cy="495" r="16" fill="white" stroke="#e7e5e4" /><text x="145" y="498" fill="#78716c">Wine</text>
-            <circle cx="445" cy="505" r="16" fill="white" stroke="#e7e5e4" /><text x="445" y="508" fill="#78716c">LatAm</text>
-            <circle cx="645" cy="495" r="16" fill="white" stroke="#e7e5e4" /><text x="645" y="498" fill="#78716c">Music</text>
-          </g>
+          {SATELLITE_NODES.map((s) => (
+            <g key={s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
+              <circle cx={s.cx} cy={s.cy} r="16" fill="white" stroke="#e7e5e4" />
+              <text x={s.cx} y={s.cy + 3} textAnchor="middle" fill="#78716c" fontSize="7.5" fontFamily="Inter, sans-serif">{s.label}</text>
+            </g>
+          ))}
+
           {/* Primary nodes */}
-          <a href="https://www.linkedin.com/in/adrianans/" target="_blank"><g>
-            <circle cx="200" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="200" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Healthcare</text>
-            <text x="200" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">UX</text>
-          </g></a>
-          <a href="https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/" target="_blank"><g>
-            <circle cx="600" cy="130" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="600" y="125" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">AI +</text>
-            <text x="600" y="138" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Building</text>
-          </g></a>
-          <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
-            <circle cx="150" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="150" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{"Women's"}</text>
-            <text x="150" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Health</text>
-          </g></a>
-          <a href="http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724" target="_blank"><g>
-            <circle cx="650" cy="320" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="650" y="315" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Embodied</text>
-            <text x="650" y="328" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Design</text>
-          </g></a>
-          <a href="https://www.athenadao.co/" target="_blank"><g>
-            <circle cx="260" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="260" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Community</text>
-            <text x="260" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">+ Life</text>
-          </g></a>
-          <a href="https://womenshealthcomputed.substack.com" target="_blank"><g>
-            <circle cx="540" cy="450" r="34" fill="#eef0ff" stroke="#4b49f7" strokeWidth="2" className="node-hover" />
-            <text x="540" y="445" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Writing +</text>
-            <text x="540" y="458" textAnchor="middle" fill="#4b49f7" fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">Culture</text>
-          </g></a>
+          {PRIMARY_NODES.map((node) => {
+            const isExpanded = expanded === node.id;
+            const r = isExpanded ? 48 : 34;
+            return (
+              <g
+                key={node.id}
+                className={`primary-node${isExpanded ? " expanded" : ""}`}
+                style={{ transformOrigin: `${node.cx}px ${node.cy}px`, cursor: "pointer" }}
+                onClick={(e) => toggleNode(node.id, e)}
+              >
+                {/* Pulse ring on expand */}
+                {isExpanded && (
+                  <circle cx={node.cx} cy={node.cy} r={r + 8} fill="none" stroke="#4b49f7" strokeWidth="1" opacity=".3" className="pulse-ring" />
+                )}
+                <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#4b49f7" : "#eef0ff"} stroke="#4b49f7" strokeWidth="2" className="node-circle" />
+                <text x={node.cx} y={node.cy - 7} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                <text x={node.cx} y={node.cy + 6} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                {/* Description on expand */}
+                {isExpanded && (
+                  <foreignObject x={node.cx - 85} y={node.cy + r + 6} width="170" height="80">
+                    <div className="node-tooltip">
+                      <p>{node.desc}</p>
+                      <a href={node.href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Explore →</a>
+                    </div>
+                  </foreignObject>
+                )}
+              </g>
+            );
+          })}
+
           {/* Center node */}
-          <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
-          <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
-          <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
+          <g className="center-node" style={{ transformOrigin: "400px 260px" }}>
+            <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
+            <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
+            <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
+          </g>
         </svg>
       </div>
       </AnimateOnScroll>
