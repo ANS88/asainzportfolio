@@ -3,7 +3,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 const pages = [
   {
     title: "Work",
-    href: "/",
+    href: "/work",
     description: "Case studies, shipped products, and impact metrics from healthcare UX leadership.",
     tag: "Portfolio",
   },
