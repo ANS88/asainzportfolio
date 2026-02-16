@@ -80,6 +80,37 @@ a:hover { opacity: .85; }
 }
 .side-nav a:hover::after { transform: scaleX(1); }
 
+/* ═══ MOONFLOWER CURSOR ═══ */
+.moonflower-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+.moonflower-spin {
+  animation: moonSpin 6s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(75,73,247,.2));
+}
+@keyframes moonSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Hide default cursor on desktop */
+@media (pointer: fine) {
+  html, body, a, button, [role="button"], input, textarea, select {
+    cursor: none !important;
+  }
+}
+/* Hide moonflower on touch devices */
+@media (pointer: coarse) {
+  .moonflower-cursor { display: none; }
+}
+
 /* ═══ SCROLL ANIMATIONS ═══ */
 .aos {
   opacity: 0;
@@ -98,6 +129,13 @@ a:hover { opacity: .85; }
 
 /* ═══ HERO ═══ */
 .hero { padding: 8rem 0 3rem; position: relative; }
+.hero-moonflower {
+  position: absolute;
+  top: 4.5rem;
+  right: -10px;
+  opacity: .35;
+  animation: fadeIn 1.5s ease forwards;
+}
 .hero-tag { font-family: var(--mono); font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin-bottom: 1.25rem; }
 .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }
 .hero h1 em { font-style: italic; color: var(--accent); }

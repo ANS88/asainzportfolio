@@ -3,6 +3,30 @@ import AnimateOnScroll from "./AnimateOnScroll";
 export default function Hero() {
   return (
     <div className="hero">
+      {/* Decorative moonflower */}
+      <div className="hero-moonflower" aria-hidden="true">
+        <svg viewBox="0 0 120 120" width="120" height="120" className="moonflower-spin">
+          <circle cx="60" cy="60" r="10" fill="#4b49f7" opacity=".15" />
+          <circle cx="60" cy="60" r="6" fill="#4b49f7" opacity=".3" />
+          <circle cx="60" cy="60" r="3" fill="#eef0ff" />
+          {[0, 72, 144, 216, 288].map((angle, i) => (
+            <g key={i} transform={`rotate(${angle} 60 60)`}>
+              <ellipse cx="60" cy="28" rx="14" ry="26" fill="white" stroke="#c7d2fe" strokeWidth="1" opacity=".7" />
+              <ellipse cx="60" cy="32" rx="7" ry="14" fill="#eef0ff" opacity=".4" />
+            </g>
+          ))}
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+            <circle
+              key={`d${i}`}
+              cx={60 + 14 * Math.cos((angle * Math.PI) / 180)}
+              cy={60 + 14 * Math.sin((angle * Math.PI) / 180)}
+              r="1.5"
+              fill="#c7d2fe"
+              opacity=".6"
+            />
+          ))}
+        </svg>
+      </div>
       <AnimateOnScroll animation="fade-in">
         <div className="hero-tag">Adriana Navarro Sainz &middot; PhD in HCI &middot; San Francisco</div>
       </AnimateOnScroll>
