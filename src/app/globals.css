@@ -100,14 +100,7 @@ a:hover { opacity: .85; }
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/* Flower drop zone */
-.flower-drop-zone {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  cursor: none;
-}
-/* Dropped flowers */
+/* Dropped flowers — double-click to drop */
 .dropped-flower {
   position: absolute;
   pointer-events: none;

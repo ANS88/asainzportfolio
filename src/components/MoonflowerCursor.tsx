@@ -40,6 +40,29 @@ export default function MoonflowerCursor() {
   const [flowers, setFlowers] = useState<DroppedFlower[]>([]);
   const nextId = useRef(0);
 
+  const dropFlower = useCallback((e: MouseEvent) => {
+    const id = nextId.current++;
+    const size = 24 + Math.random() * 28;
+    const rotation = Math.random() * 360;
+    const speed = 4 + Math.random() * 6;
+
+    setFlowers((prev) => {
+      const next = [
+        ...prev,
+        {
+          id,
+          x: e.clientX + window.scrollX,
+          y: e.clientY + window.scrollY,
+          size,
+          rotation,
+          speed,
+        },
+      ];
+      if (next.length > 30) return next.slice(-30);
+      return next;
+    });
+  }, []);
+
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
@@ -62,35 +85,23 @@ export default function MoonflowerCursor() {
       requestAnimationFrame(animate);
     };
 
+    // Double-click to drop flower — single clicks pass through normally
+    const onDblClick = (e: MouseEvent) => {
+      dropFlower(e);
+    };
+
     window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("dblclick", onDblClick);
     requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("dblclick", onDblClick);
     };
-  }, []);
-
-  const dropFlower = useCallback((e: React.MouseEvent) => {
-    const id = nextId.current++;
-    const size = 24 + Math.random() * 28;
-    const rotation = Math.random() * 360;
-    const speed = 4 + Math.random() * 6;
-
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
-
-    setFlowers((prev) => {
-      const next = [...prev, { id, x: e.clientX + scrollX, y: e.clientY + scrollY, size, rotation, speed }];
-      if (next.length > 30) return next.slice(-30);
-      return next;
-    });
-  }, []);
+  }, [dropFlower]);
 
   return (
     <>
-      {/* Click catcher */}
-      <div className="flower-drop-zone" onClick={dropFlower} aria-hidden="true" />
-
       {/* Dropped flowers */}
       {flowers.map((f) => (
         <div
