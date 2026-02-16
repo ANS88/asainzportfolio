@@ -1,5 +1,21 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
+// Generate symmetric 5-petal flower path using polar coordinates
+function petalPath(cx: number, cy: number) {
+  const R = 14.5, amp = 4, petals = 5, pts = 80;
+  let d = "";
+  for (let i = 0; i <= pts; i++) {
+    const t = (i / pts) * Math.PI * 2 - Math.PI / 2;
+    const r = R + amp * Math.cos(petals * t);
+    const x = cx + r * Math.cos(t);
+    const y = cy + r * Math.sin(t);
+    d += (i === 0 ? "M" : "L") + x.toFixed(2) + "," + y.toFixed(2);
+  }
+  return d + "Z";
+}
+
+const HERO_FLOWER_PATH = petalPath(20, 20);
+
 export default function Hero() {
   return (
     <div className="hero">
@@ -21,7 +37,7 @@ export default function Hero() {
             </radialGradient>
           </defs>
           <path
-            d="M20,2 C24,2 28,6 30,10 C33,6 37,5 38,8 C39,12 36,16 34,18 C38,20 40,24 38,27 C36,30 32,30 30,29 C31,33 30,37 27,38 C24,39 21,36 20,33 C19,36 16,39 13,38 C10,37 9,33 10,29 C8,30 4,30 2,27 C0,24 2,20 6,18 C4,16 1,12 2,8 C3,5 7,6 10,10 C12,6 16,2 20,2 Z"
+            d={HERO_FLOWER_PATH}
             fill="url(#hmf-grad)"
             stroke="#2020a0"
             strokeWidth=".3"
@@ -31,11 +47,11 @@ export default function Hero() {
               key={`hv${i}`}
               x1="20"
               y1="20"
-              x2={20 + 17 * Math.cos(((angle - 90) * Math.PI) / 180)}
-              y2={20 + 17 * Math.sin(((angle - 90) * Math.PI) / 180)}
+              x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
+              y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
               stroke="#4848d0"
               strokeWidth=".4"
-              opacity=".5"
+              opacity=".45"
             />
           ))}
           <circle cx="20" cy="20" r="7" fill="url(#hmf-center)" />
