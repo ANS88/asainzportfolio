@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
+import FlowerHome from "@/components/FlowerHome";
 import MoonflowerCursor from "@/components/MoonflowerCursor";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <MoonflowerCursor />
+        <FlowerHome />
         <TopNav />
         <main>{children}</main>
       </body>
