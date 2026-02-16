@@ -52,38 +52,33 @@ a:hover { opacity: .85; }
 /* ═══ SIDE NAV ═══ */
 .side-nav {
   position: fixed;
-  right: clamp(1rem, 2.5vw, 2.5rem);
-  top: 50%;
-  transform: translateY(-50%);
+  right: clamp(1.5rem, 4vw, 3rem);
+  top: 2rem;
   z-index: 100;
   display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 .side-nav a {
-  font-size: .75rem;
+  font-size: .8rem;
   font-weight: 500;
   color: var(--ink3);
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
   transition: color var(--transition-fast);
   position: relative;
-  letter-spacing: .04em;
 }
 .side-nav a:hover { color: var(--accent); opacity: 1; }
-.side-nav a::before {
+.side-nav a::after {
   content: '';
   position: absolute;
-  left: -6px;
-  top: 0;
-  width: 1.5px;
-  height: 100%;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
   background: var(--accent);
-  transform: scaleY(0);
-  transform-origin: top;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform var(--transition-medium);
 }
-.side-nav a:hover::before { transform: scaleY(1); }
+.side-nav a:hover::after { transform: scaleX(1); }
 
 /* ═══ SCROLL ANIMATIONS ═══ */
 .aos {
