@@ -72,9 +72,18 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
 export default function MoonflowerCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [flowers, setFlowers] = useState<DroppedFlower[]>([]);
+  const [active, setActive] = useState(false);
+  const activeRef = useRef(false);
   const nextId = useRef(0);
 
   const dropFlower = useCallback((e: MouseEvent) => {
+    // Only drop flowers when mode is active
+    if (!activeRef.current) return;
+
+    // Don't drop on interactive elements — let clicks pass through
+    const target = e.target as HTMLElement;
+    if (target.closest("a, button, [role='button'], input, textarea, select")) return;
+
     const id = nextId.current++;
     const size = 24 + Math.random() * 28;
     const rotation = Math.random() * 360;
@@ -119,18 +128,28 @@ export default function MoonflowerCursor() {
       requestAnimationFrame(animate);
     };
 
-    // Double-click to drop flower — single clicks pass through normally
-    const onDblClick = (e: MouseEvent) => {
+    // Listen for flower-picked event from Hero
+    const onFlowerPicked = () => {
+      activeRef.current = true;
+      setActive(true);
+      document.body.classList.add("flower-active");
+    };
+
+    // Single click to drop flowers (only when active)
+    const onClick = (e: MouseEvent) => {
       dropFlower(e);
     };
 
     window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("dblclick", onDblClick);
+    window.addEventListener("click", onClick);
+    window.addEventListener("flower-picked", onFlowerPicked);
     requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("dblclick", onDblClick);
+      window.removeEventListener("click", onClick);
+      window.removeEventListener("flower-picked", onFlowerPicked);
+      document.body.classList.remove("flower-active");
     };
   }, [dropFlower]);
 
@@ -148,13 +167,13 @@ export default function MoonflowerCursor() {
           }}
         >
           <div style={{ transform: `rotate(${f.rotation}deg)` }}>
-            <MoonflowerSVG size={f.size} />
+            <MoonflowerSVG size={f.size} idPrefix={`df${f.id}`} />
           </div>
         </div>
       ))}
 
-      {/* Cursor */}
-      <div ref={cursorRef} className="moonflower-cursor" aria-hidden="true">
+      {/* Cursor — hidden until flower is picked */}
+      <div ref={cursorRef} className={`moonflower-cursor${active ? " active" : ""}`} aria-hidden="true">
         <MoonflowerSVG />
       </div>
     </>

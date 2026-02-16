@@ -91,6 +91,11 @@ a:hover { opacity: .85; }
   z-index: 9999;
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.moonflower-cursor.active {
+  opacity: 1;
 }
 .moonflower-spin {
   animation: moonSpin 6s linear infinite;
@@ -100,7 +105,7 @@ a:hover { opacity: .85; }
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/* Dropped flowers — double-click to drop */
+/* Dropped flowers — click to drop (after picking) */
 .dropped-flower {
   position: absolute;
   pointer-events: none;
@@ -119,15 +124,57 @@ a:hover { opacity: .85; }
   filter: drop-shadow(0 2px 8px rgba(75,73,247,.15));
 }
 
-/* Hide default cursor on desktop */
+/* Only hide cursor when flower mode is active */
 @media (pointer: fine) {
-  html, body, a, button, [role="button"], input, textarea, select {
+  body.flower-active,
+  body.flower-active a,
+  body.flower-active button,
+  body.flower-active [role="button"],
+  body.flower-active input,
+  body.flower-active textarea,
+  body.flower-active select {
     cursor: none !important;
   }
 }
 /* Hide moonflower on touch devices */
 @media (pointer: coarse) {
   .moonflower-cursor { display: none; }
+  .pick-flower-hint { display: none; }
+}
+
+/* ═══ PICK A FLOWER HINT ═══ */
+.pick-flower-hint {
+  position: absolute;
+  top: 3rem;
+  right: 90px;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  animation: hintBob 2.5s ease-in-out infinite, fadeIn 1s ease .5s both;
+  pointer-events: none;
+  z-index: 3;
+}
+.pick-flower-hint.hidden {
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.pick-flower-label {
+  font-family: var(--hand);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--accent);
+  white-space: nowrap;
+  opacity: .8;
+}
+.pick-flower-arrow {
+  width: 48px;
+  height: 32px;
+  opacity: .7;
+}
+@keyframes hintBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* ═══ SCROLL ANIMATIONS ═══ */

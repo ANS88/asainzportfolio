@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 // Generate symmetric 5-petal flower path using polar coordinates
@@ -17,10 +20,50 @@ function petalPath(cx: number, cy: number) {
 const HERO_FLOWER_PATH = petalPath(20, 20);
 
 export default function Hero() {
+  const [picked, setPicked] = useState(false);
+
+  const handlePick = () => {
+    if (picked) return;
+    setPicked(true);
+    window.dispatchEvent(new CustomEvent("flower-picked"));
+  };
+
   return (
     <div className="hero">
-      {/* Decorative moonflower */}
-      <div className="hero-moonflower" aria-hidden="true">
+      {/* Hand-drawn arrow + label */}
+      <div className={`pick-flower-hint${picked ? " hidden" : ""}`}>
+        <span className="pick-flower-label">pick a flower</span>
+        {/* Hand-drawn arrow pointing right toward the flower */}
+        <svg className="pick-flower-arrow" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2 18 C8 16, 14 13, 20 14 C26 15, 30 17, 36 15 C38 14.5, 40 13, 42 12"
+            stroke="var(--accent)"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            fill="none"
+            strokeDasharray="2 3"
+          />
+          <path
+            d="M38 8 L43 12 L37 16"
+            stroke="var(--accent)"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      {/* Pickable moonflower */}
+      <div
+        className="hero-moonflower"
+        role="button"
+        tabIndex={0}
+        aria-label="Pick a moonflower"
+        onClick={handlePick}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handlePick(); }}
+        style={{ cursor: picked ? "default" : "pointer", opacity: picked ? 0.15 : 0.35, transition: "opacity .4s ease" }}
+      >
         <svg viewBox="0 0 40 40" width="120" height="120" className="moonflower-spin">
           <defs>
             <radialGradient id="hmf-grad" cx="50%" cy="50%" r="50%">
