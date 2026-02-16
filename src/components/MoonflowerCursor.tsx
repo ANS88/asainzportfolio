@@ -14,7 +14,7 @@ interface DroppedFlower {
 // Generate symmetric 5-petal flower path using polar coordinates
 // r(θ) = R + amp * cos(5θ), perfectly symmetric
 function petalPath(cx: number, cy: number) {
-  const R = 14.5, amp = 4, petals = 5, pts = 80;
+  const R = 16, amp = 1.8, petals = 5, pts = 80;
   let d = "";
   for (let i = 0; i <= pts; i++) {
     const t = (i / pts) * Math.PI * 2 - Math.PI / 2;
