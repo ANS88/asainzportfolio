@@ -5,26 +5,42 @@ export default function Hero() {
     <div className="hero">
       {/* Decorative moonflower */}
       <div className="hero-moonflower" aria-hidden="true">
-        <svg viewBox="0 0 120 120" width="120" height="120" className="moonflower-spin">
-          <circle cx="60" cy="60" r="10" fill="#4b49f7" opacity=".15" />
-          <circle cx="60" cy="60" r="6" fill="#4b49f7" opacity=".3" />
-          <circle cx="60" cy="60" r="3" fill="#eef0ff" />
+        <svg viewBox="0 0 40 40" width="120" height="120" className="moonflower-spin">
+          <defs>
+            <radialGradient id="hmf-grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#e8f0e0" />
+              <stop offset="12%" stopColor="#d4a0d4" />
+              <stop offset="28%" stopColor="#6848c8" />
+              <stop offset="50%" stopColor="#3535d6" />
+              <stop offset="100%" stopColor="#1a1a9e" />
+            </radialGradient>
+            <radialGradient id="hmf-center" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#f0f4d8" />
+              <stop offset="60%" stopColor="#c8a8d8" />
+              <stop offset="100%" stopColor="#8060b8" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+          <path
+            d="M20,2 C24,2 28,6 30,10 C33,6 37,5 38,8 C39,12 36,16 34,18 C38,20 40,24 38,27 C36,30 32,30 30,29 C31,33 30,37 27,38 C24,39 21,36 20,33 C19,36 16,39 13,38 C10,37 9,33 10,29 C8,30 4,30 2,27 C0,24 2,20 6,18 C4,16 1,12 2,8 C3,5 7,6 10,10 C12,6 16,2 20,2 Z"
+            fill="url(#hmf-grad)"
+            stroke="#2020a0"
+            strokeWidth=".3"
+          />
           {[0, 72, 144, 216, 288].map((angle, i) => (
-            <g key={i} transform={`rotate(${angle} 60 60)`}>
-              <ellipse cx="60" cy="28" rx="14" ry="26" fill="white" stroke="#c7d2fe" strokeWidth="1" opacity=".7" />
-              <ellipse cx="60" cy="32" rx="7" ry="14" fill="#eef0ff" opacity=".4" />
-            </g>
-          ))}
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-            <circle
-              key={`d${i}`}
-              cx={60 + 14 * Math.cos((angle * Math.PI) / 180)}
-              cy={60 + 14 * Math.sin((angle * Math.PI) / 180)}
-              r="1.5"
-              fill="#c7d2fe"
-              opacity=".6"
+            <line
+              key={`hv${i}`}
+              x1="20"
+              y1="20"
+              x2={20 + 17 * Math.cos(((angle - 90) * Math.PI) / 180)}
+              y2={20 + 17 * Math.sin(((angle - 90) * Math.PI) / 180)}
+              stroke="#4848d0"
+              strokeWidth=".4"
+              opacity=".5"
             />
           ))}
+          <circle cx="20" cy="20" r="7" fill="url(#hmf-center)" />
+          <circle cx="20" cy="20" r="2.2" fill="#e8f0d0" />
+          <circle cx="20" cy="20" r="1" fill="#c0d8a0" />
         </svg>
       </div>
       <AnimateOnScroll animation="fade-in">

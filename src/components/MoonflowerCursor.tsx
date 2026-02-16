@@ -14,23 +14,45 @@ interface DroppedFlower {
 function MoonflowerSVG({ size = 40 }: { size?: number }) {
   return (
     <svg viewBox="0 0 40 40" width={size} height={size}>
-      <circle cx="20" cy="20" r="4" fill="#4b49f7" opacity=".9" />
-      <circle cx="20" cy="20" r="2" fill="#eef0ff" />
+      <defs>
+        <radialGradient id="mf-grad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#e8f0e0" />
+          <stop offset="12%" stopColor="#d4a0d4" />
+          <stop offset="28%" stopColor="#6848c8" />
+          <stop offset="50%" stopColor="#3535d6" />
+          <stop offset="100%" stopColor="#1a1a9e" />
+        </radialGradient>
+        <radialGradient id="mf-center" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#f0f4d8" />
+          <stop offset="60%" stopColor="#c8a8d8" />
+          <stop offset="100%" stopColor="#8060b8" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      {/* Continuous trumpet bloom — 5 merged scalloped petals */}
+      <path
+        d="M20,2 C24,2 28,6 30,10 C33,6 37,5 38,8 C39,12 36,16 34,18 C38,20 40,24 38,27 C36,30 32,30 30,29 C31,33 30,37 27,38 C24,39 21,36 20,33 C19,36 16,39 13,38 C10,37 9,33 10,29 C8,30 4,30 2,27 C0,24 2,20 6,18 C4,16 1,12 2,8 C3,5 7,6 10,10 C12,6 16,2 20,2 Z"
+        fill="url(#mf-grad)"
+        stroke="#2020a0"
+        strokeWidth=".3"
+      />
+      {/* Vein lines radiating from center */}
       {[0, 72, 144, 216, 288].map((angle, i) => (
-        <g key={i} transform={`rotate(${angle} 20 20)`}>
-          <ellipse cx="20" cy="8" rx="5.5" ry="10" fill="white" stroke="#c7d2fe" strokeWidth=".5" opacity=".85" />
-          <ellipse cx="20" cy="9" rx="3" ry="6" fill="#eef0ff" opacity=".5" />
-        </g>
-      ))}
-      {[0, 60, 120, 180, 240, 300].map((angle, i) => (
-        <circle
-          key={`s${i}`}
-          cx={20 + 5.5 * Math.cos((angle * Math.PI) / 180)}
-          cy={20 + 5.5 * Math.sin((angle * Math.PI) / 180)}
-          r=".8"
-          fill="#c7d2fe"
+        <line
+          key={`v${i}`}
+          x1="20"
+          y1="20"
+          x2={20 + 17 * Math.cos(((angle - 90) * Math.PI) / 180)}
+          y2={20 + 17 * Math.sin(((angle - 90) * Math.PI) / 180)}
+          stroke="#4848d0"
+          strokeWidth=".4"
+          opacity=".5"
         />
       ))}
+      {/* Inner glow */}
+      <circle cx="20" cy="20" r="7" fill="url(#mf-center)" />
+      {/* Center pistil */}
+      <circle cx="20" cy="20" r="2.2" fill="#e8f0d0" />
+      <circle cx="20" cy="20" r="1" fill="#c0d8a0" />
     </svg>
   );
 }
