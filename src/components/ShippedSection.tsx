@@ -10,6 +10,7 @@ const items = [
     stakes: "Designing for accuracy at scale \u2014 where a workflow failure has downstream patient consequences.",
     impact: "50+ laboratories \u00b7 Thousands of patient decisions weekly",
     outcomes: ["-15% turnaround time", "-23% errors", "+50% efficiency"],
+    caseStudy: "/work/manual-review",
     built: "Stateful interruption-and-resume task model, new IA for context-preserving workflows, A/B testing platform (Claude Code), design system components across lab ops products.",
     chain: [
       { label: "Workflow shadowing" }, { label: "Ethnography" },
@@ -111,6 +112,9 @@ export default function ShippedSection() {
               {item.aside && <div className="aside">{item.aside}</div>}
               {item.link && (
                 <p><a href={item.link.href} target="_blank" rel="noopener noreferrer">{item.link.text}</a></p>
+              )}
+              {item.caseStudy && (
+                <p><a href={item.caseStudy} className="cs-link">Read full case study &rarr;</a></p>
               )}
             </div>
           </div>

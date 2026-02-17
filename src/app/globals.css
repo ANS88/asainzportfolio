@@ -309,6 +309,264 @@ a:hover { opacity: .85; }
 }
 .featured-links a:hover { border-bottom-color: var(--accent); }
 
+/* ═══ CASE STUDY TEMPLATE ═══ */
+.case-study { padding-top: 6rem; }
+
+/* Hook */
+.cs-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin-bottom: .75rem;
+}
+.cs-stakes {
+  font-size: 1.05rem;
+  color: var(--ink2);
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 1.25rem;
+}
+.cs-meta {
+  font-family: var(--mono);
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ink3);
+  margin-bottom: 1.5rem;
+}
+.cs-meta-dot { margin: 0 .4rem; color: var(--accent-soft); }
+.cs-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.cs-metric {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  font-size: .88rem;
+  color: var(--ink2);
+}
+.cs-metric-check {
+  color: var(--accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Prose blocks */
+.cs-prose {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.cs-prose > .aos { width: 100%; }
+.cs-prose p {
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--ink2);
+}
+.cs-block h3 {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink3);
+  margin-bottom: .4rem;
+}
+.cs-block p {
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--ink2);
+}
+
+/* Methods list */
+.cs-method-list {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.cs-method-item {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+.cs-method-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: .45rem;
+}
+
+/* Callouts */
+.cs-callout {
+  padding: 1.25rem 1.5rem;
+  background: var(--warm);
+  border-left: 3px solid var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+}
+.cs-callout h4 {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent);
+  margin-bottom: .4rem;
+}
+.cs-callout p {
+  font-size: .88rem;
+  line-height: 1.65;
+  color: var(--ink2);
+}
+.cs-callout-accent {
+  background: var(--cream);
+  border-left-color: var(--accent);
+}
+.cs-callout-accent p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .95rem;
+  color: var(--ink);
+}
+
+/* Findings */
+.cs-findings {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  max-width: 640px;
+}
+.cs-finding {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color var(--transition-fast);
+}
+.cs-finding:hover { border-color: var(--accent-soft); }
+.cs-finding-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--border);
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: .15rem;
+}
+.cs-finding h3 {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: .25rem;
+}
+.cs-finding p {
+  font-size: .84rem;
+  line-height: 1.6;
+  color: var(--ink3);
+}
+
+/* Design decisions */
+.cs-decisions {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.cs-decision {
+  display: flex;
+  gap: .5rem;
+  align-items: baseline;
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+.cs-decision-num {
+  color: var(--accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.cs-decision-sep { color: var(--ink3); }
+
+/* Personas */
+.cs-personas {
+  padding-top: .5rem;
+}
+.cs-personas h4 {
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink3);
+  margin-bottom: .5rem;
+}
+.cs-persona {
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--ink2);
+  margin-bottom: .2rem;
+}
+
+/* Impact grid */
+.cs-impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 640px;
+}
+.cs-impact-col h3 {
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink3);
+  margin-bottom: .6rem;
+}
+.cs-impact-item {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  font-size: .86rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  margin-bottom: .25rem;
+}
+
+/* Footer */
+.cs-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0 3rem;
+}
+.cs-footer-label {
+  font-family: var(--mono);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ink3);
+  margin-bottom: .3rem;
+}
+.cs-footer-item {
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--ink2);
+}
+
+@media (max-width: 640px) {
+  .cs-impact-grid { grid-template-columns: 1fr; }
+  .cs-footer { grid-template-columns: 1fr; gap: 1rem; }
+}
+
 /* ═══ THINKING PAGE ═══ */
 .essay-body {
   max-width: 640px;
@@ -601,6 +859,17 @@ section:hover .label::after { transform: scaleX(1); }
   background: rgba(9,9,232,.04);
   border-radius: 0 4px 4px 0;
 }
+.cs-link {
+  font-family: var(--mono);
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+.cs-link:hover { border-bottom-color: var(--accent); }
 .toggle-hint { font-family: var(--mono); font-size: .6rem; color: var(--ink3); text-align: right; white-space: nowrap; transition: color var(--transition-fast); }
 .shipped-item:hover .toggle-hint { color: var(--accent); }
 .toggle-hint::after { content: ' +'; }
