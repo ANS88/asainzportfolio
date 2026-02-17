@@ -107,14 +107,14 @@ export default function MapSection() {
               <circle
                 r={active === i ? 10 : 6}
                 fill="none"
-                stroke="#2020a0"
+                stroke="#0909e8"
                 strokeWidth={0.5}
                 opacity={active === i ? 0.4 : 0.15}
                 style={{ transition: "all 0.3s ease" }}
               />
               <circle
                 r={active === i ? 5 : 3.5}
-                fill={loc.tags.includes("Born") ? "#2020a0" : "#78716c"}
+                fill={loc.tags.includes("Born") ? "#0909e8" : "#78716c"}
                 stroke="#faf9f6"
                 strokeWidth={1}
                 style={{ transition: "all 0.3s ease", cursor: "pointer" }}

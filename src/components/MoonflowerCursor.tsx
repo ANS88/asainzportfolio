@@ -46,7 +46,7 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
         </radialGradient>
       </defs>
       {/* Symmetric 5-petal bloom */}
-      <path d={CURSOR_PATH} fill={`url(#${idPrefix}-grad)`} stroke="#2020a0" strokeWidth=".3" />
+      <path d={CURSOR_PATH} fill={`url(#${idPrefix}-grad)`} stroke="#0909e8" strokeWidth=".3" />
       {/* Vein lines between petals */}
       {[0, 72, 144, 216, 288].map((angle, i) => (
         <line
@@ -55,7 +55,7 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
           y1="20"
           x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
           y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
-          stroke="#4848d0"
+          stroke="#3838e0"
           strokeWidth=".4"
           opacity=".45"
         />
