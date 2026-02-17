@@ -112,11 +112,11 @@ export default function InterestsMapSection() {
               >
                 {/* Pulse ring on expand */}
                 {isExpanded && (
-                  <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#4b49f7" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
+                  <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#2020a0" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
                 )}
-                <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#4b49f7" : "#eef0ff"} stroke="#4b49f7" strokeWidth="2" className="node-circle" />
-                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
-                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#2020a0" : "#eeeef8"} stroke="#2020a0" strokeWidth="2" className="node-circle" />
+                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#2020a0"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#2020a0"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
                 {/* Description on expand */}
                 {isExpanded && (
                   <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
@@ -132,9 +132,9 @@ export default function InterestsMapSection() {
 
           {/* Center node */}
           <g className="center-node" style={{ transformOrigin: "400px 260px" }}>
-            <circle cx="400" cy="260" r="56" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
+            <circle cx="400" cy="260" r="56" fill="#2020a0" stroke="#181880" strokeWidth="2.5" />
             <text x="400" y="253" textAnchor="middle" fill="white" fontSize="16" fontWeight="400" fontFamily="Inter, sans-serif">Adriana</text>
-            <text x="400" y="273" textAnchor="middle" fill="#c7d2fe" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
+            <text x="400" y="273" textAnchor="middle" fill="#b0b0d8" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
           </g>
         </svg>
 
@@ -155,7 +155,7 @@ export default function InterestsMapSection() {
       <div className="social-grid">
         <AnimateOnScroll animation="fade-up">
         <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#0a66c2" }}>in</div>
+          <div className="sc-icon" style={{ background: "#2020a0" }}>in</div>
           <div className="sc-body">
             <div className="sc-name">LinkedIn</div>
             <div className="sc-handle">@adrianans</div>
@@ -165,7 +165,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#4b49f7" }}>✎</div>
+          <div className="sc-icon" style={{ background: "#2020a0" }}>✎</div>
           <div className="sc-body">
             <div className="sc-name">Substack</div>
             <div className="sc-handle">Women&apos;s Health, Computed</div>
@@ -175,7 +175,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#4285f4" }}>G</div>
+          <div className="sc-icon" style={{ background: "#2020a0" }}>G</div>
           <div className="sc-body">
             <div className="sc-name">Google Scholar</div>
             <div className="sc-handle">6 papers &middot; 1 patent</div>

@@ -21,23 +21,35 @@ const HERO_FLOWER_PATH = petalPath(20, 20);
 
 export default function Hero() {
   const [picking, setPicking] = useState(false);
+  const [returning, setReturning] = useState(false);
   const [picked, setPicked] = useState(false);
 
-  const handlePick = () => {
-    if (picked || picking) return;
-    setPicking(true);
-    // Vibrate for 600ms, then complete the pick
-    setTimeout(() => {
-      setPicking(false);
-      setPicked(true);
-      window.dispatchEvent(new CustomEvent("flower-picked"));
-    }, 600);
+  const handleClick = () => {
+    if (picking || returning) return;
+
+    if (!picked) {
+      // Pick the flower
+      setPicking(true);
+      setTimeout(() => {
+        setPicking(false);
+        setPicked(true);
+        window.dispatchEvent(new CustomEvent("flower-picked"));
+      }, 600);
+    } else {
+      // Return the flower — vibrate + blue waves
+      setReturning(true);
+      setTimeout(() => {
+        setReturning(false);
+        setPicked(false);
+        window.dispatchEvent(new CustomEvent("flower-returned"));
+      }, 800);
+    }
   };
 
   return (
     <div className="hero">
       {/* Hand-drawn arrow + label */}
-      <div className={`pick-flower-hint${picked ? " hidden" : ""}`}>
+      <div className={`pick-flower-hint${picked || returning ? " hidden" : ""}`}>
         <span className="pick-flower-label">pick a moonflower</span>
         {/* Hand-drawn dashed line with arrowhead at the end */}
         <svg className="pick-flower-arrow" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,13 +76,13 @@ export default function Hero() {
 
       {/* Pickable moonflower */}
       <div
-        className={`hero-moonflower${picking ? " picking" : ""}${picked ? " picked" : ""}`}
+        className={`hero-moonflower${picking ? " picking" : ""}${returning ? " returning" : ""}${picked && !returning ? " picked" : ""}`}
         role="button"
         tabIndex={0}
-        aria-label="Pick a moonflower to use as cursor"
-        onClick={handlePick}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handlePick(); }}
-        style={{ cursor: picked ? "default" : "pointer" }}
+        aria-label={picked ? "Return the moonflower" : "Pick a moonflower to use as cursor"}
+        onClick={handleClick}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleClick(); }}
+        style={{ cursor: "pointer" }}
       >
         <svg viewBox="0 0 40 40" width="120" height="120" className="moonflower-spin">
           <defs>
