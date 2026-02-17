@@ -3,17 +3,26 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const links = [
+  { href: "/work", label: "Work" },
+  { href: "/playground", label: "Playground" },
+  { href: "/about", label: "About" },
+];
+
 export default function TopNav() {
   const pathname = usePathname();
 
-  // Only show on homepage
-  if (pathname !== "/") return null;
-
   return (
     <nav className="side-nav">
-      <Link href="/work">Work</Link>
-      <Link href="/playground">Playground</Link>
-      <Link href="/about">About</Link>
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={pathname === link.href ? "active" : ""}
+        >
+          {link.label}
+        </Link>
+      ))}
     </nav>
   );
 }
