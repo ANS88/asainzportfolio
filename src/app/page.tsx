@@ -6,6 +6,7 @@ import DreamsSection from "@/components/DreamsSection";
 import FavoriteReads from "@/components/FavoriteReads";
 import SiteNav from "@/components/SiteNav";
 import ContactBlock from "@/components/ContactBlock";
+import LatestThinking from "@/components/LatestThinking";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <Hero />
         <hr className="section-line" />
         <SiteNav />
+        <hr className="section-line" />
+        <LatestThinking />
         <hr className="section-line" />
         <InterestsMapSection />
         <hr className="section-line" />
