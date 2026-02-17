@@ -540,10 +540,38 @@ section:hover .label::after { transform: scaleX(1); }
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  overflow: visible;
+  overflow: hidden;
   transition: border-color var(--transition-medium);
+  position: relative;
 }
 .map-wrap:hover { border-color: var(--accent-soft); }
+
+/* Smooth viewBox zoom via CSS transition on the SVG */
+.interests-map-svg {
+  transition: viewBox .5s ease; /* viewBox can't transition natively, use a wrapper approach */
+}
+
+/* Zoom out button */
+.map-zoom-out {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  font-family: var(--mono);
+  font-size: .65rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: white;
+  border: 1.5px solid var(--accent-soft);
+  border-radius: 6px;
+  padding: .3rem .7rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 2;
+}
+.map-zoom-out:hover {
+  background: var(--cream);
+  border-color: var(--accent);
+}
 
 /* Interactive nodes */
 .primary-node { cursor: pointer; }
@@ -552,7 +580,7 @@ section:hover .label::after { transform: scaleX(1); }
 }
 .primary-node:hover .node-circle {
   filter: drop-shadow(0 2px 14px rgba(75,73,247,.35));
-  r: 40;
+  r: 48;
 }
 .primary-node.expanded .node-circle {
   filter: drop-shadow(0 4px 20px rgba(75,73,247,.4));
@@ -595,8 +623,8 @@ section:hover .label::after { transform: scaleX(1); }
   animation: pulseRing 2s ease-in-out infinite;
 }
 @keyframes pulseRing {
-  0%, 100% { r: 56; opacity: .3; }
-  50% { r: 62; opacity: .1; }
+  0%, 100% { r: 64; opacity: .3; }
+  50% { r: 72; opacity: .1; }
 }
 
 /* Node tooltip */
@@ -604,20 +632,20 @@ section:hover .label::after { transform: scaleX(1); }
   background: white;
   border: 1.5px solid var(--border);
   border-radius: 8px;
-  padding: .5rem .65rem;
+  padding: .6rem .75rem;
   box-shadow: var(--shadow-md);
   animation: tooltipIn .25s ease;
 }
 .node-tooltip p {
   font-family: var(--sans);
-  font-size: 7.5px;
-  line-height: 1.45;
+  font-size: 9px;
+  line-height: 1.5;
   color: var(--ink2);
-  margin-bottom: .3rem;
+  margin-bottom: .35rem;
 }
 .node-tooltip a {
   font-family: var(--mono);
-  font-size: 7px;
+  font-size: 8.5px;
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;

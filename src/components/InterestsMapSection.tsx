@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 interface NodeInfo {
@@ -35,6 +35,9 @@ const SATELLITE_NODES = [
   { cx: 645, cy: 495, label: "Music" },
 ];
 
+const FULL_VIEWBOX = "0 0 800 520";
+const ZOOM_SIZE = 280; // viewport size when zoomed
+
 export default function InterestsMapSection() {
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -42,6 +45,18 @@ export default function InterestsMapSection() {
     e.preventDefault();
     setExpanded(expanded === id ? null : id);
   };
+
+  // Compute viewBox: zoom into selected node or show full map
+  const viewBox = useMemo(() => {
+    if (!expanded) return FULL_VIEWBOX;
+    const node = PRIMARY_NODES.find((n) => n.id === expanded);
+    if (!node) return FULL_VIEWBOX;
+    const half = ZOOM_SIZE / 2;
+    // Clamp so we don't go outside the SVG bounds
+    const x = Math.max(0, Math.min(800 - ZOOM_SIZE, node.cx - half));
+    const y = Math.max(0, Math.min(520 - ZOOM_SIZE, node.cy - half));
+    return `${x} ${y} ${ZOOM_SIZE} ${ZOOM_SIZE}`;
+  }, [expanded]);
 
   return (
     <section>
@@ -51,7 +66,11 @@ export default function InterestsMapSection() {
       </AnimateOnScroll>
       <AnimateOnScroll animation="scale-in">
       <div className="map-wrap">
-        <svg viewBox="0 0 800 520" style={{ width: "100%", height: "auto", display: "block" }}>
+        <svg
+          viewBox={viewBox}
+          className="interests-map-svg"
+          style={{ width: "100%", height: "auto", display: "block" }}
+        >
           {/* Connection lines */}
           <g stroke="#e7e5e4" strokeWidth="1.5" fill="none">
             <line x1="400" y1="260" x2="200" y2="130" /><line x1="400" y1="260" x2="600" y2="130" />
@@ -75,15 +94,15 @@ export default function InterestsMapSection() {
           {/* Satellite nodes */}
           {SATELLITE_NODES.map((s) => (
             <g key={s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
-              <circle cx={s.cx} cy={s.cy} r="16" fill="white" stroke="#e7e5e4" />
-              <text x={s.cx} y={s.cy + 3} textAnchor="middle" fill="#78716c" fontSize="7.5" fontFamily="Inter, sans-serif">{s.label}</text>
+              <circle cx={s.cx} cy={s.cy} r="20" fill="white" stroke="#e7e5e4" />
+              <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
             </g>
           ))}
 
           {/* Primary nodes */}
           {PRIMARY_NODES.map((node) => {
             const isExpanded = expanded === node.id;
-            const r = isExpanded ? 48 : 34;
+            const r = isExpanded ? 54 : 42;
             return (
               <g
                 key={node.id}
@@ -93,14 +112,14 @@ export default function InterestsMapSection() {
               >
                 {/* Pulse ring on expand */}
                 {isExpanded && (
-                  <circle cx={node.cx} cy={node.cy} r={r + 8} fill="none" stroke="#4b49f7" strokeWidth="1" opacity=".3" className="pulse-ring" />
+                  <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#4b49f7" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
                 )}
                 <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#4b49f7" : "#eef0ff"} stroke="#4b49f7" strokeWidth="2" className="node-circle" />
-                <text x={node.cx} y={node.cy - 7} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[0]}</text>
-                <text x={node.cx} y={node.cy + 6} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="9.5" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[1]}</text>
                 {/* Description on expand */}
                 {isExpanded && (
-                  <foreignObject x={node.cx - 85} y={node.cy + r + 6} width="170" height="80">
+                  <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
                     <div className="node-tooltip">
                       <p>{node.desc}</p>
                       <a href={node.href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Explore →</a>
@@ -113,11 +132,22 @@ export default function InterestsMapSection() {
 
           {/* Center node */}
           <g className="center-node" style={{ transformOrigin: "400px 260px" }}>
-            <circle cx="400" cy="260" r="48" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
-            <text x="400" y="253" textAnchor="middle" fill="white" fontSize="12" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
-            <text x="400" y="270" textAnchor="middle" fill="#c7d2fe" fontSize="8.5" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
+            <circle cx="400" cy="260" r="56" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
+            <text x="400" y="253" textAnchor="middle" fill="white" fontSize="16" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
+            <text x="400" y="273" textAnchor="middle" fill="#c7d2fe" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
           </g>
         </svg>
+
+        {/* Zoom out button when zoomed in */}
+        {expanded && (
+          <button
+            className="map-zoom-out"
+            onClick={() => setExpanded(null)}
+            aria-label="Zoom out to full map"
+          >
+            Zoom out
+          </button>
+        )}
       </div>
       </AnimateOnScroll>
 
