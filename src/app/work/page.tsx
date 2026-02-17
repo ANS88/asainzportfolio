@@ -1,7 +1,5 @@
 import BuildingSection from "@/components/BuildingSection";
 import ShippedSection from "@/components/ShippedSection";
-import BeliefsSection from "@/components/BeliefsSection";
-import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -45,10 +43,6 @@ export default function Work() {
         <BuildingSection />
         <hr className="section-line" />
         <ShippedSection />
-        <hr className="section-line" />
-        <BeliefsSection />
-        <hr className="section-line" />
-        <PublicationsSection />
       </div>
       <ContactBlock />
     </>
