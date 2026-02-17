@@ -102,7 +102,7 @@ export default function Hero() {
           <path
             d={HERO_FLOWER_PATH}
             fill="url(#hmf-grad)"
-            stroke="#2020a0"
+            stroke="#0909e8"
             strokeWidth=".3"
           />
           {[0, 72, 144, 216, 288].map((angle, i) => (
@@ -112,7 +112,7 @@ export default function Hero() {
               y1="20"
               x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
               y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
-              stroke="#4848d0"
+              stroke="#3838e0"
               strokeWidth=".4"
               opacity=".45"
             />
