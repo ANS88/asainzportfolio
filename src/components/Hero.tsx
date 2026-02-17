@@ -138,13 +138,9 @@ export default function Hero() {
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={420}>
         <div className="metrics-bar">
-          <span>10+ years clinical UX</span>
+          <span>20+ labs served</span>
           <span className="metrics-dot">&middot;</span>
-          <span>40 research participants</span>
-          <span className="metrics-dot">&middot;</span>
-          <span>127 apps evaluated</span>
-          <span className="metrics-dot">&middot;</span>
-          <span>50+ labs served</span>
+          <span>12 products shipped 0-to-1</span>
           <span className="metrics-dot">&middot;</span>
           <span>6 publications</span>
           <span className="metrics-dot">&middot;</span>
