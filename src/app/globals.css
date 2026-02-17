@@ -558,7 +558,7 @@ section:hover .label::after { transform: scaleX(1); }
   right: .75rem;
   font-family: var(--mono);
   font-size: .65rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--accent);
   background: white;
   border: 1.5px solid var(--accent-soft);
@@ -648,7 +648,7 @@ section:hover .label::after { transform: scaleX(1); }
   font-size: 8.5px;
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 .node-tooltip a:hover {
   text-decoration: underline;
