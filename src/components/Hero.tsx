@@ -32,24 +32,35 @@ export default function Hero() {
     <div className="hero">
       {/* Hand-drawn arrow + label */}
       <div className={`pick-flower-hint${picked ? " hidden" : ""}`}>
-        <span className="pick-flower-label">pick a flower</span>
-        {/* Hand-drawn arrow pointing right toward the flower */}
-        <svg className="pick-flower-arrow" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span className="pick-flower-label">pick a moonflower</span>
+        {/* Hand-drawn dashed line with centered arrowhead */}
+        <svg className="pick-flower-arrow" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Left half of dashed line */}
           <path
-            d="M2 18 C8 16, 14 13, 20 14 C26 15, 30 17, 36 15 C38 14.5, 40 13, 42 12"
+            d="M2 18 C6 16, 10 14, 16 14.5"
             stroke="var(--accent)"
             strokeWidth="1.8"
             strokeLinecap="round"
             fill="none"
             strokeDasharray="2 3"
           />
+          {/* Arrowhead in center */}
           <path
-            d="M38 8 L43 12 L37 16"
+            d="M18 10 L24 15 L18 20"
             stroke="var(--accent)"
             strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
+          />
+          {/* Right half of dashed line */}
+          <path
+            d="M26 15.5 C32 16, 38 17, 44 15 C48 14, 51 12.5, 54 11"
+            stroke="var(--accent)"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            fill="none"
+            strokeDasharray="2 3"
           />
         </svg>
       </div>
@@ -59,7 +70,7 @@ export default function Hero() {
         className="hero-moonflower"
         role="button"
         tabIndex={0}
-        aria-label="Pick a moonflower"
+        aria-label="Pick a moonflower to use as cursor"
         onClick={handlePick}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handlePick(); }}
         style={{ cursor: picked ? "default" : "pointer", opacity: picked ? 0.15 : 0.35, transition: "opacity .4s ease" }}
