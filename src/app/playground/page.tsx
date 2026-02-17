@@ -9,7 +9,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 const experiments = [
   {
     title: "Generative Art Series",
-    description: "Exploring algorithmic art through code — creating visual compositions with mathematical patterns and randomness.",
+    description: "Exploring algorithmic art through code \u2014 creating visual compositions with mathematical patterns and randomness.",
     tags: ["Creative Coding", "Canvas API"],
   },
   {
@@ -46,10 +46,43 @@ export default function Playground() {
         <div className="page-header">
           <AnimateOnScroll animation="fade-in">
             <div className="label">Experiments</div>
-            <h1 className="page-title">Playground</h1>
-            <p className="page-desc">Creative experiments, side projects, and explorations where curiosity meets code.</p>
+            <h1 className="page-title">AI + Design R&amp;D</h1>
+            <p className="page-desc">Experiments and tools built to understand things I couldn&apos;t learn by reading about them.</p>
           </AnimateOnScroll>
         </div>
+
+        <hr className="section-line" />
+
+        {/* AI Animation Library - featured */}
+        <section>
+          <AnimateOnScroll>
+            <div className="label">Featured</div>
+            <div className="section-title">AI Animation Library</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <div className="featured-card">
+              <p>Making AI concepts legible to designers who need to work with them, not just around them. Interactive explanations of tokenization, embeddings, attention, and RAG.</p>
+            </div>
+          </AnimateOnScroll>
+        </section>
+
+        <hr className="section-line" />
+
+        {/* Femtech Evaluation Framework */}
+        <section>
+          <AnimateOnScroll>
+            <div className="label">Framework</div>
+            <div className="section-title">Femtech Evaluation Framework</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <div className="featured-card">
+              <p>Six design principles distilled from evaluating 127 menopause apps using the MARS framework. A practical shortcut for product teams designing in women&apos;s health.</p>
+              <div className="featured-links">
+                <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">Read on Substack &rarr;</a>
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </section>
 
         <hr className="section-line" />
 

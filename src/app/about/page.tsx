@@ -1,12 +1,12 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
 
-const principles = [
-  { title: "Human-centered", description: "Start with lived experience, not technical constraints" },
-  { title: "Evidence-driven", description: "Qualitative insight meets quantitative validation" },
-  { title: "Bias toward action", description: "Research that doesn\u2019t ship is just documentation" },
-  { title: "Rigorous iteration", description: "Test assumptions early, adapt fast" },
-  { title: "Strategic clarity", description: "Connect granular decisions to broader impact" },
+const beliefs = [
+  "Healthcare technology fails people in predictable ways. I\u2019ve spent 10 years studying those patterns.",
+  "AI should augment clinical judgment, not simulate it. The interaction design problem at the center of AI health right now is the handoff between algorithmic confidence and human decision-making. That handoff is almost always designed poorly.",
+  "Compliance and good UX are not opposites. Regulated environments constrain the solution space. They don\u2019t constrain the quality of thinking.",
+  "The best health interfaces disappear. The worst ones cause harm. The difference is almost always a research decision that happened \u2014 or didn\u2019t \u2014 before the first wireframe.",
 ];
 
 export default function About() {
@@ -17,7 +17,6 @@ export default function About() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Bio</div>
             <h1 className="page-title">About <em>Me</em></h1>
-            <p className="page-desc">My path into HCI, guiding principles, and what drives me to build for health.</p>
           </AnimateOnScroll>
         </div>
 
@@ -27,12 +26,7 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-prose">
               <p>
-                I design technology that meets people where they are—in their
-                complexity, not our assumptions. My path into HCI began with a
-                simple question: why do digital tools so often fail the people who
-                need them most? A decade of research taught me the answer
-                isn&apos;t about features or flows—it&apos;s about whose
-                experiences we center when we build.
+                I&apos;m a researcher who ships products and a designer who publishes research. In healthcare, that combination is rare. It&apos;s also necessary.
               </p>
               <p>
                 At Natera, I lead UX for lab operations and enterprise tools,
@@ -43,16 +37,9 @@ export default function About() {
                 Fellow at AthenaDAO, shaping research priorities and funding
                 strategy that actually moves the field forward. Through my
                 Substack &ldquo;Women&apos;s Health, Computed,&rdquo; I translate
-                academic research into accessible analysis—from evaluating
-                perimenopause wearables to mapping the femtech landscape—because
+                academic research into accessible analysis&mdash;from evaluating
+                perimenopause wearables to mapping the femtech landscape&mdash;because
                 understanding shouldn&apos;t require a PhD.
-              </p>
-              <p>
-                My approach is rapid and rigorous. I don&apos;t wait for perfect
-                data when directional insight can shape better decisions today. I
-                blend qualitative depth with quantitative validation, thriving in
-                ambiguity where 0-to-1 problems demand both systems thinking and
-                attention to the details that define experience.
               </p>
             </div>
           </AnimateOnScroll>
@@ -63,16 +50,12 @@ export default function About() {
         <section>
           <AnimateOnScroll>
             <div className="label">Philosophy</div>
-            <div className="section-title">Guiding principles</div>
+            <div className="section-title">What I believe</div>
           </AnimateOnScroll>
-          <div className="beliefs-grid">
-            {principles.map((p, i) => (
+          <div className="beliefs-list">
+            {beliefs.map((b, i) => (
               <AnimateOnScroll key={i} animation="fade-up">
-                <div className="belief">
-                  <span>
-                    <strong>{p.title}</strong> — {p.description}
-                  </span>
-                </div>
+                <p className="belief-paragraph">{b}</p>
               </AnimateOnScroll>
             ))}
           </div>
@@ -80,15 +63,28 @@ export default function About() {
 
         <hr className="section-line" />
 
+        <PublicationsSection />
+
+        <hr className="section-line" />
+
         <section>
+          <AnimateOnScroll>
+            <div className="label">Next</div>
+            <div className="section-title">Currently looking for</div>
+          </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up">
-            <div className="about-contact">
+            <div className="about-prose">
               <p>
-                Feel free to get in touch at{" "}
-                <a href="mailto:sainz.nag@gmail.com">sainz.nag@gmail.com</a>{" "}
-                or find me on{" "}
-                <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                Hard problems at the intersection of health and AI &mdash; where design decisions are consequential, users are under pressure, and getting it wrong has real costs.
               </p>
+              <p className="about-available">
+                Available for: keynotes on AI and health UX, advisory roles in femtech and clinical AI, research consulting.
+              </p>
+            </div>
+            <div className="about-contact-links">
+              <a href="mailto:sainz.nag@gmail.com">Email</a>
+              <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://calendar.app.google" target="_blank" rel="noopener noreferrer">Calendar</a>
             </div>
           </AnimateOnScroll>
         </section>
