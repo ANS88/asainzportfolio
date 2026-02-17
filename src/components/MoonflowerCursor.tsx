@@ -135,6 +135,14 @@ export default function MoonflowerCursor() {
       document.body.classList.add("flower-active");
     };
 
+    // Listen for flower-returned event from Hero
+    const onFlowerReturned = () => {
+      activeRef.current = false;
+      setActive(false);
+      setFlowers([]);
+      document.body.classList.remove("flower-active");
+    };
+
     // Single click to drop flowers (only when active)
     const onClick = (e: MouseEvent) => {
       dropFlower(e);
@@ -143,12 +151,14 @@ export default function MoonflowerCursor() {
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("click", onClick);
     window.addEventListener("flower-picked", onFlowerPicked);
+    window.addEventListener("flower-returned", onFlowerReturned);
     requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("click", onClick);
       window.removeEventListener("flower-picked", onFlowerPicked);
+      window.removeEventListener("flower-returned", onFlowerReturned);
       document.body.classList.remove("flower-active");
     };
   }, [dropFlower]);
