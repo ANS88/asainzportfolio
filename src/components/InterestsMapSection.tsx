@@ -205,7 +205,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
       </div>
 
-      <div style={{ marginTop: "1rem", fontFamily: "var(--hand)", fontSize: "1.05rem", color: "var(--accent)", textAlign: "center" as const }}>
+      <div style={{ marginTop: "1rem", fontFamily: "var(--sans)", fontSize: "1.05rem", color: "var(--accent)", textAlign: "center" as const }}>
         Click any node to explore. The dashed lines are where the interesting work happens.
       </div>
     </section>
