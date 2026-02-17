@@ -129,7 +129,7 @@ export default function Hero() {
         <div className="status"><span className="status-dot"></span> Currently building</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={200}>
-        <h1>Most health products are designed for how people should behave. I design for <em>how they actually do.</em></h1>
+        <h1>I research what breaks in healthcare, then I design <em>what fixes it.</em></h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={350}>
         <p className="hero-sub">
