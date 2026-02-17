@@ -66,6 +66,7 @@ a:hover { opacity: .85; }
   position: relative;
 }
 .side-nav a:hover { color: var(--accent); opacity: 1; }
+.side-nav a.active { color: var(--accent); font-weight: 600; }
 .side-nav a::after {
   content: '';
   position: absolute;
@@ -78,7 +79,7 @@ a:hover { opacity: .85; }
   transform-origin: left;
   transition: transform var(--transition-medium);
 }
-.side-nav a:hover::after { transform: scaleX(1); }
+.side-nav a:hover::after, .side-nav a.active::after { transform: scaleX(1); }
 
 /* ═══ MOONFLOWER CURSOR ═══ */
 .moonflower-cursor {
