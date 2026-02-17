@@ -129,7 +129,7 @@ export default function Hero() {
         <div className="status"><span className="status-dot"></span> Currently building</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={200}>
-        <h1>Most health products are designed for how people should behave. I design for <em>how they actually do.</em></h1>
+        <h1>I research what breaks in healthcare, then I design <em>what fixes it.</em></h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={350}>
         <p className="hero-sub">
@@ -138,13 +138,9 @@ export default function Hero() {
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={420}>
         <div className="metrics-bar">
-          <span>10+ years clinical UX</span>
+          <span>20+ labs served</span>
           <span className="metrics-dot">&middot;</span>
-          <span>40 research participants</span>
-          <span className="metrics-dot">&middot;</span>
-          <span>127 apps evaluated</span>
-          <span className="metrics-dot">&middot;</span>
-          <span>50+ labs served</span>
+          <span>12 products shipped 0-to-1</span>
           <span className="metrics-dot">&middot;</span>
           <span>6 publications</span>
           <span className="metrics-dot">&middot;</span>
