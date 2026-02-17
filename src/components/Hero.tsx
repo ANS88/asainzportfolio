@@ -33,34 +33,25 @@ export default function Hero() {
       {/* Hand-drawn arrow + label */}
       <div className={`pick-flower-hint${picked ? " hidden" : ""}`}>
         <span className="pick-flower-label">pick a moonflower</span>
-        {/* Hand-drawn dashed line with centered arrowhead */}
+        {/* Hand-drawn dashed line with arrowhead at the end */}
         <svg className="pick-flower-arrow" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Left half of dashed line */}
+          {/* Dashed line */}
           <path
-            d="M2 18 C6 16, 10 14, 16 14.5"
+            d="M2 18 C8 16, 14 13, 22 14 C30 15, 36 17, 44 14"
             stroke="var(--accent)"
             strokeWidth="1.8"
             strokeLinecap="round"
             fill="none"
             strokeDasharray="2 3"
           />
-          {/* Arrowhead in center */}
+          {/* Arrowhead at end */}
           <path
-            d="M18 10 L24 15 L18 20"
+            d="M42 9 L48 14 L42 19"
             stroke="var(--accent)"
             strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-          />
-          {/* Right half of dashed line */}
-          <path
-            d="M26 15.5 C32 16, 38 17, 44 15 C48 14, 51 12.5, 54 11"
-            stroke="var(--accent)"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            fill="none"
-            strokeDasharray="2 3"
           />
         </svg>
       </div>
