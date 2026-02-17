@@ -129,15 +129,11 @@ export default function Hero() {
         <div className="status"><span className="status-dot"></span> Currently building</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={200}>
-        <h1>I build healthcare tools that work because <em>I studied the people using them first.</em></h1>
+        <h1>I research what breaks in healthcare, then I design <em>what fixes it.</em></h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={350}>
         <p className="hero-sub">
-          Designer, researcher, and builder with 10+ years in clinical and biotech environments. At{" "}
-          <span className="tip">Natera<span className="tiptext">Genetic testing &amp; biotech &middot; 50+ laboratories</span></span>,
-          I design workflows for genetic testing labs. Before that,{" "}
-          <span className="tip">Cincinnati Children&apos;s Hospital<span className="tiptext">Pediatric genomics, clinical decision support, NIH-funded</span></span>.
-          I don&apos;t hand off research to designers — I am the designer.
+          10 years designing healthcare tools that earn clinical trust and improve patient outcomes. PhD in HCI. Currently at Natera, building for 20+ genetic testing labs.
         </p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={500}>
