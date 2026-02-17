@@ -115,8 +115,8 @@ export default function InterestsMapSection() {
                   <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#4b49f7" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
                 )}
                 <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#4b49f7" : "#eef0ff"} stroke="#4b49f7" strokeWidth="2" className="node-circle" />
-                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[0]}</text>
-                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="600" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#4b49f7"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
                 {/* Description on expand */}
                 {isExpanded && (
                   <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
@@ -133,7 +133,7 @@ export default function InterestsMapSection() {
           {/* Center node */}
           <g className="center-node" style={{ transformOrigin: "400px 260px" }}>
             <circle cx="400" cy="260" r="56" fill="#4b49f7" stroke="#3730a3" strokeWidth="2.5" />
-            <text x="400" y="253" textAnchor="middle" fill="white" fontSize="16" fontWeight="600" fontFamily="Inter, sans-serif">Adriana</text>
+            <text x="400" y="253" textAnchor="middle" fill="white" fontSize="16" fontWeight="400" fontFamily="Inter, sans-serif">Adriana</text>
             <text x="400" y="273" textAnchor="middle" fill="#c7d2fe" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
           </g>
         </svg>
