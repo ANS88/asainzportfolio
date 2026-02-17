@@ -7,6 +7,8 @@ const items = [
   {
     title: "Lab workflow system",
     where: "Natera \u00b7 2022\u2013present \u00b7 50+ genetic testing laboratories",
+    stakes: "Designing for accuracy at scale \u2014 where a workflow failure has downstream patient consequences.",
+    impact: "50+ laboratories \u00b7 Thousands of patient decisions weekly",
     outcomes: ["-15% turnaround time", "-23% errors", "+50% efficiency"],
     built: "Stateful interruption-and-resume task model, new IA for context-preserving workflows, A/B testing platform (Claude Code), design system components across lab ops products.",
     chain: [
@@ -20,6 +22,8 @@ const items = [
   {
     title: "Patient portal",
     where: "Natera \u00b7 2023 \u00b7 First patient-facing product",
+    stakes: "Designing for accuracy at scale \u2014 where a workflow failure has downstream patient consequences.",
+    impact: "0\u21921 product \u00b7 -30% support calls",
     outcomes: ["0\u21921 product", "-30% support calls"],
     built: "Patient-controlled result delivery (not push \u2014 patients choose when to see genetic test results), educational context layers, complete interaction model and emotional pacing.",
     chain: [
@@ -32,6 +36,8 @@ const items = [
   {
     title: "Somaesthetic design framework",
     where: "PhD Dissertation \u00b7 UC \u00b7 2020\u20132025 \u00b7 40-person diary study",
+    stakes: "127 apps evaluated. 40 women studied. Here\u2019s what femtech gets wrong and what better looks like.",
+    impact: "127 apps evaluated \u00b7 40 research participants \u00b7 4 years",
     outcomes: ["Publishable framework", "DIS 2026"],
     built: "Design principles for health tools that respect embodied experience. Concrete patterns for accommodating ambiguity. Systematic review + MARS evaluation + 40-person diary studies \u2192 framework that changes how I build everything.",
     chain: [],
@@ -40,6 +46,8 @@ const items = [
   {
     title: "Genomic data platform (VIVA)",
     where: "Cincinnati Children\u2019s \u00b7 2019\u20132021",
+    stakes: "NIH-funded clinical decision support for pediatric genomics \u2014 designing for the 30 seconds a clinician has during a patient encounter.",
+    impact: "NIH-funded \u00b7 Pediatric genomics \u00b7 Clinical decision support",
     outcomes: ["Live product", "Dual-entry IA"],
     built: "Dual-entry IA (patient-centric for MDs, dataset-centric for bioinformaticians), pipeline selection interface, full intake flow, personas, style guide, UX packet.",
     chain: [],
@@ -49,6 +57,8 @@ const items = [
   {
     title: "Foster care health portal (IDENTITY)",
     where: "CCHMC + Hamilton County \u00b7 2019\u20132020",
+    stakes: "Cross-agency health data for foster children \u2014 where the portal reflected bureaucracy, not user tasks.",
+    impact: "Cross-agency IA \u00b7 County-wide deployment",
     outcomes: ["Cross-agency IA", "County-wide"],
     built: "Complete IA restructure \u2014 from agency org charts to child-needs navigation (health, legal, placement, education). New interface, 4 personas, card sort-validated structure.",
     chain: [],
@@ -75,6 +85,8 @@ export default function ShippedSection() {
           <div>
             <div className="shipped-title">{item.title}</div>
             <div className="shipped-where">{item.where}</div>
+            {item.stakes && <div className="shipped-stakes">{item.stakes}</div>}
+            {item.impact && <div className="shipped-impact">{item.impact}</div>}
             <div className="shipped-outcomes">
               {item.outcomes.map((o) => (
                 <span key={o} className="shipped-pill">{o}</span>

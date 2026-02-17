@@ -7,7 +7,15 @@ import MoonflowerCursor from "@/components/MoonflowerCursor";
 export const metadata: Metadata = {
   title: "Adriana Navarro Sainz",
   description:
-    "Designer, researcher, and builder. Healthcare UX leader with 10+ years in clinical and biotech environments.",
+    "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+  openGraph: {
+    description:
+      "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+  },
+  twitter: {
+    description:
+      "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+  },
 };
 
 export default function RootLayout({

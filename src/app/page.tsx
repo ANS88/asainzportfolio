@@ -6,7 +6,9 @@ import DreamsSection from "@/components/DreamsSection";
 import FavoriteReads from "@/components/FavoriteReads";
 import SiteNav from "@/components/SiteNav";
 import ContactBlock from "@/components/ContactBlock";
+import CurrentlyBuilding from "@/components/CurrentlyBuilding";
 import LatestThinking from "@/components/LatestThinking";
+import PublicationsSection from "@/components/PublicationsSection";
 
 export default function Home() {
   return (
@@ -14,9 +16,13 @@ export default function Home() {
       <div className="container">
         <Hero />
         <hr className="section-line" />
-        <SiteNav />
+        <CurrentlyBuilding />
         <hr className="section-line" />
         <LatestThinking />
+        <hr className="section-line" />
+        <PublicationsSection />
+        <hr className="section-line" />
+        <SiteNav />
         <hr className="section-line" />
         <InterestsMapSection />
         <hr className="section-line" />

@@ -4,19 +4,25 @@ const pages = [
   {
     title: "Work",
     href: "/work",
-    description: "Case studies, shipped products, and impact metrics from healthcare UX leadership.",
+    description: "Case studies from 10 years designing in clinical environments.",
     tag: "Portfolio",
   },
   {
     title: "Playground",
     href: "/playground",
-    description: "Creative experiments, side projects, and explorations where curiosity meets code.",
+    description: "Experiments and tools built to understand things I couldn\u2019t learn by reading about them.",
     tag: "Experiments",
+  },
+  {
+    title: "Thinking",
+    href: "/thinking",
+    description: "Working positions on healthcare design, AI health products, and femtech.",
+    tag: "Essays",
   },
   {
     title: "About",
     href: "/about",
-    description: "My path into HCI, guiding principles, and what drives me to build for health.",
+    description: "Researcher who ships products, designer who publishes research.",
     tag: "Bio",
   },
 ];

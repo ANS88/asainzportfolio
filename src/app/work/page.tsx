@@ -13,7 +13,7 @@ export default function Work() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Portfolio</div>
             <h1 className="page-title">Work</h1>
-            <p className="page-desc">Case studies, shipped products, and impact metrics from healthcare UX leadership.</p>
+            <p className="page-desc">Case studies from 10 years designing in clinical environments. Every project here involved real users, regulated systems, and decisions that affected patient outcomes.</p>
           </AnimateOnScroll>
         </div>
         <hr className="section-line" />
