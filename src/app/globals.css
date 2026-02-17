@@ -292,6 +292,21 @@ a:hover { opacity: .85; }
   right: -10px;
   opacity: .35;
   animation: fadeIn 1.5s ease forwards;
+  transition: opacity .4s ease;
+}
+.hero-moonflower.picking {
+  animation: flowerVibrate .1s ease-in-out infinite, fadeIn 1.5s ease forwards;
+  opacity: .6;
+}
+.hero-moonflower.picked {
+  opacity: .12;
+}
+@keyframes flowerVibrate {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-2px, 1px) rotate(-2deg); }
+  50% { transform: translate(2px, -1px) rotate(2deg); }
+  75% { transform: translate(-1px, -2px) rotate(-1deg); }
+  100% { transform: translate(1px, 2px) rotate(1deg); }
 }
 .hero-tag { font-family: var(--mono); font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin-bottom: 1.25rem; }
 .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5.5vw, 3.8rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }

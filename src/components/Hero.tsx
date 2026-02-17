@@ -20,12 +20,18 @@ function petalPath(cx: number, cy: number) {
 const HERO_FLOWER_PATH = petalPath(20, 20);
 
 export default function Hero() {
+  const [picking, setPicking] = useState(false);
   const [picked, setPicked] = useState(false);
 
   const handlePick = () => {
-    if (picked) return;
-    setPicked(true);
-    window.dispatchEvent(new CustomEvent("flower-picked"));
+    if (picked || picking) return;
+    setPicking(true);
+    // Vibrate for 600ms, then complete the pick
+    setTimeout(() => {
+      setPicking(false);
+      setPicked(true);
+      window.dispatchEvent(new CustomEvent("flower-picked"));
+    }, 600);
   };
 
   return (
@@ -58,13 +64,13 @@ export default function Hero() {
 
       {/* Pickable moonflower */}
       <div
-        className="hero-moonflower"
+        className={`hero-moonflower${picking ? " picking" : ""}${picked ? " picked" : ""}`}
         role="button"
         tabIndex={0}
         aria-label="Pick a moonflower to use as cursor"
         onClick={handlePick}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handlePick(); }}
-        style={{ cursor: picked ? "default" : "pointer", opacity: picked ? 0.15 : 0.35, transition: "opacity .4s ease" }}
+        style={{ cursor: picked ? "default" : "pointer" }}
       >
         <svg viewBox="0 0 40 40" width="120" height="120" className="moonflower-spin">
           <defs>
