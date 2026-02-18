@@ -5,7 +5,7 @@ export const nateraClinicalReview: CaseStudy = {
   title: "Manual Clinical Review Workflow Redesign",
   stakesLine:
     "When genetic test reports are delayed, treatment decisions are delayed. I redesigned the workflow that determines how fast 585,000 patients per year get their results.",
-  role: "Lead UX Researcher",
+  role: "Lead Designer & Researcher",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
@@ -14,7 +14,7 @@ export const nateraClinicalReview: CaseStudy = {
     { value: "50%", metric: "Reduction in turnaround time" },
     { value: "585K", metric: "Reports/year affected" },
     { value: "1", metric: "Tool replaced 4 legacy systems" },
-    { value: "Positive", metric: "Usability scores from users" },
+    { value: "88 SUS", metric: "Usability scores from users" },
   ],
 
   sections: [
@@ -25,7 +25,7 @@ export const nateraClinicalReview: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p><strong>The clinical problem:</strong> In 2024, Natera delivered 2.9 million genetic testing results. 20% (585,000 reports) required manual review by genetic counselors and lab directors before reaching patients. The existing workflow was fragmented across multiple tools, creating delays that directly affected patient care timelines.</p>",
+          data: "<p><strong>The clinical problem:</strong> In 2024, Natera processed a record 3,064,600 tests. 20% (585,000 reports) required manual review by genetic counselors and lab directors before reaching patients. The existing workflow was fragmented across multiple tools, creating delays that directly affected patient care timelines.</p>",
         },
         {
           type: "text",
@@ -213,7 +213,7 @@ export const nateraClinicalReview: CaseStudy = {
   ],
 
   myRole:
-    "Lead UX Researcher \u2014 discovery, synthesis, persona development, workflow mapping, usability testing",
+    "Lead Designer & Researcher \u2014 discovery, synthesis, persona development, workflow mapping, usability testing",
 
   tags: [
     "Healthcare UX",
