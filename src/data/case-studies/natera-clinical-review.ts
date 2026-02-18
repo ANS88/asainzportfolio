@@ -5,7 +5,7 @@ export const nateraClinicalReview: CaseStudy = {
   title: "Manual Clinical Review Workflow Redesign",
   stakesLine:
     "When genetic test reports are delayed, treatment decisions are delayed. I redesigned the workflow that determines how fast 585,000 patients per year get their results.",
-  role: "Lead UX Researcher",
+  role: "Lead Designer & Researcher",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
@@ -213,7 +213,7 @@ export const nateraClinicalReview: CaseStudy = {
   ],
 
   myRole:
-    "Lead UX Researcher \u2014 discovery, synthesis, persona development, workflow mapping, usability testing",
+    "Lead Designer & Researcher \u2014 discovery, synthesis, persona development, workflow mapping, usability testing",
 
   tags: [
     "Healthcare UX",
