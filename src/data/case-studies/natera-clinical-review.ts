@@ -25,7 +25,7 @@ export const nateraClinicalReview: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p><strong>The clinical problem:</strong> In 2024, Natera delivered 2.9 million genetic testing results. 20% (585,000 reports) required manual review by genetic counselors and lab directors before reaching patients. The existing workflow was fragmented across multiple tools, creating delays that directly affected patient care timelines.</p>",
+          data: "<p><strong>The clinical problem:</strong> In 2024, Natera processed a record 3,064,600 tests. 20% (585,000 reports) required manual review by genetic counselors and lab directors before reaching patients. The existing workflow was fragmented across multiple tools, creating delays that directly affected patient care timelines.</p>",
         },
         {
           type: "text",
