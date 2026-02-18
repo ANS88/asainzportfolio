@@ -14,7 +14,7 @@ export const nateraClinicalReview: CaseStudy = {
     { value: "50%", metric: "Reduction in turnaround time" },
     { value: "585K", metric: "Reports/year affected" },
     { value: "1", metric: "Tool replaced 4 legacy systems" },
-    { value: "Positive", metric: "Usability scores from users" },
+    { value: "88 SUS", metric: "Usability scores from users" },
   ],
 
   sections: [
