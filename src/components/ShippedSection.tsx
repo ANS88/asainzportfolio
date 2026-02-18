@@ -10,7 +10,7 @@ const items = [
     stakes: "Designing for accuracy at scale \u2014 where a workflow failure has downstream patient consequences.",
     impact: "50+ laboratories \u00b7 Thousands of patient decisions weekly",
     outcomes: ["-15% turnaround time", "-23% errors", "+50% efficiency"],
-    caseStudy: "/work/manual-review",
+    caseStudy: "/work/natera-clinical-review",
     built: "Stateful interruption-and-resume task model, new IA for context-preserving workflows, A/B testing platform (Claude Code), design system components across lab ops products.",
     chain: [
       { label: "Workflow shadowing" }, { label: "Ethnography" },
