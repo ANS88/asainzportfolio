@@ -83,6 +83,14 @@ export const nateraClinicalReview: CaseStudy = {
       type: "findings",
       content: [
         {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/findings-summary.png",
+            alt: "Three key findings illustrated with memes: Repetitive and tedious work (automation needed), Fragmented task completion (too many tools), Inconsistent change of command (unclear ownership)",
+            caption: "Core findings from discovery: repetitive work, fragmented tools, unclear ownership",
+          },
+        },
+        {
           type: "text",
           data: "<h3>Finding 1: Underutilized expertise</h3><p>Genetic counselors were spending time on repetitive administrative tasks rather than complex clinical decisions. Their domain expertise was being wasted on workflow friction.</p>",
         },
