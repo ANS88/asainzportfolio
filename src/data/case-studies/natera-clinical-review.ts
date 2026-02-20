@@ -150,12 +150,19 @@ export const nateraClinicalReview: CaseStudy = {
           data: "<h3>Personas</h3><p><strong>Genetic Counselor:</strong> high-volume review, needs efficiency and accuracy</p><p><strong>Lab Director:</strong> final approval, needs oversight and audit trail</p>",
         },
         {
-          type: "image",
-          data: {
-            src: "/images/case-studies/natera-clinical-review/personas.png",
-            alt: "Two persona cards: Jane the Genetic Counselor and Mia the Lab Director, showing responsibilities, motivations, challenges, tools, and collaboration patterns",
-            caption: "Primary personas: Jane (Genetic Counselor) and Mia (Lab Director)",
-          },
+          type: "images",
+          data: [
+            {
+              src: "/images/case-studies/natera-clinical-review/personas-gc.png",
+              alt: "Persona card for Jane, the Genetic Counselor: responsibilities, motivations, challenges, tools, and collaboration patterns",
+              caption: "Jane — Genetic Counselor",
+            },
+            {
+              src: "/images/case-studies/natera-clinical-review/personas-ld.png",
+              alt: "Persona card for Mia, the Lab Director: responsibilities, motivations, challenges, tools, and collaboration patterns",
+              caption: "Mia — Lab Director",
+            },
+          ],
         },
         {
           type: "image",
