@@ -66,6 +66,14 @@ export const nateraClinicalReview: CaseStudy = {
             attribution: "Why distributed cognition",
           },
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/discovery-workshop.png",
+            alt: "Cross-functional workshop capturing pain points and feature priorities through sticky note exercises",
+            caption: "Stakeholder workshop: identifying pain points in the manual review process",
+          },
+        },
       ],
     },
 
@@ -89,6 +97,14 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "text",
           data: "<h3>Finding 4: Context switching</h3><p>Reviewers toggled between 4 different tools to complete a single review. Each context switch increased cognitive load and time to completion.</p>",
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/thematic-analysis.png",
+            alt: "Affinity diagram with coded themes including variants, decision logic, save/edit flows, gene handling, notes, and templates",
+            caption: "Thematic analysis: coding pain points into actionable design themes",
+          },
         },
       ],
     },
@@ -124,6 +140,30 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "text",
           data: "<h3>Personas</h3><p><strong>Genetic Counselor:</strong> high-volume review, needs efficiency and accuracy</p><p><strong>Lab Director:</strong> final approval, needs oversight and audit trail</p>",
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/personas.png",
+            alt: "Two persona cards: Jane the Genetic Counselor and Mia the Lab Director, showing responsibilities, motivations, challenges, tools, and collaboration patterns",
+            caption: "Primary personas: Jane (Genetic Counselor) and Mia (Lab Director)",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/workflow-flow.png",
+            alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
+            caption: "Redesigned end-to-end workflow: GC review through LD approval to report release",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/user-journey-gc.png",
+            alt: "User journey map for Jane the Genetic Counselor showing journey phases, jobs to be done, context and touchpoints, gains, pains, and emotional curve",
+            caption: "Genetic Counselor journey map: from case queue to report submission",
+          },
         },
       ],
     },
