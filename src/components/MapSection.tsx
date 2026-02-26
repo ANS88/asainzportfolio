@@ -45,7 +45,7 @@ const locations = [
   {
     city: "San Francisco",
     country: "CA",
-    tags: ["Currently at Natera"],
+    tags: ["Currently UX Design + Research @ Natera"],
     coordinates: [-122.42, 37.77] as [number, number],
   },
 ];
