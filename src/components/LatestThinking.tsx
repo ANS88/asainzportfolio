@@ -40,20 +40,6 @@ export default function LatestThinking() {
             </a>
           </AnimateOnScroll>
         ))}
-        <AnimateOnScroll animation="fade-up">
-          <a
-            href="https://womenshealthcomputed.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="thinking-card thinking-card-cta"
-          >
-            <div className="thinking-title">Women&rsquo;s Health, Computed</div>
-            <p className="thinking-summary">
-              Academic HCI research translated into accessible analysis. Perimenopause wearables, femtech landscape, whose bodies health tech serves.
-            </p>
-            <span className="thinking-link">Read all posts &rarr;</span>
-          </a>
-        </AnimateOnScroll>
       </div>
     </section>
   );
