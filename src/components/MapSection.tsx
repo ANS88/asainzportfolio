@@ -15,31 +15,31 @@ const locations = [
   {
     city: "Guadalajara",
     country: "Mexico",
-    tags: ["Born", "ITESO", "Visual Designer"],
+    tags: ["Born", "BS in Integral Design @ ITESO", "+3 yrs as Visual Designer"],
     coordinates: [-103.35, 20.67] as [number, number],
   },
   {
     city: "Valencia",
     country: "Spain",
-    tags: ["Student exchange at UPV"],
+    tags: ["Student exchange @ UPV"],
     coordinates: [-0.38, 39.47] as [number, number],
   },
   {
     city: "Montreal",
     country: "Canada",
-    tags: ["Computational Design", "UX Freelancer"],
+    tags: ["Computational Design @ Concordia University", "UX Freelancer"],
     coordinates: [-73.57, 45.5] as [number, number],
   },
   {
     city: "Cincinnati",
     country: "OH",
-    tags: ["Master of Design", "Doctorate in HCI", "CCHMC"],
+    tags: ["Master of Design @ UC", "Doctorate in HCI @ UC", "UX Design @ CCHMC"],
     coordinates: [-84.51, 39.1] as [number, number],
   },
   {
     city: "Portland",
     country: "OR",
-    tags: ["Hewlett Packard"],
+    tags: ["UX Internship @ Hewlett Packard"],
     coordinates: [-122.68, 45.52] as [number, number],
   },
   {
