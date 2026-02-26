@@ -15,44 +15,38 @@ const locations = [
   {
     city: "Guadalajara",
     country: "Mexico",
-    tags: ["Born", "Worked", "Lived"],
+    tags: ["Born", "ITESO", "Visual Designer"],
     coordinates: [-103.35, 20.67] as [number, number],
   },
   {
-    city: "Mexico City",
-    country: "Mexico",
-    tags: ["Worked", "Lived"],
-    coordinates: [-99.13, 19.43] as [number, number],
+    city: "Valencia",
+    country: "Spain",
+    tags: ["Student exchange at UPV"],
+    coordinates: [-0.38, 39.47] as [number, number],
+  },
+  {
+    city: "Montreal",
+    country: "Canada",
+    tags: ["Computational Design", "UX Freelancer"],
+    coordinates: [-73.57, 45.5] as [number, number],
   },
   {
     city: "Cincinnati",
     country: "OH",
-    tags: ["Worked", "Lived", "Studied"],
+    tags: ["Master of Design", "Doctorate in HCI", "CCHMC"],
     coordinates: [-84.51, 39.1] as [number, number],
   },
   {
     city: "Portland",
     country: "OR",
-    tags: ["Worked", "Lived"],
+    tags: ["Hewlett Packard"],
     coordinates: [-122.68, 45.52] as [number, number],
   },
   {
     city: "San Francisco",
     country: "CA",
-    tags: ["Worked", "Lived"],
+    tags: ["Currently at Natera"],
     coordinates: [-122.42, 37.77] as [number, number],
-  },
-  {
-    city: "Montreal",
-    country: "Canada",
-    tags: ["Worked", "Lived"],
-    coordinates: [-73.57, 45.5] as [number, number],
-  },
-  {
-    city: "Valencia",
-    country: "Spain",
-    tags: ["Studied", "Lived"],
-    coordinates: [-0.38, 39.47] as [number, number],
   },
 ];
 
