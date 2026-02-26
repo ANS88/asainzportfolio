@@ -7,32 +7,28 @@ interface NodeInfo {
   id: string;
   cx: number;
   cy: number;
-  label: [string, string];
+  label: string[];
   href: string;
   desc: string;
 }
 
 const PRIMARY_NODES: NodeInfo[] = [
-  { id: "hux", cx: 200, cy: 130, label: ["Healthcare", "UX"], href: "https://www.linkedin.com/in/adrianans/", desc: "10+ years designing clinical workflows, EHR integrations, and lab systems at Natera & CCHMC" },
-  { id: "ai", cx: 600, cy: 130, label: ["AI +", "Building"], href: "https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/", desc: "Rapid prototyping with Claude Code, A/B testing tools, and design system dashboards" },
+  { id: "hc", cx: 200, cy: 130, label: ["Healthcare"], href: "https://www.linkedin.com/in/adrianans/", desc: "10+ years designing clinical workflows, EHR integrations, and lab systems at Natera & CCHMC" },
+  { id: "hci", cx: 600, cy: 130, label: ["Human", "Computer"], href: "https://scholar.google.com/citations?user=6ec-wJ8AAAAJ", desc: "Research at the intersection of people, interfaces, and digital systems" },
   { id: "wh", cx: 150, cy: 320, label: ["Women's", "Health"], href: "https://womenshealthcomputed.substack.com", desc: "Substack exploring femtech, perimenopause wearables, and whose bodies health tech serves" },
-  { id: "ed", cx: 650, cy: 320, label: ["Embodied", "Design"], href: "http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724", desc: "PhD research on somaesthetic design, body-aware interfaces, and sensory interaction" },
-  { id: "cl", cx: 260, cy: 450, label: ["Community", "+ Life"], href: "https://www.athenadao.co/", desc: "AthenaDAO dealflow fellow, wine lover, SF community builder" },
-  { id: "wc", cx: 540, cy: 450, label: ["Writing +", "Culture"], href: "https://womenshealthcomputed.substack.com", desc: "Academic HCI translated to accessible essays on health, tech, and Latin American identity" },
+  { id: "ai", cx: 650, cy: 320, label: ["AI"], href: "https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/", desc: "Building with AI: rapid prototyping, design tools, and decision support systems" },
+  { id: "wr", cx: 260, cy: 450, label: ["Writing"], href: "https://womenshealthcomputed.substack.com", desc: "Academic HCI translated to accessible essays on health, tech, and Latin American identity" },
+  { id: "ds", cx: 540, cy: 450, label: ["Design"], href: "https://www.linkedin.com/in/adrianans/", desc: "UX and product design for complex systems, from clinical tools to productivity interfaces" },
 ];
 
 const SATELLITE_NODES = [
-  { cx: 80, cy: 55, label: "Natera" },
-  { cx: 290, cy: 45, label: "CCHMC" },
-  { cx: 505, cy: 50, label: "Claude" },
-  { cx: 710, cy: 55, label: "Figma" },
-  { cx: 55, cy: 240, label: "Diary" },
-  { cx: 48, cy: 380, label: "Oura" },
-  { cx: 752, cy: 250, label: "Sara A." },
-  { cx: 755, cy: 385, label: "Web3" },
-  { cx: 145, cy: 495, label: "Wine" },
-  { cx: 445, cy: 505, label: "LatAm" },
-  { cx: 645, cy: 495, label: "Music" },
+  { cx: 290, cy: 45, label: "User Res." },
+  { cx: 505, cy: 50, label: "Data Viz" },
+  { cx: 710, cy: 55, label: "Ethnography" },
+  { cx: 48, cy: 380, label: "Q. Self" },
+  { cx: 752, cy: 250, label: "Decisions" },
+  { cx: 145, cy: 495, label: "Philosophy" },
+  { cx: 445, cy: 505, label: "Prod. Sys." },
 ];
 
 const FULL_VIEWBOX = "0 0 800 520";
@@ -83,18 +79,19 @@ export default function InterestsMapSection() {
             <line x1="650" y1="320" x2="540" y2="450" strokeDasharray="4,4" />
             <line x1="260" y1="450" x2="540" y2="450" strokeDasharray="4,4" />
             {/* Satellites */}
-            <line x1="200" y1="130" x2="80" y2="55" stroke="#f0ebe3" /><line x1="200" y1="130" x2="290" y2="45" stroke="#f0ebe3" />
-            <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" /><line x1="600" y1="130" x2="505" y2="50" stroke="#f0ebe3" />
-            <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" /><line x1="150" y1="320" x2="55" y2="240" stroke="#f0ebe3" />
-            <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" /><line x1="650" y1="320" x2="755" y2="385" stroke="#f0ebe3" />
+            <line x1="200" y1="130" x2="290" y2="45" stroke="#f0ebe3" />
+            <line x1="600" y1="130" x2="505" y2="50" stroke="#f0ebe3" />
+            <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
+            <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" />
+            <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" />
             <line x1="260" y1="450" x2="145" y2="495" stroke="#f0ebe3" />
-            <line x1="540" y1="450" x2="645" y2="495" stroke="#f0ebe3" /><line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
+            <line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
           </g>
 
           {/* Satellite nodes */}
           {SATELLITE_NODES.map((s) => (
             <g key={s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
-              <circle cx={s.cx} cy={s.cy} r="20" fill="white" stroke="#e7e5e4" />
+              <circle cx={s.cx} cy={s.cy} r="22" fill="white" stroke="#e7e5e4" />
               <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
             </g>
           ))}
@@ -115,8 +112,14 @@ export default function InterestsMapSection() {
                   <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#0909e8" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
                 )}
                 <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#0909e8" : "#f0f0fe"} stroke="#0909e8" strokeWidth="2" className="node-circle" />
-                <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
-                <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                {node.label.length === 2 ? (
+                  <>
+                    <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                    <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                  </>
+                ) : (
+                  <text x={node.cx} y={node.cy + 5} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                )}
                 {/* Description on expand */}
                 {isExpanded && (
                   <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
