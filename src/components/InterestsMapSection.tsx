@@ -30,6 +30,8 @@ const SATELLITE_NODES = [
   { cx: 445, cy: 505, label: ["Observ-", "ability"] as string[] },
   { cx: 80, cy: 215, label: ["Consumer", "Health"] as string[] },
   { cx: 700, cy: 180, label: ["Cognitive", "Science"] as string[] },
+  { cx: 768, cy: 300, label: "HITL" },
+  { cx: 750, cy: 415, label: "VUIs" },
 ];
 
 const FULL_VIEWBOX = "0 0 800 520";
@@ -94,6 +96,12 @@ export default function InterestsMapSection() {
             <line x1="600" y1="130" x2="700" y2="180" stroke="#f0ebe3" />
             <line x1="700" y1="180" x2="650" y2="320" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="700" y1="180" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="768" y2="300" stroke="#f0ebe3" />
+            <line x1="768" y1="300" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="768" y1="300" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="750" y2="415" stroke="#f0ebe3" />
+            <line x1="750" y1="415" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="750" y1="415" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" />
             <line x1="600" y1="130" x2="752" y2="250" stroke="#f0ebe3" />
             <line x1="540" y1="450" x2="752" y2="250" stroke="#f0ebe3" />
