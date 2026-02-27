@@ -27,7 +27,7 @@ const SATELLITE_NODES = [
   { cx: 710, cy: 55, label: "Ethnography" },
   { cx: 48, cy: 380, label: ["Quantified", "Self"] as string[] },
   { cx: 752, cy: 250, label: "DSS" },
-  { cx: 445, cy: 505, label: "Observability" },
+  { cx: 445, cy: 505, label: ["Observ-", "ability"] as string[] },
 ];
 
 const FULL_VIEWBOX = "0 0 800 520";
