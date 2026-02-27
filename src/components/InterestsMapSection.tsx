@@ -14,7 +14,7 @@ interface NodeInfo {
 
 const PRIMARY_NODES: NodeInfo[] = [
   { id: "hc", cx: 200, cy: 130, label: ["Healthcare"], href: "https://www.linkedin.com/in/adrianans/", desc: "10+ years designing clinical workflows, EHR integrations, and lab systems at Natera & CCHMC" },
-  { id: "hci", cx: 600, cy: 130, label: ["Human", "Computer"], href: "https://scholar.google.com/citations?user=6ec-wJ8AAAAJ", desc: "Research at the intersection of people, interfaces, and digital systems" },
+  { id: "hci", cx: 600, cy: 130, label: ["HCI"], href: "https://scholar.google.com/citations?user=6ec-wJ8AAAAJ", desc: "Research at the intersection of people, interfaces, and digital systems" },
   { id: "wh", cx: 150, cy: 320, label: ["Women's", "Health"], href: "https://womenshealthcomputed.substack.com", desc: "Substack exploring femtech, perimenopause wearables, and whose bodies health tech serves" },
   { id: "ai", cx: 650, cy: 320, label: ["AI"], href: "https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/", desc: "Building with AI: rapid prototyping, design tools, and decision support systems" },
   { id: "wr", cx: 260, cy: 450, label: ["Writing"], href: "https://womenshealthcomputed.substack.com", desc: "Academic HCI translated to accessible essays on health, tech, and Latin American identity" },
@@ -25,9 +25,8 @@ const SATELLITE_NODES = [
   { cx: 290, cy: 45, label: "User Res." },
   { cx: 505, cy: 50, label: "Data Viz" },
   { cx: 710, cy: 55, label: "Ethnography" },
-  { cx: 48, cy: 380, label: "Q. Self" },
+  { cx: 48, cy: 380, label: ["Quantified", "Self"] as string[] },
   { cx: 752, cy: 250, label: "Decisions" },
-  { cx: 145, cy: 495, label: "Philosophy" },
   { cx: 445, cy: 505, label: "Prod. Sys." },
 ];
 
@@ -84,15 +83,21 @@ export default function InterestsMapSection() {
             <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
             <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" />
             <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" />
-            <line x1="260" y1="450" x2="145" y2="495" stroke="#f0ebe3" />
             <line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
           </g>
 
           {/* Satellite nodes */}
           {SATELLITE_NODES.map((s) => (
-            <g key={s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
+            <g key={Array.isArray(s.label) ? s.label.join(" ") : s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
               <circle cx={s.cx} cy={s.cy} r="22" fill="white" stroke="#e7e5e4" />
-              <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
+              {Array.isArray(s.label) ? (
+                <>
+                  <text x={s.cx} y={s.cy - 3} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label[0]}</text>
+                  <text x={s.cx} y={s.cy + 9} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label[1]}</text>
+                </>
+              ) : (
+                <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
+              )}
             </g>
           ))}
 
