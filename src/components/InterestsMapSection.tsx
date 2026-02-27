@@ -26,8 +26,8 @@ const SATELLITE_NODES = [
   { cx: 505, cy: 50, label: "Data Viz" },
   { cx: 710, cy: 55, label: "Ethnography" },
   { cx: 48, cy: 380, label: ["Quantified", "Self"] as string[] },
-  { cx: 752, cy: 250, label: "Decisions" },
-  { cx: 445, cy: 505, label: "Prod. Sys." },
+  { cx: 752, cy: 250, label: "DSS" },
+  { cx: 445, cy: 505, label: ["Observ-", "ability"] as string[] },
 ];
 
 const FULL_VIEWBOX = "0 0 800 520";
@@ -83,7 +83,13 @@ export default function InterestsMapSection() {
             <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
             <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" />
             <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" />
+            <line x1="600" y1="130" x2="752" y2="250" stroke="#f0ebe3" />
+            <line x1="540" y1="450" x2="752" y2="250" stroke="#f0ebe3" />
+            <line x1="200" y1="130" x2="752" y2="250" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
+            <line x1="600" y1="130" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="445" y2="505" stroke="#f0ebe3" />
+            <line x1="200" y1="130" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
           </g>
 
           {/* Satellite nodes */}
