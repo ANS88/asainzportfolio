@@ -15,7 +15,6 @@ interface NodeInfo {
 const PRIMARY_NODES: NodeInfo[] = [
   { id: "hc", cx: 200, cy: 130, label: ["Healthcare"], href: "https://www.linkedin.com/in/adrianans/", desc: "10+ years designing clinical workflows, EHR integrations, and lab systems at Natera & CCHMC" },
   { id: "hci", cx: 600, cy: 130, label: ["HCI"], href: "https://scholar.google.com/citations?user=6ec-wJ8AAAAJ", desc: "Research at the intersection of people, interfaces, and digital systems" },
-  { id: "wh", cx: 150, cy: 320, label: ["Women's", "Health"], href: "https://womenshealthcomputed.substack.com", desc: "Substack exploring femtech, perimenopause wearables, and whose bodies health tech serves" },
   { id: "ai", cx: 650, cy: 320, label: ["AI"], href: "https://ux-ab-testing-tool-9e3xgawoz47zjwcsdjrzwv.streamlit.app/", desc: "Building with AI: rapid prototyping, design tools, and decision support systems" },
   { id: "wr", cx: 260, cy: 450, label: ["Writing"], href: "https://womenshealthcomputed.substack.com", desc: "Academic HCI translated to accessible essays on health, tech, and Latin American identity" },
   { id: "ds", cx: 540, cy: 450, label: ["Design"], href: "https://www.linkedin.com/in/adrianans/", desc: "UX and product design for complex systems, from clinical tools to productivity interfaces" },
@@ -25,6 +24,7 @@ const SATELLITE_NODES = [
   { cx: 290, cy: 45, label: "User Res." },
   { cx: 505, cy: 50, label: "Data Viz" },
   { cx: 710, cy: 55, label: "Ethnography" },
+  { cx: 150, cy: 320, label: ["Women's", "Health"] as string[] },
   { cx: 48, cy: 380, label: ["Quantified", "Self"] as string[] },
   { cx: 752, cy: 250, label: "CDSS" },
   { cx: 445, cy: 505, label: ["Observ-", "ability"] as string[] },
@@ -71,19 +71,18 @@ export default function InterestsMapSection() {
           {/* Connection lines */}
           <g stroke="#e7e5e4" strokeWidth="1.5" fill="none">
             <line x1="400" y1="260" x2="200" y2="130" /><line x1="400" y1="260" x2="600" y2="130" />
-            <line x1="400" y1="260" x2="150" y2="320" /><line x1="400" y1="260" x2="650" y2="320" />
+            <line x1="400" y1="260" x2="650" y2="320" />
             <line x1="400" y1="260" x2="260" y2="450" /><line x1="400" y1="260" x2="540" y2="450" />
-            <line x1="200" y1="130" x2="150" y2="320" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="650" y2="320" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="600" y2="130" strokeDasharray="4,4" />
-            <line x1="150" y1="320" x2="260" y2="450" strokeDasharray="4,4" />
             <line x1="650" y1="320" x2="540" y2="450" strokeDasharray="4,4" />
             <line x1="260" y1="450" x2="540" y2="450" strokeDasharray="4,4" />
             {/* Satellites */}
             <line x1="200" y1="130" x2="290" y2="45" stroke="#f0ebe3" />
             <line x1="600" y1="130" x2="505" y2="50" stroke="#f0ebe3" />
             <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
-            <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" />
+            <line x1="200" y1="130" x2="150" y2="320" stroke="#f0ebe3" />
+            <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="80" y2="215" stroke="#f0ebe3" />
             <line x1="80" y1="215" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
