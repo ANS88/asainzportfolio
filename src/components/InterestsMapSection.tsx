@@ -83,6 +83,8 @@ export default function InterestsMapSection() {
             <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
             <line x1="200" y1="130" x2="150" y2="320" stroke="#f0ebe3" />
             <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="150" y1="320" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="80" y1="215" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="80" y2="215" stroke="#f0ebe3" />
             <line x1="80" y1="215" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
