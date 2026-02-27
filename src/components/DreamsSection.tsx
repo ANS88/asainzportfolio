@@ -23,7 +23,7 @@ export default function DreamsSection() {
   return (
     <section>
       <AnimateOnScroll>
-        <div className="label">Life dashboard</div>
+        <div className="label">Career bucket list</div>
         <div className="dreams-header">
           <div className="section-title">Things I&apos;m working toward</div>
           <div className="dreams-pct">{pct}%</div>
