@@ -80,6 +80,9 @@ export default function InterestsMapSection() {
             <line x1="260" y1="450" x2="540" y2="450" strokeDasharray="4,4" />
             {/* Satellites */}
             <line x1="600" y1="130" x2="505" y2="50" stroke="#f0ebe3" />
+            <line x1="505" y1="50" x2="200" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="505" y1="50" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="505" y1="50" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
             <line x1="710" y1="55" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="150" y2="320" stroke="#f0ebe3" />
@@ -92,6 +95,7 @@ export default function InterestsMapSection() {
             <line x1="650" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="700" y2="180" stroke="#f0ebe3" />
+            <line x1="700" y1="180" x2="710" y2="55" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="700" y1="180" x2="650" y2="320" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="700" y1="180" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="650" y1="320" x2="768" y2="300" stroke="#f0ebe3" />
