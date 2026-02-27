@@ -89,6 +89,7 @@ export default function InterestsMapSection() {
             <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="150" y1="320" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="80" y1="215" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="260" y1="450" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="200" y1="130" x2="80" y2="215" stroke="#f0ebe3" />
             <line x1="80" y1="215" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
             <line x1="600" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
@@ -117,7 +118,7 @@ export default function InterestsMapSection() {
           {/* Satellite nodes */}
           {SATELLITE_NODES.map((s) => (
             <g key={Array.isArray(s.label) ? s.label.join(" ") : s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
-              <circle cx={s.cx} cy={s.cy} r="22" fill="white" stroke="#e7e5e4" />
+              <circle cx={s.cx} cy={s.cy} r="28" fill="white" stroke="#e7e5e4" />
               {Array.isArray(s.label) ? (
                 <>
                   <text x={s.cx} y={s.cy - 3} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label[0]}</text>
