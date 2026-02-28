@@ -1,20 +1,14 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const books = [
-  { title: "Designing for the Digital Age", author: "Kim Goodwin", tag: "Design" },
-  { title: "The Design of Everyday Things", author: "Don Norman", tag: "Design" },
-  { title: "Technically Wrong", author: "Sara Wachter-Boettcher", tag: "Tech ethics" },
-  { title: "Invisible Women", author: "Caroline Criado Perez", tag: "Health equity" },
-  { title: "Doing Things with Words", author: "J.L. Austin", tag: "Philosophy" },
-  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", tag: "Psychology" },
-];
-
-const articles = [
-  { title: "The Moral Economy of Tech", author: "Maciej Ceglowski", tag: "Essay" },
-  { title: "Research as Ceremony", author: "Shawn Wilson", tag: "Methodology" },
-  { title: "Somaesthetic Appreciation Design", author: "Kristina Höök", tag: "HCI" },
-  { title: "The Oregon Experiment", author: "Christopher Alexander", tag: "Systems" },
-  { title: "Who Gets to Be Healthy?", author: "Virginia Eubanks", tag: "Health equity" },
+  { title: "Invisible Women", author: "Caroline Criado Perez", tag: "Health equity", url: "https://www.goodreads.com/book/show/41104077-invisible-women" },
+  { title: "Design for Real Life", author: "Eric Meyer & Sara Wachter-Boettcher", tag: "Design", url: "https://www.goodreads.com/book/show/29420123-design-for-real-life" },
+  { title: "Anatomy of an AI System", author: "Kate Crawford & Vladan Joler", tag: "AI ethics", url: "https://anatomyof.ai" },
+  { title: "Observability Engineering", author: "Charity Majors, Liz Fong-Jones & George Miranda", tag: "Engineering", url: "https://www.goodreads.com/book/show/59039072-observability-engineering" },
+  { title: "The Sense of Style", author: "Steven Pinker", tag: "Writing", url: "https://www.goodreads.com/book/show/20821371-the-sense-of-style" },
+  { title: "The Society of Mind", author: "Marvin Minsky", tag: "Cognitive science", url: "https://www.goodreads.com/book/show/326790.The_Society_of_Mind" },
+  { title: "Behave", author: "Robert Sapolsky", tag: "Biology", url: "https://www.goodreads.com/book/show/31170723-behave" },
+  { title: "High Agency", author: "George Mack", tag: "Essay", url: "https://www.highagency.com/" },
 ];
 
 export default function FavoriteReads() {
@@ -29,28 +23,20 @@ export default function FavoriteReads() {
         <div className="reads-group">
           <div className="reads-heading">Books</div>
           {books.map((item, i) => (
-            <div key={i} className="read-item">
+            <a
+              key={i}
+              className="read-item"
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit", display: "flex" }}
+            >
               <div className="read-main">
                 <span className="read-title">{item.title}</span>
                 <span className="read-author">{item.author}</span>
               </div>
               <span className="read-tag">{item.tag}</span>
-            </div>
-          ))}
-        </div>
-      </AnimateOnScroll>
-
-      <AnimateOnScroll animation="fade-up" delay={200}>
-        <div className="reads-group" style={{ marginTop: "1.5rem" }}>
-          <div className="reads-heading">Articles &amp; essays</div>
-          {articles.map((item, i) => (
-            <div key={i} className="read-item">
-              <div className="read-main">
-                <span className="read-title">{item.title}</span>
-                <span className="read-author">{item.author}</span>
-              </div>
-              <span className="read-tag">{item.tag}</span>
-            </div>
+            </a>
           ))}
         </div>
       </AnimateOnScroll>
