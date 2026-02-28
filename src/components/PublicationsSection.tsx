@@ -9,7 +9,7 @@ const pubs = [
   { name: "Systems and methods for in-flight crew assistance", where: "US Patent US10775793", href: "https://patents.google.com/patent/US10775793" },
   { name: "Women\u2019s Health Digital Interventions in Latin America", where: "DIS 2026 \u2731", href: undefined },
   { name: "HCI for Women\u2019s Health: Digital Interventions for Navigating Menopause", where: "Dissertation", href: "http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724" },
-  { name: "UX in Pediatric Biomedical Informatics", where: "Talk \u00b7 2021", href: undefined },
+  { name: "UX in Pediatric Biomedical Informatics", where: "Talk \u00b7 2021", href: "https://youtu.be/XXirvW5lCKY?feature=shared" },
 ];
 
 export default function PublicationsSection() {
