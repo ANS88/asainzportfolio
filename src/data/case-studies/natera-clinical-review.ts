@@ -2,7 +2,7 @@ import type { CaseStudy } from "@/types/case-study";
 
 export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
-  title: "Manual Clinical Review Workflow Redesign",
+  title: "Clinical Review",
   stakesLine:
     "When genetic test reports are delayed, treatment decisions are delayed. I redesigned the workflow that determines how fast 585,000 patients per year get their results.",
   role: "Lead Designer & Researcher",
@@ -18,6 +18,21 @@ export const nateraClinicalReview: CaseStudy = {
   ],
 
   sections: [
+    {
+      id: "video",
+      title: "",
+      type: "design",
+      content: [
+        {
+          type: "video",
+          data: {
+            src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
+            caption: "Prototype walkthrough: unified manual review workflow (1 of 2)",
+          },
+        },
+      ],
+    },
+
     {
       id: "context",
       title: "Context & Challenge",
@@ -178,20 +193,6 @@ export const nateraClinicalReview: CaseStudy = {
             src: "/images/case-studies/natera-clinical-review/user-journey-gc.png",
             alt: "User journey map for Jane the Genetic Counselor showing journey phases, jobs to be done, context and touchpoints, gains, pains, and emotional curve",
             caption: "Genetic Counselor journey map: from case queue to report submission",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
-            caption: "Prototype walkthrough: unified manual review workflow (1 of 2)",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/987364614?h=60d97e3878&autoplay=1&loop=1&muted=1&background=1",
-            caption: "Prototype walkthrough: unified manual review workflow (2 of 2)",
           },
         },
       ],
