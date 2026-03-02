@@ -2,7 +2,7 @@ import type { CaseStudy } from "@/types/case-study";
 
 export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
-  title: "Manual Clinical Review Workflow Redesign",
+  title: "Clinical Review",
   stakesLine:
     "When genetic test reports are delayed, treatment decisions are delayed. I redesigned the workflow that determines how fast 585,000 patients per year get their results.",
   role: "Lead Designer & Researcher",
