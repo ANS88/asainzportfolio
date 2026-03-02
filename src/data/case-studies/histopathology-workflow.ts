@@ -19,6 +19,21 @@ export const histopathologyWorkflow: CaseStudy = {
 
   sections: [
     {
+      id: "video",
+      title: "",
+      type: "design",
+      content: [
+        {
+          type: "video",
+          data: {
+            src: "https://player.vimeo.com/video/1148959154?h=d9ae3634e1&autoplay=1&loop=1&muted=1&background=1",
+            caption: "Prototype walkthrough: unified histopathology lab workflow",
+          },
+        },
+      ],
+    },
+
+    {
       id: "context",
       title: "Context & Challenge",
       type: "context",
