@@ -183,8 +183,9 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://player.vimeo.com/video/1071606769?h=d67de8eb00",
+            src: "/videos/manual-review-demo.mp4",
             caption: "Prototype walkthrough: unified manual review workflow",
+            autoplay: true,
           },
         },
       ],

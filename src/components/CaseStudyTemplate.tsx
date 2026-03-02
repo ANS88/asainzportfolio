@@ -79,15 +79,26 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
     case "video":
       return (
         <figure className="cs-video-block">
-          <div className="cs-video-wrapper">
-            <iframe
+          {content.data.autoplay ? (
+            <video
               src={content.data.src}
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              allowFullScreen
-              loading="lazy"
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="cs-video-autoplay"
             />
-          </div>
+          ) : (
+            <div className="cs-video-wrapper">
+              <iframe
+                src={content.data.src}
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                allowFullScreen
+                loading="lazy"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+              />
+            </div>
+          )}
           {content.data.caption && (
             <figcaption>{content.data.caption}</figcaption>
           )}

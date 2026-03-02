@@ -589,6 +589,12 @@ a:hover { opacity: .85; }
   color: var(--ink3);
   padding: .5rem 0;
 }
+.cs-video-autoplay {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
 
 .cs-images-grid {
   display: grid;
