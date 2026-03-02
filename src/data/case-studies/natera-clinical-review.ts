@@ -19,6 +19,21 @@ export const nateraClinicalReview: CaseStudy = {
 
   sections: [
     {
+      id: "video",
+      title: "",
+      type: "design",
+      content: [
+        {
+          type: "video",
+          data: {
+            src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
+            caption: "Prototype walkthrough: unified manual review workflow (1 of 2)",
+          },
+        },
+      ],
+    },
+
+    {
       id: "context",
       title: "Context & Challenge",
       type: "context",
@@ -178,13 +193,6 @@ export const nateraClinicalReview: CaseStudy = {
             src: "/images/case-studies/natera-clinical-review/user-journey-gc.png",
             alt: "User journey map for Jane the Genetic Counselor showing journey phases, jobs to be done, context and touchpoints, gains, pains, and emotional curve",
             caption: "Genetic Counselor journey map: from case queue to report submission",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
-            caption: "Prototype walkthrough: unified manual review workflow (1 of 2)",
           },
         },
       ],
