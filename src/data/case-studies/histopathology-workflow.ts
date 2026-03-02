@@ -78,6 +78,14 @@ export const histopathologyWorkflow: CaseStudy = {
           type: "text",
           data: "<p>The workflow map captured the full end-to-end process: <strong>Validate tissue sample \u2192 Create tissue sets \u2192 Sectioning \u2192 H&E staining \u2192 Pathologist review \u2192 Micro dissection</strong>, with branching logic for slides versus blocks at the sectioning stage.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/histopathology-workflow/user-flow.png",
+            alt: "End-to-end user flow diagram mapping the histopathology pipeline from tissue validation through micro dissection, with branching logic for slides versus blocks",
+            caption: "User flow: full histopathology pipeline from tissue validation to micro dissection",
+          },
+        },
       ],
     },
 
@@ -124,6 +132,14 @@ export const histopathologyWorkflow: CaseStudy = {
         {
           type: "text",
           data: "<p><strong>What we built:</strong> A unified system replacing spreadsheets and manual tracking across all five histopathology stages. The new workflow automated queue management through barcode scanning, linked pathology reports directly to case records, and consolidated LabVantage and Philips touchpoints into a coherent experience.</p>",
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/histopathology-workflow/design-principles.png",
+            alt: "Design principles guiding the histopathology workflow redesign",
+            caption: "Design principles: scan-driven automation, integrated data, and branch-aware interface",
+          },
         },
         {
           type: "list",
