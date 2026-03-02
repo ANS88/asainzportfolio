@@ -5,8 +5,15 @@ const POSTS = [
     title: "What 40 Women Taught Me About Tracking Menopause",
     source: "Women\u2019s Health, Computed",
     summary:
-      "What four years of diary studies revealed about how women actually want to track their health.",
-    href: "https://womenshealthcomputed.substack.com/p/what-40-women-taught-me-about-tracking",
+      "Research with 40 perimenopausal women reveals that good usability \u2260 meaningful insights \u2014 women need tools that deliver actionable, personalized health patterns.",
+    href: "https://substack.com/@womenshealthcomputed/note/c-196183952?utm_source=notes-share-action&r=4fjw1",
+  },
+  {
+    title: "Building Better: What Good Menopause Technology Would Actually Look Like",
+    source: "Women\u2019s Health, Computed",
+    summary:
+      "The final installment of the symptom tracking series \u2014 exploring feminist HCI design principles for what menopause technology should actually look like.",
+    href: "https://substack.com/@womenshealthcomputed/note/c-213629195?utm_source=notes-share-action&r=4fjw1",
   },
 ];
 
@@ -33,20 +40,6 @@ export default function LatestThinking() {
             </a>
           </AnimateOnScroll>
         ))}
-        <AnimateOnScroll animation="fade-up">
-          <a
-            href="https://womenshealthcomputed.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="thinking-card thinking-card-cta"
-          >
-            <div className="thinking-title">Women&rsquo;s Health, Computed</div>
-            <p className="thinking-summary">
-              Academic HCI research translated into accessible analysis. Perimenopause wearables, femtech landscape, whose bodies health tech serves.
-            </p>
-            <span className="thinking-link">Read all posts &rarr;</span>
-          </a>
-        </AnimateOnScroll>
       </div>
     </section>
   );

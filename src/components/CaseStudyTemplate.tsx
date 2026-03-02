@@ -76,6 +76,35 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
         </div>
       );
 
+    case "video":
+      return (
+        <figure className="cs-video-block">
+          {content.data.autoplay ? (
+            <video
+              src={content.data.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="cs-video-autoplay"
+            />
+          ) : (
+            <div className="cs-video-wrapper">
+              <iframe
+                src={content.data.src}
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                allowFullScreen
+                loading="lazy"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+              />
+            </div>
+          )}
+          {content.data.caption && (
+            <figcaption>{content.data.caption}</figcaption>
+          )}
+        </figure>
+      );
+
     default:
       return null;
   }

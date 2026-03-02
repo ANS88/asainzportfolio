@@ -7,22 +7,13 @@ export default function DreamsSection() {
   const [showAll, setShowAll] = useState(false);
 
   const dreams = [
-    { text: "Publish in a top HCI venue (DIS 2026)", done: false },
-    { text: "Ship a consumer health product", done: false },
-    { text: "1,000 Substack subscribers", done: false },
-    { text: "Keynote a design or health conference", done: false },
+    { text: "Write a book about women's health HCI", done: false },
     { text: "Work at a company shaping how AI meets health", done: false },
-    { text: "Finish a PhD while working full-time", done: true },
-    { text: "Publish in a top HCI venue", done: true },
+    { text: "1,000 Substack subscribers", done: false },
+    { text: "Ship a consumer health product", done: true },
+    { text: "Publish in a top HCI venue (CHI 2020)", done: true },
     { text: "Get a US patent", done: true },
-    { text: "Ship a 0-to-1 product", done: true },
-    { text: "Start a Substack people actually read", done: true },
-    { text: "Build something with AI (Claude Code)", done: true },
-    { text: "Evaluate research proposals for a DAO", done: true },
-    { text: "Write a book about somaesthetic design", done: false },
-    { text: "Design an experience that makes someone cry (in a good way)", done: false },
-    { text: "Get my green card", done: false },
-    { text: "Visit all the wine regions of South America", done: false },
+    { text: "Get a PhD in HCI", done: true },
   ];
 
   const visible = showAll ? dreams : dreams.slice(0, 5);
@@ -32,7 +23,7 @@ export default function DreamsSection() {
   return (
     <section>
       <AnimateOnScroll>
-        <div className="label">Life dashboard</div>
+        <div className="label">Career bucket list</div>
         <div className="dreams-header">
           <div className="section-title">Things I&apos;m working toward</div>
           <div className="dreams-pct">{pct}%</div>
