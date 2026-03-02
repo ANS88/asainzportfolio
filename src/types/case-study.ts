@@ -56,4 +56,5 @@ export type CaseStudySectionContent =
     }
   | { type: "list"; data: { title?: string; items: string[] } }
   | { type: "quote"; data: { text: string; attribution?: string } }
-  | { type: "metric"; data: { value: string; label: string } };
+  | { type: "metric"; data: { value: string; label: string } }
+  | { type: "video"; data: { src: string; caption?: string } };

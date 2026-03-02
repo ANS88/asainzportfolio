@@ -180,6 +180,13 @@ export const nateraClinicalReview: CaseStudy = {
             caption: "Genetic Counselor journey map: from case queue to report submission",
           },
         },
+        {
+          type: "video",
+          data: {
+            src: "https://player.vimeo.com/video/1071606769?h=d67de8eb00",
+            caption: "Prototype walkthrough: unified manual review workflow",
+          },
+        },
       ],
     },
 

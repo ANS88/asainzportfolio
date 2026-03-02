@@ -569,6 +569,27 @@ a:hover { opacity: .85; }
   color: var(--ink3);
   padding: .5rem 0;
 }
+
+/* Video blocks */
+.cs-video-block {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cs-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.cs-video-wrapper iframe {
+  border: none;
+}
+.cs-video-block figcaption {
+  font-family: var(--mono);
+  font-size: .6rem;
+  color: var(--ink3);
+  padding: .5rem 0;
+}
+
 .cs-images-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
