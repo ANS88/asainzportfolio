@@ -33,6 +33,22 @@ export const perimenopauseTracking: CaseStudy = {
           data: "<p><strong>Goal:</strong> Understand how people actually use Clue\u2019s perimenopause mode and surface design opportunities to improve engagement, usability, and clinical value.</p>",
         },
         {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/process.png",
+            alt: "Research process overview for the perimenopause tracking diary study",
+            caption: "Research process overview",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/processdetail.png",
+            alt: "Detailed breakdown of the research process and methodology",
+            caption: "Research process — detailed breakdown",
+          },
+        },
+        {
           type: "list",
           data: {
             title: "Research questions",
