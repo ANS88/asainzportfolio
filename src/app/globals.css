@@ -719,6 +719,16 @@ a:hover { opacity: .85; }
   line-height: 1.7;
   color: var(--ink2);
 }
+.essay-ref {
+  color: var(--ink2);
+  border-bottom: 1px solid var(--accent-soft);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.essay-ref:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  opacity: 1;
+}
 
 /* ═══ SCROLL ANIMATIONS ═══ */
 .aos {
