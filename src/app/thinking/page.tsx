@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import ContactBlock from "@/components/ContactBlock";
 
@@ -51,6 +54,8 @@ const essays = [
 ];
 
 export default function Thinking() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <>
       <div className="container">
@@ -62,24 +67,38 @@ export default function Thinking() {
           </AnimateOnScroll>
         </div>
 
-        {essays.map((essay, i) => (
-          <div key={i}>
-            <hr className="section-line" />
-            <section>
-              <AnimateOnScroll>
-                <div className="label">{essay.label}</div>
-                <div className="section-title">{essay.title}</div>
-              </AnimateOnScroll>
-              <div className="essay-body">
-                {essay.paragraphs.map((p, j) => (
-                  <AnimateOnScroll key={j} animation="fade-up">
-                    <p>{p}</p>
-                  </AnimateOnScroll>
-                ))}
-              </div>
-            </section>
-          </div>
-        ))}
+        {essays.map((essay, i) => {
+          const isOpen = openIndex === i;
+          return (
+            <div key={i}>
+              <hr className="section-line" />
+              <section>
+                <button
+                  className="essay-toggle"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                >
+                  <div className="essay-toggle-left">
+                    <div className="label">{essay.label}</div>
+                    <div className="section-title">{essay.title}</div>
+                  </div>
+                  <span className={`essay-chevron${isOpen ? " essay-chevron--open" : ""}`}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+                <div className={`essay-body-wrap${isOpen ? " essay-body-wrap--open" : ""}`}>
+                  <div className="essay-body">
+                    {essay.paragraphs.map((p, j) => (
+                      <p key={j}>{p}</p>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            </div>
+          );
+        })}
       </div>
       <ContactBlock />
     </>

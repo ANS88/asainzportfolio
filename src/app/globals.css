@@ -674,12 +674,46 @@ a:hover { opacity: .85; }
 }
 
 /* ═══ THINKING PAGE ═══ */
+.essay-toggle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+}
+.essay-toggle:hover .section-title { color: var(--accent); }
+.essay-toggle-left { flex: 1; }
+.essay-chevron {
+  flex-shrink: 0;
+  margin-top: .6rem;
+  color: var(--ink3);
+  transition: transform var(--transition-medium), color var(--transition-fast);
+}
+.essay-chevron--open { transform: rotate(180deg); color: var(--accent); }
+.essay-toggle:hover .essay-chevron { color: var(--accent); }
+.essay-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-medium);
+  overflow: hidden;
+}
+.essay-body-wrap--open { grid-template-rows: 1fr; }
 .essay-body {
+  min-height: 0;
   max-width: 640px;
   display: flex;
   flex-direction: column;
   gap: .75rem;
+  padding-top: 0;
+  transition: padding-top var(--transition-medium);
 }
+.essay-body-wrap--open .essay-body { padding-top: 1rem; }
 .essay-body p {
   font-size: .92rem;
   line-height: 1.7;
