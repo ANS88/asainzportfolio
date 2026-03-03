@@ -99,6 +99,13 @@ export const identityPortal: CaseStudy = {
           type: "text",
           data: "<p>Medium-fidelity wireframes were initially created to get feedback from users. We relied on paper wireframing and held in-person sessions to go over features and workflows.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/arch.png",
+            alt: "Information architecture diagram for the IDENTITY portal",
+          },
+        },
       ],
     },
 
