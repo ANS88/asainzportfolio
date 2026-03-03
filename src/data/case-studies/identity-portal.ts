@@ -25,6 +25,12 @@ export const identityPortal: CaseStudy = {
       type: "context",
       content: [
         {
+          type: "video",
+          data: {
+            src: "https://www.youtube.com/embed/jbXdF-C4E6c?si=i3luNWnFNpHDUD-a&autoplay=1&loop=1&playlist=jbXdF-C4E6c",
+          },
+        },
+        {
           type: "text",
           data: "<p>A secure digital platform enabling Cincinnati Children\u2019s Hospital (CCHMC) and Hamilton County Jobs & Family Services (HCJFS) to share critical medical and legal information about foster children \u2014 replacing slow, paper-based exchanges and improving timeliness and accuracy of care.</p>",
         },
