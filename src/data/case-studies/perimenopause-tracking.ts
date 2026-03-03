@@ -98,6 +98,14 @@ export const perimenopauseTracking: CaseStudy = {
           type: "text",
           data: "<p><strong>Ethics:</strong> IRB-approved, anonymous data, securely stored & destroyed post-study. Compensation: $50 Amazon gift card.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/research.png",
+            alt: "Research approach diagram for the perimenopause diary study",
+            caption: "Research approach overview",
+          },
+        },
       ],
     },
 
