@@ -26,20 +26,19 @@ export default function About() {
 
         <section>
           <AnimateOnScroll>
+            <div style={{ flexShrink: 0, marginBottom: "1.25rem" }}>
+              <Image
+                src="/images/profile.png"
+                alt="Adrian Sainz"
+                width={150}
+                height={150}
+                style={{ borderRadius: "50%", objectFit: "cover", width: 150, height: 150 }}
+              />
+            </div>
             <div className="label">My Experience</div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up">
-            <div style={{ display: "flex", gap: "2.5rem", alignItems: "flex-start" }}>
-              <div style={{ flexShrink: 0 }}>
-                <Image
-                  src="/images/profile.png"
-                  alt="Adrian Sainz"
-                  width={200}
-                  height={200}
-                  style={{ borderRadius: "50%", objectFit: "cover", width: 200, height: 200 }}
-                />
-              </div>
-              <div className="about-prose">
+            <div className="about-prose">
               <p>
                 I research and I design. I do both.
               </p>
@@ -49,7 +48,6 @@ export default function About() {
               <p>
                 That thread runs back to Cincinnati Children&apos;s Hospital, where I worked with investigators on NIH-funded clinical research, and through my PhD, which included a collaboration with Clue on perimenopause symptom tracking.
               </p>
-              </div>
             </div>
           </AnimateOnScroll>
         </section>
