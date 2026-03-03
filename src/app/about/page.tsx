@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
@@ -19,6 +20,18 @@ export default function About() {
             <h1 className="page-title">About <em>Me</em></h1>
           </AnimateOnScroll>
         </div>
+
+        <AnimateOnScroll animation="fade-in" delay={100}>
+          <div style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
+            <Image
+              src="/images/profile.png"
+              alt="Adrian Sainz"
+              width={300}
+              height={300}
+              style={{ borderRadius: "50%", objectFit: "cover", width: 300, height: 300 }}
+            />
+          </div>
+        </AnimateOnScroll>
 
         <hr className="section-line" />
 

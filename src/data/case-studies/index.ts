@@ -7,10 +7,10 @@ import type { CaseStudy } from "@/types/case-study";
 
 export const caseStudies: Record<string, CaseStudy> = {
   "unified-patient-portal": unifiedPatientPortal,
+  "histopathology-workflow": histopathologyWorkflow,
   "natera-clinical-review": nateraClinicalReview,
   "perimenopause-tracking": perimenopauseTracking,
   "identity-portal": identityPortal,
-  "histopathology-workflow": histopathologyWorkflow,
 };
 
 export const caseStudyList: CaseStudy[] = Object.values(caseStudies);
