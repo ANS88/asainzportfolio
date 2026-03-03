@@ -115,6 +115,27 @@ export const identityPortal: CaseStudy = {
           type: "text",
           data: "<p>Based on the data drawn from user testing, the prototype was refined to ensure users\u2019 mental models matched the system, providing a strong user experience.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/cardsorting.png",
+            alt: "Card sorting activity results from usability testing",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/cardsorting2.png",
+            alt: "Card sorting summary from usability testing",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/mapping.png",
+            alt: "Information architecture mapping from usability testing",
+          },
+        },
       ],
     },
 
