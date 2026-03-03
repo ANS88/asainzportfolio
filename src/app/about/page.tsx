@@ -79,7 +79,7 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-prose">
               <p>
-                When I&apos;m not working, I&apos;m usually on my bike somewhere in the Bay, deep in a book, or planning the next trip.
+                When I&apos;m not working, I&apos;m cycling the Bay, hiking, dancing, traveling somewhere new, or deep in a book.
               </p>
             </div>
           </AnimateOnScroll>
