@@ -40,16 +40,13 @@ export default function About() {
               </div>
               <div className="about-prose">
               <p>
-                My work lives in the space between research and making. I ask the hard questions and then I&apos;m the one who sticks around to build the answers.
+                I research and I design. I do both.
               </p>
               <p>
-                Right now, that means leading UX for lab operations and enterprise tools at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, working in the space between what the research says and what actually gets built. I&apos;ve been focused on creating the kind of research infrastructure that makes design decisions legible to the business, and vice versa.
+                At <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, I lead UX for lab operations and enterprise tools, bridging research and product in a space where that gap is rarely closed. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I shape which women&apos;s health research gets funded and why. Through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
               </p>
               <p>
-                Outside of biotech, I work as a Dealflow Fellow at <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, where I help shape which women&apos;s health research gets funded and why. Because who decides what gets studied matters just as much as the research itself. And through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about the technology meant to serve women&apos;s bodies: perimenopause wearables, the femtech landscape, the distance between what the science says and what ends up in an app. That gap bothers me, and writing is how I think through it.
-              </p>
-              <p>
-                That obsession didn&apos;t start at Natera. At Cincinnati Children&apos;s Hospital, I worked alongside investigators and clinical researchers on NIH-funded projects, learning to move between academic rigor and real clinical environments. My PhD deepened that further, including a collaboration with Clue to study how women actually experience and track perimenopause symptoms. Research that made the distance between what science knows and what products do with that knowledge impossible to ignore.
+                That thread runs back to Cincinnati Children&apos;s Hospital, where I worked with investigators on NIH-funded clinical research, and through my PhD, which included a collaboration with Clue on perimenopause symptom tracking.
               </p>
               </div>
             </div>
