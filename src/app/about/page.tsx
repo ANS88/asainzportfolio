@@ -4,10 +4,11 @@ import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
 
 const beliefs = [
-  "Healthcare technology fails people in predictable ways. I\u2019ve spent 10 years studying those patterns.",
-  "AI should augment clinical judgment, not simulate it. The interaction design problem at the center of AI health right now is the handoff between algorithmic confidence and human decision-making. That handoff is almost always designed poorly.",
-  "Compliance and good UX are not opposites. Regulated environments constrain the solution space. They don\u2019t constrain the quality of thinking.",
-  "The best health interfaces disappear. The worst ones cause harm. The difference is almost always a research decision that happened \u2014 or didn\u2019t \u2014 before the first wireframe.",
+  "I\u2019ve spent ten years watching healthcare technology fail people in predictable ways. That shapes how I work.",
+  "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health, and it\u2019s almost always designed poorly.",
+  "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
+  "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn\u2019t, before the first wireframe.",
+  "Design is a political act. Who gets centered, who gets left out: those are choices whether you make them consciously or not. I try to.",
 ];
 
 export default function About() {
