@@ -57,6 +57,21 @@ export default function About() {
 
         <section>
           <AnimateOnScroll>
+            <div className="label">Out of Office</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <div className="about-prose">
+              <p>
+                When I&apos;m not working, I&apos;m usually on my bike somewhere in the Bay, deep in a book, or planning the next trip.
+              </p>
+            </div>
+          </AnimateOnScroll>
+        </section>
+
+        <hr className="section-line" />
+
+        <section>
+          <AnimateOnScroll>
             <div className="label">Philosophy</div>
             <div className="section-title">What I believe</div>
           </AnimateOnScroll>
