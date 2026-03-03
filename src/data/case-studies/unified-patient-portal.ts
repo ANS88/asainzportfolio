@@ -85,6 +85,7 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "image",
           data: {
             src: "/images/case-studies/unified-patient-portal/designprinciples.png",
+            alt: "Design principles framework distilled from discovery research",
             caption: "Design principles distilled from discovery research",
           },
         },
@@ -92,6 +93,7 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "image",
           data: {
             src: "/images/case-studies/unified-patient-portal/personalexi.png",
+            alt: "Lexi persona document \u2014 digitally engaged pregnant patient",
             caption: "Lexi \u2014 primary persona, digitally engaged pregnant patient",
           },
         },
@@ -99,6 +101,7 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "image",
           data: {
             src: "/images/case-studies/unified-patient-portal/userjourneylexi.png",
+            alt: "Lexi\u2019s end-to-end genetic testing journey map",
             caption: "Lexi\u2019s end-to-end genetic testing journey map",
           },
         },
@@ -168,6 +171,7 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "image",
           data: {
             src: "/images/case-studies/unified-patient-portal/iterations.png",
+            alt: "Prototype iterations tested during usability sessions",
             caption: "Prototype iterations tested during usability sessions",
           },
         },
