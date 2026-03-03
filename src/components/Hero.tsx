@@ -153,7 +153,7 @@ export default function Hero() {
           <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
           <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Resume ↓</a>
+          <a href="https://drive.google.com/file/d/11d-LqzwOmtWanQYzoXCLvkrU13Dvfa0d/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume ↓</a>
         </div>
       </AnimateOnScroll>
     </div>
