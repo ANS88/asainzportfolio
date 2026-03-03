@@ -16,7 +16,7 @@ export default function About() {
       <div className="container">
         <div className="page-header">
           <AnimateOnScroll animation="fade-in">
-            <div className="label">Bio</div>
+            <div className="label">About</div>
             <h1 className="page-title">About <em>Me</em></h1>
           </AnimateOnScroll>
         </div>
@@ -24,6 +24,9 @@ export default function About() {
         <hr className="section-line" />
 
         <section>
+          <AnimateOnScroll>
+            <div className="label">My Experience</div>
+          </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up">
             <div style={{ display: "flex", gap: "2.5rem", alignItems: "flex-start" }}>
               <div style={{ flexShrink: 0 }}>
@@ -57,22 +60,7 @@ export default function About() {
 
         <section>
           <AnimateOnScroll>
-            <div className="label">Out of Office</div>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
-              <p>
-                When I&apos;m not working, I&apos;m usually on my bike somewhere in the Bay, deep in a book, or planning the next trip.
-              </p>
-            </div>
-          </AnimateOnScroll>
-        </section>
-
-        <hr className="section-line" />
-
-        <section>
-          <AnimateOnScroll>
-            <div className="label">Philosophy</div>
+            <div className="label">My Approach</div>
             <div className="section-title">What I believe</div>
           </AnimateOnScroll>
           <div className="beliefs-list">
@@ -82,6 +70,21 @@ export default function About() {
               </AnimateOnScroll>
             ))}
           </div>
+        </section>
+
+        <hr className="section-line" />
+
+        <section>
+          <AnimateOnScroll>
+            <div className="label">As a Human</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <div className="about-prose">
+              <p>
+                When I&apos;m not working, I&apos;m usually on my bike somewhere in the Bay, deep in a book, or planning the next trip.
+              </p>
+            </div>
+          </AnimateOnScroll>
         </section>
 
         <hr className="section-line" />
