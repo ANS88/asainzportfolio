@@ -49,6 +49,20 @@ export const identityPortal: CaseStudy = {
           type: "text",
           data: "<p><strong>Goal:</strong> Design and launch an online portal to streamline the exchange of foster-care health and legal data, ensuring that social workers, clinicians, and administrators can access up-to-date information to support the health and well-being of foster children.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/overview.png",
+            alt: "Overview of the IDENTITY portal system",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/overview2.png",
+            alt: "Secondary overview of the IDENTITY portal system",
+          },
+        },
       ],
     },
 
