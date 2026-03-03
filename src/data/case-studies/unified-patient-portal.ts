@@ -109,18 +109,6 @@ export const unifiedPatientPortal: CaseStudy = {
     },
 
     {
-      id: "findings",
-      title: "Personas & Journey Mapping",
-      type: "findings",
-      content: [
-        {
-          type: "text",
-          data: "<p>Defined <em>Lexi</em>, a digitally engaged pregnant patient, as the primary persona and mapped her end-to-end genetic-testing journey to expose key moments across ordering, sampling, results delivery, and billing.</p>",
-        },
-      ],
-    },
-
-    {
       id: "design",
       title: "Design Collaboration",
       type: "design",
@@ -205,23 +193,12 @@ export const unifiedPatientPortal: CaseStudy = {
 
     {
       id: "reflection",
-      title: "Reflection & Next Steps",
+      title: "Reflection",
       type: "reflection",
       content: [
         {
           type: "text",
           data: "<p>The Unified Patient Portal demonstrated that patient empowerment is achievable without overwhelming users, provided design principles stay patient-centric.</p>",
-        },
-        {
-          type: "list",
-          data: {
-            title: "Next iterations",
-            items: [
-              "Expand to oncology patients",
-              "Address low scheduling adoption with improved guidance",
-              "Continue longitudinal analytics to refine engagement strategies",
-            ],
-          },
         },
       ],
     },
