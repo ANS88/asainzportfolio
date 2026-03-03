@@ -81,6 +81,27 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "text",
           data: "<p>These principles anchored every design and content decision throughout the project.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/unified-patient-portal/designprinciples.png",
+            caption: "Design principles distilled from discovery research",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/unified-patient-portal/personalexi.png",
+            caption: "Lexi \u2014 primary persona, digitally engaged pregnant patient",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/unified-patient-portal/userjourneylexi.png",
+            caption: "Lexi\u2019s end-to-end genetic testing journey map",
+          },
+        },
       ],
     },
 
@@ -143,6 +164,13 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "text",
           data: "<p>Recommendations included clarifying scheduling instructions and reinforcing confirmation feedback.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/unified-patient-portal/iterations.png",
+            caption: "Prototype iterations tested during usability sessions",
+          },
+        },
       ],
     },
 
@@ -166,7 +194,7 @@ export const unifiedPatientPortal: CaseStudy = {
         },
         {
           type: "text",
-          data: "<p><strong>Publication:</strong> This work culminated in a peer-reviewed paper presented at the Design Research Society 2024 Conference: Navarro-Sainz, A., Huda, S., & Bectarte, R. <em>Unified Patient Portal: Engaging Patients Throughout the Genetic Testing Journey.</em> Proceedings of DRS 2024.</p>",
+          data: "<p><strong>Publication:</strong> This work culminated in a peer-reviewed paper presented at the Design Research Society 2024 Conference: Navarro-Sainz, A., Huda, S., & Bectarte, R. <em>Unified Patient Portal: Engaging Patients Throughout the Genetic Testing Journey.</em> Proceedings of DRS 2024. <a href=\"https://dl.designresearchsociety.org/cgi/viewcontent.cgi?article=3480&context=drs-conference-papers\" target=\"_blank\" rel=\"noopener noreferrer\">Read the paper \u2192</a></p>",
         },
       ],
     },
