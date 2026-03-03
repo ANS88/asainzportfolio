@@ -37,20 +37,16 @@ export default function About() {
               </div>
               <div className="about-prose">
               <p>
-                I&apos;m a researcher who ships products and a designer who publishes research. In healthcare, that combination is rare. It&apos;s also necessary.
+                My work lives in the space between research and making. I ask the hard questions and then I&apos;m the one who sticks around to build the answers.
               </p>
               <p>
-                At Natera, I lead UX for lab operations and enterprise tools,
-                building a centralized research function that demonstrates
-                measurable ROI. I balance strategic vision with tactical execution,
-                moving from foundational research to shipped products. Beyond
-                biotech, I advance women&apos;s health technology as a Dealflow
-                Fellow at AthenaDAO, shaping research priorities and funding
-                strategy that actually moves the field forward. Through my
-                Substack &ldquo;Women&apos;s Health, Computed,&rdquo; I translate
-                academic research into accessible analysis&mdash;from evaluating
-                perimenopause wearables to mapping the femtech landscape&mdash;because
-                understanding shouldn&apos;t require a PhD.
+                Right now, that means leading UX for lab operations and enterprise tools at Natera, working in the space between what the research says and what actually gets built. I&apos;ve been focused on creating the kind of research infrastructure that makes design decisions legible to the business, and vice versa.
+              </p>
+              <p>
+                Outside of biotech, I work as a Dealflow Fellow at AthenaDAO, where I help shape which women&apos;s health research gets funded and why. Because who decides what gets studied matters just as much as the research itself. And through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about the technology meant to serve women&apos;s bodies: perimenopause wearables, the femtech landscape, the distance between what the science says and what ends up in an app. That gap bothers me, and writing is how I think through it.
+              </p>
+              <p>
+                That obsession didn&apos;t start at Natera. At Cincinnati Children&apos;s Hospital, I worked alongside investigators and clinical researchers on NIH-funded projects, learning to move between academic rigor and real clinical environments. My PhD deepened that further, including a collaboration with Clue to study how women actually experience and track perimenopause symptoms. Research that made the distance between what science knows and what products do with that knowledge impossible to ignore.
               </p>
               </div>
             </div>
