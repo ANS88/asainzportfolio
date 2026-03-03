@@ -25,6 +25,12 @@ export const identityPortal: CaseStudy = {
       type: "context",
       content: [
         {
+          type: "video",
+          data: {
+            src: "https://www.youtube.com/embed/jbXdF-C4E6c?si=i3luNWnFNpHDUD-a&autoplay=1&loop=1&playlist=jbXdF-C4E6c",
+          },
+        },
+        {
           type: "text",
           data: "<p>A secure digital platform enabling Cincinnati Children\u2019s Hospital (CCHMC) and Hamilton County Jobs & Family Services (HCJFS) to share critical medical and legal information about foster children \u2014 replacing slow, paper-based exchanges and improving timeliness and accuracy of care.</p>",
         },
@@ -42,6 +48,20 @@ export const identityPortal: CaseStudy = {
         {
           type: "text",
           data: "<p><strong>Goal:</strong> Design and launch an online portal to streamline the exchange of foster-care health and legal data, ensuring that social workers, clinicians, and administrators can access up-to-date information to support the health and well-being of foster children.</p>",
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/overview.png",
+            alt: "Overview of the IDENTITY portal system",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/overview2.png",
+            alt: "Secondary overview of the IDENTITY portal system",
+          },
         },
       ],
     },
@@ -79,6 +99,13 @@ export const identityPortal: CaseStudy = {
           type: "text",
           data: "<p>Medium-fidelity wireframes were initially created to get feedback from users. We relied on paper wireframing and held in-person sessions to go over features and workflows.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/arch.png",
+            alt: "Information architecture diagram for the IDENTITY portal",
+          },
+        },
       ],
     },
 
@@ -94,6 +121,27 @@ export const identityPortal: CaseStudy = {
         {
           type: "text",
           data: "<p>Based on the data drawn from user testing, the prototype was refined to ensure users\u2019 mental models matched the system, providing a strong user experience.</p>",
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/cardsorting.png",
+            alt: "Card sorting activity results from usability testing",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/cardsorting2.png",
+            alt: "Card sorting summary from usability testing",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/identity-portal/mapping.png",
+            alt: "Information architecture mapping from usability testing",
+          },
         },
       ],
     },
