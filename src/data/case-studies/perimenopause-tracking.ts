@@ -137,6 +137,37 @@ export const perimenopauseTracking: CaseStudy = {
           type: "text",
           data: "<h3>Finding 4: High Usability, Shallow Insights</h3><p>Average SUS score of 88.3 (industry benchmark: 68). Users praised the interface but wanted customizable symptom categories, richer trend analysis, and integration with wearables.</p>",
         },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",
+            alt: "Thematic analysis map from diary study and exit interviews",
+            caption: "Thematic analysis",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/findings2.png",
+            alt: "Secondary findings visualization from perimenopause tracking study",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/usage.png",
+            alt: "App usage patterns across daily and sporadic trackers",
+            caption: "Tracking usage patterns",
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/perimenopause-tracking/susscore.png",
+            alt: "SUS score distribution — average 88.3 against 68 benchmark",
+            caption: "SUS score results",
+          },
+        },
       ],
     },
 
