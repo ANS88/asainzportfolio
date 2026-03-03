@@ -106,7 +106,6 @@ export default function About() {
             <div className="about-contact-links">
               <a href="mailto:sainz.nag@gmail.com">Email</a>
               <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://calendar.app.google" target="_blank" rel="noopener noreferrer">Calendar</a>
             </div>
           </AnimateOnScroll>
         </section>
