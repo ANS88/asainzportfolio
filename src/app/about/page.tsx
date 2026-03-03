@@ -21,23 +21,21 @@ export default function About() {
           </AnimateOnScroll>
         </div>
 
-        <AnimateOnScroll animation="fade-in" delay={100}>
-          <div style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
-            <Image
-              src="/images/profile.png"
-              alt="Adrian Sainz"
-              width={300}
-              height={300}
-              style={{ borderRadius: "50%", objectFit: "cover", width: 300, height: 300 }}
-            />
-          </div>
-        </AnimateOnScroll>
-
         <hr className="section-line" />
 
         <section>
           <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
+            <div style={{ display: "flex", gap: "2.5rem", alignItems: "flex-start" }}>
+              <div style={{ flexShrink: 0 }}>
+                <Image
+                  src="/images/profile.png"
+                  alt="Adrian Sainz"
+                  width={200}
+                  height={200}
+                  style={{ borderRadius: "50%", objectFit: "cover", width: 200, height: 200 }}
+                />
+              </div>
+              <div className="about-prose">
               <p>
                 I&apos;m a researcher who ships products and a designer who publishes research. In healthcare, that combination is rare. It&apos;s also necessary.
               </p>
@@ -54,6 +52,7 @@ export default function About() {
                 perimenopause wearables to mapping the femtech landscape&mdash;because
                 understanding shouldn&apos;t require a PhD.
               </p>
+              </div>
             </div>
           </AnimateOnScroll>
         </section>
