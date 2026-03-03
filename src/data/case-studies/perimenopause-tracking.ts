@@ -15,7 +15,7 @@ export const perimenopauseTracking: CaseStudy = {
     { value: "40", metric: "Participants enrolled" },
     { value: "1,977", metric: "Tracking events analyzed" },
     { value: "88.3", metric: "SUS usability score (benchmark: 68)" },
-    { value: "CHI 2026", metric: "Manuscript in peer review" },
+    { value: "In Review", metric: "Conference paper submission" },
   ],
 
   sections: [
