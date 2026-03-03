@@ -30,13 +30,6 @@ export const unifiedPatientPortal: CaseStudy = {
             caption: "",
           },
         },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/1169729044?autoplay=1&loop=1&muted=1&background=1",
-            caption: "",
-          },
-        },
       ],
     },
 
