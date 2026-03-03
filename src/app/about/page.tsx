@@ -4,10 +4,11 @@ import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
 
 const beliefs = [
-  "Healthcare technology fails people in predictable ways. I\u2019ve spent 10 years studying those patterns.",
-  "AI should augment clinical judgment, not simulate it. The interaction design problem at the center of AI health right now is the handoff between algorithmic confidence and human decision-making. That handoff is almost always designed poorly.",
-  "Compliance and good UX are not opposites. Regulated environments constrain the solution space. They don\u2019t constrain the quality of thinking.",
-  "The best health interfaces disappear. The worst ones cause harm. The difference is almost always a research decision that happened \u2014 or didn\u2019t \u2014 before the first wireframe.",
+  "I\u2019ve spent ten years watching healthcare technology fail people in predictable ways. That shapes how I work.",
+  "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health, and it\u2019s almost always designed poorly.",
+  "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
+  "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn\u2019t, before the first wireframe.",
+  "Design is a political act. Who gets centered, who gets left out: those are choices whether you make them consciously or not. I try to.",
 ];
 
 export default function About() {
@@ -16,7 +17,7 @@ export default function About() {
       <div className="container">
         <div className="page-header">
           <AnimateOnScroll animation="fade-in">
-            <div className="label">Bio</div>
+            <div className="label">About</div>
             <h1 className="page-title">About <em>Me</em></h1>
           </AnimateOnScroll>
         </div>
@@ -24,6 +25,9 @@ export default function About() {
         <hr className="section-line" />
 
         <section>
+          <AnimateOnScroll>
+            <div className="label">My Experience</div>
+          </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up">
             <div style={{ display: "flex", gap: "2.5rem", alignItems: "flex-start" }}>
               <div style={{ flexShrink: 0 }}>
@@ -37,16 +41,13 @@ export default function About() {
               </div>
               <div className="about-prose">
               <p>
-                My work lives in the space between research and making. I ask the hard questions and then I&apos;m the one who sticks around to build the answers.
+                I research and I design. I do both.
               </p>
               <p>
-                Right now, that means leading UX for lab operations and enterprise tools at Natera, working in the space between what the research says and what actually gets built. I&apos;ve been focused on creating the kind of research infrastructure that makes design decisions legible to the business, and vice versa.
+                At <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, I lead UX for lab operations and enterprise tools, bridging research and product in a space where that gap is rarely closed. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I shape which women&apos;s health research gets funded and why. Through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
               </p>
               <p>
-                Outside of biotech, I work as a Dealflow Fellow at AthenaDAO, where I help shape which women&apos;s health research gets funded and why. Because who decides what gets studied matters just as much as the research itself. And through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about the technology meant to serve women&apos;s bodies: perimenopause wearables, the femtech landscape, the distance between what the science says and what ends up in an app. That gap bothers me, and writing is how I think through it.
-              </p>
-              <p>
-                That obsession didn&apos;t start at Natera. At Cincinnati Children&apos;s Hospital, I worked alongside investigators and clinical researchers on NIH-funded projects, learning to move between academic rigor and real clinical environments. My PhD deepened that further, including a collaboration with Clue to study how women actually experience and track perimenopause symptoms. Research that made the distance between what science knows and what products do with that knowledge impossible to ignore.
+                That thread runs back to Cincinnati Children&apos;s Hospital, where I worked with investigators on NIH-funded clinical research, and through my PhD, which included a collaboration with Clue on perimenopause symptom tracking.
               </p>
               </div>
             </div>
@@ -57,22 +58,7 @@ export default function About() {
 
         <section>
           <AnimateOnScroll>
-            <div className="label">Out of Office</div>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
-              <p>
-                When I&apos;m not working, I&apos;m usually on my bike somewhere in the Bay, deep in a book, or planning the next trip.
-              </p>
-            </div>
-          </AnimateOnScroll>
-        </section>
-
-        <hr className="section-line" />
-
-        <section>
-          <AnimateOnScroll>
-            <div className="label">Philosophy</div>
+            <div className="label">My Approach</div>
             <div className="section-title">What I believe</div>
           </AnimateOnScroll>
           <div className="beliefs-list">
@@ -82,6 +68,21 @@ export default function About() {
               </AnimateOnScroll>
             ))}
           </div>
+        </section>
+
+        <hr className="section-line" />
+
+        <section>
+          <AnimateOnScroll>
+            <div className="label">As a Human</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <div className="about-prose">
+              <p>
+                When I&apos;m not working, I&apos;m cycling the Bay, hiking, dancing, traveling somewhere new, or deep in a book.
+              </p>
+            </div>
+          </AnimateOnScroll>
         </section>
 
         <hr className="section-line" />
