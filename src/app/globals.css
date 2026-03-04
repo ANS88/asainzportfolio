@@ -851,8 +851,6 @@ a:hover { opacity: .85; }
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.8); } }
 
 /* Currently building accordion */
-.currently-building { margin-bottom: 1.5rem; }
-.currently-building .status { margin-bottom: .75rem; }
 .building-list { display: flex; flex-direction: column; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
 .building-item { border-bottom: 1px solid var(--border); }
 .building-item:last-child { border-bottom: none; }
