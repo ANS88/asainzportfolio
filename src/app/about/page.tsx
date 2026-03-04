@@ -43,7 +43,7 @@ export default function About() {
                 I research and I design. I do both.
               </p>
               <p>
-                At <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, I lead UX for lab operations and enterprise tools, bridging research and product in a space where that gap is rarely closed. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I shape which women&apos;s health research gets funded and why. Through my Substack, &ldquo;Women&apos;s Health, Computed,&rdquo; I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
+                At <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, I lead UX for lab operations and enterprise tools, bridging research and product in a space where that gap is rarely closed. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I shape which women&apos;s health research gets funded and why. Through my Substack, <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">&ldquo;Women&apos;s Health, Computed,&rdquo;</a> I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
               </p>
               <p>
                 That thread runs back to Cincinnati Children&apos;s Hospital, where I worked with investigators on NIH-funded clinical research, and through my PhD, which included a collaboration with Clue on perimenopause symptom tracking.
