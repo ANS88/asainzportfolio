@@ -25,7 +25,7 @@ const PROJECTS = [
     ],
   },
   {
-    name: "Women's Health, Computed",
+    name: "Women\u2019s Health, Computed",
     description: "Translating 4 years of menopause app research into insights for designers and skeptical consumers.",
     metrics: ["Public writing", "Substack"],
     points: [
@@ -45,21 +45,22 @@ export default function CurrentlyBuilding() {
         <div className="label">In progress</div>
         <div className="section-title">Currently building</div>
       </AnimateOnScroll>
-      <AnimateOnScroll animation="fade-up">
-        <div className="building-list">
-          {PROJECTS.map((item, i) => (
-            <div key={i} className={`building-item${expanded === i ? " open" : ""}`}>
-              <button
-                className="building-item-header"
-                onClick={() => setExpanded(expanded === i ? null : i)}
-                aria-expanded={expanded === i}
-              >
-                <span className="building-item-name">{item.name}</span>
-                <span className="building-item-chevron">{expanded === i ? "−" : "+"}</span>
-              </button>
-              {expanded === i && (
-                <div className="building-item-body">
-                  <p className="building-item-desc">{item.description}</p>
+      <div className="building-list">
+        {PROJECTS.map((item, i) => (
+          <AnimateOnScroll key={i} animation="fade-up">
+            <div
+              className={`building-item${expanded === i ? " open" : ""}`}
+              onClick={() => setExpanded(expanded === i ? null : i)}
+            >
+              <div className="building-item-header">
+                <div className="building-item-left">
+                  <div className="building-item-name">{item.name}</div>
+                  <div className="building-item-desc">{item.description}</div>
+                </div>
+                <span className="building-toggle-hint">details</span>
+              </div>
+              <div className="building-body-wrap">
+                <div className="building-body">
                   <div className="building-metrics">
                     {item.metrics.map((m, j) => (
                       <span key={j} className="building-metric">{m}</span>
@@ -71,16 +72,22 @@ export default function CurrentlyBuilding() {
                     ))}
                   </ul>
                   {item.href && (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="building-link">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="building-link"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       Read on Substack →
                     </a>
                   )}
                 </div>
-              )}
+              </div>
             </div>
-          ))}
-        </div>
-      </AnimateOnScroll>
+          </AnimateOnScroll>
+        ))}
+      </div>
     </section>
   );
 }

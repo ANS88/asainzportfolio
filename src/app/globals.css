@@ -850,23 +850,31 @@ a:hover { opacity: .85; }
 .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.8); } }
 
-/* Currently building accordion */
-.building-list { display: flex; flex-direction: column; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
-.building-item { border-bottom: 1px solid var(--border); }
-.building-item:last-child { border-bottom: none; }
-.building-item-header { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; padding: .65rem .9rem; cursor: pointer; text-align: left; gap: .5rem; }
-.building-item-header:hover { background: var(--surface); }
-.building-item-name { font-family: var(--mono); font-size: .72rem; color: var(--text); font-weight: 600; }
-.building-item-chevron { font-size: .85rem; color: var(--muted); line-height: 1; flex-shrink: 0; }
-.building-item-body { padding: .1rem .9rem .9rem; }
-.building-item-desc { font-size: .78rem; color: var(--muted); line-height: 1.55; margin: 0 0 .65rem; }
-.building-metrics { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .65rem; }
-.building-metric { font-family: var(--mono); font-size: .62rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .2rem .5rem; color: var(--muted); }
-.building-points { margin: 0 0 .65rem; padding-left: 1.1rem; }
-.building-points li { font-size: .78rem; color: var(--muted); line-height: 1.55; margin-bottom: .3rem; }
-.building-points li:last-child { margin-bottom: 0; }
-.building-link { font-family: var(--mono); font-size: .68rem; color: var(--accent); text-decoration: none; }
-.building-link:hover { text-decoration: underline; }
+/* Currently building accordion — matches shipped-item pattern */
+.building-list { display: flex; flex-direction: column; }
+.building-item { border-bottom: 1.5px solid var(--border); cursor: pointer; transition: all var(--transition-medium); }
+.building-item:first-child { border-top: 1.5px solid var(--border); }
+.building-item.open { background: rgba(9,9,232,.03); border-left: 3px solid var(--accent); padding-left: .75rem; border-color: var(--border); }
+.building-item-header { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.5rem 0; }
+.building-item.open .building-item-header { padding-left: .25rem; }
+.building-item-name { font-family: var(--serif); font-size: 1.2rem; line-height: 1.2; letter-spacing: -.01em; margin-bottom: .25rem; transition: color var(--transition-fast); }
+.building-item:hover .building-item-name, .building-item.open .building-item-name { color: var(--accent); }
+.building-item-desc { font-size: .82rem; color: var(--ink3); line-height: 1.55; font-style: italic; }
+.building-toggle-hint { font-family: var(--mono); font-size: .6rem; color: var(--ink3); white-space: nowrap; margin-top: .35rem; transition: color var(--transition-fast); }
+.building-toggle-hint::after { content: ' +'; }
+.building-item.open .building-toggle-hint::after { content: ' −'; }
+.building-item:hover .building-toggle-hint { color: var(--accent); }
+.building-body-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--transition-medium); overflow: hidden; }
+.building-item.open .building-body-wrap { grid-template-rows: 1fr; }
+.building-body { min-height: 0; display: flex; flex-direction: column; gap: .75rem; padding-bottom: 0; transition: padding-bottom var(--transition-medium); }
+.building-item.open .building-body { padding-bottom: 1.5rem; }
+.building-metrics { display: flex; gap: .5rem; flex-wrap: wrap; }
+.building-metric { font-family: var(--mono); font-size: .6rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); background: var(--cream); padding: .2rem .55rem; border-radius: 3px; }
+.building-points { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+.building-points li { font-size: .88rem; line-height: 1.6; color: var(--ink2); padding-left: 1.1rem; position: relative; }
+.building-points li::before { content: ''; position: absolute; left: 0; top: .55rem; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.building-link { font-family: var(--mono); font-size: .65rem; color: var(--accent); border-bottom: 1px solid transparent; transition: all var(--transition-fast); }
+.building-link:hover { border-bottom-color: var(--accent); opacity: 1; }
 
 /* ═══ SECTIONS ═══ */
 section { padding: 3.5rem 0; }
