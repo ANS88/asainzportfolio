@@ -21,8 +21,6 @@ export default function Home() {
         <hr className="section-line" />
         <PublicationsSection />
         <hr className="section-line" />
-        <SiteNav />
-        <hr className="section-line" />
         <InterestsMapSection />
         <hr className="section-line" />
         <MapSection />
@@ -30,6 +28,8 @@ export default function Home() {
         <DreamsSection />
         <hr className="section-line" />
         <FavoriteReads />
+        <hr className="section-line" />
+        <SiteNav />
       </div>
       <ContactBlock />
     </>
