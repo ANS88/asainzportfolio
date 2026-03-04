@@ -57,7 +57,7 @@ export default function CurrentlyBuilding() {
                   <div className="building-item-name">{item.name}</div>
                   <div className="building-item-desc">{item.description}</div>
                 </div>
-                <span className="building-toggle-hint">details</span>
+                <span className="building-toggle-hint"></span>
               </div>
               <div className="building-body-wrap">
                 <div className="building-body">

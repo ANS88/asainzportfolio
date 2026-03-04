@@ -862,8 +862,8 @@ a:hover { opacity: .85; }
 .building-item:hover .building-item-name, .building-item.open .building-item-name { color: var(--accent); }
 .building-item-desc { font-size: .82rem; color: var(--ink3); line-height: 1.55; font-style: italic; }
 .building-toggle-hint { font-family: var(--mono); font-size: .6rem; color: var(--ink3); white-space: nowrap; margin-top: .35rem; transition: color var(--transition-fast); }
-.building-toggle-hint::after { content: ' +'; }
-.building-item.open .building-toggle-hint::after { content: ' −'; }
+.building-toggle-hint::after { content: '+'; }
+.building-item.open .building-toggle-hint::after { content: '−'; }
 .building-item:hover .building-toggle-hint { color: var(--accent); }
 .building-body-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--transition-medium); overflow: hidden; }
 .building-item.open .building-body-wrap { grid-template-rows: 1fr; }
@@ -1049,8 +1049,8 @@ section:hover .label::after { transform: scaleX(1); }
 .cs-link:hover { border-bottom-color: var(--accent); }
 .toggle-hint { font-family: var(--mono); font-size: .6rem; color: var(--ink3); text-align: right; white-space: nowrap; transition: color var(--transition-fast); }
 .shipped-item:hover .toggle-hint { color: var(--accent); }
-.toggle-hint::after { content: ' +'; }
-.shipped-item.open .toggle-hint::after { content: ' −'; }
+.toggle-hint::after { content: '+'; }
+.shipped-item.open .toggle-hint::after { content: '−'; }
 
 /* ═══ BELIEFS ═══ */
 .beliefs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
