@@ -123,7 +123,7 @@ export default function Hero() {
         </svg>
       </div>
       <AnimateOnScroll animation="fade-in">
-        <div className="hero-tag">Adriana Navarro Sainz &middot; PhD in HCI &middot; San Francisco</div>
+        <div className="hero-tag">Adriana Sainz &middot; PhD in HCI &middot; San Francisco</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={100}>
         <div className="status"><span className="status-dot"></span> Currently building</div>
