@@ -123,13 +123,13 @@ export default function Hero() {
         </svg>
       </div>
       <AnimateOnScroll animation="fade-in">
-        <div className="hero-tag">Adriana Navarro Sainz &middot; PhD in HCI &middot; San Francisco</div>
+        <div className="hero-tag">Adriana Sainz &middot; PhD in HCI &middot; San Francisco</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={100}>
         <div className="status"><span className="status-dot"></span> Currently building</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={200}>
-        <h1>Hi, I'm Adriana, a design leader who loves building products where patients feel seen, scientists can do their best work, and <em>better outcomes follow naturally from both.</em></h1>
+        <h1>Hi, I'm Adriana, a design leader who loves building products where patients feel seen and scientists can do their best work.</h1>
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="fade-up" delay={420}>
