@@ -797,7 +797,7 @@ a:hover { opacity: .85; }
   100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; border-color: #b8b8f4; }
 }
 .hero-tag { font-family: var(--mono); font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin-bottom: 1.25rem; }
-.hero h1 { font-family: var(--serif); font-size: clamp(1.9375rem, 5.5vw, 3.8rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }
+.hero h1 { font-family: var(--serif); font-size: clamp(1.4375rem, calc(5.5vw - 0.5rem), 3.3rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }
 .hero h1 em { font-style: italic; color: var(--accent); }
 .hero-sub { font-size: 1.05rem; color: var(--ink2); line-height: 1.7; max-width: 620px; margin-bottom: 1.25rem; }
 .metrics-bar {
