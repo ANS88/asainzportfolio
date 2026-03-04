@@ -8,12 +8,6 @@ const pages = [
     tag: "Portfolio",
   },
   {
-    title: "Playground",
-    href: "/playground",
-    description: "Experiments and tools built to understand things I couldn\u2019t learn by reading about them.",
-    tag: "Experiments",
-  },
-  {
     title: "Thinking",
     href: "/thinking",
     description: "Working positions on healthcare design, AI health products, and femtech.",
