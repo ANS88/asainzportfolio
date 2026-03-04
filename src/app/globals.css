@@ -850,13 +850,14 @@ a:hover { opacity: .85; }
 .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.8); } }
 
-/* Currently building accordion — matches shipped-item pattern */
-.building-list { display: flex; flex-direction: column; }
-.building-item { border-bottom: 1.5px solid var(--border); cursor: pointer; transition: all var(--transition-medium); }
-.building-item:first-child { border-top: 1.5px solid var(--border); }
-.building-item.open { background: rgba(9,9,232,.03); border-left: 3px solid var(--accent); padding-left: .75rem; border-color: var(--border); }
-.building-item-header { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.5rem 0; }
-.building-item.open .building-item-header { padding-left: .25rem; }
+/* Currently building accordion — card style */
+.building-list { display: flex; flex-direction: column; gap: .75rem; }
+.building-item { background: white; border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; transition: all var(--transition-medium); overflow: hidden; position: relative; }
+.building-item::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform var(--transition-medium); }
+.building-item:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.building-item:hover::after, .building-item.open::after { transform: scaleX(1); }
+.building-item.open { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.building-item-header { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.25rem 1.5rem; }
 .building-item-name { font-family: var(--serif); font-size: 1.2rem; line-height: 1.2; letter-spacing: -.01em; margin-bottom: .25rem; transition: color var(--transition-fast); }
 .building-item:hover .building-item-name, .building-item.open .building-item-name { color: var(--accent); }
 .building-item-desc { font-size: .82rem; color: var(--ink3); line-height: 1.55; font-style: italic; }
@@ -866,7 +867,7 @@ a:hover { opacity: .85; }
 .building-item:hover .building-toggle-hint { color: var(--accent); }
 .building-body-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--transition-medium); overflow: hidden; }
 .building-item.open .building-body-wrap { grid-template-rows: 1fr; }
-.building-body { min-height: 0; display: flex; flex-direction: column; gap: .75rem; padding-bottom: 0; transition: padding-bottom var(--transition-medium); }
+.building-body { min-height: 0; display: flex; flex-direction: column; gap: .75rem; padding: 0 1.5rem; transition: padding-bottom var(--transition-medium); }
 .building-item.open .building-body { padding-bottom: 1.5rem; }
 .building-metrics { display: flex; gap: .5rem; flex-wrap: wrap; }
 .building-metric { font-family: var(--mono); font-size: .6rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); background: var(--cream); padding: .2rem .55rem; border-radius: 3px; }
