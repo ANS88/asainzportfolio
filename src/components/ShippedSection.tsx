@@ -94,7 +94,7 @@ export default function ShippedSection() {
               ))}
             </div>
           </div>
-          <div className="toggle-hint">details</div>
+          <div className="toggle-hint"></div>
           <div className="shipped-expand">
             <div className="expand-body">
               <p><strong>Built:</strong> {item.built}</p>
