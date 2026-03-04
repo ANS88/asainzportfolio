@@ -13,7 +13,6 @@ export default function ContactBlock() {
           <div className="contact-links">
             <a href="mailto:sainz.nag@gmail.com">sainz.nag@gmail.com</a>
             <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="https://calendar.app.google" target="_blank" rel="noopener noreferrer">Calendar ↗</a>
           </div>
           </AnimateOnScroll>
         </div>
