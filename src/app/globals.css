@@ -850,6 +850,26 @@ a:hover { opacity: .85; }
 .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.8); } }
 
+/* Currently building accordion */
+.currently-building { margin-bottom: 1.5rem; }
+.currently-building .status { margin-bottom: .75rem; }
+.building-list { display: flex; flex-direction: column; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
+.building-item { border-bottom: 1px solid var(--border); }
+.building-item:last-child { border-bottom: none; }
+.building-item-header { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; padding: .65rem .9rem; cursor: pointer; text-align: left; gap: .5rem; }
+.building-item-header:hover { background: var(--surface); }
+.building-item-name { font-family: var(--mono); font-size: .72rem; color: var(--text); font-weight: 600; }
+.building-item-chevron { font-size: .85rem; color: var(--muted); line-height: 1; flex-shrink: 0; }
+.building-item-body { padding: .1rem .9rem .9rem; }
+.building-item-desc { font-size: .78rem; color: var(--muted); line-height: 1.55; margin: 0 0 .65rem; }
+.building-metrics { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .65rem; }
+.building-metric { font-family: var(--mono); font-size: .62rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: .2rem .5rem; color: var(--muted); }
+.building-points { margin: 0 0 .65rem; padding-left: 1.1rem; }
+.building-points li { font-size: .78rem; color: var(--muted); line-height: 1.55; margin-bottom: .3rem; }
+.building-points li:last-child { margin-bottom: 0; }
+.building-link { font-family: var(--mono); font-size: .68rem; color: var(--accent); text-decoration: none; }
+.building-link:hover { text-decoration: underline; }
+
 /* ═══ SECTIONS ═══ */
 section { padding: 3.5rem 0; }
 .section-line { border: none; border-top: 1.5px solid var(--border); margin: 0; transition: border-color var(--transition-medium); }
