@@ -154,14 +154,6 @@ export default function InterestsMapSection() {
                 ) : (
                   <text x={node.cx} y={node.cy + 5} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
                 )}
-                {/* Description on expand */}
-                {isExpanded && (
-                  <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
-                    <div className="node-tooltip">
-                      <p>{node.desc}</p>
-                    </div>
-                  </foreignObject>
-                )}
               </g>
             );
           })}
@@ -173,6 +165,16 @@ export default function InterestsMapSection() {
             <text x="400" y="273" textAnchor="middle" fill="#b8b8f4" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
           </g>
         </svg>
+
+        {/* Description outside SVG so it's never clipped by the viewBox */}
+        {expanded && (() => {
+          const node = PRIMARY_NODES.find((n) => n.id === expanded);
+          return node ? (
+            <div className="node-tooltip">
+              <p>{node.desc}</p>
+            </div>
+          ) : null;
+        })()}
 
         {/* Zoom out button when zoomed in */}
         {expanded && (
