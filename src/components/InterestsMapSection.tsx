@@ -33,7 +33,7 @@ const SATELLITE_NODES = [
   { cx: 750, cy: 415, label: "VUIs" },
 ];
 
-const FULL_VIEWBOX = "0 0 800 520";
+const FULL_VIEWBOX = "0 -15 800 555";
 const ZOOM_SIZE = 280; // viewport size when zoomed
 
 export default function InterestsMapSection() {
@@ -52,7 +52,7 @@ export default function InterestsMapSection() {
     const half = ZOOM_SIZE / 2;
     // Clamp so we don't go outside the SVG bounds
     const x = Math.max(0, Math.min(800 - ZOOM_SIZE, node.cx - half));
-    const y = Math.max(0, Math.min(520 - ZOOM_SIZE, node.cy - half));
+    const y = Math.max(-15, Math.min(540 - ZOOM_SIZE, node.cy - half));
     return `${x} ${y} ${ZOOM_SIZE} ${ZOOM_SIZE}`;
   }, [expanded]);
 
@@ -159,7 +159,6 @@ export default function InterestsMapSection() {
                   <foreignObject x={node.cx - 100} y={node.cy + r + 8} width="200" height="100">
                     <div className="node-tooltip">
                       <p>{node.desc}</p>
-                      <a href={node.href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>Explore →</a>
                     </div>
                   </foreignObject>
                 )}
