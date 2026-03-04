@@ -1,58 +1,86 @@
+"use client";
+
+import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const PROJECTS = [
   {
-    title: "Women\u2019s Health, Computed",
-    description:
-      "Translating 4 years of menopause app research into insights for designers and skeptical consumers",
+    name: "yalp!",
+    description: "A lab execution platform unifying +5 legacy systems into one, modernizing lab software to reduce TAT and improve ease of use for lab users.",
+    metrics: ["+5 systems unified", "Reduced TAT", "End-to-end lab ops"],
+    points: [
+      "Replacing fragmented legacy tooling with a single, cohesive platform",
+      "Designing for bench scientists — reducing clicks, errors, and cognitive load",
+      "Coordinating across eng, science, and ops to align on a shared workflow model",
+    ],
+  },
+  {
+    name: "Natera UX research repository",
+    description: "A reusable insight library across Natera — making past research findable, actionable, and shared.",
+    metrics: ["Cross-org reuse", "Structured tagging", "Faster synthesis"],
+    points: [
+      "Centralizing scattered research artifacts into one searchable system",
+      "Designing a taxonomy that works across product areas and research methods",
+      "Reducing duplicated discovery work and surfacing existing evidence faster",
+    ],
+  },
+  {
+    name: "Women's Health, Computed",
+    description: "Translating 4 years of menopause app research into insights for designers and skeptical consumers.",
+    metrics: ["Public writing", "Substack"],
+    points: [
+      "Covering AI health products, femtech design, and clinical decision support",
+      "Written from a researcher-practitioner perspective",
+    ],
     href: "https://womenshealthcomputed.substack.com",
-  },
-  {
-    title: "AI Animation Library",
-    description:
-      "Interactive tools making tokenization, embeddings, and RAG legible to designers",
-  },
-  {
-    title: "DIS 2026 submission",
-    description:
-      "Publishing somaesthetic design principles from dissertation research",
-  },
-  {
-    title: "Natera UX ROI framework",
-    description:
-      "Proving research value in lab operations across 50+ facilities",
   },
 ];
 
 export default function CurrentlyBuilding() {
+  const [expanded, setExpanded] = useState<number | null>(null);
+
   return (
     <section>
       <AnimateOnScroll>
         <div className="label">In progress</div>
         <div className="section-title">Currently building</div>
       </AnimateOnScroll>
-      <div className="currently-list">
-        {PROJECTS.map((p) => (
-          <AnimateOnScroll key={p.title} animation="fade-up">
-            <div className="currently-item">
-              <span className="currently-arrow">&rarr;</span>
-              <div>
-                <span className="currently-title">
-                  {p.href ? (
-                    <a href={p.href} target="_blank" rel="noopener noreferrer">
-                      {p.title}
+      <AnimateOnScroll animation="fade-up">
+        <div className="building-list">
+          {PROJECTS.map((item, i) => (
+            <div key={i} className={`building-item${expanded === i ? " open" : ""}`}>
+              <button
+                className="building-item-header"
+                onClick={() => setExpanded(expanded === i ? null : i)}
+                aria-expanded={expanded === i}
+              >
+                <span className="building-item-name">{item.name}</span>
+                <span className="building-item-chevron">{expanded === i ? "−" : "+"}</span>
+              </button>
+              {expanded === i && (
+                <div className="building-item-body">
+                  <p className="building-item-desc">{item.description}</p>
+                  <div className="building-metrics">
+                    {item.metrics.map((m, j) => (
+                      <span key={j} className="building-metric">{m}</span>
+                    ))}
+                  </div>
+                  <ul className="building-points">
+                    {item.points.map((pt, j) => (
+                      <li key={j}>{pt}</li>
+                    ))}
+                  </ul>
+                  {item.href && (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="building-link">
+                      Read on Substack →
                     </a>
-                  ) : (
-                    p.title
                   )}
-                </span>
-                <span className="currently-sep"> &mdash; </span>
-                <span className="currently-desc">{p.description}</span>
-              </div>
+                </div>
+              )}
             </div>
-          </AnimateOnScroll>
-        ))}
-      </div>
+          ))}
+        </div>
+      </AnimateOnScroll>
     </section>
   );
 }
