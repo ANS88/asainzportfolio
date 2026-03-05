@@ -5,7 +5,7 @@ export const unifiedPatientPortal: CaseStudy = {
   title: "Unified Patient Portal",
   stakesLine:
     "Patients had little visibility into their own genetic test status, faced opaque billing, and waited days for results. I led research for Natera\u2019s first patient-facing portal \u2014 empowering 181K patients to track tests, view results, manage billing, and schedule sample draws.",
-  role: "Lead Designer & Researcher",
+  role: "Lead UX Designer and Researcher",
   timeline: "Discovery to post-launch monitoring (2023\u20132024)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
