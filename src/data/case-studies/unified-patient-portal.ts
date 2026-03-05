@@ -234,7 +234,7 @@ export const unifiedPatientPortal: CaseStudy = {
   ],
 
   myRole:
-    "Lead UX Researcher \u2014 stakeholder interviews, empathy mapping, persona development, journey mapping, usability testing, post-launch analytics",
+    "Lead UX Designer and Researcher \u2014 stakeholder interviews, empathy mapping, persona development, journey mapping, usability testing, post-launch analytics",
 
   tags: [
     "Healthcare UX",
