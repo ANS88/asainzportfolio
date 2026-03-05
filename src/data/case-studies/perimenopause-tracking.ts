@@ -6,7 +6,7 @@ export const perimenopauseTracking: CaseStudy = {
     "Charting the Waves of Perimenopause: A Diary Study on Digital Symptom Tracking",
   stakesLine:
     "Perimenopause is unpredictable — cycles shift, symptoms fluctuate, and clinical recognition often lags. I led a mixed-methods study with 40 women to understand how digital symptom tracking shapes self-management and clinical advocacy.",
-  role: "Principal Investigator",
+  role: "Lead Designer & Researcher",
   timeline: "Discovery to reporting (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
