@@ -1672,3 +1672,23 @@ section:hover .label::after { transform: scaleX(1); }
   .side-nav { display: none; }
   .mobile-nav { display: block; }
 }
+
+/* Currently line */
+.currently-line {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink2);
+  max-width: 42rem;
+}
+
+/* View all work link */
+.view-all-link {
+  font-size: .95rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity .2s;
+}
+.view-all-link:hover {
+  opacity: .7;
+}

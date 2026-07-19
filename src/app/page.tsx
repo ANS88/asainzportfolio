@@ -1,13 +1,8 @@
 import Hero from "@/components/Hero";
 import InterestsMapSection from "@/components/InterestsMapSection";
-import MapSection from "@/components/MapSection";
-import DreamsSection from "@/components/DreamsSection";
-import FavoriteReads from "@/components/FavoriteReads";
-import SiteNav from "@/components/SiteNav";
 import ContactBlock from "@/components/ContactBlock";
-import CurrentlyBuilding from "@/components/CurrentlyBuilding";
-import LatestThinking from "@/components/LatestThinking";
-import PublicationsSection from "@/components/PublicationsSection";
+import FeaturedWork from "@/components/FeaturedWork";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function Home() {
   return (
@@ -15,21 +10,23 @@ export default function Home() {
       <div className="container">
         <Hero />
         <hr className="section-line" />
-        <CurrentlyBuilding />
+
+        {/* Currently (single line) */}
+        <section>
+          <AnimateOnScroll>
+            <div className="label">In progress</div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up">
+            <p className="currently-line">
+              Currently: leading lab platform UX at Natera &middot; establishing a cross-org research practice &middot; writing Women&apos;s Health, Computed on Substack
+            </p>
+          </AnimateOnScroll>
+        </section>
+
         <hr className="section-line" />
-        <LatestThinking />
-        <hr className="section-line" />
-        <PublicationsSection />
+        <FeaturedWork />
         <hr className="section-line" />
         <InterestsMapSection />
-        <hr className="section-line" />
-        <MapSection />
-        <hr className="section-line" />
-        <DreamsSection />
-        <hr className="section-line" />
-        <FavoriteReads />
-        <hr className="section-line" />
-        <SiteNav />
       </div>
       <ContactBlock />
     </>

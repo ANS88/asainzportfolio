@@ -4,8 +4,8 @@ export const histopathologyWorkflow: CaseStudy = {
   slug: "histopathology-workflow",
   title: "Histopathology Lab Workflow Redesign",
   stakesLine:
-    "Lab technicians, pathologists, and micro dissection specialists relied on spreadsheets, manual queues, and fragmented systems to process tissue samples. I led shadowing sessions and UAT to design a unified system that replaced manual work across the entire histopathology pipeline.",
-  role: "Lead Designer & Researcher",
+    "Lab technicians, pathologists, and micro dissection specialists relied on spreadsheets, manual queues, and fragmented systems to process tissue samples. I made the case for in-lab research the team had never done, then led the design of a unified system that replaced manual work across the entire histopathology pipeline.",
+  role: "UX Research Lead",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
@@ -222,7 +222,7 @@ export const histopathologyWorkflow: CaseStudy = {
         },
         {
           type: "text",
-          data: "<p><strong>What I\u2019d do differently:</strong> I would have mapped the full systems architecture (LV, Philips, Bioanalyzer, LIMS) earlier in discovery. Some integration constraints surfaced late and required design rework that could have been anticipated.</p>",
+          data: "<p><strong>What I\u2019d do differently:</strong> I would have mapped the full systems architecture (LV, Philips, Bioanalyzer, LIMS) earlier and brought engineering into discovery sooner. Some integration constraints surfaced late and required design rework \u2014 a reminder that in regulated lab environments, technical constraints are design constraints, and the people who know them need to be in the room from the start.</p>",
         },
       ],
     },
@@ -235,7 +235,7 @@ export const histopathologyWorkflow: CaseStudy = {
   ],
 
   myRole:
-    "Lead Designer & Researcher \u2014 contextual inquiry, workflow mapping, pain point analysis, system design, UAT facilitation",
+    "UX Research Lead \u2014 made the case for in-lab ethnographic research, led contextual inquiry and shadowing across 5 workflow stages, coordinated with lab ops, pathology, and engineering teams, facilitated UAT with end users in their physical lab environments",
 
   tags: [
     "Healthcare UX",

@@ -234,7 +234,7 @@ export const perimenopauseTracking: CaseStudy = {
   ],
 
   myRole:
-    "Principal Investigator — study design, recruitment, data collection, qualitative & quantitative analysis, reporting",
+    "Principal Investigator — study design, recruitment, data collection, qualitative & quantitative analysis, reporting. Managed research collaboration between University of Cincinnati and Clue’s science leadership.",
 
   tags: [
     "Femtech",

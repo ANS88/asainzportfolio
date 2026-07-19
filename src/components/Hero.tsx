@@ -129,18 +129,18 @@ export default function Hero() {
         <div className="status"><span className="status-dot"></span> Currently building</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={200}>
-        <h1>Hi, I'm Adriana, a design leader who loves building products where patients feel seen and scientists can do their best work.</h1>
+        <h1>Hi, I&apos;m Adriana. I build and lead UX research in healthcare &mdash; shaping how clinical products get designed, tested, and shipped in regulated environments.</h1>
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="fade-up" delay={420}>
         <div className="metrics-bar">
-          <span>20+ labs served</span>
+          <span>4 product areas owned</span>
           <span className="metrics-dot">&middot;</span>
           <span>12 products shipped 0-to-1</span>
           <span className="metrics-dot">&middot;</span>
-          <span>6 publications</span>
+          <span>585K patients/yr impacted</span>
           <span className="metrics-dot">&middot;</span>
-          <span>1 patent</span>
+          <span>6 publications</span>
         </div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={500}>

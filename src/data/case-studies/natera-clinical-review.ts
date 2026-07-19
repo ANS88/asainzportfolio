@@ -4,8 +4,8 @@ export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
   title: "Clinical Review",
   stakesLine:
-    "When genetic test reports are delayed, treatment decisions are delayed. I redesigned the workflow that determines how fast 585,000 patients per year get their results.",
-  role: "Lead Designer & Researcher",
+    "When genetic test reports are delayed, treatment decisions are delayed. I identified the bottleneck, built the case for a platform investment, and led a cross-functional team to redesign the workflow that determines how fast 585,000 patients per year get their results.",
+  role: "UX Research Lead",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
@@ -231,8 +231,8 @@ export const nateraClinicalReview: CaseStudy = {
           data: {
             title: "Quantitative impact",
             items: [
-              "50% reduction in report turnaround time",
-              "4 legacy systems replaced with 1 unified tool",
+              "50% reduction in report turnaround time — enabling earlier clinical decisions and reducing operational bottlenecks across the report pipeline",
+              "4 legacy systems replaced with 1 unified tool — reducing training time for new hires and eliminating context-switching overhead that cost reviewers hours per week",
               "585,000 reports/year processed through the new workflow",
             ],
           },
@@ -266,7 +266,7 @@ export const nateraClinicalReview: CaseStudy = {
         },
         {
           type: "text",
-          data: "<p><strong>What I\u2019d do differently:</strong> I would have involved lab leadership earlier in the design process. Some of the handoff logic we built had to be reworked because we didn\u2019t fully understand the approval hierarchy until later in the project.</p>",
+          data: "<p><strong>What I\u2019d do differently:</strong> I would have involved lab leadership earlier \u2014 not just for feedback, but to co-own the change management. Getting the design right is half the work; getting adoption right is the other half, and it starts with stakeholder buy-in before the first prototype. Some of the handoff logic we built had to be reworked because we didn\u2019t fully map the approval hierarchy with the right people early enough.</p>",
         },
         {
           type: "text",
@@ -283,7 +283,7 @@ export const nateraClinicalReview: CaseStudy = {
   ],
 
   myRole:
-    "Lead Designer & Researcher \u2014 discovery, synthesis, persona development, workflow mapping, usability testing",
+    "UX Research Lead \u2014 defined research strategy, managed 1 researcher, led cross-functional discovery across Women\u2019s Health, Oncology, and Organ Health divisions, presented findings to department leadership, usability testing and post-launch monitoring",
 
   tags: [
     "Healthcare UX",

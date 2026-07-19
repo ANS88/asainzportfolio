@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import ContactBlock from "@/components/ContactBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { caseStudyList } from "@/data/case-studies";
+
+export const metadata: Metadata = {
+  title: "Work — Adriana Navarro Sainz",
+  description:
+    "Case studies from 10 years designing clinical tools — genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
+  openGraph: {
+    description:
+      "Case studies from 10 years designing clinical tools — genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
+  },
+  twitter: {
+    description:
+      "Case studies from 10 years designing clinical tools — genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
+  },
+};
 
 export default function Work() {
   return (
