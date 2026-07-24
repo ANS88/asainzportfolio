@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import InterestsMapSection from "@/components/InterestsMapSection";
 import ContactBlock from "@/components/ContactBlock";
 import FeaturedWork from "@/components/FeaturedWork";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
@@ -11,22 +10,34 @@ export default function Home() {
         <Hero />
         <hr className="section-line" />
 
-        {/* Currently (single line) */}
         <section>
           <AnimateOnScroll>
-            <div className="label">In progress</div>
+            <div className="label">Now</div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up">
-            <p className="currently-line">
-              Currently: leading lab platform UX at Natera &middot; establishing a cross-org research practice &middot; writing Women&apos;s Health, Computed on Substack
-            </p>
+            <div className="now-grid">
+              <div className="now-item">
+                <span className="now-from">From</span>
+                <span className="now-to">Natera</span>
+              </div>
+              <div className="now-item">
+                <span className="now-from">Role</span>
+                <span className="now-to">UX Research Lead</span>
+              </div>
+              <div className="now-item">
+                <span className="now-from">Focus</span>
+                <span className="now-to">Lab platform &middot; Clinical AI</span>
+              </div>
+              <div className="now-item">
+                <span className="now-from">Side</span>
+                <span className="now-to">Women&apos;s Health, Computed</span>
+              </div>
+            </div>
           </AnimateOnScroll>
         </section>
 
         <hr className="section-line" />
         <FeaturedWork />
-        <hr className="section-line" />
-        <InterestsMapSection />
       </div>
       <ContactBlock />
     </>

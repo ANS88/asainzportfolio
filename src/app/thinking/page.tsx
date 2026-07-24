@@ -68,7 +68,7 @@ export default function Thinking() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Essays</div>
             <h1 className="page-title">Thinking</h1>
-            <p className="page-desc">Working positions on healthcare design, clinical AI, and femtech &mdash; grounded in research and a decade of practice.</p>
+            <p className="page-desc">Positions on healthcare design, clinical AI, and femtech.</p>
           </AnimateOnScroll>
         </div>
 
