@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300..700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300..700&display=swap');
 
 :root {
   --ink: #2c1810;
@@ -16,9 +16,9 @@
   --accent-soft: #c89080;
   --green: #8b3a2a;
   --blue: #8b3a2a;
-  --serif: 'Lora', Georgia, serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
-  --hand: 'Lora', Georgia, serif;
+  --hand: 'Cormorant Garamond', Georgia, serif;
   --mono: 'Inter', system-ui, sans-serif;
   --shadow-sm: 0 1px 3px rgba(44,24,16,.06), 0 1px 2px rgba(44,24,16,.04);
   --shadow-md: 0 4px 16px rgba(44,24,16,.07), 0 2px 4px rgba(44,24,16,.04);
@@ -36,7 +36,7 @@
   --color-muted: var(--ink3);
   --color-border: var(--border);
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: 'Lora', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'Inter', system-ui, sans-serif;
 }
 
@@ -151,9 +151,9 @@ a:hover { opacity: .85; }
 .page-title {
   font-family: var(--serif);
   font-size: clamp(3.5rem, 9vw, 7rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   margin-bottom: 1.5rem;
 }
 .page-title em {
@@ -342,9 +342,9 @@ a:hover { opacity: .85; }
 .cs-title {
   font-family: var(--serif);
   font-size: clamp(2.8rem, 7vw, 5rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   margin-bottom: 1.25rem;
 }
 .cs-stakes {
@@ -697,7 +697,7 @@ a:hover { opacity: .85; }
 /* ═══ HERO ═══ */
 .hero { padding: 12rem 0 5rem; position: relative; }
 .hero-tag { font-family: var(--serif); font-size: .85rem; font-style: italic; text-transform: none; letter-spacing: .02em; color: var(--ink3); margin-bottom: 2rem; }
-.hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: -.03em; margin-bottom: 2rem; font-weight: 400; }
+.hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 2rem; font-weight: 500; }
 .hero h1 em { font-style: italic; color: var(--accent); }
 .hero-sub { font-size: 1.15rem; color: var(--ink3); line-height: 1.65; max-width: 540px; margin-bottom: 2.5rem; }
 .metrics-bar {
@@ -780,7 +780,7 @@ section { padding: 5rem 0; }
   display: none;
 }
 
-.section-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 2rem; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 2rem; }
 
 /* ═══ CURRENTLY BUILDING ═══ */
 .build-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -1369,7 +1369,7 @@ section { padding: 5rem 0; }
 .contact-block::before {
   display: none;
 }
-.contact-block h2 { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 400; line-height: 1; letter-spacing: -.03em; margin-bottom: 2rem; }
+.contact-block h2 { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 500; line-height: 1; letter-spacing: -.02em; margin-bottom: 2rem; }
 .contact-links { display: flex; gap: 2rem; }
 .contact-links a {
   color: var(--accent-soft);
