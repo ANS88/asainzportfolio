@@ -61,7 +61,7 @@ export default function MapSection() {
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="scale-in" delay={100}>
-      <div style={{ background: "white", border: "1.5px solid var(--border)", borderRadius: "10px", overflow: "hidden", transition: "border-color .3s cubic-bezier(.4,0,.2,1)" }}>
+      <div style={{ background: "var(--warm)", border: "1px solid var(--border)", borderRadius: "8px", overflow: "hidden", transition: "border-color .3s cubic-bezier(.4,0,.2,1)" }}>
         <ComposableMap
           projection="geoNaturalEarth1"
           projectionConfig={{
@@ -78,8 +78,8 @@ export default function MapSection() {
                 <Geography
                   key={geo.rpiProperties?.name || geo.id || Math.random()}
                   geography={geo}
-                  fill="#e7e5e4"
-                  stroke="#d6d3d1"
+                  fill="#e5ddd3"
+                  stroke="#c9b99a"
                   strokeWidth={0.5}
                   style={{
                     default: { outline: "none" },
@@ -101,15 +101,15 @@ export default function MapSection() {
               <circle
                 r={active === i ? 10 : 6}
                 fill="none"
-                stroke="#0909e8"
+                stroke="#8b3a2a"
                 strokeWidth={0.5}
                 opacity={active === i ? 0.4 : 0.15}
                 style={{ transition: "all 0.3s ease" }}
               />
               <circle
                 r={active === i ? 5 : 3.5}
-                fill={loc.tags.includes("Born") ? "#0909e8" : "#78716c"}
-                stroke="#faf9f6"
+                fill={loc.tags.includes("Born") ? "#8b3a2a" : "#8b7355"}
+                stroke="#f3ece4"
                 strokeWidth={1}
                 style={{ transition: "all 0.3s ease", cursor: "pointer" }}
               />
@@ -118,7 +118,7 @@ export default function MapSection() {
                 y={-12}
                 style={{
                   fontSize: active === i ? 11 : 9,
-                  fill: "#1c1917",
+                  fill: "#2c1810",
                   fontWeight: active === i ? 600 : 400,
                   transition: "all 0.3s ease",
                 }}

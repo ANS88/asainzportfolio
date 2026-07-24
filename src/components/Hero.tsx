@@ -87,22 +87,22 @@ export default function Hero() {
         <svg viewBox="0 0 40 40" width="120" height="120" className="moonflower-spin">
           <defs>
             <radialGradient id="hmf-grad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#e8f0e0" />
-              <stop offset="12%" stopColor="#d4a0d4" />
-              <stop offset="28%" stopColor="#6848c8" />
-              <stop offset="50%" stopColor="#3535d6" />
-              <stop offset="100%" stopColor="#1a1a9e" />
+              <stop offset="0%" stopColor="#f0e0d0" />
+              <stop offset="12%" stopColor="#d4a088" />
+              <stop offset="28%" stopColor="#c87060" />
+              <stop offset="50%" stopColor="#a04830" />
+              <stop offset="100%" stopColor="#8b3a2a" />
             </radialGradient>
             <radialGradient id="hmf-center" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#f0f4d8" />
-              <stop offset="60%" stopColor="#c8a8d8" />
-              <stop offset="100%" stopColor="#8060b8" stopOpacity="0" />
+              <stop offset="0%" stopColor="#f0e4d8" />
+              <stop offset="60%" stopColor="#d8a890" />
+              <stop offset="100%" stopColor="#b87060" stopOpacity="0" />
             </radialGradient>
           </defs>
           <path
             d={HERO_FLOWER_PATH}
             fill="url(#hmf-grad)"
-            stroke="#0909e8"
+            stroke="#8b3a2a"
             strokeWidth=".3"
           />
           {[0, 72, 144, 216, 288].map((angle, i) => (
@@ -112,14 +112,14 @@ export default function Hero() {
               y1="20"
               x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
               y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
-              stroke="#3838e0"
+              stroke="#a04830"
               strokeWidth=".4"
               opacity=".45"
             />
           ))}
           <circle cx="20" cy="20" r="7" fill="url(#hmf-center)" />
-          <circle cx="20" cy="20" r="2.2" fill="#e8f0d0" />
-          <circle cx="20" cy="20" r="1" fill="#c0d8a0" />
+          <circle cx="20" cy="20" r="2.2" fill="#f0e4d0" />
+          <circle cx="20" cy="20" r="1" fill="#d8c0a0" />
         </svg>
       </div>
       <AnimateOnScroll animation="fade-in">

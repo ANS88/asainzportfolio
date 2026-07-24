@@ -70,7 +70,7 @@ export default function InterestsMapSection() {
           style={{ width: "100%", height: "auto", display: "block" }}
         >
           {/* Connection lines */}
-          <g stroke="#e7e5e4" strokeWidth="1.5" fill="none">
+          <g stroke="#c9b99a" strokeWidth="1.5" fill="none">
             <line x1="400" y1="260" x2="200" y2="130" /><line x1="400" y1="260" x2="600" y2="130" />
             <line x1="400" y1="260" x2="650" y2="320" />
             <line x1="400" y1="260" x2="260" y2="450" /><line x1="400" y1="260" x2="540" y2="450" />
@@ -79,53 +79,53 @@ export default function InterestsMapSection() {
             <line x1="650" y1="320" x2="540" y2="450" strokeDasharray="4,4" />
             <line x1="260" y1="450" x2="540" y2="450" strokeDasharray="4,4" />
             {/* Satellites */}
-            <line x1="600" y1="130" x2="630" y2="505" stroke="#f0ebe3" />
-            <line x1="630" y1="505" x2="200" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="630" y1="505" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="630" y1="505" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="600" y1="130" x2="710" y2="55" stroke="#f0ebe3" />
-            <line x1="710" y1="55" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="200" y1="130" x2="150" y2="320" stroke="#f0ebe3" />
-            <line x1="150" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="150" y1="320" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="80" y1="215" x2="260" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="260" y1="450" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="200" y1="130" x2="80" y2="215" stroke="#f0ebe3" />
-            <line x1="80" y1="215" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="600" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="650" y1="320" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="200" y1="130" x2="48" y2="380" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="600" y1="130" x2="700" y2="180" stroke="#f0ebe3" />
-            <line x1="700" y1="180" x2="710" y2="55" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="700" y1="180" x2="650" y2="320" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="700" y1="180" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="650" y1="320" x2="768" y2="300" stroke="#f0ebe3" />
-            <line x1="768" y1="300" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="768" y1="300" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="650" y1="320" x2="750" y2="415" stroke="#f0ebe3" />
-            <line x1="750" y1="415" x2="540" y2="450" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="750" y1="415" x2="600" y2="130" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="650" y1="320" x2="752" y2="250" stroke="#f0ebe3" />
-            <line x1="600" y1="130" x2="752" y2="250" stroke="#f0ebe3" />
-            <line x1="540" y1="450" x2="752" y2="250" stroke="#f0ebe3" />
-            <line x1="200" y1="130" x2="752" y2="250" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="540" y1="450" x2="445" y2="505" stroke="#f0ebe3" />
-            <line x1="600" y1="130" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
-            <line x1="650" y1="320" x2="445" y2="505" stroke="#f0ebe3" />
-            <line x1="200" y1="130" x2="445" y2="505" stroke="#f0ebe3" strokeDasharray="4,4" />
+            <line x1="600" y1="130" x2="630" y2="505" stroke="#d8ccb8" />
+            <line x1="630" y1="505" x2="200" y2="130" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="630" y1="505" x2="540" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="630" y1="505" x2="445" y2="505" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="600" y1="130" x2="710" y2="55" stroke="#d8ccb8" />
+            <line x1="710" y1="55" x2="540" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="200" y1="130" x2="150" y2="320" stroke="#d8ccb8" />
+            <line x1="150" y1="320" x2="48" y2="380" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="150" y1="320" x2="260" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="80" y1="215" x2="260" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="260" y1="450" x2="600" y2="130" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="200" y1="130" x2="80" y2="215" stroke="#d8ccb8" />
+            <line x1="80" y1="215" x2="48" y2="380" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="600" y1="130" x2="48" y2="380" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="48" y2="380" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="200" y1="130" x2="48" y2="380" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="600" y1="130" x2="700" y2="180" stroke="#d8ccb8" />
+            <line x1="700" y1="180" x2="710" y2="55" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="700" y1="180" x2="650" y2="320" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="700" y1="180" x2="540" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="768" y2="300" stroke="#d8ccb8" />
+            <line x1="768" y1="300" x2="540" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="768" y1="300" x2="600" y2="130" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="750" y2="415" stroke="#d8ccb8" />
+            <line x1="750" y1="415" x2="540" y2="450" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="750" y1="415" x2="600" y2="130" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="752" y2="250" stroke="#d8ccb8" />
+            <line x1="600" y1="130" x2="752" y2="250" stroke="#d8ccb8" />
+            <line x1="540" y1="450" x2="752" y2="250" stroke="#d8ccb8" />
+            <line x1="200" y1="130" x2="752" y2="250" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="540" y1="450" x2="445" y2="505" stroke="#d8ccb8" />
+            <line x1="600" y1="130" x2="445" y2="505" stroke="#d8ccb8" strokeDasharray="4,4" />
+            <line x1="650" y1="320" x2="445" y2="505" stroke="#d8ccb8" />
+            <line x1="200" y1="130" x2="445" y2="505" stroke="#d8ccb8" strokeDasharray="4,4" />
           </g>
 
           {/* Satellite nodes */}
           {SATELLITE_NODES.map((s) => (
             <g key={Array.isArray(s.label) ? s.label.join(" ") : s.label} className="satellite-node" style={{ transformOrigin: `${s.cx}px ${s.cy}px` }}>
-              <circle cx={s.cx} cy={s.cy} r="28" fill="white" stroke="#e7e5e4" />
+              <circle cx={s.cx} cy={s.cy} r="28" fill="#f3ece4" stroke="#c9b99a" />
               {Array.isArray(s.label) ? (
                 <>
-                  <text x={s.cx} y={s.cy - 3} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label[0]}</text>
-                  <text x={s.cx} y={s.cy + 9} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label[1]}</text>
+                  <text x={s.cx} y={s.cy - 3} textAnchor="middle" fill="#8b7355" fontSize="10" fontFamily="Inter, sans-serif">{s.label[0]}</text>
+                  <text x={s.cx} y={s.cy + 9} textAnchor="middle" fill="#8b7355" fontSize="10" fontFamily="Inter, sans-serif">{s.label[1]}</text>
                 </>
               ) : (
-                <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#78716c" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
+                <text x={s.cx} y={s.cy + 4} textAnchor="middle" fill="#8b7355" fontSize="10" fontFamily="Inter, sans-serif">{s.label}</text>
               )}
             </g>
           ))}
@@ -143,16 +143,16 @@ export default function InterestsMapSection() {
               >
                 {/* Pulse ring on expand */}
                 {isExpanded && (
-                  <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#0909e8" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
+                  <circle cx={node.cx} cy={node.cy} r={r + 10} fill="none" stroke="#8b3a2a" strokeWidth="1.5" opacity=".3" className="pulse-ring" />
                 )}
-                <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#0909e8" : "#f0f0fe"} stroke="#0909e8" strokeWidth="2" className="node-circle" />
+                <circle cx={node.cx} cy={node.cy} r={r} fill={isExpanded ? "#8b3a2a" : "#ede5db"} stroke="#8b3a2a" strokeWidth="2" className="node-circle" />
                 {node.label.length === 2 ? (
                   <>
-                    <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
-                    <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
+                    <text x={node.cx} y={node.cy - 8} textAnchor="middle" fill={isExpanded ? "white" : "#8b3a2a"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                    <text x={node.cx} y={node.cy + 8} textAnchor="middle" fill={isExpanded ? "white" : "#8b3a2a"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[1]}</text>
                   </>
                 ) : (
-                  <text x={node.cx} y={node.cy + 5} textAnchor="middle" fill={isExpanded ? "white" : "#0909e8"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
+                  <text x={node.cx} y={node.cy + 5} textAnchor="middle" fill={isExpanded ? "white" : "#8b3a2a"} fontSize="13" fontWeight="400" fontFamily="Inter, sans-serif">{node.label[0]}</text>
                 )}
               </g>
             );
@@ -160,9 +160,9 @@ export default function InterestsMapSection() {
 
           {/* Center node */}
           <g className="center-node" style={{ transformOrigin: "400px 260px" }}>
-            <circle cx="400" cy="260" r="56" fill="#0909e8" stroke="#0707b8" strokeWidth="2.5" />
+            <circle cx="400" cy="260" r="56" fill="#8b3a2a" stroke="#723020" strokeWidth="2.5" />
             <text x="400" y="253" textAnchor="middle" fill="white" fontSize="16" fontWeight="400" fontFamily="Inter, sans-serif">Adriana</text>
-            <text x="400" y="273" textAnchor="middle" fill="#b8b8f4" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
+            <text x="400" y="273" textAnchor="middle" fill="#c89080" fontSize="11" fontFamily="Inter, sans-serif">PhD &middot; Builder &middot; SF</text>
           </g>
         </svg>
 
@@ -193,7 +193,7 @@ export default function InterestsMapSection() {
       <div className="social-grid">
         <AnimateOnScroll animation="fade-up">
         <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#0909e8" }}>in</div>
+          <div className="sc-icon" style={{ background: "#8b3a2a" }}>in</div>
           <div className="sc-body">
             <div className="sc-name">LinkedIn</div>
             <div className="sc-handle">@adrianans</div>
@@ -203,7 +203,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#0909e8" }}>✎</div>
+          <div className="sc-icon" style={{ background: "#8b3a2a" }}>✎</div>
           <div className="sc-body">
             <div className="sc-name">Substack</div>
             <div className="sc-handle">Women&apos;s Health, Computed</div>
@@ -213,7 +213,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#0909e8" }}>G</div>
+          <div className="sc-icon" style={{ background: "#8b3a2a" }}>G</div>
           <div className="sc-body">
             <div className="sc-name">Google Scholar</div>
             <div className="sc-handle">6 papers &middot; 1 patent</div>
@@ -223,7 +223,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer" className="social-card">
-          <div className="sc-icon" style={{ background: "#7c3aed" }}>Ξ</div>
+          <div className="sc-icon" style={{ background: "#8b3a2a" }}>Ξ</div>
           <div className="sc-body">
             <div className="sc-name">AthenaDAO</div>
             <div className="sc-handle">Dealflow Fellow</div>
@@ -233,7 +233,7 @@ export default function InterestsMapSection() {
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up">
         <a href="mailto:sainz.nag@gmail.com" className="social-card">
-          <div className="sc-icon" style={{ background: "#1c1917" }}>@</div>
+          <div className="sc-icon" style={{ background: "#2c1810" }}>@</div>
           <div className="sc-body">
             <div className="sc-name">Email</div>
             <div className="sc-handle">sainz.nag@gmail.com</div>
