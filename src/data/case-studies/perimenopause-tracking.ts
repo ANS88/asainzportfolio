@@ -6,6 +6,7 @@ export const perimenopauseTracking: CaseStudy = {
     "Charting the Waves of Perimenopause: A Diary Study on Digital Symptom Tracking",
   stakesLine:
     "Perimenopause is unpredictable — cycles shift, symptoms fluctuate, and clinical recognition often lags. I led a mixed-methods study with 40 women to understand how digital symptom tracking shapes self-management and clinical advocacy.",
+  judgment: "Chose diary study over usability test — the question was about lived experience, not task completion",
   role: "Lead Designer & Researcher",
   timeline: "Discovery to reporting (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
@@ -215,6 +216,38 @@ export const perimenopauseTracking: CaseStudy = {
     },
 
     {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p><strong>The obvious move:</strong> Run a usability study of Clue's perimenopause mode — task success rates, error counts, satisfaction scores. That's what the app company expected and what most HCI dissertations deliver.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>What I chose instead:</strong> A two-week diary study with mixed methods. The research question wasn't whether the interface was usable — it scored 88.3 SUS, well above benchmark. The question was whether symptom tracking actually changes how women understand and manage their experience. That's a lived-experience question, not a task-completion question.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>The tradeoff:</strong> Diary studies produce messy, rich, hard-to-analyze data. Thematic analysis of 40 participants' reflective entries took significantly longer than coding usability sessions. But it surfaced findings — tracking as clinical advocacy, two distinct tracking styles, the gap between high usability and shallow insight — that a usability study would have missed entirely.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "beyond",
+      title: "What this changed beyond the project",
+      type: "beyond",
+      content: [
+        {
+          type: "text",
+          data: "<p>The findings informed Clue's roadmap exploration around personalized analytics and wearable integration. More significantly, the research added empirical evidence to feminist HCI scholarship by demonstrating how digital tracking tools enable self-validation and clinical advocacy in a population the health tech field consistently underserves. The methodology — blending quantitative correlation analysis with rich participant narratives — offers a template for evaluating health apps on experiential outcomes, not just usability metrics.</p>",
+        },
+      ],
+    },
+
+    {
       id: "reflection",
       title: "Reflection",
       type: "reflection",
@@ -235,6 +268,9 @@ export const perimenopauseTracking: CaseStudy = {
 
   myRole:
     "Principal Investigator — study design, recruitment, data collection, qualitative & quantitative analysis, reporting. Managed research collaboration between University of Cincinnati and Clue’s science leadership.",
+
+  owned:
+    "Principal Investigator — I owned the entire research design: study methodology, recruitment strategy, IRB protocol, data collection instruments, qualitative and quantitative analysis, and reporting. Managed the research collaboration between University of Cincinnati and Clue's science leadership.",
 
   tags: [
     "Femtech",

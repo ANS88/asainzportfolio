@@ -25,7 +25,7 @@ export default function Work() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Portfolio</div>
             <h1 className="page-title">Work</h1>
-            <p className="page-desc">10 years in clinical environments. Real users, regulated systems, patient outcomes.</p>
+            <p className="page-desc">The gap between what science knows and what products do with it. That&rsquo;s where my work lives.</p>
           </AnimateOnScroll>
         </div>
         <hr className="section-line" />
@@ -38,6 +38,9 @@ export default function Work() {
                   <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
                   <div className="cs-preview-title">{study.title}</div>
                   <p className="cs-preview-stakes">{study.stakesLine}</p>
+                  {study.judgment && (
+                    <p className="cs-preview-judgment">{study.judgment}</p>
+                  )}
                   <span className="cs-preview-link">Read case study &rarr;</span>
                 </a>
               </AnimateOnScroll>

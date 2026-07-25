@@ -5,6 +5,7 @@ export const unifiedPatientPortal: CaseStudy = {
   title: "Unified Patient Portal",
   stakesLine:
     "Patients had little visibility into their own genetic test status, faced opaque billing, and waited days for results. I drove the research strategy across two business units for Natera\u2019s first patient-facing portal \u2014 empowering 181K patients to track tests, view results, manage billing, and schedule sample draws.",
+  judgment: "Used the Cures Act mandate as leverage to fund a patient-centered portal instead of bolting results onto the physician system",
   role: "UX Research Lead",
   timeline: "Discovery to post-launch monitoring (2023\u20132024)",
   company: "Natera",
@@ -205,6 +206,38 @@ export const unifiedPatientPortal: CaseStudy = {
     },
 
     {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p><strong>The obvious move:</strong> Bolt a results-viewing feature onto the existing physician-facing system. The Cures Act mandated patient access to results — the fastest path was to expose a read-only view of what doctors already saw.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>What I chose instead:</strong> I advocated for a purpose-built patient portal with its own design principles. Patients are not clinicians. They need plain language, emotional sensitivity, separated billing, and clear next actions — not a filtered version of the clinical interface.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>The tradeoff:</strong> Building a dedicated portal took longer and required aligning two business units that had never shared a product surface. But the result was a system that actually served patients, not one that technically complied while failing the people it was supposed to help.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "beyond",
+      title: "What this changed beyond the project",
+      type: "beyond",
+      content: [
+        {
+          type: "text",
+          data: "<p>The portal became Natera's first patient-facing product that crossed business unit boundaries. The design principles I developed — Test is Core Object, Separation of Concerns, Do Not Burden — became the foundation for all subsequent patient-facing work. The DRS 2024 publication brought external validation to the methodology and opened a conversation about how regulated companies can do patient-centered design without compromising compliance.</p>",
+        },
+      ],
+    },
+
+    {
       id: "reflection",
       title: "Reflection & Next Steps",
       type: "reflection",
@@ -236,6 +269,9 @@ export const unifiedPatientPortal: CaseStudy = {
 
   myRole:
     "UX Research Lead \u2014 defined research strategy across Women\u2019s Health and Organ Health business units, led stakeholder alignment with 15 SMEs, persona development, journey mapping, usability testing, post-launch analytics. Published findings at DRS 2024.",
+
+  owned:
+    "I owned the research strategy across both business units, stakeholder alignment with 15 SMEs, and the decision to build design principles from discovery rather than inheriting them from the physician-facing system. The product designer owned interaction design; PMs (one per BU) owned feature prioritization.",
 
   tags: [
     "Healthcare UX",

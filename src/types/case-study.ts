@@ -6,6 +6,7 @@ export interface CaseStudy {
 
   // Above the fold
   stakesLine: string;
+  judgment?: string;
   role: string;
   timeline: string;
   company: string;
@@ -30,6 +31,7 @@ export interface CaseStudy {
   // Footer
   team?: string[];
   myRole?: string;
+  owned?: string;
   tags?: string[];
 }
 
@@ -43,7 +45,9 @@ export interface CaseStudySection {
     | "design"
     | "validation"
     | "impact"
-    | "reflection";
+    | "reflection"
+    | "judgment"
+    | "beyond";
   content: CaseStudySectionContent[];
 }
 

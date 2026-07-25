@@ -20,12 +20,23 @@ export const metadata: Metadata = {
   },
 };
 
-const beliefs = [
-  "I’ve spent ten years watching healthcare technology fail people in predictable ways. That shapes how I work.",
-  "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health, and it’s almost always designed poorly.",
-  "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
-  "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn’t, before the first wireframe.",
-  "Design is a political act. Who gets centered, who gets left out: those are choices whether you make them consciously or not. I try to.",
+const beliefs: { belief: string; decision: string }[] = [
+  {
+    belief: "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn’t, before the first wireframe.",
+    decision: "At Natera, I replaced 4 legacy review tools with one — not by adding features, but by eliminating the friction that made clinicians work around the system. Turnaround dropped 50%.",
+  },
+  {
+    belief: "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health.",
+    decision: "I designed the Clinical Review workflow around progressive disclosure, surfacing automated flags only when they were actionable — not as interruptions. The genetic counselors kept their judgment in the loop.",
+  },
+  {
+    belief: "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
+    decision: "When the Cures Act required instant patient access to results, I used the mandate as leverage to fund a proper patient portal — turning a compliance requirement into a patient experience investment that reached 181K users.",
+  },
+  {
+    belief: "Design is a political act. Who gets centered, who gets left out — those are choices whether you make them consciously or not.",
+    decision: "I centered perimenopausal women — a population most health apps stop serving at 40 — as the subject of my dissertation research. The field was building menstrual trackers that assumed regularity.",
+  },
 ];
 
 const howILead = [
@@ -64,7 +75,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* What I believe (moved up) */}
+        {/* What I believe — strongest first, each with a concrete decision */}
         <section>
           <AnimateOnScroll>
             <div className="label">My Approach</div>
@@ -73,7 +84,10 @@ export default function About() {
           <div className="beliefs-list">
             {beliefs.map((b, i) => (
               <AnimateOnScroll key={i} animation="fade-up">
-                <p className="belief-paragraph">{b}</p>
+                <div className="belief-block">
+                  <p className="belief-paragraph">{b.belief}</p>
+                  <p className="belief-decision">{b.decision}</p>
+                </div>
               </AnimateOnScroll>
             ))}
           </div>
@@ -81,7 +95,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* How I Lead (new) */}
+        {/* How I Lead */}
         <section>
           <AnimateOnScroll>
             <div className="label">Leadership</div>
@@ -103,7 +117,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* My Experience (moved down, rewritten) */}
+        {/* My Experience */}
         <section>
           <AnimateOnScroll>
             <div className="label">My Experience</div>
@@ -128,7 +142,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* As a Human + Places (absorbed from homepage) */}
+        {/* As a Human */}
         <section>
           <AnimateOnScroll>
             <div className="label">As a Human</div>
@@ -142,12 +156,10 @@ export default function About() {
           </AnimateOnScroll>
         </section>
 
-        {/* Places map (moved from homepage) */}
         <MapSection />
 
         <hr className="section-line" />
 
-        {/* Reading list (moved from homepage) */}
         <FavoriteReads />
 
         <hr className="section-line" />
@@ -156,7 +168,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* Currently looking for (rewritten) */}
+        {/* Currently looking for — shape of role */}
         <section>
           <AnimateOnScroll>
             <div className="label">Next</div>
@@ -165,10 +177,10 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-prose">
               <p>
-                A leadership role where I can build and scale a UX research practice at the intersection of health and AI &mdash; setting the standard for how clinical products are designed, validated, and shipped.
+                A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions &mdash; not just run studies.
               </p>
               <p className="about-available">
-                Available for: design leadership in health/AI, building research teams, keynotes on AI and health UX, advisory roles in femtech and clinical AI.
+                Available for: design leadership in health/AI, building research teams from zero, advisory roles in femtech and clinical AI.
               </p>
             </div>
             <div className="about-contact-links">

@@ -5,6 +5,7 @@ export const histopathologyWorkflow: CaseStudy = {
   title: "Histopathology Lab Workflow Redesign",
   stakesLine:
     "Lab technicians, pathologists, and micro dissection specialists relied on spreadsheets, manual queues, and fragmented systems to process tissue samples. I made the case for in-lab research the team had never done, then led the design of a unified system that replaced manual work across the entire histopathology pipeline.",
+  judgment: "Chose in-lab ethnographic research over remote interviews \u2014 you can't redesign a pipeline from a conference room",
   role: "UX Research Lead",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
@@ -212,6 +213,38 @@ export const histopathologyWorkflow: CaseStudy = {
     },
 
     {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p><strong>The obvious move:</strong> Conduct remote stakeholder interviews and build requirements from described workflows. The team had never done in-lab research, and the lab is in a different state from HQ. Remote discovery was the path of least resistance.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>What I chose instead:</strong> I made the case for on-site ethnographic research — shadowing technicians, pathologists, and micro dissection specialists in their physical lab environments. I argued that you cannot redesign a workflow that involves microtomes, scanners, and tissue specimens by asking people to describe it over a video call.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>The tradeoff:</strong> In-lab shadowing required travel, scheduling around lab operations, and more time than remote interviews. But it surfaced the physical choreography of the work — how technicians move between stations, where they reach for a spreadsheet, where the scanner integration breaks — that no interview would have revealed.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "beyond",
+      title: "What this changed beyond the project",
+      type: "beyond",
+      content: [
+        {
+          type: "text",
+          data: "<p>This project established the precedent for in-lab ethnographic research at Natera. Before this work, UX research in lab operations was conducted remotely. After it, the team had both the methodology and the organizational buy-in to embed researchers in physical lab environments. The workflow maps I created became reference artifacts for engineering and product teams scoping adjacent lab systems.</p>",
+        },
+      ],
+    },
+
+    {
       id: "reflection",
       title: "Reflection",
       type: "reflection",
@@ -236,6 +269,9 @@ export const histopathologyWorkflow: CaseStudy = {
 
   myRole:
     "UX Research Lead \u2014 made the case for in-lab ethnographic research, led contextual inquiry and shadowing across 5 workflow stages, coordinated with lab ops, pathology, and engineering teams, facilitated UAT with end users in their physical lab environments",
+
+  owned:
+    "I owned the research methodology decision (in-lab ethnography vs. remote), the workflow mapping across all 5 stages, and stakeholder alignment with lab ops leadership. The product designer owned the UI; the PM owned scope and prioritization; engineering owned system integration architecture.",
 
   tags: [
     "Healthcare UX",

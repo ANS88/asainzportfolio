@@ -22,7 +22,7 @@ export default function Home() {
               </div>
               <div className="now-item">
                 <span className="now-from">Role</span>
-                <span className="now-to">UX Research Lead</span>
+                <span className="now-to">Leading UX research across 50+ labs</span>
               </div>
               <div className="now-item">
                 <span className="now-from">Focus</span>

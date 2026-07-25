@@ -10,7 +10,14 @@ export default function Hero() {
         <h1>Building research practices that change how healthcare gets designed.</h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
-        <p className="hero-sub">UX research leader. PhD in HCI. 10 years shipping clinical products in regulated environments.</p>
+        <p className="hero-sub">UX research leader. PhD in HCI. 10 years setting research and design direction in regulated clinical environments.</p>
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="fade-up" delay={350}>
+        <div className="hero-scope">
+          <span>50+ labs</span>
+          <span>4 business units</span>
+          <span>585K patients/yr</span>
+        </div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={450}>
         <div className="hero-links">

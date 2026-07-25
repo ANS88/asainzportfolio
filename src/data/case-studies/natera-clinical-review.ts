@@ -5,6 +5,7 @@ export const nateraClinicalReview: CaseStudy = {
   title: "Clinical Review",
   stakesLine:
     "When genetic test reports are delayed, treatment decisions are delayed. I identified the bottleneck, built the case for a platform investment, and led a cross-functional team to redesign the workflow that determines how fast 585,000 patients per year get their results.",
+  judgment: "Chose distributed cognition framework over standard usability audit \u2014 the bottleneck was organizational, not interface",
   role: "UX Research Lead",
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
@@ -256,6 +257,42 @@ export const nateraClinicalReview: CaseStudy = {
     },
 
     {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p><strong>The obvious move:</strong> Run a standard usability audit of the existing tools, identify friction points, and recommend incremental fixes. That\u2019s what the team expected when they asked for UX research support.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>What I chose instead:</strong> I reframed the problem using a distributed cognition framework. The bottleneck wasn\u2019t any single interface \u2014 it was how information flowed across people, tools, and handoffs. That reframing turned a UI improvement project into a platform investment that replaced four systems with one.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>The tradeoff:</strong> A distributed cognition analysis takes longer than a usability audit and is harder to sell to stakeholders who want quick wins. I had to spend political capital to get buy-in for a broader scope. But the payoff was a design that addressed the structural problem, not just the surface symptoms.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "beyond",
+      title: "What this changed beyond the project",
+      type: "beyond",
+      content: [
+        {
+          type: "text",
+          data: "<p>The unified review framework became the template for how Natera approaches lab workflow redesign. The discovery methodology I developed \u2014 combining contextual inquiry with distributed cognition analysis \u2014 is now the standard approach for any new workflow project in the lab operations org. Engineering adopted the role-based queue architecture as a reusable pattern across product lines.</p>",
+        },
+        {
+          type: "text",
+          data: "<p>More broadly, this project changed how research is positioned within the team. Before this work, UX research was brought in to validate designs. After, it\u2019s brought in to define the problem. That shift in when research enters the process is the most durable outcome.</p>",
+        },
+      ],
+    },
+
+    {
       id: "reflection",
       title: "Reflection",
       type: "reflection",
@@ -284,6 +321,9 @@ export const nateraClinicalReview: CaseStudy = {
 
   myRole:
     "UX Research Lead \u2014 defined research strategy, managed 1 researcher, led cross-functional discovery across Women\u2019s Health, Oncology, and Organ Health divisions, presented findings to department leadership, usability testing and post-launch monitoring",
+
+  owned:
+    "I owned the research strategy, stakeholder alignment, and the decision to use distributed cognition as the analytical framework. The product designer owned interaction design; the PM owned roadmap prioritization; engineering owned technical feasibility of the queue architecture.",
 
   tags: [
     "Healthcare UX",
