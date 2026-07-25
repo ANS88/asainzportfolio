@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="hero-tag">Adriana Sainz</div>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={100}>
-        <h1>Building research practices that change how healthcare gets designed.</h1>
+        <h1>All design is a signal-to-noise decision. I&apos;ve spent ten years making it in high-stakes systems.</h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
         <p className="hero-sub">UX research leader. PhD in HCI. 10 years setting research and design direction in regulated clinical environments.</p>
