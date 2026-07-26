@@ -36,8 +36,8 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
           <stop offset="0%" stopColor="#f0e0d0" />
           <stop offset="12%" stopColor="#d4a088" />
           <stop offset="28%" stopColor="#c87060" />
-          <stop offset="50%" stopColor="#a04830" />
-          <stop offset="100%" stopColor="#8b3a2a" />
+          <stop offset="50%" stopColor="#d4bcf5" />
+          <stop offset="100%" stopColor="#c4a8f0" />
         </radialGradient>
         <radialGradient id={`${idPrefix}-center`} cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#f0e4d8" />
@@ -46,7 +46,7 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
         </radialGradient>
       </defs>
       {/* Symmetric 5-petal bloom */}
-      <path d={CURSOR_PATH} fill={`url(#${idPrefix}-grad)`} stroke="#8b3a2a" strokeWidth=".3" />
+      <path d={CURSOR_PATH} fill={`url(#${idPrefix}-grad)`} stroke="#c4a8f0" strokeWidth=".3" />
       {/* Vein lines between petals */}
       {[0, 72, 144, 216, 288].map((angle, i) => (
         <line
@@ -55,7 +55,7 @@ function MoonflowerSVG({ size = 40, idPrefix = "mf" }: { size?: number; idPrefix
           y1="20"
           x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
           y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
-          stroke="#a04830"
+          stroke="#d4bcf5"
           strokeWidth=".4"
           opacity=".45"
         />

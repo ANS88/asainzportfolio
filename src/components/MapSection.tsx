@@ -78,8 +78,8 @@ export default function MapSection() {
                 <Geography
                   key={geo.rpiProperties?.name || geo.id || Math.random()}
                   geography={geo}
-                  fill="#e5ddd3"
-                  stroke="#c9b99a"
+                  fill="#2e1440"
+                  stroke="#4a2d6b"
                   strokeWidth={0.5}
                   style={{
                     default: { outline: "none" },
@@ -101,15 +101,15 @@ export default function MapSection() {
               <circle
                 r={active === i ? 10 : 6}
                 fill="none"
-                stroke="#8b3a2a"
+                stroke="#c4a8f0"
                 strokeWidth={0.5}
                 opacity={active === i ? 0.4 : 0.15}
                 style={{ transition: "all 0.3s ease" }}
               />
               <circle
                 r={active === i ? 5 : 3.5}
-                fill={loc.tags.includes("Born") ? "#8b3a2a" : "#8b7355"}
-                stroke="#f3ece4"
+                fill={loc.tags.includes("Born") ? "#c4a8f0" : "#7a6aad"}
+                stroke="#230c33"
                 strokeWidth={1}
                 style={{ transition: "all 0.3s ease", cursor: "pointer" }}
               />
@@ -118,7 +118,7 @@ export default function MapSection() {
                 y={-12}
                 style={{
                   fontSize: active === i ? 11 : 9,
-                  fill: "#2c1810",
+                  fill: "#9984d4",
                   fontWeight: active === i ? 600 : 400,
                   transition: "all 0.3s ease",
                 }}

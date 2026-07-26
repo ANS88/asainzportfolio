@@ -33,8 +33,8 @@ export default function FlowerHome() {
             <stop offset="0%" stopColor="#f0e0d0" />
             <stop offset="12%" stopColor="#d4a088" />
             <stop offset="28%" stopColor="#c87060" />
-            <stop offset="50%" stopColor="#a04830" />
-            <stop offset="100%" stopColor="#8b3a2a" />
+            <stop offset="50%" stopColor="#d4bcf5" />
+            <stop offset="100%" stopColor="#c4a8f0" />
           </radialGradient>
           <radialGradient id="fh-center" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#f0e4d8" />
@@ -42,7 +42,7 @@ export default function FlowerHome() {
             <stop offset="100%" stopColor="#b87060" stopOpacity="0" />
           </radialGradient>
         </defs>
-        <path d={FLOWER_PATH} fill="url(#fh-grad)" stroke="#8b3a2a" strokeWidth=".3" />
+        <path d={FLOWER_PATH} fill="url(#fh-grad)" stroke="#c4a8f0" strokeWidth=".3" />
         {[0, 72, 144, 216, 288].map((angle, i) => (
           <line
             key={`fhv${i}`}
@@ -50,7 +50,7 @@ export default function FlowerHome() {
             y1="20"
             x2={20 + 16 * Math.cos(((angle - 90) * Math.PI) / 180)}
             y2={20 + 16 * Math.sin(((angle - 90) * Math.PI) / 180)}
-            stroke="#a04830"
+            stroke="#d4bcf5"
             strokeWidth=".4"
             opacity=".45"
           />

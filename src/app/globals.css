@@ -3,27 +3,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300..700&display=swap');
 
 :root {
-  --ink: #2c1810;
-  --ink2: #4a3228;
-  --ink3: #8b7355;
-  --paper: #f3ece4;
-  --warm: #ebe3d9;
-  --cream: #ede5db;
-  --border: #c9b99a;
-  --border-strong: #a89070;
-  --accent: #8b3a2a;
-  --accent2: #a04830;
-  --accent-soft: #c89080;
-  --green: #8b3a2a;
-  --blue: #8b3a2a;
+  --ink: #9984d4;
+  --ink2: #b8a9e0;
+  --ink3: #7a6aad;
+  --paper: #230c33;
+  --warm: #2e1440;
+  --cream: #2a1239;
+  --border: #4a2d6b;
+  --border-strong: #6b4a8f;
+  --accent: #c4a8f0;
+  --accent2: #d4bcf5;
+  --accent-soft: #8a6ebf;
+  --green: #c4a8f0;
+  --blue: #c4a8f0;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
   --hand: 'Cormorant Garamond', Georgia, serif;
   --mono: 'Inter', system-ui, sans-serif;
-  --shadow-sm: 0 1px 3px rgba(44,24,16,.06), 0 1px 2px rgba(44,24,16,.04);
-  --shadow-md: 0 4px 16px rgba(44,24,16,.07), 0 2px 4px rgba(44,24,16,.04);
-  --shadow-lg: 0 12px 40px rgba(44,24,16,.08), 0 4px 8px rgba(44,24,16,.04);
-  --shadow-accent: 0 4px 20px rgba(139,58,42,.15);
+  --shadow-sm: 0 1px 3px rgba(35,12,51,.3), 0 1px 2px rgba(35,12,51,.2);
+  --shadow-md: 0 4px 16px rgba(35,12,51,.35), 0 2px 4px rgba(35,12,51,.2);
+  --shadow-lg: 0 12px 40px rgba(35,12,51,.4), 0 4px 8px rgba(35,12,51,.2);
+  --shadow-accent: 0 4px 20px rgba(196,168,240,.2);
   --transition-fast: .15s cubic-bezier(.4, 0, .2, 1);
   --transition-medium: .3s cubic-bezier(.4, 0, .2, 1);
   --transition-slow: .5s cubic-bezier(.4, 0, .2, 1);
@@ -43,7 +43,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-::selection { background: var(--accent); color: #f3ece4; }
+::selection { background: var(--accent); color: #230c33; }
 a { color: var(--accent); text-decoration: none; transition: all var(--transition-fast); }
 a:hover { opacity: .85; }
 
@@ -1050,7 +1050,7 @@ section { padding: 5rem 0; }
   transition: fill .3s ease;
 }
 .primary-node:hover text {
-  fill: #723020;
+  fill: #8a6ebf;
 }
 .primary-node.expanded:hover text {
   fill: white;
