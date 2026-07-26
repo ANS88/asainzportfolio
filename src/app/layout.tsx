@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
+import DotCursor from "@/components/DotCursor";
 
 export const metadata: Metadata = {
   title: "Adriana Navarro Sainz",
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <DotCursor />
         <TopNav />
         <main>{children}</main>
       </body>
