@@ -43,7 +43,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; cursor: none; }
-::selection { background: #F0386B; color: #ffffff; }
 a { color: var(--accent); text-decoration: none; transition: all var(--transition-fast); }
 a:hover { opacity: .85; }
 
@@ -1610,3 +1609,7 @@ section { padding: 5rem 0; }
   .work-row { grid-template-columns: 1fr; gap: .35rem; }
   .work-row-result { display: none; }
 }
+
+/* Selection highlight — placed last to override Tailwind preflight */
+*::selection { background: #F0386B; color: #fff; }
+*::-moz-selection { background: #F0386B; color: #fff; }
