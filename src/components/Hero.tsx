@@ -10,7 +10,7 @@ export default function Hero() {
         <h1>I lead design and research for complex, high-stakes products.</h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
-        <p className="hero-sub">A systems thinker and builder with a decade of experience turning tangled problems into products people trust.</p>
+        <p className="hero-sub">A systems thinker and builder at heart with a decade of experience turning tangled problems into products people trust.</p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={350}>
         <div className="hero-scope">
