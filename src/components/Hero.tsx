@@ -13,11 +13,7 @@ export default function Hero() {
         <p className="hero-sub">A systems thinker and builder at heart with a decade of experience turning tangled problems into products people trust.</p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={350}>
-        <div className="hero-scope">
-          <span>50+ labs</span>
-          <span>4 business units</span>
-          <span>585K patients/yr</span>
-        </div>
+        <p className="hero-current">Currently at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a></p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={450}>
         <div className="hero-links">
