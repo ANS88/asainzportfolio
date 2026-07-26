@@ -110,7 +110,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/natera-clinical-review/distributed-cognition-map.png",
+            src: "/images/case-studies/natera-clinical-review/distributed-cognition-map.svg",
             alt: "As-is map of the manual review workflow showing information flowing across two roles, four tools, and the handoffs between them, with friction points marked at the transitions.",
             caption: "Mapping the review process as a distributed system, rather than auditing each tool separately, showed the delays lived in the transitions, not the interfaces. That reframing is what turned a usability project into a platform investment.",
           },
