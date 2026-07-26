@@ -7,35 +7,35 @@ import FavoriteReads from "@/components/FavoriteReads";
 import MapSection from "@/components/MapSection";
 
 export const metadata: Metadata = {
-  title: "About — Adriana Navarro Sainz",
+  title: "About, Adriana Navarro Sainz",
   description:
-    "Adriana Navarro Sainz — UX research leader building design teams in healthcare. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+    "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
   openGraph: {
     description:
-      "Adriana Navarro Sainz — UX research leader building design teams in healthcare. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
   },
   twitter: {
     description:
-      "Adriana Navarro Sainz — UX research leader building design teams in healthcare. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
   },
 };
 
 const beliefs: { belief: string; decision: string }[] = [
   {
     belief: "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn’t, before the first wireframe.",
-    decision: "At Natera, I replaced 4 legacy review tools with one — not by adding features, but by eliminating the friction that made clinicians work around the system. Turnaround dropped 50%.",
+    decision: "At Natera, I replaced 4 legacy review tools with one. Not by adding features, but by eliminating the friction that made clinicians work around the system. Turnaround dropped 50%.",
   },
   {
     belief: "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health.",
-    decision: "I designed the Clinical Review workflow around progressive disclosure, surfacing automated flags only when they were actionable — not as interruptions. The genetic counselors kept their judgment in the loop.",
+    decision: "I designed the Clinical Review workflow around progressive disclosure, surfacing automated flags only when they were actionable, not as interruptions. The genetic counselors kept their judgment in the loop.",
   },
   {
     belief: "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
-    decision: "When the Cures Act required instant patient access to results, I used the mandate as leverage to fund a proper patient portal — turning a compliance requirement into a patient experience investment that reached 181K users.",
+    decision: "When the Cures Act required instant patient access to results, I used the mandate as leverage to fund a proper patient portal, turning a compliance requirement into a patient experience investment that reached 181K users.",
   },
   {
-    belief: "Design is a political act. Who gets centered, who gets left out — those are choices whether you make them consciously or not.",
-    decision: "I centered perimenopausal women — a population most health apps stop serving at 40 — as the subject of my dissertation research. The field was building menstrual trackers that assumed regularity.",
+    belief: "Design is a political act. Who gets centered, who gets left out: those are choices whether you make them consciously or not.",
+    decision: "I centered perimenopausal women, a population most health apps stop serving at 40, as the subject of my dissertation research. The field was building menstrual trackers that assumed regularity.",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* What I believe — strongest first, each with a concrete decision */}
+        {/* What I believe: strongest first, each with a concrete decision */}
         <section>
           <AnimateOnScroll>
             <div className="label">My Approach</div>
@@ -128,7 +128,7 @@ export default function About() {
                 Building research practices in healthcare.
               </p>
               <p>
-                I&apos;ve spent ten years building UX research into healthcare organizations that didn&apos;t have it &mdash; establishing practices, growing researchers, and proving that user evidence changes what gets shipped.
+                I&apos;ve spent ten years building UX research into healthcare organizations that didn&apos;t have it: establishing practices, growing researchers, and proving that user evidence changes what gets shipped.
               </p>
               <p>
                 Currently at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, where I lead UX research across lab operations and enterprise tools, and my team&apos;s work shapes product decisions for systems serving 585K patients a year. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I evaluate which women&apos;s health research proposals get funded and why. Through my Substack, <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">&ldquo;Women&apos;s Health, Computed,&rdquo;</a> I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
@@ -168,7 +168,7 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* Currently looking for — shape of role */}
+        {/* Currently looking for: shape of role */}
         <section>
           <AnimateOnScroll>
             <div className="label">Next</div>
@@ -177,7 +177,7 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-prose">
               <p>
-                A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions &mdash; not just run studies.
+                A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions, not just run studies.
               </p>
               <p className="about-available">
                 Available for: design leadership in health/AI, building research teams from zero, advisory roles in femtech and clinical AI.

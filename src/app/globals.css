@@ -790,6 +790,15 @@ a:hover { opacity: .85; }
 .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 2rem; font-weight: 500; }
 .hero h1 em { font-style: italic; color: var(--accent); }
 .hero-sub { font-size: 1.15rem; color: var(--ink3); line-height: 1.65; max-width: 540px; margin-bottom: 1.5rem; }
+.hero-stats {
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 1.5rem;
+}
 .hero-current {
   font-family: var(--sans);
   font-size: .75rem;

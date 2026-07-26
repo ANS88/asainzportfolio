@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cs) return {};
 
   return {
-    title: `${cs.title} \u2014 Adriana Navarro Sainz`,
+    title: `${cs.title}, Adriana Navarro Sainz`,
     description: cs.stakesLine,
     openGraph: {
       title: cs.title,

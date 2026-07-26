@@ -110,21 +110,13 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
   }
 }
 
-/* ── Section type labels ── */
-const sectionLabels: Record<string, string> = {
-  judgment: "Judgment",
-  beyond: "Impact",
-};
-
 /* ── Section Renderer ── */
 function CaseStudySection({ section }: { section: SectionType }) {
-  const label = sectionLabels[section.type] ?? section.type.charAt(0).toUpperCase() + section.type.slice(1);
   return (
     <>
       <hr className="section-line" />
       <section id={section.id} className={`cs-section cs-section-${section.type}`}>
         <AnimateOnScroll>
-          <div className="label">{label}</div>
           <div className="section-title">{section.title}</div>
         </AnimateOnScroll>
         <div className="cs-section-body">

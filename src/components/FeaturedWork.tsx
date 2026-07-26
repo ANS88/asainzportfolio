@@ -5,14 +5,14 @@ const featured = [
     slug: "natera-clinical-review",
     title: "Clinical Review",
     result: "50% faster turnaround for 585K patients/yr",
-    judgment: "Chose distributed cognition over standard usability audit — the bottleneck was organizational, not interface",
+    judgment: "Chose distributed cognition over standard usability audit, the bottleneck was organizational, not interface",
     company: "Natera",
   },
   {
     slug: "perimenopause-tracking",
     title: "Perimenopause Symptom Tracking",
     result: "40-person diary study, 88.3 SUS, paper in review",
-    judgment: "Chose diary study over usability test — the question was about lived experience, not task completion",
+    judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
     company: "UC & Clue",
   },
   {
