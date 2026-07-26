@@ -3,10 +3,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 export default function Hero() {
   return (
     <div className="hero">
-      <AnimateOnScroll animation="fade-in">
-        <div className="hero-tag">Adriana Sainz</div>
-      </AnimateOnScroll>
-      <AnimateOnScroll animation="fade-up" delay={100}>
+      <AnimateOnScroll animation="fade-up">
         <h1>I lead design and research for complex, high-stakes products.</h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
