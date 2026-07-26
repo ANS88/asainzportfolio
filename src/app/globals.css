@@ -43,7 +43,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; cursor: none; }
-::selection { background: var(--accent); color: #230c33; }
+::selection { background: #F0386B; color: #ffffff; }
 a { color: var(--accent); text-decoration: none; transition: all var(--transition-fast); }
 a:hover { opacity: .85; }
 
