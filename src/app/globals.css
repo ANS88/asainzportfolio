@@ -800,6 +800,42 @@ a:hover { opacity: .85; }
   margin-bottom: 2.5rem;
 }
 .hero-current a { color: var(--accent); }
+
+/* Hero keyword hover */
+.hero-keyword {
+  position: relative;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+  cursor: none;
+}
+.hero-keyword:hover {
+  color: #F0386B;
+  border-bottom-color: #F0386B;
+}
+.hero-keyword-tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .5rem);
+  width: max-content;
+  max-width: 420px;
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  background: #F0386B;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  z-index: 50;
+  pointer-events: none;
+  animation: tooltipIn .18s ease;
+}
+@keyframes tooltipIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .metrics-bar {
   display: flex;
   gap: .5rem;

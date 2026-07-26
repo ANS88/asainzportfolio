@@ -1,10 +1,33 @@
+"use client";
+
+import { useState, useRef } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
+const TOOLTIP_TEXT =
+  "clinical decision support systems, genetic testing interpretation tools, patient portals, symptom trackers, process execution and automatization software";
+
 export default function Hero() {
+  const [show, setShow] = useState(false);
+  const wordRef = useRef<HTMLSpanElement>(null);
+
   return (
     <div className="hero">
       <AnimateOnScroll animation="fade-up">
-        <h1>I lead design and research for complex, high-stakes products.</h1>
+        <h1>
+          I lead design and research for{" "}
+          <span
+            ref={wordRef}
+            className="hero-keyword"
+            onMouseEnter={() => setShow(true)}
+            onMouseLeave={() => setShow(false)}
+          >
+            complex
+            {show && (
+              <span className="hero-keyword-tooltip">{TOOLTIP_TEXT}</span>
+            )}
+          </span>
+          , high-stakes products.
+        </h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
         <p className="hero-sub">A systems thinker and builder at heart with a decade of experience turning tangled problems into products people trust.</p>
