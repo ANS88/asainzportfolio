@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="50%" stop-color="#2d1150"/>
+      <stop offset="100%" stop-color="#230c33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F0386B"/>
+      <stop offset="100%" stop-color="#c4a8f0"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0386B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F0386B" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9984d4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#9984d4" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4a8f0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c4a8f0" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#c4a8f0" stroke-width="0.5">
+    <line x1="0" y1="600" x2="1280" y2="600"/>
+    <line x1="0" y1="450" x2="1280" y2="450"/>
+    <line x1="0" y1="300" x2="1280" y2="300"/>
+  </g>
+
+  <!-- Data viz bars - representing Reddit posting activity -->
+  <g transform="translate(140, 150)">
+    <!-- Bar chart visualization -->
+    <rect x="0" y="280" width="40" height="170" rx="4" fill="url(#bar1)" opacity="0.7"/>
+    <rect x="60" y="220" width="40" height="230" rx="4" fill="url(#bar2)" opacity="0.7"/>
+    <rect x="120" y="310" width="40" height="140" rx="4" fill="url(#bar1)" opacity="0.7"/>
+    <rect x="180" y="180" width="40" height="270" rx="4" fill="url(#bar3)" opacity="0.7"/>
+    <rect x="240" y="250" width="40" height="200" rx="4" fill="url(#bar2)" opacity="0.7"/>
+    <rect x="300" y="120" width="40" height="330" rx="4" fill="url(#bar1)" opacity="0.8"/>
+    <rect x="360" y="200" width="40" height="250" rx="4" fill="url(#bar3)" opacity="0.7"/>
+    <rect x="420" y="160" width="40" height="290" rx="4" fill="url(#bar2)" opacity="0.7"/>
+    <rect x="480" y="80" width="40" height="370" rx="4" fill="url(#bar1)" opacity="0.9"/>
+    <rect x="540" y="240" width="40" height="210" rx="4" fill="url(#bar3)" opacity="0.7"/>
+    <rect x="600" y="140" width="40" height="310" rx="4" fill="url(#bar2)" opacity="0.8"/>
+    <rect x="660" y="60" width="40" height="390" rx="4" fill="url(#bar1)" opacity="0.9"/>
+    <rect x="720" y="190" width="40" height="260" rx="4" fill="url(#bar3)" opacity="0.7"/>
+    <rect x="780" y="100" width="40" height="350" rx="4" fill="url(#bar2)" opacity="0.8"/>
+    <rect x="840" y="40" width="40" height="410" rx="4" fill="url(#bar1)" opacity="1"/>
+    <rect x="900" y="170" width="40" height="280" rx="4" fill="url(#bar3)" opacity="0.7"/>
+    <rect x="960" y="130" width="40" height="320" rx="4" fill="url(#bar2)" opacity="0.8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="640" y="100" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#F0386B" letter-spacing="-1">Menopause Is Hot Now</text>
+  <text x="640" y="140" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#c4a8f0" opacity="0.7" letter-spacing="3" text-transform="uppercase">REDDIT DATA VISUALIZATION</text>
+
+  <!-- Trend line overlay -->
+  <polyline points="160,400 220,370 280,420 340,330 400,360 460,280 520,320 580,240 640,350 700,300 760,220 820,260 880,200 940,330 1000,290 1060,250 1120,230"
+    fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"
+    transform="translate(0, -10)"/>
+
+  <!-- Dots on trend line -->
+  <g fill="#F0386B" opacity="0.8">
+    <circle cx="460" cy="270" r="5"/>
+    <circle cx="580" cy="230" r="5"/>
+    <circle cx="760" cy="210" r="5"/>
+    <circle cx="880" cy="190" r="5"/>
+    <circle cx="1120" cy="220" r="5"/>
+  </g>
+</svg>
