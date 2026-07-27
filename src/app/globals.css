@@ -409,7 +409,7 @@ a:hover { opacity: .85; }
 }
 
 /* ═══ PLAYGROUND ═══ */
-.playground-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.playground-grid { display: grid; gap: 2rem; }
 .playground-card {
   display: block;
   background: var(--warm);
