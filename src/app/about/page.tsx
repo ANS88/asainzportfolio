@@ -100,6 +100,8 @@ export default function About() {
           </AnimateOnScroll>
         </section>
 
+        <hr className="section-line" />
+
         <MapSection />
 
         <hr className="section-line" />
