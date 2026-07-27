@@ -60,6 +60,46 @@ export default function About() {
           </AnimateOnScroll>
         </section>
 
+        <hr className="section-line" />
+
+        {/* Experience */}
+        <section>
+          <AnimateOnScroll>
+            <div className="label">Relevant experience</div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up">
+            <div className="experience-block">
+              <div className="experience-header">
+                <div className="experience-company">Natera</div>
+                <div className="experience-role">Senior UX Design &amp; Research Manager</div>
+                <div className="experience-dates">2021 &ndash; Present</div>
+              </div>
+              <ul className="experience-list">
+                <li>Established the company&apos;s first team dedicated to lab experience, defining the roles, hiring the designers and researchers, and setting the success metrics and roadmaps for a function that didn&apos;t exist before.</li>
+                <li>Led the 0&rarr;1 creation of Natera&apos;s first patient portal, defining the end-to-end patient experience from test order through results.</li>
+                <li>Built the company&apos;s first software layer for the lab itself, a product suite spanning every step of sample processing across 50+ laboratories.</li>
+              </ul>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up">
+            <div className="experience-block">
+              <div className="experience-header">
+                <div className="experience-company">Cincinnati Children&apos;s Hospital Medical Center</div>
+                <div className="experience-role">UX Designer, Biomedical Informatics</div>
+                <div className="experience-dates">2019 &ndash; 2021</div>
+              </div>
+              <ul className="experience-list">
+                <li>Led the 0&rarr;1 design of a patient and caregiver portal for families managing cystic fibrosis, chronic care coordination where missed information has clinical consequences.</li>
+                <li>Created a medication adherence app for teens, designing for the hardest adherence population there is: adolescents who don&apos;t want another adult telling them what to do.</li>
+                <li>Built a clinical decision support tool helping patients and providers navigate genetic testing decisions.</li>
+                <li>Designed a variant interpretation and curation bank, internal tooling for the scientists classifying genetic variants, where interface clarity directly affects diagnostic accuracy.</li>
+              </ul>
+            </div>
+          </AnimateOnScroll>
+        </section>
+
         <MapSection />
 
         <hr className="section-line" />
