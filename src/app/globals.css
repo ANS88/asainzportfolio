@@ -46,6 +46,28 @@ body { font-family: var(--sans); background: var(--paper); color: var(--ink); -w
 a { color: var(--accent); text-decoration: none; transition: all var(--transition-fast); }
 a:hover { opacity: .85; }
 
+/* Inline content links get an underline so they're visually distinct */
+.about-prose a,
+.hero-sub a,
+.cs-text-block a,
+.cs-list-block a,
+.belief-paragraph a,
+.belief-decision a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.about-prose a:hover,
+.hero-sub a:hover,
+.cs-text-block a:hover,
+.cs-list-block a:hover,
+.belief-paragraph a:hover,
+.belief-decision a:hover {
+  text-decoration-color: var(--accent);
+  opacity: 1;
+}
+
 .container { max-width: 900px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); }
 
 /* ═══ TOP BAR ═══ */
