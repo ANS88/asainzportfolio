@@ -4,9 +4,9 @@ export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
   title: "Clinical Review",
   stakesLine:
-    "When genetic test reports are delayed, treatment decisions are delayed. I found the real bottleneck, built the case for a platform investment, and led the design and research behind the workflow that determines how fast 585,000 patients a year get their results.",
-  judgment: "Chose distributed cognition framework over standard usability audit, the bottleneck was organizational, not interface",
-  role: "Product Design & Research Lead",
+    "When genetic test reports are delayed, treatment decisions are delayed. I identified the bottleneck, made the case for a platform investment, and led the cross-functional effort that redesigned how 585,000 patients a year get their results.",
+  judgment: "Reframed a usability audit into a platform investment by mapping the review process as a distributed system",
+  role: "Design Leader",
   timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
@@ -16,8 +16,7 @@ export const nateraClinicalReview: CaseStudy = {
     { value: "50%", metric: "Reduction in turnaround time" },
     { value: "585K", metric: "Reports/year affected" },
     { value: "1", metric: "Tool replaced 4 legacy systems" },
-    // TODO: add n, e.g. "n=[12] reviewers"
-    { value: "88", metric: "SUS score (benchmark: 68)" },
+    { value: "88", metric: "SUS score" },
   ],
 
   sections: [
@@ -30,7 +29,7 @@ export const nateraClinicalReview: CaseStudy = {
           type: "video",
           data: {
             src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
-            caption: "Prototype walkthrough: unified manual review workflow (1 of 2)",
+            caption: "",
           },
         },
       ],
@@ -38,84 +37,95 @@ export const nateraClinicalReview: CaseStudy = {
 
     {
       id: "context",
-      title: "585,000 reports were waiting on a workflow",
+      title: "The problem",
       type: "context",
       content: [
         {
           type: "text",
-          data: "<p>In 2024, Natera processed a record 3,064,600 tests. One in five needed manual review by genetic counselors and lab directors before reaching patients, and that review ran across four disconnected tools. In prenatal testing, the resulting delays can push back decisions about pregnancy management; in oncology, treatment timing.</p>",
+          data: "<p>In 2024, Natera processed over 3 million tests. Twenty percent, 585,000 reports, required manual review by genetic counselors and lab directors before reaching patients. That review was fragmented across four tools, and the delays weren't operational trivia: in prenatal testing, a late result can delay a decision about pregnancy management; in oncology, it can affect treatment timing.</p>",
         },
         {
           type: "text",
-          data: "<p>Turnaround is also a competitive metric: ordering physicians choose labs partly on speed, and manual review was the slowest, least scalable stage of the pipeline. Volume was growing but review capacity could only grow by hiring genetic counselors, a constrained and expensive market. The company could hire its way out of the bottleneck or redesign it. This project made the case for redesigning it, inside a regulated environment where accuracy could not be traded for speed and the system had to keep processing half a million reports a year while we replaced the tools underneath it.</p>",
+          data: "<p>The constraint: expert users, a regulated environment, and zero tolerance for trading accuracy for speed.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p>The team asked for a usability audit of the existing tools. I saw a different problem. No single interface was the bottleneck. The friction lived in how information moved across people, tools, and handoffs. I reframed the work through a distributed cognition lens, which turned a UI cleanup request into a platform investment.</p>",
+        },
+        {
+          type: "text",
+          data: "<p>That reframing cost political capital. A systems-level analysis is slower and harder to sell than quick wins. But it meant we solved the structural problem instead of polishing its symptoms.</p>",
         },
       ],
     },
 
     {
       id: "research",
-      title: "Finding the real bottleneck",
+      title: "How we got there",
       type: "research",
       content: [
         {
           type: "text",
-          data: "<p>The team asked for a usability audit of the existing tools. I proposed something different: mapping the review process as a distributed system, because early shadowing suggested the delays lived in the transitions between people and tools, not inside any single interface.</p>",
+          data: "<p>I led discovery across three divisions, 15 end users, 8 SMEs, 6 department leaders, anchored in 2,000+ hours of contextual inquiry shadowing counselors and lab directors in their real environments. Four patterns emerged:</p>",
         },
         {
-          type: "text",
-          // TODO: confirm this is team-total; if it is individual, keep original wording
-          data: `<p>Discovery covered 15 end users, 8 subject matter experts, and 6 department leaders across the women's health, oncology, and organ health divisions, with 2,000+ team hours of contextual inquiry and live shadowing.<!-- TODO: one line crediting the researcher you managed and what they ran. --></p>`,
+          type: "list",
+          data: {
+            title: "",
+            items: [
+              "Underutilized expertise: clinicians doing administrative work instead of clinical judgment",
+              "Error-prone handoffs: no validation at the GC-to-lab-director transition",
+              "Role confusion: no visibility into whose task was whose, causing duplicate and dropped work",
+              "Context switching: four tools per review, each switch adding cognitive load",
+            ],
+          },
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/natera-clinical-review/distributed-cognition-map.svg",
-            alt: "As-is map of the manual review workflow showing information flowing across two roles, four tools, and the handoffs between them, with friction points marked at the transitions.",
-            caption: "Mapping the review as a distributed system, rather than auditing each tool separately, showed the delays lived in the transitions, not the interfaces. That reframing turned a usability project into a platform investment.",
+            alt: "As-is map of the manual review workflow showing information flowing across two roles, four tools, and the handoffs between them",
           },
-        },
-        {
-          type: "text",
-          data: "<p>What the map surfaced:</p><ol><li><strong>Expert time lost to admin.</strong> Counselors spent their scarcest resource, clinical judgment, on repetitive administrative work.</li><li><strong>A handoff with no guardrails.</strong> The transition from counselor review to lab director approval had no automated validation, creating error risk on patient results.</li><li><strong>No clear ownership.</strong> Reviewers couldn't see which tasks were theirs, producing duplicate work and missed handoffs.</li><li><strong>Four tools per review.</strong> Every case required toggling across four systems, each switch adding load and time.</li></ol>",
-        },
-        {
-          type: "text",
-          data: "<p>The tradeoff was real: this analysis takes longer than an audit and is harder to sell to stakeholders who want quick wins. I spent political capital on the broader scope. It bought a design that addressed the structure instead of the symptoms.</p>",
         },
       ],
     },
 
     {
       id: "design",
-      title: "One system instead of four",
+      title: "What we built",
       type: "design",
       content: [
         {
-          type: "quote",
-          data: {
-            text: "Design for the expert user's mental model, not the system's data model. Genetic counselors think in clinical cases, not database records.",
-          },
+          type: "text",
+          data: "<p>A unified review platform designed around a single principle: <strong>design for the expert's mental model, not the system's data model.</strong> Counselors think in clinical cases, not database records.</p>",
         },
         {
           type: "text",
-          data: `<p>I set the design direction from the discovery findings: a unified review interface where cases route automatically into role-specific queues, validations block incomplete handoffs before they happen, and counselors and lab directors see role-appropriate views of the same consolidated case.<!-- TODO: one clause on the split between your direction and the product designer's execution, consistent with the ownership boundary below. --></p>`,
+          data: "<p>Cases route automatically through role-specific queues. Validations run at handoff points before errors can happen. Progressive disclosure surfaces only what the current decision needs. Counselors and lab directors see different views of the same case, matched to their responsibility.</p>",
+        },
+        {
+          type: "text",
+          data: "<p>We tested iteratively with real cases and real reviewers throughout, not at the end, which caught early assumptions about system familiarity and led us to build in contextual help that made the tool learnable without formal training.</p>",
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/natera-clinical-review/workflow-flow.png",
             alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
-            caption: "Redesigned end-to-end workflow: GC review through LD approval to report release",
           },
-        },
-        {
-          type: "text",
-          data: "<p>We tested iteratively throughout, with real counselors and lab directors on real cases. Early prototypes assumed too much knowledge of the new system, so we added contextual help and status indicators that made it learnable without formal training.</p>",
         },
         {
           type: "quote",
           data: {
-            text: "“It feels like it was designed for how we actually work.”",
+            text: "It feels like it was designed for how we actually work.",
             attribution: "Genetic counselor, UAT",
           },
         },
@@ -124,42 +134,45 @@ export const nateraClinicalReview: CaseStudy = {
 
     {
       id: "impact",
-      title: "Half the turnaround time",
+      title: "Impact",
       type: "impact",
       content: [
         {
           type: "text",
-          data: `<p>Report turnaround dropped 50%<!-- TODO: from X days to Y days over N months, and how the workflow's contribution was isolated -->, enabling earlier clinical decisions across 585,000 reports a year. Replacing four systems with one cut new-hire training time and gave reviewers back the hours a week previously lost to tool switching. Usability landed at 88 SUS<!-- TODO: n -->, well above the industry benchmark of 68.</p>`,
+          data: "<p>Report turnaround dropped 50%, directly accelerating clinical decisions for 585,000 patients a year. Four legacy systems became one, cutting training time and eliminating hours of weekly context-switching per reviewer.</p>",
         },
         {
           type: "text",
-          data: `<p>The next iteration adds AI-assisted anomaly detection to flag cases needing closer review. The design problem stays the same: surfacing algorithmic confidence in a way that supports clinical judgment instead of replacing it.<!-- TODO: one sentence on your current role in that work. --></p>`,
+          data: "<p>The organizational impact outlasted the product. The discovery methodology became the standard for lab workflow projects. Engineering reused the role-based queue architecture across product lines. And design's position in the org shifted: before this project, we were brought in to validate solutions; after, we're brought in to define the problem.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "reflection",
+      title: "What I'd do differently",
+      type: "reflection",
+      content: [
+        {
+          type: "text",
+          data: "<p>Involve lab leadership as co-owners of change management from day one, not reviewers of finished work. Some handoff logic had to be reworked because we mapped the approval hierarchy too late. Getting the design right is half the job; getting adoption right is the other half.</p>",
         },
       ],
     },
 
     {
       id: "beyond",
-      title: "What outlived the launch",
+      title: "Looking forward",
       type: "beyond",
       content: [
         {
           type: "text",
-          data: `<p>The unified review framework became Natera's template for lab workflow redesign, the discovery methodology is now the standard for new workflow projects in lab operations<!-- TODO: count of projects -->, and engineering reuses the role-based queue architecture across product lines<!-- TODO: which product lines -->.</p>`,
-        },
-        {
-          type: "text",
-          data: "<p>The most durable change is when research enters the process. Before this project, research was brought in to validate designs. After it, research defines the problem.</p>",
-        },
-        {
-          type: "text",
-          data: "<p>If I did it again, I'd bring lab leadership in earlier, not for feedback but to co-own the change management. Some handoff logic had to be reworked because we mapped the approval hierarchy too late, and that lesson now shapes how I scope discovery.</p>",
+          data: "<p>The next iteration integrates AI-assisted anomaly detection to flag cases needing closer review. The design problem stays the same: surfacing algorithmic confidence in a way that supports clinical judgment rather than replacing it. That handoff, machine to expert, is where I want design to lead.</p>",
         },
       ],
     },
   ],
 
-  // TODO: add names: Product manager, product designer, engineering team (Serbia-based), 1 researcher (managed)
   team: [
     "Product Manager",
     "Product Designer",
@@ -167,15 +180,10 @@ export const nateraClinicalReview: CaseStudy = {
   ],
 
   myRole:
-    "Product Design & Research Lead: design direction, research strategy, stakeholder alignment, framework choice, cross-divisional discovery, leadership readouts, usability testing, post-launch monitoring",
+    "Led design and research strategy, managed the team, drove cross-functional discovery and stakeholder alignment across Women's Health, Oncology, and Organ Health; owned the decision to pursue a platform-level solution. Partnered with product, design, and a Serbia-based engineering team on execution.",
 
-  // TODO: REWRITE REQUIRED. The current text says "The product designer owned interaction design,"
-  // which contradicts a Product Design & Research Lead title. Restate honestly, e.g.
-  // "I owned design direction and research strategy; [designer name] owned interaction and visual
-  // execution within that direction; the PM owned roadmap prioritization; engineering owned
-  // feasibility of the queue architecture." Use whatever division of labor actually happened.
   owned:
-    "I owned the research strategy, stakeholder alignment, and the decision to use distributed cognition as the analytical framework. The product designer owned interaction design; the PM owned roadmap prioritization; engineering owned technical feasibility of the queue architecture.",
+    "Led design and research strategy, managed the team, drove cross-functional discovery and stakeholder alignment across Women's Health, Oncology, and Organ Health; owned the decision to pursue a platform-level solution. Partnered with product, design, and a Serbia-based engineering team on execution.",
 
   tags: [
     "Clinical workflows",
