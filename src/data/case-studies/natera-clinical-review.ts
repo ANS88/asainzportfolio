@@ -10,7 +10,7 @@ export const nateraClinicalReview: CaseStudy = {
   timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.png",
+  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },
@@ -118,7 +118,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/natera-clinical-review/workflow-flow.png",
+            src: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
             alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
           },
         },

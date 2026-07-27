@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 620" width="1360" height="620">
+  <defs>
+    <style>
+      text { font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1a0a2e"/>
+    </marker>
+    <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#b8a0d4"/>
+    </marker>
+  </defs>
+
+  <rect width="1360" height="620" fill="#ffffff" rx="0"/>
+
+  <!-- Title -->
+  <text x="60" y="55" font-size="32" font-weight="700" fill="#1a0a2e" letter-spacing="-0.02em">The redesigned workflow</text>
+  <text x="60" y="85" font-size="16" fill="#6b5a7d" font-style="italic">How the unified platform routes cases from GC review through LD approval to report release</text>
+
+  <!-- ===== PHASE LABELS ===== -->
+  <text x="135" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">TRIGGER</text>
+  <text x="440" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">GC REVIEW</text>
+  <text x="760" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">ROUTING</text>
+  <text x="1060" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">LD REVIEW</text>
+  <text x="1290" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">RELEASE</text>
+
+  <!-- ===== STEP 1: Scenario trigger ===== -->
+  <rect x="50" y="160" width="170" height="90" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="135" y="198" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">GC completes</text>
+  <text x="135" y="218" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">manual review</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="220" y1="205" x2="290" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 2: Decision - flags cleared? ===== -->
+  <polygon points="370,160 440,205 370,250 300,205" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="370" y="200" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">All flags</text>
+  <text x="370" y="216" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">cleared?</text>
+
+  <!-- Yes path: up to Sign off -->
+  <line x1="440" y1="182" x2="500" y2="182" stroke="#1a0a2e" stroke-width="2"/>
+  <text x="470" y="175" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
+  <rect x="500" y="160" width="130" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="565" y="187" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Sign off</text>
+
+  <!-- No path: down to Escalated -->
+  <line x1="370" y1="250" x2="370" y2="310" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="385" y="280" font-size="11" fill="#3d1f5c">No</text>
+  <rect x="305" y="320" width="130" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="370" y="347" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Escalated</text>
+
+  <!-- ===== STEP 3: LD lands on dashboard ===== -->
+  <line x1="630" y1="182" x2="685" y2="182" stroke="#1a0a2e" stroke-width="2"/>
+  <!-- Escalated also routes to dashboard -->
+  <line x1="435" y1="342" x2="660" y2="342" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="660" y1="342" x2="660" y2="210" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="660" y1="210" x2="685" y2="210" stroke="#b8a0d4" stroke-width="1.5" marker-end="url(#arrow-light)"/>
+
+  <rect x="685" y="165" width="150" height="80" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="760" y="200" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">LD dashboard</text>
+  <text x="760" y="220" font-size="12" fill="#6b5a7d" text-anchor="middle">Auto-routed queue</text>
+
+  <!-- Arrow to LD selects case -->
+  <line x1="835" y1="205" x2="895" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 4: LD reviews case ===== -->
+  <rect x="905" y="170" width="130" height="70" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="970" y="200" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">LD selects case</text>
+  <text x="970" y="218" font-size="12" fill="#6b5a7d" text-anchor="middle">Reviews flags</text>
+
+  <!-- Arrow to decision -->
+  <line x1="1035" y1="205" x2="1090" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 5: Flags cleared decision ===== -->
+  <polygon points="1160,160 1230,205 1160,250 1090,205" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1160" y="200" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">Flags</text>
+  <text x="1160" y="216" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">resolved?</text>
+
+  <!-- Yes: to release -->
+  <line x1="1230" y1="205" x2="1260" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1245" y="198" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
+
+  <!-- Release box -->
+  <rect x="1270" y="175" width="70" height="60" rx="8" fill="#1a0a2e" stroke="#1a0a2e" stroke-width="2"/>
+  <text x="1305" y="202" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Report</text>
+  <text x="1305" y="218" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">release</text>
+
+  <!-- No: loop back to address flags -->
+  <line x1="1160" y1="250" x2="1160" y2="340" stroke="#b8a0d4" stroke-width="1.5"/>
+  <text x="1175" y="280" font-size="11" fill="#3d1f5c">No</text>
+  <rect x="1090" y="340" width="140" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1160" y="367" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Address flags</text>
+  <!-- Loop arrow back to LD reviews -->
+  <line x1="1090" y1="362" x2="970" y2="362" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="970" y1="362" x2="970" y2="248" stroke="#b8a0d4" stroke-width="1.5" marker-end="url(#arrow-light)"/>
+
+  <!-- ===== LEGEND ===== -->
+  <line x1="60" y1="440" x2="1300" y2="440" stroke="#d4cade" stroke-width="1"/>
+
+  <text x="60" y="485" font-size="18" font-weight="700" fill="#1a0a2e">What the redesign changed</text>
+
+  <!-- Row 1 -->
+  <circle cx="80" cy="530" r="16" fill="#1a0a2e"/>
+  <text x="80" y="536" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="110" y="536" font-size="15" fill="#1a0a2e">Auto-routing replaces manual queue management</text>
+
+  <circle cx="730" cy="530" r="16" fill="#1a0a2e"/>
+  <text x="730" y="536" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="760" y="536" font-size="15" fill="#1a0a2e">Validation at every handoff, not just at the end</text>
+
+  <!-- Row 2 -->
+  <circle cx="80" cy="575" r="16" fill="#1a0a2e"/>
+  <text x="80" y="581" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="110" y="581" font-size="15" fill="#1a0a2e">Role-specific views of the same case</text>
+
+  <circle cx="730" cy="575" r="16" fill="#1a0a2e"/>
+  <text x="730" y="581" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="760" y="581" font-size="15" fill="#1a0a2e">One tool instead of four</text>
+</svg>
