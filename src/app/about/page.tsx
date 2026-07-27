@@ -74,13 +74,7 @@ export default function About() {
               <div className="about-intro-text">
                 <div className="about-prose">
                   <p>
-                    I&apos;ve spent ten years building UX research into healthcare organizations that didn&apos;t have it: establishing practices, growing researchers, and proving that user evidence changes what gets shipped.
-                  </p>
-                  <p>
-                    Currently at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, where I lead UX research across lab operations and enterprise tools, and my team&apos;s work shapes product decisions for systems serving 585K patients a year. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I evaluate which women&apos;s health research proposals get funded and why. Through my Substack, <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">&ldquo;Women&apos;s Health, Computed,&rdquo;</a> I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
-                  </p>
-                  <p>
-                    That thread runs back to <a href="https://www.cincinnatichildrens.org/" target="_blank" rel="noopener noreferrer">Cincinnati Children&apos;s Hospital</a>, where I worked with investigators on NIH-funded clinical research (<a href="https://www.rarediseasesnetwork.org/" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://www.nhlbi.nih.gov/news/2019/lungmap-nhlbi-project-breathes-life-first-depth-atlas-human-lung" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4888111/" target="_blank" rel="noopener noreferrer">3</a>), and through my PhD, which included a collaboration with <a href="https://helloclue.com/" target="_blank" rel="noopener noreferrer">Clue</a> on perimenopause symptom tracking.
+                    I grew up in Guadalajara, Mexico, where I found an early passion for building. A detour through Montreal showed me that what I wanted to build were digital things. I moved to the US for grad school, then joined <a href="https://www.cincinnatichildrens.org/" target="_blank" rel="noopener noreferrer">Cincinnati Children&apos;s Hospital</a> as a UX designer in biomedical informatics, designing tools for patients, physicians, and scientists. Today I&apos;m at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, the world&apos;s leading genetic testing company, where I lead a team of designers and researchers making the lab experience better.
                   </p>
                 </div>
               </div>
