@@ -21,7 +21,7 @@ const experiments = [
     title: "Menopause Is Hot Now",
     description: "An interactive exploration of posting activity in the menopause subreddit.",
     url: "https://menopauseishotnow.vercel.app/",
-    video: "/images/playground/menopauseishotnow.mov",
+    video: "/images/playground/menopauseishotnow.mp4",
     tags: ["Data viz", "Reddit", "Menopause"],
   },
 ];
