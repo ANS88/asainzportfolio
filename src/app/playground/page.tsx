@@ -21,7 +21,7 @@ const experiments = [
     title: "Menopause Is Hot Now",
     description: "An interactive exploration of posting activity in the menopause subreddit.",
     url: "https://menopauseishotnow.vercel.app/",
-    image: "/images/playground/menopause-is-hot-now.png",
+    video: "/images/playground/menopauseishotnow.mov",
     tags: ["Data viz", "Reddit", "Menopause"],
   },
 ];
@@ -49,9 +49,9 @@ export default function Playground() {
                   rel="noopener noreferrer"
                   className="playground-card"
                 >
-                  {exp.image && (
+                  {exp.video && (
                     <div className="playground-card-image">
-                      <img src={exp.image} alt={exp.title} loading="lazy" />
+                      <video src={exp.video} autoPlay muted loop playsInline />
                     </div>
                   )}
                   <div className="playground-card-body">
