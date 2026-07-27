@@ -402,6 +402,11 @@ a:hover { opacity: .85; }
   letter-spacing: -.02em;
   margin-bottom: 1.25rem;
 }
+.cs-subtitle {
+  font-size: 1.15rem;
+  color: var(--ink3);
+  margin-bottom: 1.5rem;
+}
 .cs-stakes {
   font-size: 1.05rem;
   color: var(--ink2);

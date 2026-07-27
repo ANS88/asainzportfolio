@@ -14,17 +14,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!cs) return {};
 
+  const desc = cs.metaDescription ?? cs.stakesLine;
   return {
     title: `${cs.title}, Adriana Navarro Sainz`,
-    description: cs.stakesLine,
+    description: desc,
     openGraph: {
       title: cs.title,
-      description: cs.stakesLine,
+      description: desc,
       images: cs.heroImage ? [cs.heroImage.src] : [],
     },
     twitter: {
       title: cs.title,
-      description: cs.stakesLine,
+      description: desc,
     },
   };
 }

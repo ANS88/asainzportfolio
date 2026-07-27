@@ -144,6 +144,9 @@ export default function CaseStudyTemplate({
         <AnimateOnScroll animation="fade-in">
           <div className="label">Case Study</div>
           <h1 className="cs-title">{caseStudy.title}</h1>
+          {caseStudy.shortTitle && (
+            <p className="cs-subtitle">{caseStudy.shortTitle}</p>
+          )}
           <p className="cs-stakes">{caseStudy.stakesLine}</p>
           {caseStudy.judgment && (
             <p className="cs-judgment">{caseStudy.judgment}</p>

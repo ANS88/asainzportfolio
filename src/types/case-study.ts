@@ -6,6 +6,7 @@ export interface CaseStudy {
 
   // Above the fold
   stakesLine: string;
+  metaDescription?: string;
   judgment?: string;
   role: string;
   timeline: string;

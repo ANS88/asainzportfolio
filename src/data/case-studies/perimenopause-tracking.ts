@@ -2,51 +2,42 @@ import type { CaseStudy } from "@/types/case-study";
 
 export const perimenopauseTracking: CaseStudy = {
   slug: "perimenopause-tracking",
-  title:
-    "Charting the Waves of Perimenopause: A Diary Study on Digital Symptom Tracking",
+  title: "When usability scores lie",
+  shortTitle: "A diary study of perimenopause symptom tracking",
   stakesLine:
-    "Perimenopause is unpredictable — cycles shift, symptoms fluctuate, and clinical recognition often lags. I led a mixed-methods study with 40 women to understand how digital symptom tracking shapes self-management and clinical advocacy.",
-  judgment: "Chose diary study over usability test — the question was about lived experience, not task completion",
+    "Clue's perimenopause mode scored 88.3 on the System Usability Scale, far above the industry benchmark. My research question was what that number was hiding. I designed and ran a two-week mixed-methods diary study with 40 women to measure what usability metrics miss: whether tracking actually changes how people understand, manage, and advocate for their health.",
+  metaDescription:
+    "A product can score high on usability and still deliver shallow value. I ran a mixed-methods diary study with 40 women to measure what usability metrics miss.",
+  judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
   role: "Lead Designer & Researcher",
   timeline: "Discovery to reporting (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
 
   impact: [
-    { value: "40", metric: "Participants enrolled" },
+    { value: "40", metric: "Participants, two-week diary protocol" },
     { value: "1,977", metric: "Tracking events analyzed" },
-    { value: "88.3", metric: "SUS usability score (benchmark: 68)" },
-    { value: "In Review", metric: "Conference paper submission" },
+    { value: "88.3", metric: "Product's SUS score, yet insights ran shallow" },
+    // TODO: replace with a real number, e.g. exit interviews conducted, diary entries coded, or publication venue if accepted
+
   ],
 
   sections: [
     {
       id: "context",
-      title: "Context & Challenge",
+      title: "The question usability testing can't answer",
       type: "context",
       content: [
         {
           type: "text",
-          data: "<p>Perimenopause is unpredictable — cycles shift, symptoms fluctuate, and clinical recognition often lags. Symptom-tracking apps promise self-insight and better clinical conversations, yet prior evaluations show lower user satisfaction when tracking features dominate.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>Goal:</strong> Understand how people actually use Clue\u2019s perimenopause mode and surface design opportunities to improve engagement, usability, and clinical value.</p>",
-        },
-        {
-          type: "image",
-          data: {
-            src: "/images/case-studies/perimenopause-tracking/process.png",
-            alt: "Research process overview for the perimenopause tracking diary study",
-            caption: "Research process overview",
-          },
+          data: "<p><strong>Goal:</strong> Understand how people actually use Clue's perimenopause mode and surface design opportunities to improve engagement, usability, and clinical value.</p>",
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/perimenopause-tracking/processdetail.png",
             alt: "Detailed breakdown of the research process and methodology",
-            caption: "Research process — detailed breakdown",
+            caption: "Research process, detailed breakdown",
           },
         },
         {
@@ -55,7 +46,7 @@ export const perimenopauseTracking: CaseStudy = {
             title: "Research questions",
             items: [
               "How does symptom tracking influence self-management of perimenopause?",
-              "What benefits and limitations do users perceive in Clue\u2019s perimenopause mode?",
+              "What benefits and limitations do users perceive in Clue's perimenopause mode?",
               "How does tracking affect health decisions and clinical encounters?",
               "What challenges or barriers deter continued use?",
             ],
@@ -66,12 +57,12 @@ export const perimenopauseTracking: CaseStudy = {
 
     {
       id: "research",
-      title: "Research Approach",
+      title: "Two weeks inside 40 women's tracking habits",
       type: "research",
       content: [
         {
           type: "text",
-          data: "<p><strong>Approach:</strong> Mixed-methods, two-week diary study with 40 U.S. Clue users (perimenopausal or menopausal, joined perimenopause mode in past 3 months).</p>",
+          data: "<p>Mixed-methods, two-week diary study with 40 U.S. Clue users (perimenopausal or menopausal, joined perimenopause mode in past 3 months).</p>",
         },
         {
           type: "list",
@@ -79,11 +70,15 @@ export const perimenopauseTracking: CaseStudy = {
             title: "Data collection",
             items: [
               "Daily symptom logs and reflective diary entries",
-              "App analytics (1,977 tracking events from 16 fully-engaged participants)",
+              "App analytics (1,977 tracking events from 16 fully engaged participants)",
               "System Usability Scale (SUS) survey",
               "30-minute semi-structured exit interviews",
             ],
           },
+        },
+        {
+          type: "text",
+          data: `<!-- TODO: "Of 40 enrolled, [N] completed the full diary protocol; analytics analysis drew on the 16 fully engaged participants. Attrition itself became data: [one sentence on what drop-off patterns revealed about tracking burden, only if supported by the study]." -->`,
         },
         {
           type: "list",
@@ -97,46 +92,50 @@ export const perimenopauseTracking: CaseStudy = {
         },
         {
           type: "text",
-          data: "<p><strong>Ethics:</strong> IRB-approved, anonymous data, securely stored & destroyed post-study. Compensation: $50 Amazon gift card.</p>",
+          data: "<p><strong>Ethics:</strong> IRB-approved, anonymous data, securely stored and destroyed post-study. Compensation: $50 Amazon gift card.</p>",
         },
+      ],
+    },
+
+    {
+      id: "collaboration",
+      title: "Brokering the collaboration",
+      type: "research",
+      content: [
         {
-          type: "image",
-          data: {
-            src: "/images/case-studies/perimenopause-tracking/research.png",
-            alt: "Research approach diagram for the perimenopause diary study",
-            caption: "Research approach overview",
-          },
+          type: "text",
+          data: `<!-- TODO: 3-4 sentences from the owner covering: what access Clue provided (users, analytics export), what the university and IRB required, what each party wanted from the study, and what the owner personally negotiated or aligned. This is the leadership content of the page; do not draft it from imagination. -->`,
         },
       ],
     },
 
     {
       id: "findings",
-      title: "Key Findings",
+      title: "What the diaries showed",
       type: "findings",
       content: [
         {
           type: "text",
-          data: "<h3>Finding 1: Tracking as Validation & Advocacy</h3><p>Participants used logs as evidence in clinical visits. Tracking strengthened self-awareness and confidence — even when clinicians remained skeptical.</p>",
+          data: "<h3>Tracking as validation and advocacy</h3><p>Participants used logs as evidence in clinical visits. Tracking strengthened self-awareness and confidence, even when clinicians remained skeptical.</p>",
         },
         {
           type: "quote",
           data: {
-            text: "My doctor wasn\u2019t listening... I needed to present a more holistic picture.",
+            text: "My doctor wasn't listening... I needed to present a more holistic picture.",
             attribution: "P38, exit interview",
           },
         },
         {
           type: "text",
-          data: "<h3>Finding 2: Two Distinct Tracking Styles</h3><p><strong>Daily Trackers:</strong> Consistent multi-category logging. <strong>Sporadic Trackers:</strong> Reactive logging during symptom spikes or before appointments.</p>",
+          data: "<h3>Two distinct tracking styles</h3><p><strong>Daily Trackers:</strong> Consistent multi-category logging. <strong>Sporadic Trackers:</strong> Reactive logging during symptom spikes or before appointments.</p>",
         },
         {
           type: "text",
-          data: "<h3>Finding 3: Interconnected Symptoms</h3><p>Correlation analysis revealed strong links among hot flashes, brain fog, mood swings, and sleep disruption. These symptoms rarely occurred in isolation, suggesting the need for holistic views rather than siloed metrics.</p>",
+          data: "<h3>Interconnected symptoms</h3><p>Correlation analysis revealed strong links among hot flashes, brain fog, mood swings, and sleep disruption. These symptoms rarely occurred in isolation, suggesting the need for holistic views rather than siloed metrics.</p>",
         },
         {
           type: "text",
-          data: "<h3>Finding 4: High Usability, Shallow Insights</h3><p>Average SUS score of 88.3 (industry benchmark: 68). Users praised the interface but wanted customizable symptom categories, richer trend analysis, and integration with wearables.</p>",
+          data: "<h3>High usability, shallow insights</h3><p>Average SUS score of 88.3 (industry benchmark: 68). Users praised the interface but wanted customizable symptom categories, richer trend analysis, and integration with wearables.</p>",
         },
         {
           type: "image",
@@ -165,7 +164,7 @@ export const perimenopauseTracking: CaseStudy = {
           type: "image",
           data: {
             src: "/images/case-studies/perimenopause-tracking/susscore.png",
-            alt: "SUS score distribution — average 88.3 against 68 benchmark",
+            alt: "SUS score distribution, average 88.3 against 68 benchmark",
             caption: "SUS score results",
           },
         },
@@ -174,110 +173,79 @@ export const perimenopauseTracking: CaseStudy = {
 
     {
       id: "design",
-      title: "Design Opportunities",
+      title: "What I recommended, and what happened",
       type: "design",
       content: [
         {
-          type: "list",
-          data: {
-            title: "Recommendations surfaced from research",
-            items: [
-              "Customizable Tracking — Let users add or hide symptoms to reduce cognitive load",
-              "Richer Insights & Visualizations — Provide context-sensitive explanations and correlations",
-              "Ecosystem Integration — Sync with fitness trackers and health records",
-              "Adaptive Interfaces — Recognize tracking style (daily vs. sporadic) and tailor prompts or dashboards",
-            ],
-          },
-        },
-      ],
-    },
-
-    {
-      id: "impact",
-      title: "Impact & Outcomes",
-      type: "impact",
-      content: [
-        {
-          type: "list",
-          data: {
-            title: "Research impact",
-            items: [
-              "Informed Clue\u2019s roadmap exploration of personalized analytics and wearable integration",
-              "Added empirical evidence to feminist HCI scholarship, demonstrating how digital tools enable self-validation and clinical advocacy",
-              "Showcased a rigorous mixed-methods approach blending quantitative correlations with rich participant narratives",
-            ],
-          },
-        },
-        {
           type: "text",
-          data: "<p><strong>Publication:</strong> Manuscript in peer review for CHI 2026 (ACM Conference on Human Factors in Computing Systems).</p>",
+          data: `<p>Recommendations surfaced from the research, each grounded in a specific finding:</p><ul><li><strong>Customizable tracking</strong> (from findings 1 and 4): Let users add or hide symptoms to reduce cognitive load.<!-- TODO: what Clue did with this, or delete the outcome clause --></li><li><strong>Correlation-aware trend views</strong> (from finding 3): Surface cross-symptom patterns instead of siloed metrics.<!-- TODO: outcome --></li><li><strong>Adaptive interfaces for two tracking styles</strong> (from finding 2): Recognize tracking style (daily vs. sporadic) and tailor prompts or dashboards.<!-- TODO: what Clue did with this, or delete the outcome clause --></li></ul>`,
         },
       ],
     },
 
     {
       id: "judgment",
-      title: "The call I made",
+      title: "The bet: lived experience over task success",
       type: "judgment",
       content: [
         {
           type: "text",
-          data: "<p><strong>The obvious move:</strong> Run a usability study of Clue's perimenopause mode — task success rates, error counts, satisfaction scores. That's what the app company expected and what most HCI dissertations deliver.</p>",
+          data: "<p><strong>The obvious move:</strong> Run a usability study of Clue's perimenopause mode: task success rates, error counts, satisfaction scores. That's what the app company expected and what most HCI dissertations deliver.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>What I chose instead:</strong> A two-week diary study with mixed methods. The research question wasn't whether the interface was usable — it scored 88.3 SUS, well above benchmark. The question was whether symptom tracking actually changes how women understand and manage their experience. That's a lived-experience question, not a task-completion question.</p>",
+          data: "<p><strong>What I chose instead:</strong> A two-week diary study with mixed methods. The research question wasn't whether the interface was usable, it scored 88.3 SUS, well above benchmark. The question was whether symptom tracking actually changes how women understand and manage their experience. That's a lived-experience question, not a task-completion question.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>The tradeoff:</strong> Diary studies produce messy, rich, hard-to-analyze data. Thematic analysis of 40 participants' reflective entries took significantly longer than coding usability sessions. But it surfaced findings — tracking as clinical advocacy, two distinct tracking styles, the gap between high usability and shallow insight — that a usability study would have missed entirely.</p>",
+          data: "<p><strong>The tradeoff:</strong> Diary studies produce messy, rich, hard-to-analyze data. Thematic analysis of 40 participants' reflective entries took significantly longer than coding usability sessions. But it surfaced findings, tracking as clinical advocacy, two distinct tracking styles, the gap between high usability and shallow insight, that a usability study would have missed entirely.</p>",
         },
       ],
     },
 
     {
       id: "beyond",
-      title: "What this changed beyond the project",
+      title: "What outlived the study",
       type: "beyond",
       content: [
         {
           type: "text",
-          data: "<p>The findings informed Clue's roadmap exploration around personalized analytics and wearable integration. More significantly, the research added empirical evidence to feminist HCI scholarship by demonstrating how digital tracking tools enable self-validation and clinical advocacy in a population the health tech field consistently underserves. The methodology — blending quantitative correlation analysis with rich participant narratives — offers a template for evaluating health apps on experiential outcomes, not just usability metrics.</p>",
+          data: `<p><!-- TODO: What Clue did with the recommendations. If no concrete outcomes, use: "Delivered to Clue's science leadership as [report/readout format]." --></p>`,
         },
-      ],
-    },
-
-    {
-      id: "reflection",
-      title: "Reflection",
-      type: "reflection",
-      content: [
         {
           type: "text",
-          data: "<p>This project reaffirmed the value of designing with feminist HCI principles: centering lived experience, resisting over-medicalization, and providing agency through customization and insight.</p>",
+          data: "<p>Demonstrated a repeatable way to evaluate products on experiential outcomes when usability metrics say everything is fine, and showed how tracking tools become evidence people use to advocate for themselves in clinical visits.</p>",
+        },
+        {
+          type: "text",
+          data: `<p><!-- TODO: current, true publication status, e.g. "Published at [venue] 2026" or "Under review at [venue]" --></p>`,
+        },
+        {
+          type: "text",
+          data: "<p>The study reinforced a principle I bring to every product: give people agency over what they track and surface insight, not just data.</p>",
         },
       ],
     },
   ],
 
+  // TODO: names if the owner wants them public
   team: [
-    "Dissertation Advisor Chair, University of Cincinnati",
-    "Chief Science Officer, Clue",
-    "Director of Science, Clue",
+    "Dissertation committee chair (University of Cincinnati)",
+    "Chief Science Officer (Clue)",
+    "Director of Science (Clue)",
   ],
 
   myRole:
-    "Principal Investigator — study design, recruitment, data collection, qualitative & quantitative analysis, reporting. Managed research collaboration between University of Cincinnati and Clue’s science leadership.",
+    "Principal Investigator: study design, recruitment, data collection, qualitative and quantitative analysis, reporting.",
 
+  // TODO: REWRITE REQUIRED. One sentence on what the advisor and Clue's science team owned,
+  // e.g. advisor oversight of methodology, Clue's ownership of analytics export and roadmap decisions.
   owned:
-    "Principal Investigator — I owned the entire research design: study methodology, recruitment strategy, IRB protocol, data collection instruments, qualitative and quantitative analysis, and reporting. Managed the research collaboration between University of Cincinnati and Clue's science leadership.",
+    "Principal Investigator: I owned the entire research design, study methodology, recruitment strategy, IRB protocol, data collection instruments, qualitative and quantitative analysis, and reporting.",
 
   tags: [
     "Femtech",
-    "Women\u2019s health",
     "Diary study",
     "Mixed methods",
-    "HCI research",
-    "Perimenopause",
   ],
 };

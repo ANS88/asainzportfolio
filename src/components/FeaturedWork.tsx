@@ -10,8 +10,8 @@ const featured = [
   },
   {
     slug: "perimenopause-tracking",
-    title: "Perimenopause Symptom Tracking",
-    result: "40-person diary study, 88.3 SUS, paper in review",
+    title: "When usability scores lie",
+    result: "40-person diary study, 88.3 SUS, shallow insights uncovered",
     judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
     company: "UC & Clue",
   },
