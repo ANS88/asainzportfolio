@@ -63,7 +63,7 @@ export default function About() {
           <AnimateOnScroll>
             <div style={{ flexShrink: 0, marginBottom: "1.25rem" }}>
               <Image
-                src="/images/profile.png"
+                src="/images/profile-purple.png"
                 alt="Adriana Sainz"
                 width={150}
                 height={150}
