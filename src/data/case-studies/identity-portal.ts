@@ -5,11 +5,13 @@ export const identityPortal: CaseStudy = {
   title: "IDENTITY: Foster Care Health Data Portal",
   stakesLine:
     "Critical medical and legal information for foster children was exchanged via mail and paper workflows, creating dangerous delays. I led user research and co-design to build a secure digital portal connecting Cincinnati Children\u2019s Hospital and Hamilton County Jobs & Family Services.",
+  judgment: "Chose participatory co-design over traditional requirements gathering \u2014 the stakeholders weren't just sources of requirements, they were co-designers",
   role: "Lead Designer & Researcher",
-  timeline: "May \u2013 August 2017",
+  timeline: "0 → 1 (May \u2013 August 2017)",
   company: "Live Well Collaborative",
   companyDescription:
     "In partnership with CCHMC and HCJFS",
+  previewImage: "/images/case-studies/identity-portal/overview.png",
 
   impact: [
     { value: "18", metric: "Participants in card sort activity" },
@@ -147,6 +149,26 @@ export const identityPortal: CaseStudy = {
     },
 
     {
+      id: "judgment",
+      title: "The call I made",
+      type: "judgment",
+      content: [
+        {
+          type: "text",
+          data: "<p><strong>The obvious move:</strong> Conduct stakeholder interviews, gather requirements, and hand off a spec to the development team. That's the standard process for a portal project with a tight timeline and multiple organizations.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>What I chose instead:</strong> Participatory co-design. I brought social workers, clinicians, administrators, and IT staff into the design process as co-creators, not just sources of requirements. Card sorting with 18 participants across both organizations surfaced information architecture that matched real mental models.</p>",
+        },
+        {
+          type: "text",
+          data: "<p><strong>The tradeoff:</strong> Co-design is slower upfront and harder to coordinate across organizations with different cultures, priorities, and security concerns. But the result was a system that matched actual workflows — validated by the fact that it scaled from a single-county pilot to statewide deployment without major redesign.</p>",
+        },
+      ],
+    },
+
+    {
       id: "impact",
       title: "Impact & Outcomes",
       type: "impact",
@@ -177,6 +199,18 @@ export const identityPortal: CaseStudy = {
     },
 
     {
+      id: "beyond",
+      title: "What this changed beyond the project",
+      type: "beyond",
+      content: [
+        {
+          type: "text",
+          data: "<p>The portal expanded from a single-county pilot in Hamilton County to statewide deployment across Ohio by 2020, with plans for nationwide expansion. The participatory design methodology produced a system that matched real workflows rather than imposing new ones — validated by three peer-reviewed publications in JAMIA, Pediatrics, and CincyInformatix. The project demonstrated that co-design with diverse stakeholders (social workers, clinicians, IT staff) in complex regulated environments produces systems that scale.</p>",
+        },
+      ],
+    },
+
+    {
       id: "reflection",
       title: "Reflection",
       type: "reflection",
@@ -197,6 +231,9 @@ export const identityPortal: CaseStudy = {
 
   myRole:
     "Graduate Research Fellow \u2014 user research, co-creation workshops, information-architecture design, iterative prototyping",
+
+  owned:
+    "Graduate Research Fellow — I owned user research, co-creation workshop facilitation, information architecture design, and iterative prototyping. Worked within a cross-organizational team spanning CCHMC clinical/IT staff and HCJFS social workers and administrators.",
 
   tags: [
     "Healthcare UX",

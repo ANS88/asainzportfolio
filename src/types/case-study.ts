@@ -6,6 +6,8 @@ export interface CaseStudy {
 
   // Above the fold
   stakesLine: string;
+  metaDescription?: string;
+  judgment?: string;
   role: string;
   timeline: string;
   company: string;
@@ -16,6 +18,9 @@ export interface CaseStudy {
     metric: string;
     value: string;
   }[];
+
+  // Preview image for work listing cards
+  previewImage?: string;
 
   // Hero image
   heroImage?: {
@@ -30,6 +35,7 @@ export interface CaseStudy {
   // Footer
   team?: string[];
   myRole?: string;
+  owned?: string;
   tags?: string[];
 }
 
@@ -43,7 +49,9 @@ export interface CaseStudySection {
     | "design"
     | "validation"
     | "impact"
-    | "reflection";
+    | "reflection"
+    | "judgment"
+    | "beyond";
   content: CaseStudySectionContent[];
 }
 

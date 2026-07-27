@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 980" width="1360" height="980">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'SystemSans';
+        src: local('Inter'), local('SF Pro Display'), local('Segoe UI'), local('system-ui');
+      }
+      text { font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1360" height="980" fill="#ffffff" rx="0"/>
+
+  <!-- Title -->
+  <text x="60" y="60" font-size="32" font-weight="700" fill="#1a0a2e" letter-spacing="-0.02em">The manual review workflow, as-is</text>
+  <text x="60" y="92" font-size="16" fill="#6b5a7d" font-style="italic">How information moved across people, tools, and handoffs before the redesign</text>
+
+  <!-- ===== ROLE BOXES (left) ===== -->
+
+  <!-- Genetic Counselor box -->
+  <rect x="80" y="160" width="340" height="110" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="250" y="210" font-size="22" font-weight="700" fill="#1a0a2e" text-anchor="middle">Genetic counselor</text>
+  <text x="250" y="240" font-size="15" fill="#6b5a7d" text-anchor="middle">First-line clinical review</text>
+
+  <!-- Lab Director box -->
+  <rect x="80" y="520" width="340" height="110" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="250" y="570" font-size="22" font-weight="700" fill="#1a0a2e" text-anchor="middle">Lab director</text>
+  <text x="250" y="600" font-size="15" fill="#6b5a7d" text-anchor="middle">Final approval and release</text>
+
+  <!-- Vertical arrow from GC to LD -->
+  <line x1="250" y1="270" x2="250" y2="510" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="250,520 243,505 257,505" fill="#1a0a2e"/>
+
+  <!-- Handoff label -->
+  <text x="58" y="400" font-size="13" fill="#6b5a7d" text-anchor="middle">Manual handoff</text>
+  <text x="58" y="418" font-size="13" fill="#6b5a7d" text-anchor="middle">no automated validation</text>
+
+  <!-- ===== TOOL BOXES (right) ===== -->
+
+  <!-- LIMS -->
+  <rect x="860" y="150" width="280" height="90" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1000" y="192" font-size="20" font-weight="700" fill="#1a0a2e" text-anchor="middle">LIMS</text>
+  <text x="1000" y="218" font-size="14" fill="#6b5a7d" text-anchor="middle">Case data and results</text>
+
+  <!-- Report editor -->
+  <rect x="860" y="280" width="280" height="90" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1000" y="322" font-size="20" font-weight="700" fill="#1a0a2e" text-anchor="middle">Report editor</text>
+  <text x="1000" y="348" font-size="14" fill="#6b5a7d" text-anchor="middle">Drafting and templates</text>
+
+  <!-- Case tracker -->
+  <rect x="860" y="410" width="280" height="90" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1000" y="452" font-size="20" font-weight="700" fill="#1a0a2e" text-anchor="middle">Case tracker</text>
+  <text x="1000" y="478" font-size="14" fill="#6b5a7d" text-anchor="middle">Status and assignments</text>
+
+  <!-- Email -->
+  <rect x="860" y="540" width="280" height="90" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1000" y="582" font-size="20" font-weight="700" fill="#1a0a2e" text-anchor="middle">Email</text>
+  <text x="1000" y="608" font-size="14" fill="#6b5a7d" text-anchor="middle">Handoffs and escalations</text>
+
+  <!-- ===== CONNECTION LINES ===== -->
+
+  <!-- GC to tools -->
+  <line x1="420" y1="200" x2="860" y2="195" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="215" x2="860" y2="325" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="230" x2="860" y2="455" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="245" x2="860" y2="585" stroke="#b8a0d4" stroke-width="1.5"/>
+
+  <!-- LD to tools -->
+  <line x1="420" y1="560" x2="860" y2="195" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="570" x2="860" y2="325" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="580" x2="860" y2="455" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="420" y1="590" x2="860" y2="585" stroke="#b8a0d4" stroke-width="1.5"/>
+
+  <!-- ===== FRICTION POINT BADGES ===== -->
+
+  <!-- Badge 1: at GC -->
+  <circle cx="100" cy="155" r="18" fill="#1a0a2e"/>
+  <text x="100" y="161" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- Badge 2: at handoff -->
+  <circle cx="280" cy="400" r="18" fill="#1a0a2e"/>
+  <text x="280" y="406" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- Badge 3: at Case tracker -->
+  <circle cx="855" cy="405" r="18" fill="#1a0a2e"/>
+  <text x="855" y="411" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- Badge 4: at crossing lines -->
+  <circle cx="640" cy="370" r="18" fill="#1a0a2e"/>
+  <text x="640" y="376" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- ===== LEGEND ===== -->
+
+  <line x1="60" y1="720" x2="1300" y2="720" stroke="#d4cade" stroke-width="1"/>
+
+  <text x="60" y="770" font-size="18" font-weight="700" fill="#1a0a2e">Friction points found in discovery</text>
+
+  <!-- Row 1 -->
+  <circle cx="80" cy="820" r="16" fill="#1a0a2e"/>
+  <text x="80" y="826" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="110" y="826" font-size="15" fill="#1a0a2e">Expert time lost to administrative tasks</text>
+
+  <circle cx="680" cy="820" r="16" fill="#1a0a2e"/>
+  <text x="680" y="826" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="710" y="826" font-size="15" fill="#1a0a2e">Manual handoff with no automated validation</text>
+
+  <!-- Row 2 -->
+  <circle cx="80" cy="870" r="16" fill="#1a0a2e"/>
+  <text x="80" y="876" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="110" y="876" font-size="15" fill="#1a0a2e">No clear view of task ownership</text>
+
+  <circle cx="680" cy="870" r="16" fill="#1a0a2e"/>
+  <text x="680" y="876" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="710" y="876" font-size="15" fill="#1a0a2e">Four tools to complete one review</text>
+</svg>

@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
-import FlowerHome from "@/components/FlowerHome";
-import MoonflowerCursor from "@/components/MoonflowerCursor";
+import DotCursor from "@/components/DotCursor";
 
 export const metadata: Metadata = {
   title: "Adriana Navarro Sainz",
   description:
-    "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+    "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
   openGraph: {
     description:
-      "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
   },
   twitter: {
     description:
-      "Adriana Navarro Sainz \u2014 PhD in HCI, UX Research Leader specializing in healthcare AI, femtech, and clinical decision support. 10 years designing in regulated clinical environments.",
+      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
   },
 };
 
@@ -26,8 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <MoonflowerCursor />
-        <FlowerHome />
+        <DotCursor />
         <TopNav />
         <main>{children}</main>
       </body>

@@ -6,10 +6,10 @@ import { histopathologyWorkflow } from "./histopathology-workflow";
 import type { CaseStudy } from "@/types/case-study";
 
 export const caseStudies: Record<string, CaseStudy> = {
-  "unified-patient-portal": unifiedPatientPortal,
-  "histopathology-workflow": histopathologyWorkflow,
   "natera-clinical-review": nateraClinicalReview,
   "perimenopause-tracking": perimenopauseTracking,
+  "unified-patient-portal": unifiedPatientPortal,
+  "histopathology-workflow": histopathologyWorkflow,
   "identity-portal": identityPortal,
 };
 

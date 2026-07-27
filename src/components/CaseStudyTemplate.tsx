@@ -117,7 +117,6 @@ function CaseStudySection({ section }: { section: SectionType }) {
       <hr className="section-line" />
       <section id={section.id} className={`cs-section cs-section-${section.type}`}>
         <AnimateOnScroll>
-          <div className="label">{section.type.charAt(0).toUpperCase() + section.type.slice(1)}</div>
           <div className="section-title">{section.title}</div>
         </AnimateOnScroll>
         <div className="cs-section-body">
@@ -145,7 +144,13 @@ export default function CaseStudyTemplate({
         <AnimateOnScroll animation="fade-in">
           <div className="label">Case Study</div>
           <h1 className="cs-title">{caseStudy.title}</h1>
+          {caseStudy.shortTitle && (
+            <p className="cs-subtitle">{caseStudy.shortTitle}</p>
+          )}
           <p className="cs-stakes">{caseStudy.stakesLine}</p>
+          {caseStudy.judgment && (
+            <p className="cs-judgment">{caseStudy.judgment}</p>
+          )}
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-up" delay={100}>
@@ -204,6 +209,12 @@ export default function CaseStudyTemplate({
             <div className="cs-footer-item">
               <div className="cs-footer-label">My role</div>
               <div>{caseStudy.myRole}</div>
+            </div>
+          )}
+          {caseStudy.owned && (
+            <div className="cs-footer-item">
+              <div className="cs-footer-label">Ownership boundary</div>
+              <div>{caseStudy.owned}</div>
             </div>
           )}
           <div className="cs-footer-item">
