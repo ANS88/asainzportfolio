@@ -76,6 +76,9 @@ export default function About() {
                   <p>
                     I grew up in <a href="https://visitagdl.com/" target="_blank" rel="noopener noreferrer">Guadalajara</a>, Mexico, where I found an early passion for building. A detour through <a href="https://www.concordia.ca/academics/graduate/calendar/current/fine-arts-programs/digital-technologies-in-design-art-practice-graduate-certificate.html" target="_blank" rel="noopener noreferrer">Montreal</a> showed me that what I wanted to build were digital things. I moved to the US for grad school, earning a <a href="http://rave.ohiolink.edu/etdc/view?acc_num=ucin1746535132778724" target="_blank" rel="noopener noreferrer">PhD in human-computer interaction</a> with research focused on women&apos;s health. From there I joined <a href="https://www.cincinnatichildrens.org/" target="_blank" rel="noopener noreferrer">Cincinnati Children&apos;s Hospital</a> as a UX designer in biomedical informatics, designing tools for patients, physicians, and scientists. Today I&apos;m at <a href="https://www.natera.com/" target="_blank" rel="noopener noreferrer">Natera</a>, the world&apos;s leading genetic testing company, where I lead a team of designers and researchers making the lab experience better. Through it all, women&apos;s health has remained my throughline: the space where I <a href="https://womenshealthcomputed.substack.com/" target="_blank" rel="noopener noreferrer">write</a>, <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">research, and invest</a>.
                   </p>
+                  <p>
+                    Outside of work, you&apos;ll find me exploring the Bay Area and the world with my husband (by bike whenever possible), caf&eacute; hopping with a good book, or scouting the best tacos in the area.
+                  </p>
                 </div>
               </div>
             </div>
