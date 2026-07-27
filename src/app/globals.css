@@ -365,6 +365,64 @@ a:hover { opacity: .85; }
   transition: all var(--transition-fast);
 }
 
+/* ═══ PLAYGROUND ═══ */
+.playground-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.playground-card {
+  display: block;
+  background: var(--warm);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color var(--transition-medium), transform var(--transition-medium);
+  overflow: hidden;
+}
+.playground-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.playground-card-body { padding: 1.75rem; }
+.playground-card-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: .6rem;
+  transition: color var(--transition-fast);
+}
+.playground-card:hover .playground-card-title { color: var(--accent); }
+.playground-card-desc {
+  font-size: .88rem;
+  color: var(--ink3);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+.playground-card-tags {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.playground-tag {
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: rgba(196, 168, 240, .1);
+  padding: .2rem .55rem;
+  border-radius: 4px;
+}
+.playground-card-link {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+}
+
 /* ═══ CASE STUDY TEMPLATE ═══ */
 .case-study { padding-top: 6rem; }
 
