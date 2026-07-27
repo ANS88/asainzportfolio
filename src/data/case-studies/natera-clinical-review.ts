@@ -53,7 +53,7 @@ export const nateraClinicalReview: CaseStudy = {
 
     {
       id: "judgment",
-      title: "The call I made",
+      title: "My approach",
       type: "judgment",
       content: [
         {
