@@ -1,74 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="780" viewBox="0 0 1520 780">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a0a2e"/>
-      <stop offset="50%" stop-color="#2d1150"/>
-      <stop offset="100%" stop-color="#230c33"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F0386B"/>
-      <stop offset="100%" stop-color="#c4a8f0"/>
-    </linearGradient>
-    <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F0386B" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#F0386B" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9984d4" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#9984d4" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="bar3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c4a8f0" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#c4a8f0" stop-opacity="0.4"/>
-    </linearGradient>
+    <radialGradient id="bg" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#2a0a0f"/>
+      <stop offset="60%" stop-color="#1a0508"/>
+      <stop offset="100%" stop-color="#120305"/>
+    </radialGradient>
   </defs>
 
-  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1520" height="780" fill="url(#bg)"/>
+  <ellipse cx="400" cy="350" rx="500" ry="300" fill="#3a0a10" opacity="0.3"/>
+  <ellipse cx="1100" cy="500" rx="400" ry="250" fill="#2a0810" opacity="0.2"/>
 
-  <!-- Subtle grid -->
-  <g opacity="0.05" stroke="#c4a8f0" stroke-width="0.5">
-    <line x1="0" y1="600" x2="1280" y2="600"/>
-    <line x1="0" y1="450" x2="1280" y2="450"/>
-    <line x1="0" y1="300" x2="1280" y2="300"/>
+  <!-- Nav bar -->
+  <rect x="0" y="0" width="1520" height="44" fill="#120305" opacity="0.8"/>
+  <text x="40" y="28" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#fff" letter-spacing="1.5">BIG MENOPAUSE | USA</text>
+  <text x="380" y="28" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#F0386B" letter-spacing="2">STORY</text>
+  <text x="470" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">01 · COMMUNITY</text>
+  <text x="630" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">02 · CAPITAL</text>
+  <text x="755" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">03 · PHARMA</text>
+  <text x="875" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">04 · RESEARCH</text>
+  <text x="1010" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">05 · POLICY</text>
+  <text x="1110" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">TIMELINE</text>
+  <text x="1210" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">NETWORK</text>
+  <text x="1310" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">FINDINGS</text>
+  <text x="1420" y="28" font-family="'Inter',sans-serif" font-size="11" fill="#888" letter-spacing="1.5">ABOUT</text>
+
+  <!-- Subtitle -->
+  <text x="90" y="95" font-family="'Inter',sans-serif" font-size="13" font-weight="500" fill="#F0386B" letter-spacing="3">US WOMEN'S HEALTH · 2012 – 2026</text>
+
+  <!-- Title line 1: Menopause -->
+  <text x="80" y="230" font-family="'Inter',sans-serif" font-size="160" font-weight="800" letter-spacing="-4">
+    <tspan fill="#ffffff">M</tspan><tspan fill="#F0386B">eno</tspan><tspan fill="#ffffff">pa</tspan><tspan fill="#F0386B">use</tspan>
+  </text>
+
+  <!-- Title line 2: is Hot Now -->
+  <text x="80" y="380" font-family="'Inter',sans-serif" font-size="160" font-weight="800" letter-spacing="-4">
+    <tspan fill="#F0386B">is</tspan><tspan fill="#ffffff"> H</tspan><tspan fill="#F0386B">ot</tspan><tspan fill="#ffffff"> N</tspan><tspan fill="#F0386B">ow</tspan>
+  </text>
+
+  <!-- Instructions -->
+  <g transform="translate(96, 422) scale(0.35)" fill="#F0386B" opacity="0.8">
+    <path d="M0,-18 C5,-10 10,0 10,8 C10,14 5,20 0,20 C-5,20 -10,14 -10,8 C-10,0 -5,-10 0,-18Z"/>
+  </g>
+  <text x="120" y="430" font-family="'Inter',sans-serif" font-size="12" fill="#777" letter-spacing="2">CLICK ON THE DROPS TO REVEAL FACTS ·  </text>
+  <text x="490" y="430" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#bbb" letter-spacing="2">0 / 20</text>
+  <text x="555" y="430" font-family="'Inter',sans-serif" font-size="12" fill="#777" letter-spacing="2">REVEALED</text>
+
+  <!-- Blood drops scattered -->
+  <g fill="#F0386B" opacity="0.7">
+    <g transform="translate(480,75) scale(0.7)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1150,65) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1350,90) scale(0.55)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1280,160) scale(0.65)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1460,200) scale(0.5)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1080,240) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(650,320) scale(0.55)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1400,330) scale(0.7)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="20" fill="none" stroke="#F0386B" opacity="0.25"/></g>
+    <g transform="translate(380,500) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(700,480) scale(0.5)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(950,460) scale(0.65)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1200,440) scale(0.55)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1350,500) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(150,580) scale(0.5)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(550,570) scale(0.65)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(850,560) scale(0.55)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1100,580) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(1450,560) scale(0.5)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(300,680) scale(0.6)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(750,650) scale(0.55)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
+    <g transform="translate(60,700) scale(0.5)"><path d="M0,-18C5,-10 10,0 10,8 10,14 5,20 0,20-5,20-10,14-10,8-10,0-5,-10 0,-18Z"/><circle cx="0" cy="0" r="18" fill="none" stroke="#F0386B" opacity="0.3"/></g>
   </g>
 
-  <!-- Data viz bars - representing Reddit posting activity -->
-  <g transform="translate(140, 150)">
-    <!-- Bar chart visualization -->
-    <rect x="0" y="280" width="40" height="170" rx="4" fill="url(#bar1)" opacity="0.7"/>
-    <rect x="60" y="220" width="40" height="230" rx="4" fill="url(#bar2)" opacity="0.7"/>
-    <rect x="120" y="310" width="40" height="140" rx="4" fill="url(#bar1)" opacity="0.7"/>
-    <rect x="180" y="180" width="40" height="270" rx="4" fill="url(#bar3)" opacity="0.7"/>
-    <rect x="240" y="250" width="40" height="200" rx="4" fill="url(#bar2)" opacity="0.7"/>
-    <rect x="300" y="120" width="40" height="330" rx="4" fill="url(#bar1)" opacity="0.8"/>
-    <rect x="360" y="200" width="40" height="250" rx="4" fill="url(#bar3)" opacity="0.7"/>
-    <rect x="420" y="160" width="40" height="290" rx="4" fill="url(#bar2)" opacity="0.7"/>
-    <rect x="480" y="80" width="40" height="370" rx="4" fill="url(#bar1)" opacity="0.9"/>
-    <rect x="540" y="240" width="40" height="210" rx="4" fill="url(#bar3)" opacity="0.7"/>
-    <rect x="600" y="140" width="40" height="310" rx="4" fill="url(#bar2)" opacity="0.8"/>
-    <rect x="660" y="60" width="40" height="390" rx="4" fill="url(#bar1)" opacity="0.9"/>
-    <rect x="720" y="190" width="40" height="260" rx="4" fill="url(#bar3)" opacity="0.7"/>
-    <rect x="780" y="100" width="40" height="350" rx="4" fill="url(#bar2)" opacity="0.8"/>
-    <rect x="840" y="40" width="40" height="410" rx="4" fill="url(#bar1)" opacity="1"/>
-    <rect x="900" y="170" width="40" height="280" rx="4" fill="url(#bar3)" opacity="0.7"/>
-    <rect x="960" y="130" width="40" height="320" rx="4" fill="url(#bar2)" opacity="0.8"/>
-  </g>
-
-  <!-- Title -->
-  <text x="640" y="100" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#F0386B" letter-spacing="-1">Menopause Is Hot Now</text>
-  <text x="640" y="140" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#c4a8f0" opacity="0.7" letter-spacing="3" text-transform="uppercase">REDDIT DATA VISUALIZATION</text>
-
-  <!-- Trend line overlay -->
-  <polyline points="160,400 220,370 280,420 340,330 400,360 460,280 520,320 580,240 640,350 700,300 760,220 820,260 880,200 940,330 1000,290 1060,250 1120,230"
-    fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"
-    transform="translate(0, -10)"/>
-
-  <!-- Dots on trend line -->
-  <g fill="#F0386B" opacity="0.8">
-    <circle cx="460" cy="270" r="5"/>
-    <circle cx="580" cy="230" r="5"/>
-    <circle cx="760" cy="210" r="5"/>
-    <circle cx="880" cy="190" r="5"/>
-    <circle cx="1120" cy="220" r="5"/>
-  </g>
+  <text x="90" y="750" font-family="'Inter',sans-serif" font-size="11" fill="#555" letter-spacing="3">SCROLL</text>
 </svg>
