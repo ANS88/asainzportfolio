@@ -7,7 +7,7 @@ export const nateraClinicalReview: CaseStudy = {
     "When genetic test reports are delayed, treatment decisions are delayed. I found the real bottleneck, built the case for a platform investment, and led the design and research behind the workflow that determines how fast 585,000 patients a year get their results.",
   judgment: "Chose distributed cognition framework over standard usability audit, the bottleneck was organizational, not interface",
   role: "Product Design & Research Lead",
-  timeline: "Discovery to launch (2024–2025)",
+  timeline: "0 to 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.png",

@@ -10,7 +10,7 @@ export const perimenopauseTracking: CaseStudy = {
     "A product can score high on usability and still deliver shallow value. I ran a mixed-methods diary study with 40 women to measure what usability metrics miss.",
   judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
   role: "Lead Designer & Researcher",
-  timeline: "Discovery to reporting (Oct 2024 – Feb 2025)",
+  timeline: "0 to 1 (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
   previewImage: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",

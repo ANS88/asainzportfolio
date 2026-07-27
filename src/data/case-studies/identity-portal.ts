@@ -7,7 +7,7 @@ export const identityPortal: CaseStudy = {
     "Critical medical and legal information for foster children was exchanged via mail and paper workflows, creating dangerous delays. I led user research and co-design to build a secure digital portal connecting Cincinnati Children\u2019s Hospital and Hamilton County Jobs & Family Services.",
   judgment: "Chose participatory co-design over traditional requirements gathering \u2014 the stakeholders weren't just sources of requirements, they were co-designers",
   role: "Lead Designer & Researcher",
-  timeline: "May \u2013 August 2017",
+  timeline: "0 to 1 (May \u2013 August 2017)",
   company: "Live Well Collaborative",
   companyDescription:
     "In partnership with CCHMC and HCJFS",

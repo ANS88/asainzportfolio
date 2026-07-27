@@ -7,7 +7,7 @@ export const unifiedPatientPortal: CaseStudy = {
     "Patients had little visibility into their own genetic test status, faced opaque billing, and waited days for results. I drove the research strategy across two business units for Natera\u2019s first patient-facing portal \u2014 empowering 181K patients to track tests, view results, manage billing, and schedule sample draws.",
   judgment: "Used the Cures Act mandate as leverage to fund a patient-centered portal instead of bolting results onto the physician system",
   role: "UX Research Lead",
-  timeline: "Discovery to post-launch monitoring (2023\u20132024)",
+  timeline: "0 to 1 (2023\u20132024)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
