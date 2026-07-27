@@ -7,7 +7,7 @@ export const histopathologyWorkflow: CaseStudy = {
     "Lab technicians, pathologists, and micro dissection specialists relied on spreadsheets, manual queues, and fragmented systems to process tissue samples. I made the case for in-lab research the team had never done, then led the design of a unified system that replaced manual work across the entire histopathology pipeline.",
   judgment: "Chose in-lab ethnographic research over remote interviews \u2014 you can't redesign a pipeline from a conference room",
   role: "UX Research Lead",
-  timeline: "0 to 1 (2024\u20132025)",
+  timeline: "0 → 1 (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/histopathology-workflow/user-flow.png",
