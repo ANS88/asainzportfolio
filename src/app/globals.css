@@ -910,13 +910,19 @@ a:hover { opacity: .85; }
 /* Hero keyword hover */
 .hero-keyword {
   position: relative;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid var(--accent-soft);
   transition: border-color .2s ease, color .2s ease;
   cursor: none;
+  animation: keyword-pulse 2.5s ease-in-out infinite;
+}
+@keyframes keyword-pulse {
+  0%, 100% { border-bottom-color: var(--accent-soft); }
+  50% { border-bottom-color: #F0386B; }
 }
 .hero-keyword:hover {
   color: #F0386B;
   border-bottom-color: #F0386B;
+  animation: none;
 }
 .hero-keyword-tooltip {
   position: absolute;
