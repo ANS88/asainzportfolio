@@ -11,6 +11,7 @@ export const identityPortal: CaseStudy = {
   company: "Live Well Collaborative",
   companyDescription:
     "In partnership with CCHMC and HCJFS",
+  previewImage: "/images/case-studies/identity-portal/overview.png",
 
   impact: [
     { value: "18", metric: "Participants in card sort activity" },

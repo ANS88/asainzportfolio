@@ -19,6 +19,9 @@ export interface CaseStudy {
     value: string;
   }[];
 
+  // Preview image for work listing cards
+  previewImage?: string;
+
   // Hero image
   heroImage?: {
     src: string;

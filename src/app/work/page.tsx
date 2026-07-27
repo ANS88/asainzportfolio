@@ -35,13 +35,17 @@ export default function Work() {
             {caseStudyList.map((study) => (
               <AnimateOnScroll key={study.slug} animation="fade-up">
                 <a href={`/work/${study.slug}`} className="cs-preview-card">
-                  <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
-                  <div className="cs-preview-title">{study.title}</div>
-                  <p className="cs-preview-stakes">{study.stakesLine}</p>
-                  {study.judgment && (
-                    <p className="cs-preview-judgment">{study.judgment}</p>
+                  {study.previewImage && (
+                    <div className="cs-preview-image">
+                      <img src={study.previewImage} alt={study.title} loading="lazy" />
+                    </div>
                   )}
-                  <span className="cs-preview-link">Read case study &rarr;</span>
+                  <div className="cs-preview-body">
+                    <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
+                    <div className="cs-preview-title">{study.title}</div>
+                    <p className="cs-preview-stakes">{study.stakesLine}</p>
+                    <span className="cs-preview-link">Read case study &rarr;</span>
+                  </div>
                 </a>
               </AnimateOnScroll>
             ))}

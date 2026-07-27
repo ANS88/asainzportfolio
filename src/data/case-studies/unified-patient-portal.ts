@@ -10,6 +10,7 @@ export const unifiedPatientPortal: CaseStudy = {
   timeline: "Discovery to post-launch monitoring (2023\u20132024)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
+  previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
 
   impact: [
     { value: "181K", metric: "Patients created accounts" },

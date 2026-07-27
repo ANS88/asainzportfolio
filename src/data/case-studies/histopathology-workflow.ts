@@ -10,6 +10,7 @@ export const histopathologyWorkflow: CaseStudy = {
   timeline: "Discovery to launch (2024\u20132025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
+  previewImage: "/images/case-studies/histopathology-workflow/user-flow.png",
 
   impact: [
     { value: "5", metric: "Workflow stages redesigned end-to-end" },

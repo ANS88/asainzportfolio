@@ -10,6 +10,7 @@ export const nateraClinicalReview: CaseStudy = {
   timeline: "Discovery to launch (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
+  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.png",
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },

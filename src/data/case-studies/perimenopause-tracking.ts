@@ -13,6 +13,7 @@ export const perimenopauseTracking: CaseStudy = {
   timeline: "Discovery to reporting (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
+  previewImage: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",
 
   impact: [
     { value: "40", metric: "Participants, two-week diary protocol" },
