@@ -25,7 +25,6 @@ export default function Work() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Portfolio</div>
             <h1 className="page-title">Work</h1>
-            <p className="page-desc">The gap between what science knows and what products do with it. That&rsquo;s where my work lives.</p>
           </AnimateOnScroll>
         </div>
         <hr className="section-line" />
