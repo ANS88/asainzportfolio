@@ -20,31 +20,6 @@ export const metadata: Metadata = {
   },
 };
 
-const beliefs: { belief: string; decision: string }[] = [
-  {
-    belief: "The best health interfaces disappear. The worst cause harm. The difference is a research decision that happened, or didn’t, before the first wireframe.",
-    decision: "At Natera, I replaced 4 legacy review tools with one. Not by adding features, but by eliminating the friction that made clinicians work around the system. Turnaround dropped 50%.",
-  },
-  {
-    belief: "AI should augment clinical judgment, not simulate it. The handoff between algorithmic confidence and human decision-making is the central design problem in health.",
-    decision: "I designed the Clinical Review workflow around progressive disclosure, surfacing automated flags only when they were actionable, not as interruptions. The genetic counselors kept their judgment in the loop.",
-  },
-  {
-    belief: "Compliance and good UX are not opposites. Regulated environments constrain the solution space, not the quality of thinking.",
-    decision: "When the Cures Act required instant patient access to results, I used the mandate as leverage to fund a proper patient portal, turning a compliance requirement into a patient experience investment that reached 181K users.",
-  },
-  {
-    belief: "Design is a political act. Who gets centered, who gets left out: those are choices whether you make them consciously or not.",
-    decision: "I centered perimenopausal women, a population most health apps stop serving at 40, as the subject of my dissertation research. The field was building menstrual trackers that assumed regularity.",
-  },
-];
-
-const howILead = [
-  "I hire for judgment, not just methods. The researchers I want on my team can navigate ambiguity, push back on stakeholders, and know when a scrappy study is better than a perfect one.",
-  "I embed research in product teams rather than running a centralized service. Research that lives next to the decisions it’s meant to inform gets used. Research that gets presented two sprints later gets filed.",
-  "I make the case for research by showing what it costs to skip it. In regulated environments, the cost is measured in rework, failed validations, and products that clinicians work around instead of with.",
-];
-
 export default function About() {
   return (
     <>
@@ -81,64 +56,6 @@ export default function About() {
                   </p>
                 </div>
               </div>
-            </div>
-          </AnimateOnScroll>
-        </section>
-
-        <hr className="section-line" />
-
-        {/* What I believe: strongest first, each with a concrete decision */}
-        <section>
-          <AnimateOnScroll>
-            <div className="label">My Approach</div>
-            <div className="section-title">What I believe</div>
-          </AnimateOnScroll>
-          <div className="beliefs-list">
-            {beliefs.map((b, i) => (
-              <AnimateOnScroll key={i} animation="fade-up">
-                <div className="belief-block">
-                  <p className="belief-paragraph">{b.belief}</p>
-                  <p className="belief-decision">{b.decision}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </section>
-
-        <hr className="section-line" />
-
-        {/* How I Lead */}
-        <section>
-          <AnimateOnScroll>
-            <div className="label">Leadership</div>
-            <div className="section-title">How I Lead</div>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
-              <p>I build research practices, not just research projects. Here&apos;s what that looks like:</p>
-            </div>
-          </AnimateOnScroll>
-          <div className="beliefs-list">
-            {howILead.map((item, i) => (
-              <AnimateOnScroll key={i} animation="fade-up">
-                <p className="belief-paragraph">{item}</p>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </section>
-
-        <hr className="section-line" />
-
-        {/* As a Human */}
-        <section>
-          <AnimateOnScroll>
-            <div className="label">As a Human</div>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
-              <p>
-                When I&apos;m not working, I&apos;m cycling the Bay, hiking, dancing, traveling somewhere new, or deep in a book.
-              </p>
             </div>
           </AnimateOnScroll>
         </section>
