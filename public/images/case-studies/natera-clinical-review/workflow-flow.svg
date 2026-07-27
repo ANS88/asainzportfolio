@@ -3,12 +3,6 @@
     <style>
       text { font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif; }
     </style>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#1a0a2e"/>
-    </marker>
-    <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#b8a0d4"/>
-    </marker>
   </defs>
 
   <rect width="1360" height="620" fill="#ffffff" rx="0"/>
@@ -19,80 +13,106 @@
 
   <!-- ===== PHASE LABELS ===== -->
   <text x="135" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">TRIGGER</text>
-  <text x="440" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">GC REVIEW</text>
-  <text x="760" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">ROUTING</text>
-  <text x="1060" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">LD REVIEW</text>
-  <text x="1290" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">RELEASE</text>
+  <text x="390" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">GC REVIEW</text>
+  <text x="710" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">ROUTING</text>
+  <text x="990" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">LD REVIEW</text>
+  <text x="1260" y="135" font-size="11" font-weight="600" fill="#6b5a7d" text-anchor="middle" letter-spacing="0.1em">RELEASE</text>
 
-  <!-- ===== STEP 1: Scenario trigger ===== -->
-  <rect x="50" y="160" width="170" height="90" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="135" y="198" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">GC completes</text>
-  <text x="135" y="218" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">manual review</text>
+  <!-- ===== STEP 1: GC completes manual review ===== -->
+  <!-- Box: x=50, y=170, w=170, h=80 → center (135, 210) -->
+  <rect x="50" y="170" width="170" height="80" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="135" y="204" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">GC completes</text>
+  <text x="135" y="224" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">manual review</text>
 
-  <!-- Arrow 1→2 -->
-  <line x1="220" y1="205" x2="290" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow: right edge of box (220, 210) → left vertex of diamond (300, 210) -->
+  <line x1="220" y1="210" x2="295" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="300,210 288,204 288,216" fill="#1a0a2e"/>
 
-  <!-- ===== STEP 2: Decision - flags cleared? ===== -->
-  <polygon points="370,160 440,205 370,250 300,205" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="370" y="200" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">All flags</text>
-  <text x="370" y="216" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">cleared?</text>
+  <!-- ===== STEP 2: Diamond — All flags cleared? ===== -->
+  <!-- Center (370, 210), half-w=70, half-h=50 -->
+  <!-- Vertices: left(300,210) top(370,160) right(440,210) bottom(370,260) -->
+  <polygon points="370,160 440,210 370,260 300,210" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="370" y="205" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">All flags</text>
+  <text x="370" y="221" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">cleared?</text>
 
-  <!-- Yes path: up to Sign off -->
-  <line x1="440" y1="182" x2="500" y2="182" stroke="#1a0a2e" stroke-width="2"/>
-  <text x="470" y="175" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
-  <rect x="500" y="160" width="130" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="565" y="187" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Sign off</text>
+  <!-- YES path: right vertex (440, 210) → Sign off box left edge (500, 210) -->
+  <text x="468" y="198" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
+  <line x1="440" y1="210" x2="495" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="500,210 488,204 488,216" fill="#1a0a2e"/>
 
-  <!-- No path: down to Escalated -->
-  <line x1="370" y1="250" x2="370" y2="310" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="385" y="280" font-size="11" fill="#3d1f5c">No</text>
+  <!-- Sign off box: x=500, y=188, w=120, h=44 → center (560, 210) -->
+  <rect x="500" y="188" width="120" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="560" y="215" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Sign off</text>
+
+  <!-- Arrow: Sign off right (620, 210) → LD dashboard left (645, 210) -->
+  <line x1="620" y1="210" x2="640" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="645,210 633,204 633,216" fill="#1a0a2e"/>
+
+  <!-- NO path: bottom vertex (370, 260) → Escalated box top (370, 320) -->
+  <text x="385" y="290" font-size="11" fill="#3d1f5c">No</text>
+  <line x1="370" y1="260" x2="370" y2="315" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="370,320 364,308 376,308" fill="#1a0a2e"/>
+
+  <!-- Escalated box: x=305, y=320, w=130, h=44 → center (370, 342) -->
   <rect x="305" y="320" width="130" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
   <text x="370" y="347" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Escalated</text>
 
-  <!-- ===== STEP 3: LD lands on dashboard ===== -->
-  <line x1="630" y1="182" x2="685" y2="182" stroke="#1a0a2e" stroke-width="2"/>
-  <!-- Escalated also routes to dashboard -->
-  <line x1="435" y1="342" x2="660" y2="342" stroke="#b8a0d4" stroke-width="1.5"/>
-  <line x1="660" y1="342" x2="660" y2="210" stroke="#b8a0d4" stroke-width="1.5"/>
-  <line x1="660" y1="210" x2="685" y2="210" stroke="#b8a0d4" stroke-width="1.5" marker-end="url(#arrow-light)"/>
+  <!-- Escalated routes to LD dashboard (secondary path) -->
+  <!-- Right edge (435, 342) → right to (710, 342) → up to bottom of LD dashboard (710, 260) -->
+  <line x1="435" y1="342" x2="710" y2="342" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="710" y1="342" x2="710" y2="265" stroke="#b8a0d4" stroke-width="1.5"/>
+  <polygon points="710,260 704,272 716,272" fill="#b8a0d4"/>
 
-  <rect x="685" y="165" width="150" height="80" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="760" y="200" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">LD dashboard</text>
-  <text x="760" y="220" font-size="12" fill="#6b5a7d" text-anchor="middle">Auto-routed queue</text>
+  <!-- ===== STEP 3: LD dashboard ===== -->
+  <!-- Box: x=645, y=175, w=130, h=70 → center (710, 210) -->
+  <rect x="645" y="175" width="130" height="70" rx="12" fill="#f3ecf8" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="710" y="205" font-size="14" font-weight="700" fill="#1a0a2e" text-anchor="middle">LD dashboard</text>
+  <text x="710" y="225" font-size="12" fill="#6b5a7d" text-anchor="middle">Auto-routed queue</text>
 
-  <!-- Arrow to LD selects case -->
-  <line x1="835" y1="205" x2="895" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow: LD dashboard right (775, 210) → LD selects case left (850, 210) -->
+  <line x1="775" y1="210" x2="845" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="850,210 838,204 838,216" fill="#1a0a2e"/>
 
-  <!-- ===== STEP 4: LD reviews case ===== -->
-  <rect x="905" y="170" width="130" height="70" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="970" y="200" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">LD selects case</text>
-  <text x="970" y="218" font-size="12" fill="#6b5a7d" text-anchor="middle">Reviews flags</text>
+  <!-- ===== STEP 4: LD selects case ===== -->
+  <!-- Box: x=850, y=180, w=140, h=60 → center (920, 210) -->
+  <rect x="850" y="180" width="140" height="60" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="920" y="205" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">LD selects case</text>
+  <text x="920" y="223" font-size="12" fill="#6b5a7d" text-anchor="middle">Reviews flags</text>
 
-  <!-- Arrow to decision -->
-  <line x1="1035" y1="205" x2="1090" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow: LD selects case right (990, 210) → Flags resolved diamond left (1060, 210) -->
+  <line x1="990" y1="210" x2="1055" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="1060,210 1048,204 1048,216" fill="#1a0a2e"/>
 
-  <!-- ===== STEP 5: Flags cleared decision ===== -->
-  <polygon points="1160,160 1230,205 1160,250 1090,205" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="1160" y="200" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">Flags</text>
-  <text x="1160" y="216" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">resolved?</text>
+  <!-- ===== STEP 5: Diamond — Flags resolved? ===== -->
+  <!-- Center (1130, 210), half-w=70, half-h=50 -->
+  <!-- Vertices: left(1060,210) top(1130,160) right(1200,210) bottom(1130,260) -->
+  <polygon points="1130,160 1200,210 1130,260 1060,210" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1130" y="205" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">Flags</text>
+  <text x="1130" y="221" font-size="12" font-weight="600" fill="#1a0a2e" text-anchor="middle">resolved?</text>
 
-  <!-- Yes: to release -->
-  <line x1="1230" y1="205" x2="1260" y2="205" stroke="#1a0a2e" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1245" y="198" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
+  <!-- YES path: right vertex (1200, 210) → Report release left (1240, 210) -->
+  <text x="1218" y="198" font-size="11" fill="#3d1f5c" text-anchor="middle">Yes</text>
+  <line x1="1200" y1="210" x2="1235" y2="210" stroke="#1a0a2e" stroke-width="2"/>
+  <polygon points="1240,210 1228,204 1228,216" fill="#1a0a2e"/>
 
-  <!-- Release box -->
-  <rect x="1270" y="175" width="70" height="60" rx="8" fill="#1a0a2e" stroke="#1a0a2e" stroke-width="2"/>
-  <text x="1305" y="202" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Report</text>
-  <text x="1305" y="218" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">release</text>
+  <!-- Report release box: x=1240, y=182, w=80, h=56 -->
+  <rect x="1240" y="182" width="80" height="56" rx="8" fill="#1a0a2e" stroke="#1a0a2e" stroke-width="2"/>
+  <text x="1280" y="207" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Report</text>
+  <text x="1280" y="223" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">release</text>
 
-  <!-- No: loop back to address flags -->
-  <line x1="1160" y1="250" x2="1160" y2="340" stroke="#b8a0d4" stroke-width="1.5"/>
-  <text x="1175" y="280" font-size="11" fill="#3d1f5c">No</text>
-  <rect x="1090" y="340" width="140" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
-  <text x="1160" y="367" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Address flags</text>
-  <!-- Loop arrow back to LD reviews -->
-  <line x1="1090" y1="362" x2="970" y2="362" stroke="#b8a0d4" stroke-width="1.5"/>
-  <line x1="970" y1="362" x2="970" y2="248" stroke="#b8a0d4" stroke-width="1.5" marker-end="url(#arrow-light)"/>
+  <!-- NO path: bottom vertex (1130, 260) → Address flags box (1130, 330) -->
+  <text x="1145" y="290" font-size="11" fill="#3d1f5c">No</text>
+  <line x1="1130" y1="260" x2="1130" y2="325" stroke="#b8a0d4" stroke-width="1.5"/>
+  <polygon points="1130,330 1124,318 1136,318" fill="#b8a0d4"/>
+
+  <!-- Address flags box: x=1060, y=330, w=140, h=44 → center (1130, 352) -->
+  <rect x="1060" y="330" width="140" height="44" rx="8" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <text x="1130" y="357" font-size="13" font-weight="600" fill="#1a0a2e" text-anchor="middle">Address flags</text>
+
+  <!-- Loop back: Address flags left (1060, 352) → left to (920, 352) → up to LD selects case bottom (920, 240) -->
+  <line x1="1060" y1="352" x2="920" y2="352" stroke="#b8a0d4" stroke-width="1.5"/>
+  <line x1="920" y1="352" x2="920" y2="245" stroke="#b8a0d4" stroke-width="1.5"/>
+  <polygon points="920,240 914,252 926,252" fill="#b8a0d4"/>
 
   <!-- ===== LEGEND ===== -->
   <line x1="60" y1="440" x2="1300" y2="440" stroke="#d4cade" stroke-width="1"/>
