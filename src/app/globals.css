@@ -200,6 +200,27 @@ a:hover { opacity: .85; }
 }
 
 /* ═══ ABOUT PAGE ═══ */
+.about-intro {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.about-intro-photo img {
+  border-radius: 20px;
+}
+.about-intro-text .about-prose {
+  max-width: none;
+}
+@media (max-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-intro-photo {
+    max-width: 220px;
+  }
+}
 .about-prose {
   max-width: 640px;
 }

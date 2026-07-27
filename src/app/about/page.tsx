@@ -58,17 +58,32 @@ export default function About() {
 
         <hr className="section-line" />
 
-        {/* Photo */}
+        {/* Photo + Bio side by side */}
         <section>
-          <AnimateOnScroll>
-            <div style={{ flexShrink: 0, marginBottom: "1.25rem" }}>
-              <Image
-                src="/images/profile-purple.png"
-                alt="Adriana Sainz"
-                width={150}
-                height={150}
-                style={{ borderRadius: "50%", objectFit: "cover", width: 150, height: 150 }}
-              />
+          <AnimateOnScroll animation="fade-up">
+            <div className="about-intro">
+              <div className="about-intro-photo">
+                <Image
+                  src="/images/profile-purple.png"
+                  alt="Adriana Sainz"
+                  width={320}
+                  height={320}
+                  style={{ borderRadius: 20, objectFit: "cover", width: "100%", height: "auto" }}
+                />
+              </div>
+              <div className="about-intro-text">
+                <div className="about-prose">
+                  <p>
+                    I&apos;ve spent ten years building UX research into healthcare organizations that didn&apos;t have it: establishing practices, growing researchers, and proving that user evidence changes what gets shipped.
+                  </p>
+                  <p>
+                    Currently at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, where I lead UX research across lab operations and enterprise tools, and my team&apos;s work shapes product decisions for systems serving 585K patients a year. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I evaluate which women&apos;s health research proposals get funded and why. Through my Substack, <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">&ldquo;Women&apos;s Health, Computed,&rdquo;</a> I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
+                  </p>
+                  <p>
+                    That thread runs back to <a href="https://www.cincinnatichildrens.org/" target="_blank" rel="noopener noreferrer">Cincinnati Children&apos;s Hospital</a>, where I worked with investigators on NIH-funded clinical research (<a href="https://www.rarediseasesnetwork.org/" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://www.nhlbi.nih.gov/news/2019/lungmap-nhlbi-project-breathes-life-first-depth-atlas-human-lung" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4888111/" target="_blank" rel="noopener noreferrer">3</a>), and through my PhD, which included a collaboration with <a href="https://helloclue.com/" target="_blank" rel="noopener noreferrer">Clue</a> on perimenopause symptom tracking.
+                  </p>
+                </div>
+              </div>
             </div>
           </AnimateOnScroll>
         </section>
@@ -113,31 +128,6 @@ export default function About() {
               </AnimateOnScroll>
             ))}
           </div>
-        </section>
-
-        <hr className="section-line" />
-
-        {/* My Experience */}
-        <section>
-          <AnimateOnScroll>
-            <div className="label">My Experience</div>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up">
-            <div className="about-prose">
-              <p>
-                Building research practices in healthcare.
-              </p>
-              <p>
-                I&apos;ve spent ten years building UX research into healthcare organizations that didn&apos;t have it: establishing practices, growing researchers, and proving that user evidence changes what gets shipped.
-              </p>
-              <p>
-                Currently at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>, where I lead UX research across lab operations and enterprise tools, and my team&apos;s work shapes product decisions for systems serving 585K patients a year. At <a href="https://www.athenadao.co/" target="_blank" rel="noopener noreferrer">AthenaDAO</a>, I evaluate which women&apos;s health research proposals get funded and why. Through my Substack, <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">&ldquo;Women&apos;s Health, Computed,&rdquo;</a> I write about femtech, perimenopause, and the distance between what science knows and what products actually do with it.
-              </p>
-              <p>
-                That thread runs back to <a href="https://www.cincinnatichildrens.org/" target="_blank" rel="noopener noreferrer">Cincinnati Children&apos;s Hospital</a>, where I worked with investigators on NIH-funded clinical research (<a href="https://www.rarediseasesnetwork.org/" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://www.nhlbi.nih.gov/news/2019/lungmap-nhlbi-project-breathes-life-first-depth-atlas-human-lung" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4888111/" target="_blank" rel="noopener noreferrer">3</a>), and through my PhD, which included a collaboration with <a href="https://helloclue.com/" target="_blank" rel="noopener noreferrer">Clue</a> on perimenopause symptom tracking.
-              </p>
-            </div>
-          </AnimateOnScroll>
         </section>
 
         <hr className="section-line" />
