@@ -15,9 +15,9 @@ const transformations = [
   },
   {
     slug: "histopathology-workflow",
-    from: "Manual",
+    from: "Hands-on",
     project: "Histopathology Redesign",
-    to: "Scan-driven",
+    to: "Hands-off",
   },
   {
     slug: "identity-portal",
