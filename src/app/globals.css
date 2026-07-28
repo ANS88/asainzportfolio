@@ -585,6 +585,18 @@ a:hover { opacity: .85; }
   margin-bottom: 2rem;
 }
 .cs-meta-dot { margin: 0 .4rem; color: var(--accent-soft); }
+.cs-hero-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+.cs-hero-tag {
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: rgba(196, 168, 240, .1);
+  padding: .2rem .55rem;
+  border-radius: 4px;
+}
 
 /* Impact hero grid — large numbers */
 .cs-impact-hero {

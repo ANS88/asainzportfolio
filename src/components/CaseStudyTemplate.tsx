@@ -161,6 +161,13 @@ export default function CaseStudyTemplate({
             <span className="cs-meta-dot">&middot;</span>
             <span>{caseStudy.company}</span>
           </div>
+          {caseStudy.tags && caseStudy.tags.length > 0 && (
+            <div className="cs-hero-tags">
+              {caseStudy.tags.map((tag) => (
+                <span key={tag} className="cs-hero-tag">{tag}</span>
+              ))}
+            </div>
+          )}
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-up" delay={200}>
