@@ -21,7 +21,7 @@ const transformations = [
   },
   {
     slug: "identity-portal",
-    from: "Paper",
+    from: "Scattered",
     project: "IDENTITY Portal",
     to: "Connected",
   },
