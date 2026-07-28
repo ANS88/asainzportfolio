@@ -105,6 +105,26 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
         </figure>
       );
 
+    case "videos":
+      return (
+        <div className="cs-videos-row">
+          {content.data.map((v, i) => (
+            <figure key={i} className="cs-video-block">
+              <div className="cs-video-wrapper">
+                <iframe
+                  src={v.src}
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  allowFullScreen
+                  loading="lazy"
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                />
+              </div>
+              {v.caption && <figcaption>{v.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      );
+
     default:
       return null;
   }

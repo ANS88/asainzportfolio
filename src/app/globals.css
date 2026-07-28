@@ -823,6 +823,14 @@ a:hover { opacity: .85; }
 }
 
 /* Video blocks */
+.cs-videos-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .cs-videos-row { grid-template-columns: 1fr; }
+}
 .cs-video-block {
   border-radius: 20px;
   overflow: hidden;

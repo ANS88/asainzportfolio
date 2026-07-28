@@ -27,11 +27,12 @@ export const unifiedPatientPortal: CaseStudy = {
       type: "design",
       content: [
         {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1#t=0s",
-            caption: "",
-          },
+          type: "videos",
+          data: [
+            { src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=0s" },
+            { src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=100s" },
+            { src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=200s" },
+          ],
         },
       ],
     },
@@ -60,13 +61,6 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "text",
           data: "<p>From there I ran workshops with 15 SMEs — genetic counselors, lab ops, product — to map the full journey from the system side and find where patient experience broke down. The combination of patient-facing and system-facing research is what surfaced the real design opportunities, not just the obvious ones.</p>",
-        },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=100s",
-            caption: "",
-          },
         },
       ],
     },
@@ -134,13 +128,6 @@ export const unifiedPatientPortal: CaseStudy = {
           data: {
             src: "/images/case-studies/unified-patient-portal/iterations.png",
             alt: "Prototype iterations tested during usability sessions",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=200s",
-            caption: "",
           },
         },
       ],
