@@ -43,6 +43,13 @@ export default function Work() {
                     <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
                     <div className="cs-preview-title">{study.title}</div>
                     <p className="cs-preview-stakes">{study.stakesLine}</p>
+                    {study.tags && study.tags.length > 0 && (
+                      <div className="cs-preview-tags">
+                        {study.tags.map((tag) => (
+                          <span key={tag} className="cs-hero-tag">{tag}</span>
+                        ))}
+                      </div>
+                    )}
                     <span className="cs-preview-link">Read case study &rarr;</span>
                   </div>
                 </a>

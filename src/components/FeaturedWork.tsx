@@ -1,4 +1,5 @@
 import AnimateOnScroll from "./AnimateOnScroll";
+import { caseStudies } from "@/data/case-studies";
 
 const featured = [
   {
@@ -7,6 +8,7 @@ const featured = [
     result: "50% faster turnaround for 585K patients/yr",
     judgment: "Chose distributed cognition over standard usability audit, the bottleneck was organizational, not interface",
     company: "Natera",
+    tags: caseStudies["natera-clinical-review"]?.tags ?? [],
   },
   {
     slug: "perimenopause-tracking",
@@ -14,6 +16,7 @@ const featured = [
     result: "40-person diary study, 88.3 SUS, shallow insights uncovered",
     judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
     company: "UC & Clue",
+    tags: caseStudies["perimenopause-tracking"]?.tags ?? [],
   },
   {
     slug: "unified-patient-portal",
@@ -21,6 +24,7 @@ const featured = [
     result: "First patient-facing portal across 4 business units",
     judgment: "Used the Cures Act mandate as leverage to fund a patient-centered portal instead of bolting results onto the physician system",
     company: "Natera",
+    tags: caseStudies["unified-patient-portal"]?.tags ?? [],
   },
 ];
 
@@ -38,6 +42,13 @@ export default function FeaturedWork() {
               <span className="work-row-title">{study.title}</span>
               <span className="work-row-result">{study.result}</span>
               <span className="work-row-judgment">{study.judgment}</span>
+              {study.tags.length > 0 && (
+                <span className="work-row-tags">
+                  {study.tags.map((tag) => (
+                    <span key={tag} className="cs-hero-tag">{tag}</span>
+                  ))}
+                </span>
+              )}
             </a>
           </AnimateOnScroll>
         ))}

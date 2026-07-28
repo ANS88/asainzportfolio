@@ -1866,6 +1866,19 @@ section { padding: 5rem 0; }
   line-height: 1.5;
   margin-top: .25rem;
 }
+.work-row-tags {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .5rem;
+}
+.cs-preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .5rem;
+}
 
 /* View all link */
 .view-all-link {
