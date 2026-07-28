@@ -4,10 +4,10 @@ export const histopathologyWorkflow: CaseStudy = {
   slug: "histopathology-workflow",
   title: "Histopathology Lab Workflow Redesign",
   stakesLine:
-    "Lab technicians, pathologists, and micro dissection specialists relied on spreadsheets, manual queues, and fragmented systems to process tissue samples. I made the case for in-lab research the team had never done, then led the design of a unified system that replaced manual work across the entire histopathology pipeline.",
-  judgment: "Chose in-lab ethnographic research over remote interviews \u2014 you can't redesign a pipeline from a conference room",
-  role: "UX Research Lead",
-  timeline: "0 → 1 (2024\u20132025)",
+    "Natera's histopathology pipeline ran on spreadsheets, manual queues, and fragmented systems — in a domain where a mislabeled tube can compromise a genetic test result. I made an organizational bet on a research methodology the company had never used, set the ownership model for a cross-functional team, and led the redesign of the entire pipeline. The methodology outlived the project.",
+  judgment: "Made the organizational case for in-lab ethnography in a company that had never done it — the methodology became the standard",
+  role: "UX & Design Lead",
+  timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/histopathology-workflow/user-flow.png",
@@ -36,7 +36,7 @@ export const histopathologyWorkflow: CaseStudy = {
           type: "video",
           data: {
             src: "https://player.vimeo.com/video/1148959154?h=d9ae3634e1&autoplay=1&loop=1&muted=1&background=1",
-            caption: "Prototype walkthrough: unified histopathology lab workflow",
+            caption: "",
           },
         },
       ],
@@ -44,191 +44,143 @@ export const histopathologyWorkflow: CaseStudy = {
 
     {
       id: "context",
-      title: "Context & Challenge",
+      title: "The problem",
       type: "context",
       content: [
         {
           type: "text",
-          data: "<p><strong>The lab problem:</strong> Natera\u2019s histopathology workflow \u2014 from tissue validation through micro dissection \u2014 spanned five major stages, each with its own tools, manual handoffs, and pain points. Lab technicians toggled between LabVantage (LV) for accessioning, Philips for digital pathology, and spreadsheets for everything in between.</p>",
+          data: "<p>Natera's histopathology workflow — from tissue validation through micro dissection — spanned five major stages, each with its own tools, manual handoffs, and failure modes. Lab technicians toggled between LabVantage for accessioning, Philips for digital pathology, and spreadsheets for everything in between.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>Why this matters:</strong> Every manual step in histopathology introduces risk. Mislabeled tubes, missed scanning windows, and broken integrations between systems don\u2019t just slow the lab down \u2014 they can compromise sample integrity and downstream genetic test results.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>The constraint:</strong> Design for expert lab users who work with physical specimens, scanners, and microscopes \u2014 not just screens. The system had to fit into the physical choreography of the lab, not disrupt it.</p>",
-        },
-      ],
-    },
-
-    {
-      id: "research",
-      title: "Research Approach",
-      type: "research",
-      content: [
-        {
-          type: "text",
-          data: "<p>I led multiple rounds of contextual inquiry and shadowing sessions with lab technicians, pathologists, and micro dissection specialists in their actual work environments. The goal was to map every action, decision point, and system touchpoint across the full histopathology pipeline.</p>",
-        },
-        {
-          type: "list",
-          data: {
-            title: "Methods",
-            items: [
-              "In-lab shadowing sessions observing tissue validation, sectioning, staining, pathologist review, and micro dissection",
-              "Workflow mapping of user actions, system interactions, and decision branches (slides vs. blocks)",
-              "Pain point identification through observation and contextual interviews",
-              "Systems audit of LabVantage (LV) and Philips integration points",
-            ],
-          },
-        },
-        {
-          type: "text",
-          data: "<p>The workflow map captured the full end-to-end process: <strong>Validate tissue sample \u2192 Create tissue sets \u2192 Sectioning \u2192 H&E staining \u2192 Pathologist review \u2192 Micro dissection</strong>, with branching logic for slides versus blocks at the sectioning stage.</p>",
-        },
-        {
-          type: "image",
-          data: {
-            src: "/images/case-studies/histopathology-workflow/user-flow.png",
-            alt: "End-to-end user flow diagram mapping the histopathology pipeline from tissue validation through micro dissection, with branching logic for slides versus blocks",
-            caption: "User flow: full histopathology pipeline from tissue validation to micro dissection",
-          },
-        },
-      ],
-    },
-
-    {
-      id: "findings",
-      title: "Key Findings",
-      type: "findings",
-      content: [
-        {
-          type: "text",
-          data: "<h3>Finding 1: Manual queue management</h3><p>Lab staff manually added \u201Cchildren\u201D samples to queues \u2014 a repetitive task that could be automated through barcode scanning. Every manual entry was a potential error.</p>",
-        },
-        {
-          type: "text",
-          data: "<h3>Finding 2: Broken system integrations</h3><p>The integration between Bioanalyzer and LabVantage was incomplete. System-generated codes weren\u2019t automatically added to cases, forcing manual data reconciliation.</p>",
-        },
-        {
-          type: "text",
-          data: "<h3>Finding 3: Disconnected pathology reports</h3><p>Path report PDFs weren\u2019t linked to case details in the system. Staff had to retrieve reports from LIMS separately, losing context and time during pathologist review.</p>",
-        },
-        {
-          type: "text",
-          data: "<h3>Finding 4: Tube-label mismatch risk</h3><p>Manual matching between cycles of data (tubes vs. labels) during micro dissection created a high-risk error point. Scanning before and after processing had no valid time window for \u201Cundo\u201D operations.</p>",
-        },
-        {
-          type: "text",
-          data: "<h3>Finding 5: Historical scanning gaps</h3><p>Historical scanning of all tissue samples lacked consistent records, making it difficult to trace case history. Scanning samples initiated lab workflows and retrieved case info, but this process wasn\u2019t standardized.</p>",
-        },
-      ],
-    },
-
-    {
-      id: "design",
-      title: "Design Strategy",
-      type: "design",
-      content: [
-        {
-          type: "quote",
-          data: {
-            text: "Design for the physical choreography of the lab. Technicians move between stations, scanners, and microscopes \u2014 the system has to meet them where they work, not pull them to a screen.",
-            attribution: "Design principle",
-          },
-        },
-        {
-          type: "text",
-          data: "<p><strong>What we built:</strong> A unified system replacing spreadsheets and manual tracking across all five histopathology stages. The new workflow automated queue management through barcode scanning, linked pathology reports directly to case records, and consolidated LabVantage and Philips touchpoints into a coherent experience.</p>",
-        },
-        {
-          type: "image",
-          data: {
-            src: "/images/case-studies/histopathology-workflow/design-principles.png",
-            alt: "Design principles guiding the histopathology workflow redesign",
-            caption: "Design principles: scan-driven automation, integrated data, and branch-aware interface",
-          },
-        },
-        {
-          type: "list",
-          data: {
-            title: "Key design decisions",
-            items: [
-              "Scan-driven workflow \u2014 barcode scanning triggers automatic queue placement and case retrieval, eliminating manual entry",
-              "Integrated pathology reports \u2014 path report PDFs linked directly to case details, leveraging document management",
-              "Automated code generation \u2014 system-generated codes added to cases automatically, closing the Bioanalyzer-LV gap",
-              "Undo-safe scanning \u2014 defined valid time windows for scan corrections during micro dissection",
-              "Branch-aware UI \u2014 interface adapts based on whether the sample follows the slides or blocks path after sectioning",
-            ],
-          },
-        },
-      ],
-    },
-
-    {
-      id: "validation",
-      title: "Validation & UAT",
-      type: "validation",
-      content: [
-        {
-          type: "text",
-          data: "<p><strong>Testing approach:</strong> Conducted user acceptance testing (UAT) with lab technicians, pathologists, and micro dissection specialists using the actual system in their lab environments. Tested each workflow stage with real tissue processing scenarios.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>What we validated:</strong> The scan-driven workflow reduced manual entry points. Integrated pathology reports eliminated the context-switching overhead of retrieving reports from LIMS. The branch-aware interface correctly guided users through slides vs. blocks paths without confusion.</p>",
-        },
-      ],
-    },
-
-    {
-      id: "impact",
-      title: "Impact & Outcomes",
-      type: "impact",
-      content: [
-        {
-          type: "list",
-          data: {
-            title: "Quantitative impact",
-            items: [
-              "Replaced spreadsheets and manual tracking across all 5 histopathology stages",
-              "Consolidated LabVantage and Philips interactions into a unified workflow",
-              "Eliminated manual queue management through scan-driven automation",
-              "Linked pathology reports directly to case records, removing retrieval overhead",
-            ],
-          },
-        },
-        {
-          type: "list",
-          data: {
-            title: "Qualitative impact",
-            items: [
-              "Reduced error risk at tube-label matching and sample handoff points",
-              "Standardized scanning and tracking across the full tissue processing pipeline",
-              "Lab staff no longer context-switch between disconnected systems for a single case",
-            ],
-          },
+          data: "<p>In a clinical genomics lab, workflow friction isn't an efficiency problem — it's a risk problem. Mislabeled tubes, missed scanning windows, and broken system integrations can compromise sample integrity and the genetic test results downstream. Any redesign had to be justified not on convenience but on error reduction.</p>",
         },
       ],
     },
 
     {
       id: "judgment",
-      title: "The call I made",
+      title: "My approach",
       type: "judgment",
       content: [
         {
           type: "text",
-          data: "<p><strong>The obvious move:</strong> Conduct remote stakeholder interviews and build requirements from described workflows. The team had never done in-lab research, and the lab is in a different state from HQ. Remote discovery was the path of least resistance.</p>",
+          data: "<p>The organization's default was remote discovery — no travel budget, no scheduling around lab operations, no disruption to a production clinical lab. Every incentive pointed that direction.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>What I chose instead:</strong> I made the case for on-site ethnographic research — shadowing technicians, pathologists, and micro dissection specialists in their physical lab environments. I argued that you cannot redesign a workflow that involves microtomes, scanners, and tissue specimens by asking people to describe it over a video call.</p>",
+          data: "<p>You cannot redesign a workflow involving microtomes, scanners, and tissue specimens by asking people to describe it over video. Expert users narrate their idealized process, not their actual one — and the gap between the two is exactly where the errors live. I made the case to lab ops leadership and my own stakeholders that on-site ethnography was not a research preference but a risk-management decision: the cost of travel was trivial against the cost of building the wrong system for a patient-safety-critical pipeline.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>The tradeoff:</strong> In-lab shadowing required travel, scheduling around lab operations, and more time than remote interviews. But it surfaced the physical choreography of the work — how technicians move between stations, where they reach for a spreadsheet, where the scanner integration breaks — that no interview would have revealed.</p>",
+          data: "<p>What it bought: the physical choreography of the work — how technicians move between stations, where they reach for a spreadsheet because the system fails them, where the scanner integration silently breaks. None of it would have surfaced on a call.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "research",
+      title: "How we got there",
+      type: "research",
+      content: [
+        {
+          type: "text",
+          data: "<p>I directed multiple rounds of contextual inquiry and shadowing with lab technicians, pathologists, and micro dissection specialists in their working environments, with a clear mandate: map every action, decision point, and system touchpoint across the full pipeline, so that the design work was grounded in observed reality rather than requirements documents.</p>",
+        },
+        {
+          type: "list",
+          data: {
+            title: "",
+            items: [
+              "In-lab shadowing across tissue validation, sectioning, staining, pathologist review, and micro dissection",
+              "Workflow mapping of user actions, system interactions, and decision branches (slides vs. blocks)",
+              "Pain point identification through observation and contextual interviews",
+              "Systems audit of LabVantage and Philips integration points",
+            ],
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/histopathology-workflow/user-flow.png",
+            alt: "End-to-end user flow diagram mapping the histopathology pipeline from tissue validation through micro dissection, with branching logic for slides versus blocks",
+          },
+        },
+        {
+          type: "text",
+          data: "<p>Five findings, each tied to a concrete risk:</p>",
+        },
+        {
+          type: "list",
+          data: {
+            title: "",
+            items: [
+              "Manual queue management — staff hand-entered samples into queues, every manual entry a potential error",
+              "Broken system integrations — the Bioanalyzer–LabVantage integration was incomplete, forcing manual reconciliation",
+              "Disconnected pathology reports — PDFs weren't linked to case details, so staff retrieved them separately from LIMS",
+              "Tube-label mismatch risk — manual matching during micro dissection was the highest-risk error point in the pipeline",
+              "Historical scanning gaps — scanning initiated workflows but wasn't standardized, leaving case history untraceable",
+            ],
+          },
+        },
+      ],
+    },
+
+    {
+      id: "design",
+      title: "What we built",
+      type: "design",
+      content: [
+        {
+          type: "quote",
+          data: {
+            text: "Design for the physical choreography of the lab. Technicians move between stations, scanners, and microscopes — the system has to meet them where they work, not pull them to a screen.",
+            attribution: "Design principle I set for the team",
+          },
+        },
+        {
+          type: "text",
+          data: "<p>I set this principle as the decision filter for all design work, then held the line on it through scoping, critique, and design reviews. Every key decision maps directly to a research finding — in a patient-safety context, a design decision without an evidence trail is a liability.</p>",
+        },
+        {
+          type: "list",
+          data: {
+            title: "",
+            items: [
+              "Scan-driven workflow — barcode scanning triggers queue placement and case retrieval, eliminating manual entry",
+              "Integrated pathology reports — PDFs linked directly to case details",
+              "Automated code generation — closing the Bioanalyzer–LV gap without human reconciliation",
+              "Undo-safe scanning — defined valid correction windows during micro dissection, directly addressing the highest-risk finding",
+              "Branch-aware UI — interface adapts to the slides vs. blocks path after sectioning",
+            ],
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/histopathology-workflow/design-principles.png",
+            alt: "Design principles guiding the histopathology workflow redesign",
+          },
+        },
+        {
+          type: "text",
+          data: "<p>Validation happened the same way discovery did: in the lab, with the actual system, against real tissue-processing scenarios. UAT confirmed that scan-driven workflows reduced manual entry points, integrated reports eliminated LIMS context-switching, and the branch-aware interface guided users through both paths without confusion.</p>",
+        },
+      ],
+    },
+
+    {
+      id: "impact",
+      title: "Impact",
+      type: "impact",
+      content: [
+        {
+          type: "text",
+          data: "<p>Replaced spreadsheets and manual tracking across all five histopathology stages. Consolidated LabVantage and Philips interactions into a unified workflow. Eliminated manual queue management through scan-driven automation and linked pathology reports directly to case records.</p>",
+        },
+        {
+          type: "text",
+          data: "<p>Reduced error risk at tube-label matching and sample handoff points — the pipeline's highest-stakes failure modes. Standardized scanning and tracking across the full tissue processing pipeline, ending the context-switching between disconnected systems for a single case.</p>",
         },
       ],
     },
@@ -240,23 +192,23 @@ export const histopathologyWorkflow: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>This project established the precedent for in-lab ethnographic research at Natera. Before this work, UX research in lab operations was conducted remotely. After it, the team had both the methodology and the organizational buy-in to embed researchers in physical lab environments. The workflow maps I created became reference artifacts for engineering and product teams scoping adjacent lab systems.</p>",
+          data: "<p>This is the outcome I weigh most heavily. The project established in-lab ethnographic research as organizational precedent at Natera. Before it, lab operations research was remote by default; after it, the team had both a proven methodology and the leadership buy-in to embed researchers in physical lab environments — a durable capability, not a one-time win. The workflow maps became reference artifacts for engineering and product teams scoping adjacent lab systems, extending the return on the research well past this project's boundaries.</p>",
+        },
+        {
+          type: "text",
+          data: "<p>That's the pattern I look for in leadership work: the deliverable ships, but the way of working persists.</p>",
         },
       ],
     },
 
     {
       id: "reflection",
-      title: "Reflection",
+      title: "What I'd do differently",
       type: "reflection",
       content: [
         {
           type: "text",
-          data: "<p><strong>What I learned:</strong> Lab workflows are deeply physical. You can\u2019t redesign a histopathology pipeline from a conference room \u2014 you have to stand next to the microtome, watch the staining process, and see where the technician reaches for a spreadsheet because the system doesn\u2019t support what they need. The shadowing sessions were the most valuable research investment in this project.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>What I\u2019d do differently:</strong> I would have mapped the full systems architecture (LV, Philips, Bioanalyzer, LIMS) earlier and brought engineering into discovery sooner. Some integration constraints surfaced late and required design rework \u2014 a reminder that in regulated lab environments, technical constraints are design constraints, and the people who know them need to be in the room from the start.</p>",
+          data: "<p>I would have mapped the full systems architecture (LV, Philips, Bioanalyzer, LIMS) earlier and pulled engineering into discovery from day one. Integration constraints surfaced late and forced design rework. The lesson I've carried forward: in high-stakes systems, the people who know the constraints belong in the room before the first design decision, and it's my job to put them there.</p>",
         },
       ],
     },
@@ -269,17 +221,14 @@ export const histopathologyWorkflow: CaseStudy = {
   ],
 
   myRole:
-    "UX Research Lead \u2014 made the case for in-lab ethnographic research, led contextual inquiry and shadowing across 5 workflow stages, coordinated with lab ops, pathology, and engineering teams, facilitated UAT with end users in their physical lab environments",
+    "Set the discovery strategy and made the organizational case for in-lab ethnography; directed contextual inquiry and shadowing across 5 workflow stages; owned the design strategy and principles governing the redesign; aligned lab ops, pathology, and engineering stakeholders; ran UAT with end users in their physical environments.",
 
   owned:
-    "I owned the research methodology decision (in-lab ethnography vs. remote), the workflow mapping across all 5 stages, and stakeholder alignment with lab ops leadership. The product designer owned the UI; the PM owned scope and prioritization; engineering owned system integration architecture.",
+    "Set the discovery strategy and made the organizational case for in-lab ethnography; directed contextual inquiry and shadowing across 5 workflow stages; owned the design strategy and principles governing the redesign; aligned lab ops, pathology, and engineering stakeholders; ran UAT with end users in their physical environments.",
 
   tags: [
-    "Healthcare UX",
     "Lab operations",
     "Histopathology",
-    "Workflow automation",
     "Contextual inquiry",
-    "Genetic testing",
   ],
 };
