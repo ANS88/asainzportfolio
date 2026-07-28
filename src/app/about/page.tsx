@@ -138,7 +138,7 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-prose">
               <p>
-                A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions, not just run studies.
+                A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions.
               </p>
               <p className="about-available">
                 Available for: design leadership in health/AI, building research teams from zero, advisory roles in femtech and clinical AI.
