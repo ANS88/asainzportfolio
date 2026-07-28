@@ -1,58 +1,65 @@
 import AnimateOnScroll from "./AnimateOnScroll";
-import { caseStudies } from "@/data/case-studies";
 
-const featured = [
+const transformations = [
   {
     slug: "natera-clinical-review",
-    title: "Clinical Review",
-    result: "50% faster turnaround for 585K patients/yr",
-    judgment: "Chose distributed cognition over standard usability audit, the bottleneck was organizational, not interface",
-    company: "Natera",
-    tags: caseStudies["natera-clinical-review"]?.tags ?? [],
-  },
-  {
-    slug: "perimenopause-tracking",
-    title: "Tracking Perimenopause",
-    result: "40-person diary study, 88.3 SUS, shallow insights uncovered",
-    judgment: "Chose diary study over usability test, the question was about lived experience, not task completion",
-    company: "UC & Clue",
-    tags: caseStudies["perimenopause-tracking"]?.tags ?? [],
+    from: "Fragmented",
+    project: "Clinical Review",
+    to: "Unified",
   },
   {
     slug: "unified-patient-portal",
-    title: "Unified Patient Portal",
-    result: "First patient-facing portal across 4 business units",
-    judgment: "Used the Cures Act mandate as leverage to fund a patient-centered portal instead of bolting results onto the physician system",
-    company: "Natera",
-    tags: caseStudies["unified-patient-portal"]?.tags ?? [],
+    from: "Invisible",
+    project: "Patient Portal",
+    to: "Empowered",
+  },
+  {
+    slug: "histopathology-workflow",
+    from: "Manual",
+    project: "Histopathology Redesign",
+    to: "Scan-driven",
+  },
+  {
+    slug: "identity-portal",
+    from: "Paper",
+    project: "IDENTITY Portal",
+    to: "Connected",
+  },
+  {
+    slug: "perimenopause-tracking",
+    from: "Measured",
+    project: "Tracking Perimenopause",
+    to: "Understood",
   },
 ];
 
 export default function FeaturedWork() {
   return (
     <section>
-      <AnimateOnScroll>
-        <div className="label">Selected work</div>
+      <AnimateOnScroll animation="fade-in">
+        <p className="transform-tagline">
+          I redesign the systems behind clinical decisions —<br />
+          and the experience changes <em>downstream.</em>
+        </p>
       </AnimateOnScroll>
-      <div className="work-list">
-        {featured.map((study) => (
-          <AnimateOnScroll key={study.slug} animation="fade-up">
-            <a href={`/work/${study.slug}`} className="work-row">
-              <span className="work-row-company">{study.company}</span>
-              <span className="work-row-title">{study.title}</span>
-              <span className="work-row-result">{study.result}</span>
-              <span className="work-row-judgment">{study.judgment}</span>
-              {study.tags.length > 0 && (
-                <span className="work-row-tags">
-                  {study.tags.map((tag) => (
-                    <span key={tag} className="cs-hero-tag">{tag}</span>
-                  ))}
-                </span>
-              )}
+
+      <AnimateOnScroll animation="fade-up">
+        <div className="transform-table">
+          <div className="transform-header">
+            <span>From</span>
+            <span>Project</span>
+            <span>To</span>
+          </div>
+          {transformations.map((t) => (
+            <a key={t.slug} href={`/work/${t.slug}`} className="transform-row">
+              <span className="transform-from">{t.from}</span>
+              <span className="transform-project">{t.project}</span>
+              <span className="transform-to">{t.to}</span>
             </a>
-          </AnimateOnScroll>
-        ))}
-      </div>
+          ))}
+        </div>
+      </AnimateOnScroll>
+
       <AnimateOnScroll animation="fade-up">
         <div style={{ marginTop: "2rem" }}>
           <a href="/work" className="view-all-link">
