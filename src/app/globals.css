@@ -825,14 +825,16 @@ a:hover { opacity: .85; }
 /* Video blocks */
 .cs-section-body--videos {
   max-width: none;
-  width: 300vw;
-  margin-left: calc(-150vw + 50%);
   gap: 0;
   flex-direction: row;
 }
 .cs-section-body--videos > * {
   flex: 1 1 0;
   min-width: 0;
+}
+.cs-section-body--videos .cs-video-wrapper {
+  padding-bottom: 0;
+  height: 640px;
 }
 .cs-video-block {
   border-radius: 20px;
