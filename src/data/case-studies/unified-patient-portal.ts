@@ -11,7 +11,7 @@ export const unifiedPatientPortal: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
-  previewVideo: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
+  previewVideo: "/videos/patient-portal/snippet-01.mp4",
 
   impact: [
     { value: "181K", metric: "Patient accounts" },
@@ -29,7 +29,8 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
+            src: "/videos/patient-portal/snippet-01.mp4",
+            autoplay: true,
             caption: "",
           },
         },
@@ -60,6 +61,14 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "text",
           data: "<p>From there I ran workshops with 15 SMEs — genetic counselors, lab ops, product — to map the full journey from the system side and find where patient experience broke down. The combination of patient-facing and system-facing research is what surfaced the real design opportunities, not just the obvious ones.</p>",
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/snippet-02.mp4",
+            autoplay: true,
+            caption: "",
+          },
         },
       ],
     },
@@ -127,6 +136,14 @@ export const unifiedPatientPortal: CaseStudy = {
           data: {
             src: "/images/case-studies/unified-patient-portal/iterations.png",
             alt: "Prototype iterations tested during usability sessions",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/snippet-03.mp4",
+            autoplay: true,
+            caption: "",
           },
         },
       ],
