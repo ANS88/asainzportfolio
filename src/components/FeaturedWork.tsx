@@ -37,6 +37,9 @@ export default function FeaturedWork() {
   return (
     <section>
       <AnimateOnScroll animation="fade-up">
+        <div className="label">Selected work</div>
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="fade-up">
         <div className="transform-table">
           <div className="transform-header">
             <span>From</span>
