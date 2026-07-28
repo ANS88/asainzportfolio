@@ -464,6 +464,19 @@ a:hover { opacity: .85; }
   height: 100%;
   background: var(--accent-soft);
 }
+.cs-preview-video-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.cs-preview-video-row .cs-preview-video {
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 0;
+}
 .cs-preview-image {
   width: 100%;
   aspect-ratio: 16 / 9;

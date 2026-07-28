@@ -22,6 +22,7 @@ export interface CaseStudy {
   // Preview image/video for work listing cards
   previewImage?: string;
   previewVideo?: string;
+  previewVideos?: string[];
 
   // Hero image
   heroImage?: {

@@ -12,6 +12,11 @@ export const unifiedPatientPortal: CaseStudy = {
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
   previewVideo: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
+  previewVideos: [
+    "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=0s",
+    "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=100s",
+    "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=200s",
+  ],
 
   impact: [
     { value: "181K", metric: "Patient accounts" },

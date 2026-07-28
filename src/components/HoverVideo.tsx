@@ -35,3 +35,20 @@ export function HoverVideoEmbed({ src }: { src: string }) {
     </div>
   );
 }
+
+export function HoverVideoEmbedRow({ sources }: { sources: string[] }) {
+  return (
+    <div className="cs-preview-video-row">
+      {sources.map((src, i) => (
+        <div key={i} className="cs-preview-video" style={{ pointerEvents: "none" }}>
+          <iframe
+            src={src}
+            allow="autoplay; encrypted-media"
+            tabIndex={-1}
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}

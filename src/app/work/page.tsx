@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContactBlock from "@/components/ContactBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { HoverVideoLocal, HoverVideoEmbed } from "@/components/HoverVideo";
+import { HoverVideoLocal, HoverVideoEmbed, HoverVideoEmbedRow } from "@/components/HoverVideo";
 import { caseStudyList } from "@/data/case-studies";
 
 export const metadata: Metadata = {
@@ -35,7 +35,9 @@ export default function Work() {
             {caseStudyList.map((study) => (
               <AnimateOnScroll key={study.slug} animation="fade-up">
                 <a href={`/work/${study.slug}`} className="cs-preview-card">
-                  {study.previewVideo && study.previewVideo.startsWith("/") ? (
+                  {study.previewVideos && study.previewVideos.length > 0 ? (
+                    <HoverVideoEmbedRow sources={study.previewVideos} />
+                  ) : study.previewVideo && study.previewVideo.startsWith("/") ? (
                     <HoverVideoLocal src={study.previewVideo} />
                   ) : study.previewVideo ? (
                     <HoverVideoEmbed src={study.previewVideo} />
