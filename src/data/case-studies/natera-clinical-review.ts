@@ -74,14 +74,6 @@ export const nateraClinicalReview: CaseStudy = {
           type: "text",
           data: "<p>That reframing cost political capital. A systems-level analysis is slower and harder to sell than quick wins. But it meant we solved the structural problem instead of polishing its symptoms.</p>",
         },
-        {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/clip-01.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
       ],
     },
 
