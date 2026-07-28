@@ -10,7 +10,7 @@ export const histopathologyWorkflow: CaseStudy = {
   timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/histopathology-workflow/user-flow.png",
+  previewImage: "/images/case-studies/histopathology-workflow/user-flow.svg",
 
   impact: [
     { value: "5", metric: "Workflow stages redesigned end-to-end" },
@@ -98,7 +98,7 @@ export const histopathologyWorkflow: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/histopathology-workflow/user-flow.png",
+            src: "/images/case-studies/histopathology-workflow/user-flow.svg",
             alt: "End-to-end user flow diagram mapping the histopathology pipeline from tissue validation through micro dissection, with branching logic for slides versus blocks",
           },
         },
