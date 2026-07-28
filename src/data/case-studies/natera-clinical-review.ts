@@ -53,7 +53,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/patient-portal/clip-00.mp4",
+            src: "/videos/clinical-review/snippet-01.mp4",
             autoplay: true,
             caption: "",
           },
@@ -117,7 +117,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/patient-portal/clip-01.mp4",
+            src: "/videos/clinical-review/snippet-02.mp4",
             autoplay: true,
             caption: "",
           },
@@ -198,23 +198,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/patient-portal/clip-02.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-03.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-04.mp4",
+            src: "/videos/clinical-review/snippet-03.mp4",
             autoplay: true,
             caption: "",
           },
