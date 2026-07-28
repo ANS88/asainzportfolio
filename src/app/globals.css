@@ -825,6 +825,8 @@ a:hover { opacity: .85; }
 /* Video blocks */
 .cs-section-body--videos {
   max-width: none;
+  width: 300vw;
+  margin-left: calc(-150vw + 50%);
   gap: 0;
   flex-direction: row;
 }
