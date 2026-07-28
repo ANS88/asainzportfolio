@@ -4,10 +4,10 @@ export const identityPortal: CaseStudy = {
   slug: "identity-portal",
   title: "IDENTITY: Foster Care Health Data Portal",
   stakesLine:
-    "Critical medical and legal information for foster children was exchanged via mail and paper workflows, creating dangerous delays. I led user research and co-design to build a secure digital portal connecting Cincinnati Children\u2019s Hospital and Hamilton County Jobs & Family Services.",
-  judgment: "Chose participatory co-design over traditional requirements gathering \u2014 the stakeholders weren't just sources of requirements, they were co-designers",
-  role: "Lead Designer & Researcher",
-  timeline: "0 → 1 (May \u2013 August 2017)",
+    "Critical medical and legal information for foster children moved by mail and paper, creating dangerous delays. I designed a secure digital portal connecting Cincinnati Children's Hospital and Hamilton County Jobs & Family Services — building the information architecture from users' own mental models and iterating the design through three rounds of testing until it matched how people actually worked.",
+  judgment: "Designed the information architecture from card-sort data instead of org charts — the structure users navigate had to mirror the structure in their heads",
+  role: "UX Designer & Researcher",
+  timeline: "0 → 1 (May – August 2017)",
   company: "Live Well Collaborative",
   companyDescription:
     "In partnership with CCHMC and HCJFS",
@@ -23,7 +23,7 @@ export const identityPortal: CaseStudy = {
   sections: [
     {
       id: "context",
-      title: "Context & Challenge",
+      title: "The problem",
       type: "context",
       content: [
         {
@@ -34,22 +34,11 @@ export const identityPortal: CaseStudy = {
         },
         {
           type: "text",
-          data: "<p>A secure digital platform enabling Cincinnati Children\u2019s Hospital (CCHMC) and Hamilton County Jobs & Family Services (HCJFS) to share critical medical and legal information about foster children \u2014 replacing slow, paper-based exchanges and improving timeliness and accuracy of care.</p>",
-        },
-        {
-          type: "list",
-          data: {
-            title: "Research highlights",
-            items: [
-              "Fragmented Processes \u2014 Critical data was exchanged via mail and long paper workflows, creating delays and inconsistencies",
-              "Diverse Stakeholders \u2014 Medical professionals, social workers, and IT staff had different priorities, technical skills, and security concerns",
-              "Complex Data Needs \u2014 Sensitive legal and medical information required rigorous privacy safeguards and clear access permissions",
-            ],
-          },
+          data: "<p>A secure digital platform enabling Cincinnati Children's Hospital (CCHMC) and Hamilton County Jobs & Family Services (HCJFS) to share critical medical and legal information about foster children — replacing slow, paper-based exchanges and improving the timeliness and accuracy of care.</p>",
         },
         {
           type: "text",
-          data: "<p><strong>Goal:</strong> Design and launch an online portal to streamline the exchange of foster-care health and legal data, ensuring that social workers, clinicians, and administrators can access up-to-date information to support the health and well-being of foster children.</p>",
+          data: "<p>This wasn't a blank-canvas product. It was a translation problem: two organizations with entrenched paper workflows, incompatible vocabularies, and very different users — clinicians on one side, social workers and administrators on the other — needed a single interface they could both navigate without training manuals. Whatever I designed had to feel obvious to both groups on day one.</p>",
         },
         {
           type: "image",
@@ -69,37 +58,33 @@ export const identityPortal: CaseStudy = {
     },
 
     {
-      id: "research",
-      title: "Discovery & Co-Creation",
-      type: "research",
+      id: "judgment",
+      title: "My approach",
+      type: "judgment",
       content: [
         {
           type: "text",
-          data: "<p>Employing participatory methods, we mapped out the current system along with the CCHMC and HCJFS team, then defined the goal system to guide our research and design process.</p>",
+          data: "<p>Before drawing a single screen, I needed to know how each user group actually thought about this information — what they called things, what they reached for first, what belonged together in their heads.</p>",
         },
         {
           type: "text",
-          data: "<p>To understand the needs of both user groups \u2014 HCJFS (social workers, administrative personnel, IT) and CCHMC (medical doctors, nurses, social workers, researchers, IT) \u2014 the first interactions focused on learning about their daily activities, schedules, tools used at work, environments, people and departments they interact with, and the kind of data they most need to access.</p>",
-        },
-        {
-          type: "text",
-          data: "<p>Initial user research helped us identify the user profiles for the portal. 18 participants from HCJFS and CCHMC then partook in a card sort activity, arranging and prioritizing the content for the website.</p>",
+          data: "<p>Working with the CCHMC and HCJFS teams, we mapped the current system and defined the goal system. Early sessions with both user groups — social workers, administrative personnel, IT, doctors, nurses, and researchers — focused on their daily activities, tools, environments, and the data they most needed. Then came the activity that shaped the design most directly: a card sort with 18 participants across both organizations, arranging and prioritizing the portal's content. When two organizations disagree about what \"case information\" means, the card sort is where you find out before the navigation ossifies around the wrong answer.</p>",
         },
       ],
     },
 
     {
       id: "design",
-      title: "Design & Information Architecture",
+      title: "What we built",
       type: "design",
       content: [
         {
           type: "text",
-          data: "<p>The insights gathered from various research activities (card sorting, observational research, and interviews) along with secondary research helped us design the structure of the portal.</p>",
+          data: "<p>The IA came out of the evidence: card sort clusters, observational research, interviews, and secondary research together defined the portal's structure. My job was to resolve the tensions in that data — where clinicians and social workers grouped content differently, the structure had to find an organization both could navigate without translation.</p>",
         },
         {
           type: "text",
-          data: "<p>Medium-fidelity wireframes were initially created to get feedback from users. We relied on paper wireframing and held in-person sessions to go over features and workflows.</p>",
+          data: "<p>I started with medium-fidelity wireframes on paper, reviewed in in-person sessions. That choice was deliberate. With users this busy and this varied — many of them not accustomed to giving feedback on software — paper lowered the stakes. People will redraw a paper wireframe in front of you; they'll politely nod at a polished mockup. The rougher artifact got me honest reactions while everything was still cheap to change.</p>",
         },
         {
           type: "image",
@@ -108,104 +93,46 @@ export const identityPortal: CaseStudy = {
             alt: "Information architecture diagram for the IDENTITY portal",
           },
         },
-      ],
-    },
-
-    {
-      id: "validation",
-      title: "Usability Testing",
-      type: "validation",
-      content: [
         {
           type: "text",
-          data: "<p>After refining the wireframes and developing a high-fidelity version, we conducted cognitive walkthroughs with users from both organizations. The interactive prototype was tested with 15 users from both organizations.</p>",
-        },
-        {
-          type: "text",
-          data: "<p>Based on the data drawn from user testing, the prototype was refined to ensure users\u2019 mental models matched the system, providing a strong user experience.</p>",
+          data: "<p>Once the wireframes stabilized, I developed a high-fidelity interactive prototype and ran cognitive walkthroughs with 15 users from both organizations. The testing question was always the same one the card sort had asked at a different altitude: does the system's structure match the structure in the user's head? Where walkthroughs exposed mismatches — a label that meant different things across organizations, a workflow step in the wrong order — I refined the prototype until users' mental models and the system's model converged. That convergence, not visual polish, was the definition of done.</p>",
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/identity-portal/cardsorting.png",
-            alt: "Card sorting activity results from usability testing",
+            alt: "Card sorting activity with participants from both organizations",
           },
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/identity-portal/cardsorting2.png",
-            alt: "Card sorting summary from usability testing",
+            alt: "Card sorting results and clustering analysis",
           },
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/identity-portal/mapping.png",
-            alt: "Information architecture mapping from usability testing",
+            alt: "Information architecture mapping from research synthesis",
           },
-        },
-      ],
-    },
-
-    {
-      id: "judgment",
-      title: "The call I made",
-      type: "judgment",
-      content: [
-        {
-          type: "text",
-          data: "<p><strong>The obvious move:</strong> Conduct stakeholder interviews, gather requirements, and hand off a spec to the development team. That's the standard process for a portal project with a tight timeline and multiple organizations.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>What I chose instead:</strong> Participatory co-design. I brought social workers, clinicians, administrators, and IT staff into the design process as co-creators, not just sources of requirements. Card sorting with 18 participants across both organizations surfaced information architecture that matched real mental models.</p>",
-        },
-        {
-          type: "text",
-          data: "<p><strong>The tradeoff:</strong> Co-design is slower upfront and harder to coordinate across organizations with different cultures, priorities, and security concerns. But the result was a system that matched actual workflows — validated by the fact that it scaled from a single-county pilot to statewide deployment without major redesign.</p>",
         },
       ],
     },
 
     {
       id: "impact",
-      title: "Impact & Outcomes",
+      title: "Impact",
       type: "impact",
       content: [
         {
-          type: "list",
-          data: {
-            title: "Launch & expansion",
-            items: [
-              "Launched in 2018 as a pilot project in Hamilton County",
-              "By 2020, expanded across the state of Ohio",
-              "Future plans include nationwide expansion",
-            ],
-          },
+          type: "text",
+          data: "<p>The portal grew from a single-county pilot to statewide deployment across Ohio by 2020, with nationwide expansion planned — and it made that jump without major redesign. That's the design outcome I'm proudest of: an information architecture sturdy enough to survive scale, because it was built from users' mental models rather than either organization's org chart.</p>",
         },
-        {
-          type: "list",
-          data: {
-            title: "Publications",
-            items: [
-              "Journal of the American Medical Informatics Association (JAMIA)",
-              "CincyInformatix: Personal Health Records Link Data for Foster Care Youth",
-              "American Academy of Pediatrics (Pediatrics journal)",
-            ],
-          },
-        },
-      ],
-    },
-
-    {
-      id: "beyond",
-      title: "What this changed beyond the project",
-      type: "beyond",
-      content: [
         {
           type: "text",
-          data: "<p>The portal expanded from a single-county pilot in Hamilton County to statewide deployment across Ohio by 2020, with plans for nationwide expansion. The participatory design methodology produced a system that matched real workflows rather than imposing new ones — validated by three peer-reviewed publications in JAMIA, Pediatrics, and CincyInformatix. The project demonstrated that co-design with diverse stakeholders (social workers, clinicians, IT staff) in complex regulated environments produces systems that scale.</p>",
+          data: "<p>Three peer-reviewed publications (JAMIA, Pediatrics, CincyInformatix) documented the approach, demonstrating that co-design with diverse stakeholders in complex regulated environments produces systems that scale.</p>",
         },
       ],
     },
@@ -217,7 +144,7 @@ export const identityPortal: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>This project demonstrated the power of participatory design in complex, multi-stakeholder healthcare environments. By involving social workers, clinicians, administrators, and IT staff as co-designers \u2014 not just end users \u2014 we built a system that matched real workflows rather than imposing new ones. The portal\u2019s expansion from a single-county pilot to statewide deployment validated the research-driven approach.</p>",
+          data: "<p>This project taught me what design actually is in multi-stakeholder healthcare environments: not producing screens, but negotiating a shared structure that many kinds of experts can inhabit. The most consequential design artifacts weren't the high-fidelity prototypes — they were the paper wireframes and card sort clusters, because that's where the real decisions got made while they were still cheap. The portal's expansion from county pilot to statewide system validated the premise: when the design matches how people already think, adoption isn't a separate problem to solve.</p>",
         },
       ],
     },
@@ -230,17 +157,14 @@ export const identityPortal: CaseStudy = {
   ],
 
   myRole:
-    "Graduate Research Fellow \u2014 user research, co-creation workshops, information-architecture design, iterative prototyping",
+    "User research, co-creation workshop facilitation, information architecture design, wireframing from paper through high-fidelity interactive prototype, usability testing and design iteration.",
 
   owned:
-    "Graduate Research Fellow — I owned user research, co-creation workshop facilitation, information architecture design, and iterative prototyping. Worked within a cross-organizational team spanning CCHMC clinical/IT staff and HCJFS social workers and administrators.",
+    "User research, co-creation workshop facilitation, information architecture design, wireframing from paper through high-fidelity interactive prototype, usability testing and design iteration.",
 
   tags: [
-    "Healthcare UX",
     "Foster care",
     "Participatory design",
     "Information architecture",
-    "Co-creation",
-    "Service design",
   ],
 };
