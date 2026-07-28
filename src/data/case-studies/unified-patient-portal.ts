@@ -54,15 +54,11 @@ export const unifiedPatientPortal: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>The fastest path to compliance was obvious: bolt a read-only results view onto the physician-facing system. Legally sufficient, cheap, shippable.</p>",
+          data: "<p>Patients are not clinicians, and I wasn't going to design for them from inside a conference room. I started with patient interviews and shadowing across both business units — sitting with patients as they navigated test ordering, waiting for results, and trying to understand their bills. I watched where confusion hit, where anxiety spiked, and where they gave up and called the clinic instead.</p>",
         },
         {
           type: "text",
-          data: "<p>I made the case for the opposite — a purpose-built patient portal with its own design foundation. Patients are not clinicians. A pregnant patient opening a genetic test result needs plain language, emotional care, billing kept separate from medical news, and a clear next step — not a filtered clinical interface. The mandate was the leverage; patient experience was the point.</p>",
-        },
-        {
-          type: "text",
-          data: "<p>The cost was real: a longer build and aligning two business units that had never shared a product surface. The payoff was a product that served patients rather than one that technically complied while failing them.</p>",
+          data: "<p>From there I ran workshops with 15 SMEs — genetic counselors, lab ops, product — to map the full journey from the system side and find where patient experience broke down. The combination of patient-facing and system-facing research is what surfaced the real design opportunities, not just the obvious ones.</p>",
         },
       ],
     },
