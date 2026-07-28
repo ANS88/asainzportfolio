@@ -243,6 +243,19 @@ a:hover { opacity: .85; }
     max-width: 220px;
   }
 }
+.resume-download {
+  display: inline-block;
+  margin-top: .5rem;
+  font-family: var(--sans);
+  font-size: .7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.resume-download:hover { opacity: .7; }
 /* Experience blocks */
 .experience-block {
   max-width: 640px;

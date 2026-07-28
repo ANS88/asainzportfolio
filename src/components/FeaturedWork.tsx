@@ -36,13 +36,6 @@ const transformations = [
 export default function FeaturedWork() {
   return (
     <section>
-      <AnimateOnScroll animation="fade-in">
-        <p className="transform-tagline">
-          Ambiguity is where I start.<br />
-          Clarity is what I <em>ship.</em>
-        </p>
-      </AnimateOnScroll>
-
       <AnimateOnScroll animation="fade-up">
         <div className="transform-table">
           <div className="transform-header">

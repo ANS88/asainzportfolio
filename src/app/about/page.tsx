@@ -66,6 +66,7 @@ export default function About() {
         <section>
           <AnimateOnScroll>
             <div className="label">Relevant experience</div>
+            <a href="/adriana-navarro-sainz-resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download">Download resume &darr;</a>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
@@ -73,12 +74,26 @@ export default function About() {
               <div className="experience-header">
                 <div className="experience-company">Natera</div>
                 <div className="experience-role">Senior UX Design &amp; Research Manager</div>
-                <div className="experience-dates">2021 &ndash; Present</div>
+                <div className="experience-dates">Jan 2025 &ndash; Present</div>
               </div>
               <ul className="experience-list">
-                <li>Established the company&apos;s first team dedicated to lab experience, defining the roles, hiring the designers and researchers, and setting the success metrics and roadmaps for a function that didn&apos;t exist before.</li>
-                <li>Led the 0&rarr;1 creation of Natera&apos;s first patient portal, defining the end-to-end patient experience from test order through results.</li>
-                <li>Built the company&apos;s first software layer for the lab itself, a product suite spanning every step of sample processing across 50+ laboratories.</li>
+                <li>Drove design strategy and roadmap for genomic testing tools, leading a cross-disciplinary team to ship end-to-end product experiences.</li>
+                <li>Research-informed decisions cut lab turnaround 15% and improved staff efficiency 50% across clinical workflows.</li>
+              </ul>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up">
+            <div className="experience-block">
+              <div className="experience-header">
+                <div className="experience-company">Natera</div>
+                <div className="experience-role">Senior Product Designer &amp; UX Researcher</div>
+                <div className="experience-dates">Nov 2021 &ndash; Jan 2025</div>
+              </div>
+              <ul className="experience-list">
+                <li>Designed end-to-end clinical reporting interfaces for genetic counselors, lab directors, and operations teams across germline and somatic product lines.</li>
+                <li>Led 0-to-1 product design for Natera&apos;s first patient portal; design improvements reduced support calls 30%.</li>
+                <li>Built HIPAA-aware design frameworks balancing regulatory compliance with usability for safety-critical genomics workflows.</li>
               </ul>
             </div>
           </AnimateOnScroll>
@@ -87,18 +102,20 @@ export default function About() {
             <div className="experience-block">
               <div className="experience-header">
                 <div className="experience-company">Cincinnati Children&apos;s Hospital Medical Center</div>
-                <div className="experience-role">UX Designer, Biomedical Informatics</div>
-                <div className="experience-dates">2019 &ndash; 2021</div>
+                <div className="experience-role">UX Researcher &amp; Designer</div>
+                <div className="experience-dates">Jan 2019 &ndash; 2021</div>
               </div>
               <ul className="experience-list">
-                <li>Led the 0&rarr;1 design of a patient and caregiver portal for families managing cystic fibrosis, chronic care coordination where missed information has clinical consequences.</li>
-                <li>Created a medication adherence app for teens, designing for the hardest adherence population there is: adolescents who don&apos;t want another adult telling them what to do.</li>
-                <li>Built a clinical decision support tool helping patients and providers navigate genetic testing decisions.</li>
-                <li>Designed a variant interpretation and curation bank, internal tooling for the scientists classifying genetic variants, where interface clarity directly affects diagnostic accuracy.</li>
+                <li>Led UX research and interaction design across NIH- and PCORI-funded projects on cystic fibrosis and rare diseases &mdash; using ethnography, interviews, and quantitative analysis.</li>
+                <li>Designed a DNA sequencing analysis platform translating complex genomic data workflows into clinical-grade interfaces in close partnership with wet lab and dry lab scientists.</li>
               </ul>
             </div>
           </AnimateOnScroll>
         </section>
+
+        <hr className="section-line" />
+
+        <PublicationsSection />
 
         <hr className="section-line" />
 
@@ -107,10 +124,6 @@ export default function About() {
         <hr className="section-line" />
 
         <FavoriteReads />
-
-        <hr className="section-line" />
-
-        <PublicationsSection />
 
         <hr className="section-line" />
 
