@@ -11,6 +11,7 @@ export const histopathologyWorkflow: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/histopathology-workflow/user-flow.svg",
+  previewVideo: "https://player.vimeo.com/video/1169727354?h=e903c04ee8&autoplay=1&loop=1&muted=1&background=1",
 
   impact: [
     { value: "5", metric: "Workflow stages redesigned end-to-end" },

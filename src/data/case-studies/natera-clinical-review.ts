@@ -11,6 +11,7 @@ export const nateraClinicalReview: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
+  previewVideo: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },

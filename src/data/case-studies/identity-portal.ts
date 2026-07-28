@@ -12,6 +12,7 @@ export const identityPortal: CaseStudy = {
   companyDescription:
     "In partnership with CCHMC and HCJFS",
   previewImage: "/images/case-studies/identity-portal/overview.png",
+  previewVideo: "https://www.youtube.com/embed/jbXdF-C4E6c?si=i3luNWnFNpHDUD-a&autoplay=1&loop=1&muted=1&playlist=jbXdF-C4E6c",
 
   impact: [
     { value: "18", metric: "Participants in card sort activity" },

@@ -34,11 +34,20 @@ export default function Work() {
             {caseStudyList.map((study) => (
               <AnimateOnScroll key={study.slug} animation="fade-up">
                 <a href={`/work/${study.slug}`} className="cs-preview-card">
-                  {study.previewImage && (
+                  {study.previewVideo ? (
+                    <div className="cs-preview-video">
+                      <iframe
+                        src={study.previewVideo}
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        loading="lazy"
+                        tabIndex={-1}
+                      />
+                    </div>
+                  ) : study.previewImage ? (
                     <div className="cs-preview-image">
                       <img src={study.previewImage} alt={study.title} loading="lazy" />
                     </div>
-                  )}
+                  ) : null}
                   <div className="cs-preview-body">
                     <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
                     <div className="cs-preview-title">{study.title}</div>
