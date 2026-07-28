@@ -50,7 +50,6 @@ export default function Work() {
                         ))}
                       </div>
                     )}
-                    <span className="cs-preview-link">Read case study &rarr;</span>
                   </div>
                 </a>
               </AnimateOnScroll>
