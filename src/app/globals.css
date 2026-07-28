@@ -1735,10 +1735,10 @@ section { padding: 5rem 0; }
 .contact-block::before {
   display: none;
 }
-.contact-block h2 { font-family: var(--sans); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1; letter-spacing: -.02em; margin-bottom: 2rem; color: var(--ink); }
+.contact-block h2 { font-family: var(--sans); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1; letter-spacing: -.02em; margin-bottom: 2rem; color: var(--paper); }
 .contact-links { display: flex; gap: 2rem; }
 .contact-links a {
-  color: var(--ink);
+  color: var(--paper);
   font-size: 1.05rem;
   transition: opacity var(--transition-fast);
   display: inline-block;
