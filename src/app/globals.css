@@ -827,6 +827,13 @@ a:hover { opacity: .85; }
   max-width: none;
   gap: 0;
   flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.cs-section-body--videos > * {
+  min-width: 100%;
+  scroll-snap-align: start;
 }
 .cs-video-block {
   border-radius: 20px;
