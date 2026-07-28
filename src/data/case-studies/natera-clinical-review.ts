@@ -11,7 +11,7 @@ export const nateraClinicalReview: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
-  previewVideo: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
+  previewVideo: "/videos/clinical-review/clip-00.mp4",
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },
@@ -29,7 +29,8 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://player.vimeo.com/video/987351069?h=88b99a7143&autoplay=1&loop=1&muted=1&background=1",
+            src: "/videos/clinical-review/clip-00.mp4",
+            autoplay: true,
             caption: "",
           },
         },
@@ -65,6 +66,14 @@ export const nateraClinicalReview: CaseStudy = {
           type: "text",
           data: "<p>That reframing cost political capital. A systems-level analysis is slower and harder to sell than quick wins. But it meant we solved the structural problem instead of polishing its symptoms.</p>",
         },
+        {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/clip-01.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
       ],
     },
 
@@ -87,6 +96,14 @@ export const nateraClinicalReview: CaseStudy = {
               "Role confusion: no visibility into whose task was whose, causing duplicate and dropped work",
               "Context switching: four tools per review, each switch adding cognitive load",
             ],
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/clip-02.mp4",
+            autoplay: true,
+            caption: "",
           },
         },
         {
@@ -117,10 +134,26 @@ export const nateraClinicalReview: CaseStudy = {
           data: "<p>We tested iteratively with real cases and real reviewers throughout, not at the end, which caught early assumptions about system familiarity and led us to build in contextual help that made the tool learnable without formal training.</p>",
         },
         {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/clip-03.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
+        {
           type: "image",
           data: {
             src: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
             alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/clip-04.mp4",
+            autoplay: true,
+            caption: "",
           },
         },
         {

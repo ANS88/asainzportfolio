@@ -36,11 +36,12 @@ export default function Work() {
                 <a href={`/work/${study.slug}`} className="cs-preview-card">
                   {study.previewVideo ? (
                     <div className="cs-preview-video">
-                      <iframe
+                      <video
                         src={study.previewVideo}
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                        loading="lazy"
-                        tabIndex={-1}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                       />
                     </div>
                   ) : study.previewImage ? (
