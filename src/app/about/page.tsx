@@ -140,9 +140,6 @@ export default function About() {
               <p>
                 A role where I set research and design direction for an organization building health or AI products. I want to own a domain, build a practice, and shape how evidence gets used in product decisions.
               </p>
-              <p className="about-available">
-                Available for: design leadership in health/AI, building research teams from zero, advisory roles in femtech and clinical AI.
-              </p>
             </div>
             <div className="about-contact-links">
               <a href="mailto:sainz.nag@gmail.com">Email</a>
