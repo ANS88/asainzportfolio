@@ -838,7 +838,7 @@ a:hover { opacity: .85; }
 /* Video blocks */
 .cs-section-body--videos {
   max-width: none;
-  gap: 0;
+  gap: 1.5rem;
 }
 .cs-section-body--videos-row {
   max-width: none;
