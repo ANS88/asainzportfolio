@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 620" width="1360" height="620">
+  <defs>
+    <style>
+      text { font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1360" height="620" fill="#ffffff" rx="0"/>
+
+  <!-- Title -->
+  <text x="60" y="55" font-size="32" font-weight="700" fill="#1a0a2e" letter-spacing="-0.02em">Design principles</text>
+  <text x="60" y="85" font-size="16" fill="#6b5a7d" font-style="italic">Decision filters that governed every design choice in the redesign</text>
+
+  <!-- ===== ROW 1: Cards 1-3 ===== -->
+
+  <!-- Card 1: Scan-first interactions -->
+  <rect x="60" y="120" width="393" height="210" rx="12" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <circle cx="92" cy="152" r="16" fill="#1a0a2e"/>
+  <text x="92" y="158" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="120" y="158" font-size="15" font-weight="700" fill="#1a0a2e">Scan-first interactions</text>
+  <line x1="80" y1="174" x2="433" y2="174" stroke="#d4cade" stroke-width="1"/>
+  <text x="80" y="198" font-size="12" fill="#6b5a7d">Design to initiate workflows through</text>
+  <text x="80" y="216" font-size="12" fill="#6b5a7d">barcode scanning. Minimize manual</text>
+  <text x="80" y="234" font-size="12" fill="#6b5a7d">navigation by letting users trigger</text>
+  <text x="80" y="252" font-size="12" fill="#6b5a7d">tasks by scanning a sample's barcode.</text>
+
+  <!-- Card 2: Minimize friction between steps -->
+  <rect x="483" y="120" width="393" height="210" rx="12" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <circle cx="515" cy="152" r="16" fill="#1a0a2e"/>
+  <text x="515" y="158" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="543" y="158" font-size="15" font-weight="700" fill="#1a0a2e">Minimize friction between steps</text>
+  <line x1="503" y1="174" x2="856" y2="174" stroke="#d4cade" stroke-width="1"/>
+  <text x="503" y="198" font-size="12" fill="#6b5a7d">Remove unnecessary confirmations and</text>
+  <text x="503" y="216" font-size="12" fill="#6b5a7d">modal gatekeepers. Allow users to move</text>
+  <text x="503" y="234" font-size="12" fill="#6b5a7d">fluidly between steps without disruptive</text>
+  <text x="503" y="252" font-size="12" fill="#6b5a7d">messages.</text>
+
+  <!-- Card 3: Minimize physical interaction -->
+  <rect x="906" y="120" width="393" height="210" rx="12" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <circle cx="938" cy="152" r="16" fill="#1a0a2e"/>
+  <text x="938" y="158" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="966" y="158" font-size="15" font-weight="700" fill="#1a0a2e">Minimize physical interaction</text>
+  <line x1="926" y1="174" x2="1279" y2="174" stroke="#d4cade" stroke-width="1"/>
+  <text x="926" y="198" font-size="12" fill="#6b5a7d">Reduce reliance on clicks and mouse.</text>
+  <text x="926" y="216" font-size="12" fill="#6b5a7d">Design for hands-busy environments</text>
+  <text x="926" y="234" font-size="12" fill="#6b5a7d">&#8212; prioritize keyboard shortcuts,</text>
+  <text x="926" y="252" font-size="12" fill="#6b5a7d">scanning, and voice.</text>
+
+  <!-- ===== ROW 2: Cards 4-5 (centered) ===== -->
+
+  <!-- Card 4: Workflow visibility -->
+  <rect x="270" y="360" width="393" height="210" rx="12" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <circle cx="302" cy="392" r="16" fill="#1a0a2e"/>
+  <text x="302" y="398" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="330" y="398" font-size="15" font-weight="700" fill="#1a0a2e">Workflow visibility</text>
+  <line x1="290" y1="414" x2="643" y2="414" stroke="#d4cade" stroke-width="1"/>
+  <text x="290" y="438" font-size="12" fill="#6b5a7d">Incorporate clear, real-time</text>
+  <text x="290" y="456" font-size="12" fill="#6b5a7d">visualizations showing where each</text>
+  <text x="290" y="474" font-size="12" fill="#6b5a7d">sample or case is in the process.</text>
+  <text x="290" y="492" font-size="12" fill="#6b5a7d">Use visual cues and status indicators.</text>
+
+  <!-- Card 5: Automate data entry -->
+  <rect x="693" y="360" width="393" height="210" rx="12" fill="#ffffff" stroke="#3d1f5c" stroke-width="2"/>
+  <circle cx="725" cy="392" r="16" fill="#1a0a2e"/>
+  <text x="725" y="398" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="753" y="398" font-size="15" font-weight="700" fill="#1a0a2e">Automate data entry</text>
+  <line x1="713" y1="414" x2="1066" y2="414" stroke="#d4cade" stroke-width="1"/>
+  <text x="713" y="438" font-size="12" fill="#6b5a7d">Eliminate manual inputs where possible.</text>
+  <text x="713" y="456" font-size="12" fill="#6b5a7d">Automatically match IDs, populate</text>
+  <text x="713" y="474" font-size="12" fill="#6b5a7d">fields, and minimize prompts for user</text>
+  <text x="713" y="492" font-size="12" fill="#6b5a7d">choices.</text>
+
+</svg>

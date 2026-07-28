@@ -158,7 +158,7 @@ export const histopathologyWorkflow: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/histopathology-workflow/design-principles.png",
+            src: "/images/case-studies/histopathology-workflow/design-principles.svg",
             alt: "Design principles guiding the histopathology workflow redesign",
           },
         },
