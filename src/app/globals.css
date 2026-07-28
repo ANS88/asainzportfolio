@@ -839,13 +839,17 @@ a:hover { opacity: .85; }
 .cs-section-body--videos {
   max-width: none;
   gap: 0;
+}
+.cs-section-body--videos-row {
+  max-width: none;
+  gap: 0;
   flex-direction: row;
 }
-.cs-section-body--videos > * {
+.cs-section-body--videos-row > * {
   flex: 1 1 0;
   min-width: 0;
 }
-.cs-section-body--videos .cs-video-wrapper {
+.cs-section-body--videos-row .cs-video-wrapper {
   padding-bottom: 0;
   height: 640px;
 }

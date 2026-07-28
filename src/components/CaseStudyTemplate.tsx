@@ -133,6 +133,8 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
 /* ── Section Renderer ── */
 function CaseStudySection({ section }: { section: SectionType }) {
   const allVideos = section.content.every((c) => c.type === "video" || c.type === "videos");
+  const videoCount = section.content.filter((c) => c.type === "video" || c.type === "videos").length;
+  const videosClass = allVideos ? (videoCount >= 3 ? " cs-section-body--videos-row" : " cs-section-body--videos") : "";
   return (
     <>
       <hr className="section-line" />
@@ -142,7 +144,7 @@ function CaseStudySection({ section }: { section: SectionType }) {
             <div className="section-title">{section.title}</div>
           </AnimateOnScroll>
         )}
-        <div className={`cs-section-body${allVideos ? " cs-section-body--videos" : ""}`}>
+        <div className={`cs-section-body${videosClass}`}>
           {section.content.map((content, i) => (
             <AnimateOnScroll key={i} animation="fade-up">
               <ContentBlock content={content} />
