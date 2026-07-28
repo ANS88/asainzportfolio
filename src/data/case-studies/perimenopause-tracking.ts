@@ -2,7 +2,7 @@ import type { CaseStudy } from "@/types/case-study";
 
 export const perimenopauseTracking: CaseStudy = {
   slug: "perimenopause-tracking",
-  title: "When usability scores lie",
+  title: "Tracking Perimenopause",
   shortTitle: "A diary study of perimenopause symptom tracking",
   stakesLine:
     "Clue's perimenopause mode scored 88.3 on the System Usability Scale, far above the industry benchmark. My research question was what that number was hiding. I designed and ran a two-week mixed-methods diary study with 40 women to measure what usability metrics miss: whether tracking actually changes how people understand, manage, and advocate for their health.",
