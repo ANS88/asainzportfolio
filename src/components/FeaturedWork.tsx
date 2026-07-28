@@ -38,8 +38,8 @@ export default function FeaturedWork() {
     <section>
       <AnimateOnScroll animation="fade-in">
         <p className="transform-tagline">
-          I redesign the systems behind clinical decisions —<br />
-          and the experience changes <em>downstream.</em>
+          Ambiguity is where I start.<br />
+          Clarity is what I <em>ship.</em>
         </p>
       </AnimateOnScroll>
 
