@@ -38,7 +38,7 @@ export default function Work() {
                   {study.previewVideo && study.previewVideo.startsWith("/") ? (
                     <HoverVideoLocal src={study.previewVideo} />
                   ) : study.previewVideo ? (
-                    <HoverVideoEmbed src={study.previewVideo} poster={study.previewImage} />
+                    <HoverVideoEmbed src={study.previewVideo} />
                   ) : study.previewImage ? (
                     <div className="cs-preview-image">
                       <img src={study.previewImage} alt={study.title} loading="lazy" />

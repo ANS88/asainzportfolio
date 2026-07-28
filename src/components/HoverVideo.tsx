@@ -21,28 +21,17 @@ export function HoverVideoLocal({ src }: { src: string }) {
   );
 }
 
-export function HoverVideoEmbed({ src, poster }: { src: string; poster?: string }) {
-  const [hovered, setHovered] = useState(false);
-
-  const mutedSrc = src.includes("muted=1") ? src : src + "&muted=1";
+export function HoverVideoEmbed({ src }: { src: string }) {
+  const mutedSrc = src.includes("mute=1") ? src : src + "&mute=1";
 
   return (
-    <div
-      className="cs-preview-video"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {hovered ? (
-        <iframe
-          src={mutedSrc}
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          tabIndex={-1}
-        />
-      ) : poster ? (
-        <img src={poster} alt="" className="cs-preview-poster" />
-      ) : (
-        <div className="cs-preview-poster-blank" />
-      )}
+    <div className="cs-preview-video" style={{ pointerEvents: "none" }}>
+      <iframe
+        src={mutedSrc}
+        allow="autoplay; encrypted-media"
+        tabIndex={-1}
+        loading="lazy"
+      />
     </div>
   );
 }
