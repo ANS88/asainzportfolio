@@ -1833,20 +1833,19 @@ section { padding: 5rem 0; }
   grid-template-columns: 7rem 1fr 1fr;
   gap: 1.5rem;
   align-items: baseline;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-bottom: none;
   text-decoration: none;
   color: var(--ink);
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
 }
-.work-row:first-child {
-  border-top: 1px solid var(--border);
+.work-row:last-child {
+  border-bottom: 1px solid var(--border);
 }
 .work-row:hover {
   opacity: 1;
   background: var(--warm);
-  margin: 0 -1.5rem;
-  padding: 1.5rem;
 }
 .work-row-company {
   font-family: var(--sans);
