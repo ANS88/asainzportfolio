@@ -8,12 +8,6 @@ const pages = [
     tag: "Portfolio",
   },
   {
-    title: "Thinking",
-    href: "/thinking",
-    description: "Working positions on healthcare design, AI health products, and femtech.",
-    tag: "Essays",
-  },
-  {
     title: "About",
     href: "/about",
     description: "Researcher who ships products, designer who publishes research.",
