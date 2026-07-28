@@ -436,7 +436,6 @@ a:hover { opacity: .85; }
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  pointer-events: none;
   border-radius: 12px;
 }
 .cs-preview-video video {
@@ -453,6 +452,17 @@ a:hover { opacity: .85; }
   width: 100%;
   height: 100%;
   border: 0;
+}
+.cs-preview-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cs-preview-poster-blank {
+  width: 100%;
+  height: 100%;
+  background: var(--accent-soft);
 }
 .cs-preview-image {
   width: 100%;
