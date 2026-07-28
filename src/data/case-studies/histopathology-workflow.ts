@@ -65,15 +65,11 @@ export const histopathologyWorkflow: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>The organization's default was remote discovery — no travel budget, no scheduling around lab operations, no disruption to a production clinical lab. Every incentive pointed that direction.</p>",
+          data: "<p>I spent days shadowing lab technicians, pathologists, and micro dissection specialists through full shifts — standing next to the microtome, watching the staining process, following tissue samples from station to station. Not interviews. Not described workflows. The actual physical work, observed in real time.</p>",
         },
         {
           type: "text",
-          data: "<p>You cannot redesign a workflow involving microtomes, scanners, and tissue specimens by asking people to describe it over video. Expert users narrate their idealized process, not their actual one — and the gap between the two is exactly where the errors live. I made the case to lab ops leadership and my own stakeholders that on-site ethnography was not a research preference but a risk-management decision: the cost of travel was trivial against the cost of building the wrong system for a patient-safety-critical pipeline.</p>",
-        },
-        {
-          type: "text",
-          data: "<p>What it bought: the physical choreography of the work — how technicians move between stations, where they reach for a spreadsheet because the system fails them, where the scanner integration silently breaks. None of it would have surfaced on a call.</p>",
+          data: "<p>The biggest insight wasn't in the task list — it was in the tool. Across every stage of the pipeline, the one constant was the barcode scanner. Technicians reached for it more than any keyboard, mouse, or screen. It was the physical anchor of their workflow, but the software treated it as an input peripheral, not a driver. That observation became the design thesis: if the scanner is how lab staff actually move through their work, the scanner should be driving the interface — not the other way around.</p>",
         },
       ],
     },
