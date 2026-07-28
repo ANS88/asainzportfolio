@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" fill="none">
+  <style>
+    text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .rule-num { font-size: 32px; font-weight: 700; fill: #d0d0d0; }
+    .rule-title { font-size: 14px; font-weight: 600; fill: #1a1a1a; }
+    .rule-desc { font-size: 11px; fill: #555; }
+    .divider { stroke: #e5e5e5; stroke-width: 1; }
+  </style>
+
+  <!-- Rule 1 -->
+  <text x="40" y="70" class="rule-num">01</text>
+  <text x="100" y="55" class="rule-title">Data Boundaries Are Absolute</text>
+  <text x="100" y="75" class="rule-desc">No PHI, patient data, or sensitive lab data enters any AI tool.</text>
+  <text x="100" y="92" class="rule-desc">Research data is de-identified before processing; all tools run through</text>
+  <text x="100" y="109" class="rule-desc">company-approved accounts under existing data handling policy.</text>
+  <line x1="40" y1="130" x2="920" y2="130" class="divider"/>
+
+  <!-- Rule 2 -->
+  <text x="40" y="170" class="rule-num">02</text>
+  <text x="100" y="155" class="rule-title">AI Output Is Always a Draft</text>
+  <text x="100" y="175" class="rule-desc">Findings, copy, code, and documentation require human review</text>
+  <text x="100" y="192" class="rule-desc">by someone accountable for the result. No exceptions.</text>
+  <line x1="40" y1="215" x2="920" y2="215" class="divider"/>
+
+  <!-- Rule 3 -->
+  <text x="40" y="255" class="rule-num">03</text>
+  <text x="100" y="240" class="rule-title">Provenance Is Tracked</text>
+  <text x="100" y="260" class="rule-desc">Reports and deliverables note where AI assisted, so review</text>
+  <text x="100" y="277" class="rule-desc">effort can be calibrated honestly.</text>
+  <line x1="40" y1="300" x2="920" y2="300" class="divider"/>
+
+  <!-- Rule 4 -->
+  <text x="40" y="340" class="rule-num">04</text>
+  <text x="100" y="325" class="rule-title">Centrally Approved, Individually Explored</text>
+  <text x="100" y="345" class="rule-desc">Short list of sanctioned tools with a lightweight process for proposing</text>
+  <text x="100" y="362" class="rule-desc">new ones. Experimentation without shadow-IT sprawl.</text>
+  <line x1="40" y1="385" x2="920" y2="385" class="divider"/>
+
+  <!-- Rule 5 -->
+  <text x="40" y="425" class="rule-num">05</text>
+  <text x="100" y="410" class="rule-title">Skill-Building Is Deliberate</text>
+  <text x="100" y="430" class="rule-desc">Prompt craft, AI-assisted prototyping, and model-limitation literacy</text>
+  <text x="100" y="447" class="rule-desc">are team competencies with shared patterns and internal show-and-tells.</text>
+</svg>

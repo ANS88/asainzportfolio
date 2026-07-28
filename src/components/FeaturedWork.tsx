@@ -31,6 +31,12 @@ const transformations = [
     project: "Tracking Perimenopause",
     to: "Understood",
   },
+  {
+    slug: "ai-design-practice",
+    from: "Manual",
+    project: "AI in Design Practice",
+    to: "Augmented",
+  },
 ];
 
 export default function FeaturedWork() {

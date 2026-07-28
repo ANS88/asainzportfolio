@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" fill="none">
+  <style>
+    text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .col-header { font-size: 14px; font-weight: 700; fill: #1a1a1a; text-anchor: middle; }
+    .col-sub { font-size: 11px; fill: #888; text-anchor: middle; }
+    .item { font-size: 12px; fill: #333; }
+    .arrow { font-size: 20px; fill: #ccc; text-anchor: middle; }
+    .divider { stroke: #e0e0e0; stroke-width: 1; stroke-dasharray: 6 4; }
+    .tag-ai { font-size: 10px; font-weight: 600; fill: #888; }
+    .tag-human { font-size: 10px; font-weight: 600; fill: #1a1a1a; }
+  </style>
+
+  <!-- Left column: Production (AI accelerates) -->
+  <text x="240" y="40" class="col-header">Production</text>
+  <text x="240" y="58" class="col-sub">AI accelerates</text>
+
+  <rect x="60" y="80" width="360" height="36" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="104" class="item">Transcription &amp; first-pass coding</text>
+  <text x="370" y="104" class="tag-ai">AI</text>
+
+  <rect x="60" y="126" width="360" height="36" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="150" class="item">Affinity clusters &amp; theme drafts</text>
+  <text x="370" y="150" class="tag-ai">AI</text>
+
+  <rect x="60" y="172" width="360" height="36" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="196" class="item">Prototype scaffolding &amp; boilerplate</text>
+  <text x="370" y="196" class="tag-ai">AI</text>
+
+  <rect x="60" y="218" width="360" height="36" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="242" class="item">Component variants &amp; documentation</text>
+  <text x="370" y="242" class="tag-ai">AI</text>
+
+  <rect x="60" y="264" width="360" height="36" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="288" class="item">Report drafts &amp; meeting notes</text>
+  <text x="370" y="288" class="tag-ai">AI</text>
+
+  <!-- Arrow -->
+  <text x="480" y="196" class="arrow">&rarr;</text>
+
+  <!-- Vertical dashed divider -->
+  <line x1="480" y1="70" x2="480" y2="310" class="divider"/>
+
+  <!-- Right column: Judgment (Humans own) -->
+  <text x="720" y="40" class="col-header">Judgment</text>
+  <text x="720" y="58" class="col-sub">Humans own</text>
+
+  <rect x="540" y="80" width="360" height="36" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <text x="560" y="104" class="item">What to build &amp; what evidence means</text>
+  <text x="850" y="104" class="tag-human">HUMAN</text>
+
+  <rect x="540" y="126" width="360" height="36" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <text x="560" y="150" class="item">Theme validation against field memory</text>
+  <text x="850" y="150" class="tag-human">HUMAN</text>
+
+  <rect x="540" y="172" width="360" height="36" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <text x="560" y="196" class="item">Interaction refinement &amp; craft</text>
+  <text x="850" y="196" class="tag-human">HUMAN</text>
+
+  <rect x="540" y="218" width="360" height="36" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <text x="560" y="242" class="item">Quality standards &amp; what ships</text>
+  <text x="850" y="242" class="tag-human">HUMAN</text>
+
+  <rect x="540" y="264" width="360" height="36" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <text x="560" y="288" class="item">Domain review &amp; final authority</text>
+  <text x="850" y="288" class="tag-human">HUMAN</text>
+</svg>
