@@ -1721,8 +1721,8 @@ section { padding: 5rem 0; }
 
 /* ═══ CONTACT ═══ */
 .contact-block {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--accent-soft);
+  color: var(--ink);
   padding: 8rem 0;
   margin-top: 5rem;
   position: relative;
@@ -1731,15 +1731,16 @@ section { padding: 5rem 0; }
 .contact-block::before {
   display: none;
 }
-.contact-block h2 { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 500; line-height: 1; letter-spacing: -.02em; margin-bottom: 2rem; }
+.contact-block h2 { font-family: var(--sans); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1; letter-spacing: -.02em; margin-bottom: 2rem; color: var(--ink); }
 .contact-links { display: flex; gap: 2rem; }
 .contact-links a {
-  color: var(--accent-soft);
+  color: var(--ink);
   font-size: 1.05rem;
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
   display: inline-block;
+  opacity: .6;
 }
-.contact-links a:hover { color: var(--paper); opacity: 1; }
+.contact-links a:hover { opacity: 1; }
 
 /* ═══ TOOLTIP ═══ */
 .tip { position: relative; border-bottom: 1.5px dashed var(--accent-soft); cursor: help; transition: border-color var(--transition-fast); }
