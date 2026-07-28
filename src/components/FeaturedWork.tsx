@@ -38,6 +38,7 @@ export default function FeaturedWork() {
     <section>
       <AnimateOnScroll animation="fade-up">
         <div className="label">Selected work</div>
+        <p className="section-subtitle">I do my best work amid ambiguity and entangled systems, in pursuit of clarity.</p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up">
         <div className="transform-table">
