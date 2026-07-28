@@ -118,6 +118,13 @@ export const nateraClinicalReview: CaseStudy = {
           data: "<p>We tested iteratively with real cases and real reviewers throughout, not at the end, which caught early assumptions about system familiarity and led us to build in contextual help that made the tool learnable without formal training.</p>",
         },
         {
+          type: "image",
+          data: {
+            src: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
+            alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
+          },
+        },
+        {
           type: "video",
           data: {
             src: "/videos/clinical-review/clip-02.mp4",
@@ -137,21 +144,6 @@ export const nateraClinicalReview: CaseStudy = {
           type: "video",
           data: {
             src: "/videos/clinical-review/clip-03.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
-          type: "image",
-          data: {
-            src: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
-            alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/clip-04.mp4",
             autoplay: true,
             caption: "",
           },
@@ -178,14 +170,6 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "text",
           data: "<p>The organizational impact outlasted the product. The discovery methodology became the standard for lab workflow projects. Engineering reused the role-based queue architecture across product lines. And design's position in the org shifted: before this project, we were brought in to validate solutions; after, we're brought in to define the problem.</p>",
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/snippet-03.mp4",
-            autoplay: true,
-            caption: "",
-          },
         },
       ],
     },
