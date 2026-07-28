@@ -99,22 +99,6 @@ export const nateraClinicalReview: CaseStudy = {
           },
         },
         {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/clip-02.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/snippet-02.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
           type: "image",
           data: {
             src: "/images/case-studies/natera-clinical-review/distributed-cognition-map.svg",
@@ -140,6 +124,22 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "text",
           data: "<p>We tested iteratively with real cases and real reviewers throughout, not at the end, which caught early assumptions about system familiarity and led us to build in contextual help that made the tool learnable without formal training.</p>",
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/clip-02.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/clinical-review/snippet-02.mp4",
+            autoplay: true,
+            caption: "",
+          },
         },
         {
           type: "video",
