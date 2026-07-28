@@ -34,7 +34,6 @@ export default function Playground() {
           <AnimateOnScroll animation="fade-in">
             <div className="label">Experiments</div>
             <h1 className="page-title">Playground</h1>
-            <p className="page-desc">Side projects, prototypes, and ideas I'm exploring outside of client work.</p>
           </AnimateOnScroll>
         </div>
         <hr className="section-line" />
