@@ -50,14 +50,6 @@ export const nateraClinicalReview: CaseStudy = {
           type: "text",
           data: "<p>The constraint: expert users, a regulated environment, and zero tolerance for trading accuracy for speed.</p>",
         },
-        {
-          type: "video",
-          data: {
-            src: "/videos/clinical-review/snippet-01.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
       ],
     },
 
