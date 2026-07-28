@@ -132,14 +132,17 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
 
 /* ── Section Renderer ── */
 function CaseStudySection({ section }: { section: SectionType }) {
+  const allVideos = section.content.every((c) => c.type === "video" || c.type === "videos");
   return (
     <>
       <hr className="section-line" />
       <section id={section.id} className={`cs-section cs-section-${section.type}`}>
-        <AnimateOnScroll>
-          <div className="section-title">{section.title}</div>
-        </AnimateOnScroll>
-        <div className="cs-section-body">
+        {section.title && (
+          <AnimateOnScroll>
+            <div className="section-title">{section.title}</div>
+          </AnimateOnScroll>
+        )}
+        <div className={`cs-section-body${allVideos ? " cs-section-body--videos" : ""}`}>
           {section.content.map((content, i) => (
             <AnimateOnScroll key={i} animation="fade-up">
               <ContentBlock content={content} />
