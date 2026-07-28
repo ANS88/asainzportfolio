@@ -64,7 +64,7 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1#t=100s",
+            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=100s",
             caption: "",
           },
         },
@@ -139,7 +139,7 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1#t=200s",
+            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=200s",
             caption: "",
           },
         },
