@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" fill="none">
   <style>
     text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .rule-num { font-size: 32px; font-weight: 700; fill: #d0d0d0; }
-    .rule-title { font-size: 14px; font-weight: 600; fill: #1a1a1a; }
-    .rule-desc { font-size: 11px; fill: #555; }
-    .divider { stroke: #e5e5e5; stroke-width: 1; }
+    .rule-num { font-size: 32px; font-weight: 700; fill: #4a2d6b; }
+    .rule-title { font-size: 14px; font-weight: 600; fill: #c4a8f0; }
+    .rule-desc { font-size: 11px; fill: #b8a9e0; }
+    .divider { stroke: #3a1d5b; stroke-width: 1; }
   </style>
 
   <!-- Rule 1 -->

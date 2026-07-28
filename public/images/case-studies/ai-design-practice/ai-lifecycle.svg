@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
   <style>
     text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .title { font-size: 18px; font-weight: 600; fill: #1a1a1a; }
-    .subtitle { font-size: 12px; fill: #666; }
-    .node-label { font-size: 13px; font-weight: 600; fill: #1a1a1a; text-anchor: middle; }
-    .node-sub { font-size: 10px; fill: #555; text-anchor: middle; }
-    .center-label { font-size: 14px; font-weight: 700; fill: #1a1a1a; text-anchor: middle; }
-    .center-sub { font-size: 11px; fill: #666; text-anchor: middle; }
-    .connector { stroke: #ccc; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
-    .ring { stroke: #e0e0e0; stroke-width: 1; fill: none; }
+    .title { font-size: 18px; font-weight: 600; fill: #e8daf5; }
+    .subtitle { font-size: 12px; fill: #b8a9e0; }
+    .node-label { font-size: 13px; font-weight: 600; fill: #e8daf5; text-anchor: middle; }
+    .node-sub { font-size: 10px; fill: #b8a9e0; text-anchor: middle; }
+    .center-label { font-size: 14px; font-weight: 700; fill: #c4a8f0; text-anchor: middle; }
+    .center-sub { font-size: 11px; fill: #b8a9e0; text-anchor: middle; }
+    .connector { stroke: #4a2d6b; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
+    .ring { stroke: #3a1d5b; stroke-width: 1; fill: none; }
   </style>
 
   <!-- Center hub -->
-  <circle cx="480" cy="260" r="72" fill="#f8f8f8" stroke="#d0d0d0" stroke-width="1.5"/>
+  <circle cx="480" cy="260" r="72" fill="#2e1440" stroke="#4a2d6b" stroke-width="1.5"/>
   <text x="480" y="250" class="center-label">Human Judgment</text>
   <text x="480" y="268" class="center-sub">AI accelerates production;</text>
   <text x="480" y="282" class="center-sub">humans own decisions</text>
@@ -22,40 +22,40 @@
 
   <!-- Node 1: Research Synthesis (top) -->
   <line x1="480" y1="188" x2="480" y2="105" class="connector"/>
-  <rect x="370" y="30" width="220" height="72" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <rect x="370" y="30" width="220" height="72" rx="12" fill="#2a1239" stroke="#4a2d6b" stroke-width="1.2"/>
   <text x="480" y="58" class="node-label">Research Synthesis</text>
   <text x="480" y="74" class="node-sub">AI drafts themes &amp; clusters;</text>
   <text x="480" y="88" class="node-sub">researchers adjudicate findings</text>
 
   <!-- Node 2: Prototyping (top-right) -->
   <line x1="540" y1="200" x2="660" y2="130" class="connector"/>
-  <rect x="620" y="60" width="220" height="72" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <rect x="620" y="60" width="220" height="72" rx="12" fill="#2a1239" stroke="#4a2d6b" stroke-width="1.2"/>
   <text x="730" y="88" class="node-label">Prototyping</text>
   <text x="730" y="104" class="node-sub">AI scaffolds interactive code;</text>
   <text x="730" y="118" class="node-sub">designers refine craft details</text>
 
   <!-- Node 3: Design Systems (bottom-right) -->
   <line x1="550" y1="310" x2="660" y2="370" class="connector"/>
-  <rect x="620" y="340" width="220" height="72" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <rect x="620" y="340" width="220" height="72" rx="12" fill="#2a1239" stroke="#4a2d6b" stroke-width="1.2"/>
   <text x="730" y="368" class="node-label">Design Systems</text>
   <text x="730" y="384" class="node-sub">AI generates variants &amp; docs;</text>
   <text x="730" y="398" class="node-sub">designers ship reviewable diffs</text>
 
   <!-- Node 4: Content (bottom-left) -->
   <line x1="410" y1="310" x2="300" y2="370" class="connector"/>
-  <rect x="120" y="340" width="220" height="72" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <rect x="120" y="340" width="220" height="72" rx="12" fill="#2a1239" stroke="#4a2d6b" stroke-width="1.2"/>
   <text x="230" y="368" class="node-label">Content &amp; Communication</text>
   <text x="230" y="384" class="node-sub">AI drafts reports &amp; copy;</text>
   <text x="230" y="398" class="node-sub">humans review with domain context</text>
 
   <!-- Node 5: Design Ops (top-left) -->
   <line x1="420" y1="200" x2="300" y2="130" class="connector"/>
-  <rect x="120" y="60" width="220" height="72" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.2"/>
+  <rect x="120" y="60" width="220" height="72" rx="12" fill="#2a1239" stroke="#4a2d6b" stroke-width="1.2"/>
   <text x="230" y="88" class="node-label">Design Operations</text>
   <text x="230" y="104" class="node-sub">AI automates meeting notes,</text>
   <text x="230" y="118" class="node-sub">tagging, and onboarding updates</text>
 
   <!-- Bottom governance bar -->
-  <rect x="180" y="460" width="600" height="44" rx="8" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
-  <text x="480" y="486" class="node-label" style="font-size:12px">Governance: data boundaries &bull; draft-never-final &bull; provenance tracking &bull; approved tooling &bull; skill-building</text>
+  <rect x="180" y="460" width="600" height="44" rx="8" fill="#2e1440" stroke="#4a2d6b" stroke-width="1"/>
+  <text x="480" y="486" class="node-label" style="font-size:12px">Governance: data boundaries &#x2022; draft-never-final &#x2022; provenance tracking &#x2022; approved tooling &#x2022; skill-building</text>
 </svg>
