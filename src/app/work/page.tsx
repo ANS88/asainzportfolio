@@ -34,7 +34,7 @@ export default function Work() {
             {caseStudyList.map((study) => (
               <AnimateOnScroll key={study.slug} animation="fade-up">
                 <a href={`/work/${study.slug}`} className="cs-preview-card">
-                  {study.previewVideo ? (
+                  {study.previewVideo && study.previewVideo.startsWith("/") ? (
                     <div className="cs-preview-video">
                       <video
                         src={study.previewVideo}
@@ -42,6 +42,15 @@ export default function Work() {
                         muted
                         loop
                         playsInline
+                      />
+                    </div>
+                  ) : study.previewVideo ? (
+                    <div className="cs-preview-video">
+                      <iframe
+                        src={study.previewVideo}
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        loading="lazy"
+                        tabIndex={-1}
                       />
                     </div>
                   ) : study.previewImage ? (

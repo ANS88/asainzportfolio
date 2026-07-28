@@ -11,7 +11,7 @@ export const unifiedPatientPortal: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
-  previewVideo: "/videos/patient-portal/clip-00.mp4",
+  previewVideo: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
 
   impact: [
     { value: "181K", metric: "Patient accounts" },
@@ -29,8 +29,7 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/patient-portal/clip-00.mp4",
-            autoplay: true,
+            src: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
             caption: "",
           },
         },
@@ -62,14 +61,6 @@ export const unifiedPatientPortal: CaseStudy = {
           type: "text",
           data: "<p>From there I ran workshops with 15 SMEs — genetic counselors, lab ops, product — to map the full journey from the system side and find where patient experience broke down. The combination of patient-facing and system-facing research is what surfaced the real design opportunities, not just the obvious ones.</p>",
         },
-        {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-01.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
       ],
     },
 
@@ -97,14 +88,6 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "text",
           data: "<p>Anchoring the team to principles, rather than adjudicating features one by one, is what let a small cross-functional team move fast across two business units without me in every room.</p>",
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-02.mp4",
-            autoplay: true,
-            caption: "",
-          },
         },
         {
           type: "image",
@@ -140,26 +123,10 @@ export const unifiedPatientPortal: CaseStudy = {
           data: "<p>We designed around the moments that carry the most weight: scheduling a sample draw and opening results — with optional educational videos and a path to a genetic counselor built into the results experience. Usability testing with patients sharpened the flows across three major iterations, and pre-results education proved to do double duty: easing anxiety while improving comprehension.</p>",
         },
         {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-03.mp4",
-            autoplay: true,
-            caption: "",
-          },
-        },
-        {
           type: "image",
           data: {
             src: "/images/case-studies/unified-patient-portal/iterations.png",
             alt: "Prototype iterations tested during usability sessions",
-          },
-        },
-        {
-          type: "video",
-          data: {
-            src: "/videos/patient-portal/clip-04.mp4",
-            autoplay: true,
-            caption: "",
           },
         },
       ],

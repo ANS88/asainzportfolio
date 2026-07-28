@@ -50,6 +50,14 @@ export const nateraClinicalReview: CaseStudy = {
           type: "text",
           data: "<p>The constraint: expert users, a regulated environment, and zero tolerance for trading accuracy for speed.</p>",
         },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/clip-00.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
       ],
     },
 
@@ -102,6 +110,14 @@ export const nateraClinicalReview: CaseStudy = {
           type: "video",
           data: {
             src: "/videos/clinical-review/clip-02.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/clip-01.mp4",
             autoplay: true,
             caption: "",
           },
@@ -178,6 +194,30 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "text",
           data: "<p>The organizational impact outlasted the product. The discovery methodology became the standard for lab workflow projects. Engineering reused the role-based queue architecture across product lines. And design's position in the org shifted: before this project, we were brought in to validate solutions; after, we're brought in to define the problem.</p>",
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/clip-02.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/clip-03.mp4",
+            autoplay: true,
+            caption: "",
+          },
+        },
+        {
+          type: "video",
+          data: {
+            src: "/videos/patient-portal/clip-04.mp4",
+            autoplay: true,
+            caption: "",
+          },
         },
       ],
     },
