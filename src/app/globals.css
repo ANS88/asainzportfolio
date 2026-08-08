@@ -2142,6 +2142,201 @@ section { padding: 5rem 0; }
   .work-gallery-thumb { height: 130px; }
 }
 
+/* ── Blow-out overlay ── */
+.blowout-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 5, 22, 0);
+  transition: background .4s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blowout-backdrop--open {
+  background: rgba(15, 5, 22, .85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.blowout-panel {
+  position: fixed;
+  border-radius: 12px;
+  overflow: hidden;
+  overflow-y: auto;
+  background: var(--warm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  transition:
+    top .45s cubic-bezier(.4, 0, .2, 1),
+    left .45s cubic-bezier(.4, 0, .2, 1),
+    width .45s cubic-bezier(.4, 0, .2, 1),
+    height .45s cubic-bezier(.4, 0, .2, 1),
+    border-radius .45s cubic-bezier(.4, 0, .2, 1),
+    opacity .35s ease;
+  opacity: 1;
+}
+.blowout-panel--open {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  width: min(640px, 90vw) !important;
+  height: auto !important;
+  max-height: 85vh;
+  border-radius: 16px;
+  border-color: var(--accent-soft);
+}
+
+.blowout-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink2);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: all var(--transition-fast);
+  opacity: 0;
+}
+.blowout-panel--open .blowout-close {
+  opacity: 1;
+  transition-delay: .3s;
+}
+.blowout-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(196, 168, 240, .12);
+}
+
+.blowout-hero {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: var(--cream);
+}
+.blowout-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blowout-body {
+  padding: 1.5rem 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .35s ease .25s, transform .35s ease .25s;
+}
+.blowout-panel--open .blowout-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blowout-meta {
+  font-size: .7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ink3);
+}
+.blowout-title {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.25;
+}
+.blowout-stakes {
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--ink2);
+}
+
+.blowout-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: .75rem;
+  margin-top: .5rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+}
+.blowout-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.blowout-metric-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.blowout-metric-label {
+  font-size: .68rem;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.blowout-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .25rem;
+}
+.blowout-tag {
+  font-size: .68rem;
+  padding: .2rem .55rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--ink2);
+  background: transparent;
+}
+
+.blowout-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .75rem;
+  padding: .65rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent-soft);
+  background: transparent;
+  color: var(--accent);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  transition: all var(--transition-fast);
+  align-self: flex-start;
+  text-decoration: none;
+}
+.blowout-cta:hover {
+  background: rgba(196, 168, 240, .1);
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .blowout-panel--open {
+    width: 95vw !important;
+    max-height: 90vh;
+  }
+  .blowout-hero { height: 180px; }
+  .blowout-body { padding: 1.25rem 1.25rem 1.5rem; }
+  .blowout-title { font-size: 1.25rem; }
+  .blowout-metrics { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* Selection highlight — placed last to override Tailwind preflight */
 *::selection { background: #F0386B; color: #fff; }
 *::-moz-selection { background: #F0386B; color: #fff; }
