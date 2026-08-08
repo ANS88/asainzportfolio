@@ -2002,6 +2002,146 @@ section { padding: 5rem 0; }
   .transform-project { font-size: .95rem; }
 }
 
+/* ── Work Gallery (homepage) ── */
+.work-gallery {
+  padding: 2rem 0;
+}
+.work-gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.work-gallery-title {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--ink3);
+}
+.work-gallery-nav {
+  display: flex;
+  gap: .5rem;
+}
+.work-gallery-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink2);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: none;
+}
+.work-gallery-arrow:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(196, 168, 240, .08);
+}
+.work-gallery-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: .75rem;
+  scrollbar-width: none;
+}
+.work-gallery-track::-webkit-scrollbar { display: none; }
+
+.work-gallery-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--warm);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.work-gallery-card:hover {
+  border-color: var(--accent-soft);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.work-gallery-thumb {
+  height: 160px;
+  overflow: hidden;
+  background: var(--cream);
+}
+.work-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+.work-gallery-card:hover .work-gallery-thumb img {
+  transform: scale(1.03);
+}
+.work-gallery-card-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  flex: 1;
+}
+.work-gallery-meta {
+  font-size: .7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ink3);
+}
+.work-gallery-card-title {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.3;
+}
+.work-gallery-judgment {
+  font-size: .82rem;
+  line-height: 1.45;
+  color: var(--ink2);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.work-gallery-metric {
+  margin-top: auto;
+  padding-top: .6rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+}
+.work-gallery-metric-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.work-gallery-metric-label {
+  font-size: .72rem;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+@media (max-width: 640px) {
+  .work-gallery-card { flex: 0 0 280px; }
+  .work-gallery-thumb { height: 130px; }
+}
+
 /* Selection highlight — placed last to override Tailwind preflight */
 *::selection { background: #F0386B; color: #fff; }
 *::-moz-selection { background: #F0386B; color: #fff; }
