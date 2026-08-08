@@ -10,23 +10,33 @@ export default function WorkGallery() {
   const [expanded, setExpanded] = useState<CaseStudy | null>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
   const [phase, setPhase] = useState<"idle" | "measure" | "animate">("idle");
+  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: number) => {
     trackRef.current?.scrollBy({ left: dir * 360, behavior: "smooth" });
   };
 
-  const handleCardClick = useCallback(
+  const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, study: CaseStudy) => {
-      e.preventDefault();
+      if (expanded) return;
       const card = e.currentTarget;
-      const r = card.getBoundingClientRect();
-      setRect(r);
-      setExpanded(study);
-      setPhase("measure");
+      hoverTimer.current = setTimeout(() => {
+        const r = card.getBoundingClientRect();
+        setRect(r);
+        setExpanded(study);
+        setPhase("measure");
+      }, 350);
     },
-    []
+    [expanded]
   );
+
+  const handleMouseLeave = useCallback(() => {
+    if (hoverTimer.current) {
+      clearTimeout(hoverTimer.current);
+      hoverTimer.current = null;
+    }
+  }, []);
 
   useEffect(() => {
     if (phase === "measure") {
@@ -94,7 +104,8 @@ export default function WorkGallery() {
             key={study.slug}
             href={`/work/${study.slug}`}
             className="work-gallery-card"
-            onClick={(e) => handleCardClick(e, study)}
+            onMouseEnter={(e) => handleMouseEnter(e, study)}
+            onMouseLeave={handleMouseLeave}
           >
             {study.previewImage && (
               <div className="work-gallery-thumb">
