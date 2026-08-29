@@ -2353,7 +2353,6 @@ section { padding: 5rem 0; }
 .sc-card {
   position: sticky;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: 420px;
   border-radius: 20px;
   overflow: hidden;
@@ -2506,12 +2505,13 @@ section { padding: 5rem 0; }
 
 @media (max-width: 768px) {
   .sc-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     min-height: auto;
   }
   .sc-visual {
     aspect-ratio: 16 / 9;
     min-height: auto;
+    order: -1;
   }
   .sc-content {
     padding: 1.25rem 1.35rem 1.5rem;

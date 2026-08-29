@@ -13,6 +13,16 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "ai-design-practice": { from: "Manual", to: "Augmented" },
 };
 
+// Gallery rhythm: alternate sides + vary proportions
+const galleryPattern: { side: "left" | "right"; split: string }[] = [
+  { side: "left",  split: "1.4fr 1fr" },
+  { side: "right", split: "1fr 1.2fr" },
+  { side: "left",  split: "1fr 1fr"   },
+  { side: "right", split: "1fr 1.6fr" },
+  { side: "left",  split: "1.6fr 1fr" },
+  { side: "right", split: "1fr 1fr"   },
+];
+
 function ProjectCard({
   study,
   index,
@@ -26,6 +36,7 @@ function ProjectCard({
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [visible, setVisible] = useState(false);
   const labels = transformLabels[study.slug];
+  const pattern = galleryPattern[index % galleryPattern.length];
 
   const isLocalVideo =
     study.previewVideo && study.previewVideo.startsWith("/");
@@ -51,6 +62,75 @@ function ProjectCard({
 
   const stickyTop = 80 + index * 12;
 
+  const visual = (
+    <div className="sc-visual">
+      {isLocalVideo ? (
+        <video
+          ref={videoRef}
+          src={study.previewVideo}
+          muted
+          loop
+          playsInline
+          className="sc-media"
+        />
+      ) : isEmbed ? (
+        <iframe
+          src={study.previewVideo}
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowFullScreen
+          loading="lazy"
+          className="sc-iframe"
+        />
+      ) : study.previewImage ? (
+        <img
+          src={study.previewImage}
+          alt={study.title}
+          loading="lazy"
+          className="sc-media"
+        />
+      ) : null}
+      <div className="sc-visual-overlay" />
+    </div>
+  );
+
+  const content = (
+    <div className="sc-content">
+      <div className="sc-content-inner">
+        <span className="sc-index">
+          {String(index + 1).padStart(2, "0")}/{String(total).padStart(2, "0")}
+        </span>
+
+        <div className="sc-text">
+          <span className="sc-meta">
+            {study.company} &middot; {study.timeline}
+          </span>
+          <h3 className="sc-title">{study.title}</h3>
+          {labels && (
+            <div className="sc-transform">
+              <span className="sc-from">{labels.from}</span>
+              <span className="sc-arr">&rarr;</span>
+              <span className="sc-to">{labels.to}</span>
+            </div>
+          )}
+          {study.judgment && (
+            <p className="sc-judgment">{study.judgment}</p>
+          )}
+        </div>
+
+        <div className="sc-stats">
+          {study.impact.slice(0, 3).map((m, i) => (
+            <div key={i} className="sc-stat">
+              <span className="sc-stat-val">{m.value}</span>
+              <span className="sc-stat-lbl">{m.metric}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <span className="sc-cta">View project &rarr;</span>
+    </div>
+  );
+
   return (
     <div
       className="sc-card-wrap"
@@ -60,72 +140,16 @@ function ProjectCard({
         ref={cardRef}
         href={`/work/${study.slug}`}
         className="sc-card"
-        style={{ top: `${stickyTop}px` }}
+        style={{
+          top: `${stickyTop}px`,
+          gridTemplateColumns: pattern.split,
+        }}
       >
-        <div className="sc-visual">
-          {isLocalVideo ? (
-            <video
-              ref={videoRef}
-              src={study.previewVideo}
-              muted
-              loop
-              playsInline
-              className="sc-media"
-            />
-          ) : isEmbed ? (
-            <iframe
-              src={study.previewVideo}
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              allowFullScreen
-              loading="lazy"
-              className="sc-iframe"
-            />
-          ) : study.previewImage ? (
-            <img
-              src={study.previewImage}
-              alt={study.title}
-              loading="lazy"
-              className="sc-media"
-            />
-          ) : null}
-          <div className="sc-visual-overlay" />
-        </div>
-
-        <div className="sc-content">
-          <div className="sc-content-inner">
-            <span className="sc-index">
-              {String(index + 1).padStart(2, "0")}/{String(total).padStart(2, "0")}
-            </span>
-
-            <div className="sc-text">
-              <span className="sc-meta">
-                {study.company} &middot; {study.timeline}
-              </span>
-              <h3 className="sc-title">{study.title}</h3>
-              {labels && (
-                <div className="sc-transform">
-                  <span className="sc-from">{labels.from}</span>
-                  <span className="sc-arr">&rarr;</span>
-                  <span className="sc-to">{labels.to}</span>
-                </div>
-              )}
-              {study.judgment && (
-                <p className="sc-judgment">{study.judgment}</p>
-              )}
-            </div>
-
-            <div className="sc-stats">
-              {study.impact.slice(0, 3).map((m, i) => (
-                <div key={i} className="sc-stat">
-                  <span className="sc-stat-val">{m.value}</span>
-                  <span className="sc-stat-lbl">{m.metric}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <span className="sc-cta">View project &rarr;</span>
-        </div>
+        {pattern.side === "left" ? (
+          <>{visual}{content}</>
+        ) : (
+          <>{content}{visual}</>
+        )}
       </a>
     </div>
   );
