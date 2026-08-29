@@ -4,15 +4,6 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
 
-const transformLabels: Record<string, { from: string; to: string }> = {
-  "natera-clinical-review": { from: "Fragmented", to: "Unified" },
-  "unified-patient-portal": { from: "Invisible", to: "Empowered" },
-  "histopathology-workflow": { from: "Hands-on", to: "Hands-off" },
-  "identity-portal": { from: "Scattered", to: "Connected" },
-  "perimenopause-tracking": { from: "Measured", to: "Understood" },
-  "ai-design-practice": { from: "Manual", to: "Augmented" },
-};
-
 interface CardLayout {
   x: number;
   y: number;
@@ -22,17 +13,20 @@ interface CardLayout {
   rot: number;
 }
 
+// Art gallery: mixed sizes — tall portraits, wide landscapes, small squares
 const layouts: CardLayout[] = [
-  { x: 40,   y: 30,   w: 440, h: 320, z: 6, rot: -1.2 },
-  { x: 520,  y: 60,   w: 400, h: 280, z: 5, rot: 1.5  },
-  { x: 960,  y: 20,   w: 420, h: 300, z: 4, rot: -0.8 },
-  { x: 100,  y: 390,  w: 380, h: 270, z: 3, rot: 1.0  },
-  { x: 540,  y: 370,  w: 440, h: 320, z: 2, rot: -1.8 },
-  { x: 1020, y: 360,  w: 380, h: 270, z: 1, rot: 0.6  },
+  { x: 60,   y: 40,   w: 260, h: 340, z: 6, rot: -2.5 },   // tall portrait
+  { x: 380,  y: 100,  w: 320, h: 180, z: 5, rot: 1.2  },   // wide landscape
+  { x: 760,  y: 30,   w: 180, h: 180, z: 4, rot: -1.0 },   // small square
+  { x: 1000, y: 60,   w: 280, h: 360, z: 3, rot: 2.0  },   // tall portrait
+  { x: 160,  y: 440,  w: 340, h: 200, z: 2, rot: -1.5 },   // wide landscape
+  { x: 580,  y: 400,  w: 200, h: 260, z: 1, rot: 1.8  },   // medium portrait
+  { x: 850,  y: 460,  w: 280, h: 160, z: 7, rot: -0.5 },   // wide small
+  { x: 1180, y: 420,  w: 160, h: 210, z: 8, rot: 2.5  },   // small portrait
 ];
 
-const CANVAS_W = 1460;
-const CANVAS_H = 700;
+const CANVAS_W = 1420;
+const CANVAS_H = 720;
 
 function CanvasCard({
   study,
@@ -43,7 +37,6 @@ function CanvasCard({
   layout: CardLayout;
   dragging: boolean;
 }) {
-  const labels = transformLabels[study.slug];
   const isLocalVideo = study.previewVideo?.startsWith("/");
 
   return (
@@ -83,16 +76,9 @@ function CanvasCard({
           <div className="cv-card-blank" />
         )}
       </div>
-      <div className="cv-card-info">
-        <h3 className="cv-card-title">{study.title}</h3>
-        <div className="cv-card-row">
-          <span className="cv-card-meta">{study.company}</span>
-          {labels && (
-            <span className="cv-card-transform">
-              {labels.from} &rarr; {labels.to}
-            </span>
-          )}
-        </div>
+      <div className="cv-card-label">
+        <span className="cv-card-title">{study.title}</span>
+        <span className="cv-card-meta">{study.company}</span>
       </div>
     </a>
   );
@@ -128,17 +114,11 @@ export default function ProjectShowcase() {
     if (!vp) return;
     const vw = vp.clientWidth;
     const vh = vp.clientHeight;
-    setOffset({
-      x: Math.max(-(CANVAS_W - vw) / 2, -(CANVAS_W - vw)),
-      y: Math.max(-(CANVAS_H - vh) / 2, -(CANVAS_H - vh)),
-    });
-  }, []);
+    setOffset(clampOffset(-(CANVAS_W - vw) / 2, -(CANVAS_H - vh) / 2));
+  }, [clampOffset]);
 
   const onPointerDown = useCallback(
     (e: React.PointerEvent) => {
-      if ((e.target as HTMLElement).closest("a")) {
-        // allow link clicks — we'll cancel if drag distance exceeds threshold
-      }
       setIsDragging(true);
       hasMoved.current = false;
       dragStart.current = { x: e.clientX, y: e.clientY };
@@ -195,7 +175,6 @@ export default function ProjectShowcase() {
     }, 50);
   }, [coast]);
 
-  // touch support
   useEffect(() => {
     const vp = viewportRef.current;
     if (!vp) return;
