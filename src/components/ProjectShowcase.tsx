@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import AnimateOnScroll from "./AnimateOnScroll";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
 
@@ -14,17 +13,31 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "ai-design-practice": { from: "Manual", to: "Augmented" },
 };
 
-function ProjectVisual({ study }: { study: CaseStudy }) {
+function ProjectCard({
+  study,
+  index,
+  total,
+}: {
+  study: CaseStudy;
+  index: number;
+  total: number;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const [visible, setVisible] = useState(false);
+  const labels = transformLabels[study.slug];
+
+  const isLocalVideo =
+    study.previewVideo && study.previewVideo.startsWith("/");
+  const isEmbed =
+    study.previewVideo && !study.previewVideo.startsWith("/");
 
   useEffect(() => {
-    const el = containerRef.current;
+    const el = cardRef.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.3 }
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.4 }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -32,104 +45,118 @@ function ProjectVisual({ study }: { study: CaseStudy }) {
 
   useEffect(() => {
     if (!videoRef.current) return;
-    if (inView) {
-      videoRef.current.play().catch(() => {});
-    } else {
-      videoRef.current.pause();
-    }
-  }, [inView]);
+    if (visible) videoRef.current.play().catch(() => {});
+    else videoRef.current.pause();
+  }, [visible]);
 
-  const isLocalVideo =
-    study.previewVideo && study.previewVideo.startsWith("/");
-  const isEmbed =
-    study.previewVideo && !study.previewVideo.startsWith("/");
+  const stickyTop = 80 + index * 12;
 
   return (
-    <div ref={containerRef} className="showcase-visual">
-      {isLocalVideo ? (
-        <video
-          ref={videoRef}
-          src={study.previewVideo}
-          muted
-          loop
-          playsInline
-          className="showcase-video"
-        />
-      ) : isEmbed ? (
-        <div className="showcase-embed-wrap">
-          <iframe
-            src={study.previewVideo}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            allowFullScreen
-            loading="lazy"
-          />
+    <div
+      className="sc-card-wrap"
+      style={{ zIndex: index + 1 }}
+    >
+      <a
+        ref={cardRef}
+        href={`/work/${study.slug}`}
+        className="sc-card"
+        style={{ top: `${stickyTop}px` }}
+      >
+        <div className="sc-visual">
+          {isLocalVideo ? (
+            <video
+              ref={videoRef}
+              src={study.previewVideo}
+              muted
+              loop
+              playsInline
+              className="sc-media"
+            />
+          ) : isEmbed ? (
+            <iframe
+              src={study.previewVideo}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowFullScreen
+              loading="lazy"
+              className="sc-iframe"
+            />
+          ) : study.previewImage ? (
+            <img
+              src={study.previewImage}
+              alt={study.title}
+              loading="lazy"
+              className="sc-media"
+            />
+          ) : null}
+          <div className="sc-visual-overlay" />
         </div>
-      ) : study.previewImage ? (
-        <img
-          src={study.previewImage}
-          alt={study.title}
-          loading="lazy"
-          className="showcase-image"
-        />
-      ) : null}
+
+        <div className="sc-content">
+          <div className="sc-content-inner">
+            <span className="sc-index">
+              {String(index + 1).padStart(2, "0")}/{String(total).padStart(2, "0")}
+            </span>
+
+            <div className="sc-text">
+              <span className="sc-meta">
+                {study.company} &middot; {study.timeline}
+              </span>
+              <h3 className="sc-title">{study.title}</h3>
+              {labels && (
+                <div className="sc-transform">
+                  <span className="sc-from">{labels.from}</span>
+                  <span className="sc-arr">&rarr;</span>
+                  <span className="sc-to">{labels.to}</span>
+                </div>
+              )}
+              {study.judgment && (
+                <p className="sc-judgment">{study.judgment}</p>
+              )}
+            </div>
+
+            <div className="sc-stats">
+              {study.impact.slice(0, 3).map((m, i) => (
+                <div key={i} className="sc-stat">
+                  <span className="sc-stat-val">{m.value}</span>
+                  <span className="sc-stat-lbl">{m.metric}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <span className="sc-cta">View project &rarr;</span>
+        </div>
+      </a>
     </div>
   );
 }
 
 export default function ProjectShowcase() {
-  return (
-    <section className="showcase">
-      <AnimateOnScroll animation="fade-up">
-        <p className="section-subtitle">
-          I do my best work amid ambiguity and entangled systems, in pursuit of
-          clarity.
-        </p>
-      </AnimateOnScroll>
+  const total = caseStudyList.length;
 
-      <div className="showcase-list">
-        {caseStudyList.map((study, idx) => {
-          const labels = transformLabels[study.slug];
-          return (
-            <AnimateOnScroll key={study.slug} animation="fade-up">
-              <a href={`/work/${study.slug}`} className="showcase-card">
-                <ProjectVisual study={study} />
-                <div className="showcase-info">
-                  <span className="showcase-meta">
-                    {study.company} &middot; {study.timeline}
-                  </span>
-                  <h3 className="showcase-title">{study.title}</h3>
-                  {labels && (
-                    <div className="showcase-transform">
-                      <span className="showcase-from">{labels.from}</span>
-                      <span className="showcase-arrow">&rarr;</span>
-                      <span className="showcase-to">{labels.to}</span>
-                    </div>
-                  )}
-                  {study.judgment && (
-                    <p className="showcase-judgment">{study.judgment}</p>
-                  )}
-                  <div className="showcase-metrics">
-                    {study.impact.slice(0, 3).map((m, i) => (
-                      <div key={i} className="showcase-metric">
-                        <span className="showcase-metric-val">{m.value}</span>
-                        <span className="showcase-metric-lbl">{m.metric}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </a>
-            </AnimateOnScroll>
-          );
-        })}
+  return (
+    <section className="sc-section">
+      <p className="section-subtitle">
+        I do my best work amid ambiguity and entangled systems, in pursuit of
+        clarity.
+      </p>
+
+      <div className="sc-stack">
+        {caseStudyList.map((study, i) => (
+          <ProjectCard
+            key={study.slug}
+            study={study}
+            index={i}
+            total={total}
+          />
+        ))}
       </div>
 
-      <AnimateOnScroll animation="fade-up">
-        <div style={{ marginTop: "2rem" }}>
-          <a href="/work" className="view-all-link">
-            All work &rarr;
-          </a>
-        </div>
-      </AnimateOnScroll>
+      <div className="sc-footer">
+        <a href="/work" className="view-all-link">
+          All work &rarr;
+        </a>
+      </div>
     </section>
   );
 }
