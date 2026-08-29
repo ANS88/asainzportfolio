@@ -2337,6 +2337,140 @@ section { padding: 5rem 0; }
   .blowout-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Project Showcase (homepage) ── */
+.showcase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.showcase-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--warm);
+  transition: border-color var(--transition-medium), transform var(--transition-medium);
+}
+.showcase-card:hover {
+  border-color: var(--accent-soft);
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+.showcase-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--cream);
+  position: relative;
+}
+.showcase-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-medium);
+}
+.showcase-card:hover .showcase-image {
+  transform: scale(1.03);
+}
+.showcase-embed-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.showcase-embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.showcase-info {
+  padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.showcase-meta {
+  font-size: .7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink3);
+}
+.showcase-title {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.25;
+}
+.showcase-card:hover .showcase-title { color: var(--accent2); }
+
+.showcase-transform {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .85rem;
+  font-weight: 600;
+  margin-top: .15rem;
+}
+.showcase-from { color: var(--ink3); }
+.showcase-arrow { color: var(--border-strong); font-size: .75rem; }
+.showcase-to { color: var(--accent); }
+
+.showcase-judgment {
+  font-size: .88rem;
+  line-height: 1.5;
+  color: var(--ink2);
+  max-width: 48rem;
+}
+
+.showcase-metrics {
+  display: flex;
+  gap: 2rem;
+  margin-top: .75rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.showcase-metric {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.showcase-metric-val {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.showcase-metric-lbl {
+  font-size: .68rem;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+@media (max-width: 640px) {
+  .showcase-info { padding: 1.15rem 1.25rem 1.35rem; }
+  .showcase-title { font-size: 1.2rem; }
+  .showcase-metrics { gap: 1.25rem; }
+  .showcase-metric-val { font-size: 1.1rem; }
+}
+
 /* Selection highlight — placed last to override Tailwind preflight */
 *::selection { background: #F0386B; color: #fff; }
 *::-moz-selection { background: #F0386B; color: #fff; }
