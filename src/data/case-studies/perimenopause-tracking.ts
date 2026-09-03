@@ -99,18 +99,6 @@ export const perimenopauseTracking: CaseStudy = {
     },
 
     {
-      id: "collaboration",
-      title: "Brokering the collaboration",
-      type: "research",
-      content: [
-        {
-          type: "text",
-          data: `<!-- TODO: 3-4 sentences from the owner covering: what access Clue provided (users, analytics export), what the university and IRB required, what each party wanted from the study, and what the owner personally negotiated or aligned. This is the leadership content of the page; do not draft it from imagination. -->`,
-        },
-      ],
-    },
-
-    {
       id: "findings",
       title: "What the diaries showed",
       type: "findings",
