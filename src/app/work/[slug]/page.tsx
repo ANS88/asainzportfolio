@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import CaseStudyTemplate from "@/components/CaseStudyTemplate";
+import MoreWork from "@/components/MoreWork";
 import ContactBlock from "@/components/ContactBlock";
 import { caseStudies } from "@/data/case-studies";
 import type { Metadata } from "next";
@@ -46,6 +47,7 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       <div className="container">
         <CaseStudyTemplate caseStudy={caseStudy} />
+        <MoreWork currentSlug={slug} />
       </div>
       <ContactBlock />
     </>
