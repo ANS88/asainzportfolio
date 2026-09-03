@@ -2582,7 +2582,12 @@ section { padding: 5rem 0; }
   background: rgba(10, 4, 16, .92);
   pointer-events: auto;
 }
-.lightbox-img {
+.cs-video-clickable {
+  cursor: zoom-in;
+}
+
+.lightbox-img,
+.lightbox-video {
   max-width: 90vw;
   max-height: 85vh;
   object-fit: contain;
@@ -2592,8 +2597,27 @@ section { padding: 5rem 0; }
   transition: transform .3s cubic-bezier(.4, 0, .2, 1);
   cursor: default;
 }
-.lightbox-visible .lightbox-img {
+.lightbox-visible .lightbox-img,
+.lightbox-visible .lightbox-video {
   transform: scale(1);
+}
+.lightbox-embed {
+  width: 85vw;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .6);
+  transform: scale(.92);
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+.lightbox-visible .lightbox-embed {
+  transform: scale(1);
+}
+.lightbox-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 .lightbox-close {
   position: absolute;

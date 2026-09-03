@@ -1,7 +1,7 @@
 "use client";
 
 import AnimateOnScroll from "./AnimateOnScroll";
-import ImageLightbox, { triggerLightbox } from "./ImageLightbox";
+import ImageLightbox, { triggerLightbox, triggerVideoLightbox, triggerEmbedLightbox } from "./ImageLightbox";
 import type {
   CaseStudy,
   CaseStudySection as SectionType,
@@ -90,7 +90,14 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
 
     case "video":
       return (
-        <figure className="cs-video-block">
+        <figure
+          className="cs-video-block cs-video-clickable"
+          onClick={() =>
+            content.data.autoplay || content.data.src.startsWith("/")
+              ? triggerVideoLightbox(content.data.src)
+              : triggerEmbedLightbox(content.data.src)
+          }
+        >
           {content.data.autoplay ? (
             <video
               src={content.data.src}
@@ -107,7 +114,7 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 allowFullScreen
                 loading="lazy"
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none" }}
               />
             </div>
           )}
@@ -121,14 +128,18 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
       return (
         <div className="cs-videos-row">
           {content.data.map((v, i) => (
-            <figure key={i} className="cs-video-block">
+            <figure
+              key={i}
+              className="cs-video-block cs-video-clickable"
+              onClick={() => triggerEmbedLightbox(v.src)}
+            >
               <div className="cs-video-wrapper">
                 <iframe
                   src={v.src}
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                   allowFullScreen
                   loading="lazy"
-                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none" }}
                 />
               </div>
               {v.caption && <figcaption>{v.caption}</figcaption>}
