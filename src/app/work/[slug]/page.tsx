@@ -47,7 +47,7 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       <div className="container">
         <CaseStudyTemplate caseStudy={caseStudy} />
-        {slug !== "perimenopause-tracking" && <MoreWork currentSlug={slug} />}
+        <MoreWork currentSlug={slug} />
       </div>
       <ContactBlock />
     </>
