@@ -2553,6 +2553,66 @@ section { padding: 5rem 0; }
   .more-work-title { font-size: .75rem; }
 }
 
+/* ── Image Lightbox ── */
+.cs-image-clickable {
+  cursor: zoom-in;
+}
+.cs-image-clickable img {
+  transition: filter .3s ease;
+}
+.cs-image-clickable:hover img {
+  filter: brightness(1.08);
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(10, 4, 16, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity .3s ease, background .3s ease;
+  pointer-events: none;
+}
+.lightbox-overlay.lightbox-visible {
+  opacity: 1;
+  background: rgba(10, 4, 16, .92);
+  pointer-events: auto;
+}
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .6);
+  transform: scale(.92);
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+  cursor: default;
+}
+.lightbox-visible .lightbox-img {
+  transform: scale(1);
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: .5rem;
+  transition: color var(--transition-fast);
+  z-index: 1;
+}
+.lightbox-close:hover {
+  color: var(--accent);
+}
+
 /* Selection highlight — placed last to override Tailwind preflight */
 *::selection { background: #F0386B; color: #fff; }
 *::-moz-selection { background: #F0386B; color: #fff; }

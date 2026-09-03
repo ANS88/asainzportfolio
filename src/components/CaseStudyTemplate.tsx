@@ -1,9 +1,24 @@
+"use client";
+
 import AnimateOnScroll from "./AnimateOnScroll";
+import ImageLightbox, { triggerLightbox } from "./ImageLightbox";
 import type {
   CaseStudy,
   CaseStudySection as SectionType,
   CaseStudySectionContent,
 } from "@/types/case-study";
+
+function ClickableImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+  return (
+    <figure
+      className="cs-image-block cs-image-clickable"
+      onClick={() => triggerLightbox(src, alt)}
+    >
+      <img src={src} alt={alt} loading="lazy" />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  );
+}
 
 /* ── Content Block Renderer ── */
 function ContentBlock({ content }: { content: CaseStudySectionContent }) {
@@ -18,26 +33,23 @@ function ContentBlock({ content }: { content: CaseStudySectionContent }) {
 
     case "image":
       return (
-        <figure className="cs-image-block">
-          <img
-            src={content.data.src}
-            alt={content.data.alt}
-            loading="lazy"
-          />
-          {content.data.caption && (
-            <figcaption>{content.data.caption}</figcaption>
-          )}
-        </figure>
+        <ClickableImage
+          src={content.data.src}
+          alt={content.data.alt}
+          caption={content.data.caption}
+        />
       );
 
     case "images":
       return (
         <div className="cs-images-grid">
           {content.data.map((img, i) => (
-            <figure key={i}>
-              <img src={img.src} alt={img.alt} loading="lazy" />
-              {img.caption && <figcaption>{img.caption}</figcaption>}
-            </figure>
+            <ClickableImage
+              key={i}
+              src={img.src}
+              alt={img.alt}
+              caption={img.caption}
+            />
           ))}
         </div>
       );
@@ -164,6 +176,8 @@ export default function CaseStudyTemplate({
 }) {
   return (
     <article className="case-study">
+      <ImageLightbox />
+
       {/* ── HERO ── */}
       <header className="cs-hook">
         <AnimateOnScroll animation="fade-in">
@@ -208,7 +222,10 @@ export default function CaseStudyTemplate({
 
         {caseStudy.heroImage && (
           <AnimateOnScroll animation="fade-up" delay={300}>
-            <figure className="cs-hero-image">
+            <figure
+              className="cs-hero-image cs-image-clickable"
+              onClick={() => triggerLightbox(caseStudy.heroImage!.src, caseStudy.heroImage!.alt)}
+            >
               <img
                 src={caseStudy.heroImage.src}
                 alt={caseStudy.heroImage.alt}
