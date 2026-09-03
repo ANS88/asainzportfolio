@@ -8,7 +8,7 @@ export default function MoreWork({ currentSlug }: { currentSlug: string }) {
 
   return (
     <section className="more-work">
-      <h2 className="more-work-heading">More work</h2>
+      <h2 className="more-work-heading">Wanna see more?</h2>
       <div className="more-work-grid">
         {others.map((study) => (
           <a
