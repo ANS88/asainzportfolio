@@ -56,7 +56,20 @@ function ProjectCard({
       className="sc-card"
     >
       <div className="sc-visual">
-        {isLocalVideo ? (
+        {study.previewVideos && study.previewVideos.length > 0 ? (
+          <div className="sc-video-row">
+            {study.previewVideos.map((src, i) => (
+              <iframe
+                key={i}
+                src={src}
+                allow="autoplay; encrypted-media"
+                tabIndex={-1}
+                loading="lazy"
+                className="sc-iframe"
+              />
+            ))}
+          </div>
+        ) : isLocalVideo ? (
           <video
             ref={videoRef}
             src={study.previewVideo}

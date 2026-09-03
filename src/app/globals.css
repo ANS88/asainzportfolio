@@ -2387,6 +2387,17 @@ section { padding: 5rem 0; }
   height: 100%;
   border: none;
 }
+.sc-video-row {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.sc-video-row .sc-iframe {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+}
 .sc-visual-overlay {
   position: absolute;
   inset: 0;
