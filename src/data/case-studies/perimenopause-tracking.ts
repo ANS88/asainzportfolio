@@ -14,6 +14,10 @@ export const perimenopauseTracking: CaseStudy = {
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
   previewImage: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",
+  heroImage: {
+    src: "/images/case-studies/perimenopause-tracking/hero.jpg",
+    alt: "Clue app perimenopause mode — cycle tracking, symptom logging, and health education screens",
+  },
 
   impact: [
     { value: "40", metric: "Participants, two-week diary protocol" },
