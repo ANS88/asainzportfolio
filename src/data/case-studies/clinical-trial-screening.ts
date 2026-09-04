@@ -14,7 +14,7 @@ export const clinicalTrialScreening: CaseStudy = {
   timeline: "2024–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
+  previewImage: "/images/case-studies/clinical-trial-screening/patient-queue.png",
 
   impact: [
     { value: "50%", metric: "Reduction in patient-to-match time" },
@@ -76,6 +76,14 @@ export const clinicalTrialScreening: CaseStudy = {
           data: `<p>The core workflow moves patients through a pipeline: <strong>Identified → Review → Eligible / Ineligible / Watch and Wait</strong>. The AI does the initial scan — connecting to EHR data sources, matching diagnoses and staging, evaluating inclusion criteria, ranking by confidence. The coordinator does the judgment — reviewing evidence, resolving unknowns, making the call.</p>`,
         },
         {
+          type: "image",
+          data: {
+            src: "/images/case-studies/clinical-trial-screening/patient-queue.png",
+            alt: "Patient queue showing candidates ranked by AI confidence, with inclusion match scores, status filters, and events to review across multiple cancer centers",
+            caption: "The patient queue surfaces AI-matched candidates ranked by confidence — coordinators filter by site, status, and urgency to decide where to start",
+          },
+        },
+        {
           type: "list",
           data: {
             title: "The pipeline in three stages",
@@ -84,6 +92,14 @@ export const clinicalTrialScreening: CaseStudy = {
               "Review — For each patient, every inclusion criterion shows Match / Not a Match / Unknown, with links to the source document and passage. The coordinator confirms, overrides, or investigates the unknowns.",
               "Decision — When all criteria are resolved, the coordinator marks eligibility. The tool tracks the audit trail: who decided, when, based on what evidence.",
             ],
+          },
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/clinical-trial-screening/events-review.png",
+            alt: "Events to Review tab showing AI-extracted clinical events with source documents, review status, and structured data from pathology reports",
+            caption: "The review step: AI-extracted clinical events shown with structured data and source documents — coordinators mark each as reviewed",
           },
         },
         {
@@ -103,8 +119,24 @@ export const clinicalTrialScreening: CaseStudy = {
           data: `<p>The most important screen in the tool isn't the patient queue. It's the criteria review panel — where a coordinator sees why the AI thinks a patient matches (or doesn't) each inclusion criterion.</p>`,
         },
         {
+          type: "image",
+          data: {
+            src: "/images/case-studies/clinical-trial-screening/criteria-review.png",
+            alt: "Inclusion/exclusion criteria panel showing each criterion with Match or Unknown status, linked evidence documents, and coordinator notes",
+            caption: "Each inclusion criterion shows its AI-determined status — Match, Not a Match, or Unknown — with direct links to the source evidence",
+          },
+        },
+        {
           type: "text",
           data: `<p>Each criterion shows its status (Match, Not a match, Unknown) alongside the evidence: a link to the source document, the relevant passage highlighted, and a confidence indicator. If the AI found a Signatera report showing ctDNA positive at 5.0 MTM/mL, the coordinator sees the report, sees the value, and can click through to the full document. If a criterion is marked Unknown, the coordinator knows exactly what's missing and where to look.</p>`,
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/clinical-trial-screening/evidence-panel.png",
+            alt: "Split view showing inclusion criteria on the left and the source pathology report on the right, with diagnosis details visible in both",
+            caption: "Clicking an evidence link opens the source document inline — the coordinator verifies the AI's reasoning without leaving the screen",
+          },
         },
         {
           type: "text",
@@ -121,6 +153,14 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "text",
           data: `<p>A patient isn't a set of inclusion criteria. Coordinators need clinical context to make good eligibility decisions — treatment history, imaging timeline, genomic alterations, adverse events. The patient summary panel assembles this context from across the EHR, organized by clinical relevance rather than document type.</p>`,
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/clinical-trial-screening/patient-detail.png",
+            alt: "Patient detail view showing treatment timeline with chemotherapy and immunotherapy events, AI-generated patient summary, and inclusion criteria with evidence links",
+            caption: "The patient view assembles treatment timeline, AI-generated summary, and criteria status — giving coordinators the full clinical picture in one screen",
+          },
         },
         {
           type: "list",
