@@ -10,7 +10,6 @@
   <g transform="translate(345, 88)">
     <circle cx="0" cy="-6" r="7" fill="#c4a8f0" opacity="0.25"/>
     <path d="M-10 12 Q-8 2 0 0 Q8 2 10 12" fill="#c4a8f0" opacity="0.25"/>
-    <path d="M-5 -10 Q0 -16 5 -10" fill="none" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
   </g>
   <text x="420" y="85" fill="#c4a8f0" font-size="12" font-weight="600">Design Lead</text>
   <text x="420" y="100" fill="#b8a9e0" font-size="10" opacity="0.7">Lab Operations</text>
@@ -41,7 +40,6 @@
   <g transform="translate(122, 274)">
     <circle cx="0" cy="-4" r="6" fill="#c4a8f0" opacity="0.2"/>
     <path d="M-8 10 Q-6 2 0 0 Q6 2 8 10" fill="#c4a8f0" opacity="0.2"/>
-    <path d="M-5 -8 Q-4 -13 0 -12 Q4 -13 5 -8" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
   </g>
   <text x="170" y="273" fill="#b8a9e0" font-size="11" font-weight="500">Product</text>
   <text x="170" y="287" fill="#b8a9e0" font-size="11" font-weight="500">Designer</text>
@@ -52,8 +50,6 @@
   <g transform="translate(278, 274)">
     <circle cx="0" cy="-4" r="6" fill="#c4a8f0" opacity="0.2"/>
     <path d="M-8 10 Q-6 2 0 0 Q6 2 8 10" fill="#c4a8f0" opacity="0.2"/>
-    <!-- Bun -->
-    <circle cx="0" cy="-13" r="3" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
   </g>
   <text x="326" y="273" fill="#b8a9e0" font-size="11" font-weight="500">UX</text>
   <text x="326" y="287" fill="#b8a9e0" font-size="11" font-weight="500">Researcher</text>
@@ -64,7 +60,6 @@
   <g transform="translate(482, 274)">
     <circle cx="0" cy="-4" r="6" fill="#c4a8f0" opacity="0.2"/>
     <path d="M-8 10 Q-6 2 0 0 Q6 2 8 10" fill="#c4a8f0" opacity="0.2"/>
-    <path d="M-4 -8 Q0 -14 4 -8" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
   </g>
   <text x="530" y="273" fill="#b8a9e0" font-size="11" font-weight="500">Product</text>
   <text x="530" y="287" fill="#b8a9e0" font-size="11" font-weight="500">Designer</text>
@@ -75,7 +70,6 @@
   <g transform="translate(638, 274)">
     <circle cx="0" cy="-4" r="6" fill="#c4a8f0" opacity="0.2"/>
     <path d="M-8 10 Q-6 2 0 0 Q6 2 8 10" fill="#c4a8f0" opacity="0.2"/>
-    <path d="M-5 -7 Q-5 -14 0 -13 Q5 -14 5 -7" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
   </g>
   <text x="686" y="273" fill="#b8a9e0" font-size="11" font-weight="500">Content</text>
   <text x="686" y="287" fill="#b8a9e0" font-size="11" font-weight="500">Designer</text>
