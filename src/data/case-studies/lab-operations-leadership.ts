@@ -65,13 +65,6 @@ export const labOperationsLeadership: CaseStudy = {
           type: "text",
           data: `<p>I made the organizational case for in-lab ethnography — shadowing technicians through full shifts, watching the moments where they work around the software instead of with it. Six-plus shadowing sessions across multiple labs. The methodology became Natera's standard for lab-facing design work. It wasn't just a research technique; it was a credibility move. Once the lab staff saw that someone from the product side understood their physical reality, the quality of feedback changed permanently.</p>`,
         },
-        {
-          type: "quote",
-          data: {
-            text: "The methodology became the standard — not because I mandated it, but because the work that came out of it was visibly better than the work that didn't.",
-            attribution: "",
-          },
-        },
       ],
     },
 
