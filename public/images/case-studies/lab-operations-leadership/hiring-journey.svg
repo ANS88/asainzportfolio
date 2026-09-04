@@ -1,122 +1,169 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="Inter, system-ui, sans-serif">
-  <rect width="800" height="360" fill="#2e1440" rx="16"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="380" fill="#2e1440" rx="16"/>
 
   <!-- Title -->
   <text x="400" y="38" text-anchor="middle" fill="#c4a8f0" font-size="14" font-weight="600" letter-spacing="0.1em">GROWING THE PRACTICE</text>
 
-  <!-- Timeline line - hand-drawn style with slight waviness -->
-  <path d="M80 175 Q120 174 160 175 Q200 176 240 175 Q280 174 320 175 Q360 176 400 175 Q440 174 480 175 Q520 176 560 175 Q600 174 640 175 Q680 176 720 175" stroke="#4a2d6b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Timeline line - subtle wavy -->
+  <path d="M80 195 Q200 193 320 195 Q440 197 560 195 Q640 193 720 195" stroke="#4a2d6b" stroke-width="2" fill="none" stroke-linecap="round"/>
 
-  <!-- ====== Phase 1: Solo ====== -->
-  <!-- Person illustration - single figure, hand-drawn style -->
-  <g transform="translate(140, 130)">
-    <!-- Head -->
-    <circle cx="0" cy="-18" r="8" fill="none" stroke="#c4a8f0" stroke-width="1.8" stroke-linecap="round"/>
-    <!-- Body -->
-    <path d="M0 -10 Q-1 0 0 10" stroke="#c4a8f0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-    <!-- Arms -->
-    <path d="M-10 -2 Q-4 -5 0 -3 Q4 -5 10 -2" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <!-- Legs -->
-    <path d="M0 10 Q-3 18 -7 24" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M0 10 Q3 18 7 24" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- ====== Phase 1: Solo — one person ====== -->
+  <g transform="translate(140, 135)">
+    <!-- Head shape -->
+    <ellipse cx="0" cy="-12" rx="14" ry="16" fill="none" stroke="#c4a8f0" stroke-width="1.6"/>
+    <!-- Curly/wavy hair -->
+    <path d="M-14 -16 Q-16 -30 -8 -32 Q-2 -34 2 -30 Q6 -34 12 -30 Q18 -28 14 -16" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Eyes - dots -->
+    <circle cx="-5" cy="-14" r="1.5" fill="#c4a8f0"/>
+    <circle cx="5" cy="-14" r="1.5" fill="#c4a8f0"/>
+    <!-- Nose -->
+    <path d="M0 -10 Q2 -7 0 -6" fill="none" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <!-- Slight smile -->
+    <path d="M-4 -2 Q0 2 4 -2" fill="none" stroke="#c4a8f0" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Neck -->
+    <path d="M-4 4 L-4 12 M4 4 L4 12" stroke="#c4a8f0" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- Shoulders / top -->
+    <path d="M-22 28 Q-18 14 -4 12 M4 12 Q18 14 22 28" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Collar detail -->
+    <path d="M-3 12 L0 18 L3 12" fill="none" stroke="#c4a8f0" stroke-width="1.2" stroke-linecap="round"/>
   </g>
-  <!-- Phase label above -->
-  <text x="140" y="82" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Solo</text>
-  <text x="140" y="96" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Ship &amp; learn</text>
+  <!-- Phase label -->
+  <text x="140" y="70" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Solo</text>
+  <text x="140" y="84" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Ship &amp; learn</text>
   <!-- Dot on timeline -->
-  <circle cx="140" cy="175" r="4" fill="#c4a8f0" opacity="0.5"/>
-  <!-- Bullet points below -->
-  <text x="140" y="202" text-anchor="middle" fill="#7a6aad" font-size="9">Audit the landscape</text>
-  <text x="140" y="216" text-anchor="middle" fill="#7a6aad" font-size="9">Build credibility</text>
-  <text x="140" y="230" text-anchor="middle" fill="#7a6aad" font-size="9">Define the gaps</text>
+  <circle cx="140" cy="195" r="4" fill="#c4a8f0" opacity="0.5"/>
+  <!-- Bullets below -->
+  <text x="140" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Audit the landscape</text>
+  <text x="140" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Build credibility</text>
+  <text x="140" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Define the gaps</text>
 
-  <!-- Arrow 1 - hand-drawn -->
-  <path d="M210 175 Q230 174 248 175" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M242 170 L250 175 L242 180" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Arrow 1 -->
+  <path d="M208 195 Q228 194 246 195" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M240 190 L248 195 L240 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
-  <!-- ====== Phase 2: First hires ====== -->
-  <!-- Two people, slightly overlapping -->
-  <g transform="translate(340, 130)">
-    <!-- Person 1 -->
-    <circle cx="-10" cy="-18" r="7" fill="none" stroke="#c4a8f0" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M-10 -11 Q-11 -1 -10 8" stroke="#c4a8f0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <path d="M-18 -3 Q-13 -5 -10 -4 Q-7 -5 -2 -3" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M-10 8 Q-13 15 -16 21" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M-10 8 Q-7 15 -4 21" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <!-- Person 2 -->
-    <circle cx="10" cy="-18" r="7" fill="none" stroke="#c4a8f0" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M10 -11 Q9 -1 10 8" stroke="#c4a8f0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <path d="M2 -3 Q7 -5 10 -4 Q13 -5 18 -3" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M10 8 Q7 15 4 21" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M10 8 Q13 15 16 21" stroke="#c4a8f0" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <!-- ====== Phase 2: First hires — two people ====== -->
+  <!-- Person A - glasses, short hair -->
+  <g transform="translate(320, 135)">
+    <ellipse cx="-18" cy="-12" rx="12" ry="14" fill="none" stroke="#c4a8f0" stroke-width="1.4"/>
+    <!-- Short spiky hair -->
+    <path d="M-30 -18 Q-28 -30 -22 -28 Q-18 -32 -14 -28 Q-10 -30 -6 -20" fill="none" stroke="#c4a8f0" stroke-width="1.3" stroke-linecap="round"/>
+    <!-- Glasses -->
+    <circle cx="-22" cy="-14" r="4" fill="none" stroke="#c4a8f0" stroke-width="1" opacity="0.8"/>
+    <circle cx="-14" cy="-14" r="4" fill="none" stroke="#c4a8f0" stroke-width="1" opacity="0.8"/>
+    <line x1="-18" y1="-14" x2="-18" y2="-14" stroke="#c4a8f0" stroke-width="1"/>
+    <!-- Eyes inside glasses -->
+    <circle cx="-22" cy="-14" r="1.2" fill="#c4a8f0"/>
+    <circle cx="-14" cy="-14" r="1.2" fill="#c4a8f0"/>
+    <!-- Nose -->
+    <path d="M-18 -9 Q-16 -7 -18 -5" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Mouth -->
+    <path d="M-22 -1 Q-18 1 -14 -1" fill="none" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <!-- Neck & shoulders -->
+    <path d="M-21 2 L-21 10 M-15 2 L-15 10" stroke="#c4a8f0" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M-36 26 Q-30 12 -21 10 M-15 10 Q-6 12 0 26" fill="none" stroke="#c4a8f0" stroke-width="1.3" stroke-linecap="round"/>
   </g>
-  <text x="340" y="82" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">First hires</text>
-  <text x="340" y="96" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Split the domains</text>
-  <circle cx="340" cy="175" r="4" fill="#c4a8f0" opacity="0.5"/>
-  <text x="340" y="202" text-anchor="middle" fill="#7a6aad" font-size="9">Hire for domain fit</text>
-  <text x="340" y="216" text-anchor="middle" fill="#7a6aad" font-size="9">Embed in squads</text>
-  <text x="340" y="230" text-anchor="middle" fill="#7a6aad" font-size="9">Establish rituals</text>
+  <!-- Person B - long hair, earring -->
+  <g transform="translate(320, 135)">
+    <ellipse cx="18" cy="-12" rx="12" ry="14" fill="none" stroke="#c4a8f0" stroke-width="1.4"/>
+    <!-- Long flowing hair -->
+    <path d="M6 -18 Q4 -30 10 -30 Q16 -34 22 -30 Q28 -28 30 -18 Q32 -6 30 6 Q28 14 26 18" fill="none" stroke="#c4a8f0" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M6 -18 Q4 -6 6 4 Q7 10 8 14" fill="none" stroke="#c4a8f0" stroke-width="1.3" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="14" cy="-14" r="1.3" fill="#c4a8f0"/>
+    <circle cx="22" cy="-14" r="1.3" fill="#c4a8f0"/>
+    <!-- Nose -->
+    <path d="M18 -10 Q20 -7 18 -6" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round"/>
+    <!-- Smile -->
+    <path d="M14 -1 Q18 2 22 -1" fill="none" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <!-- Neck & top -->
+    <path d="M15 2 L15 10 M21 2 L21 10" stroke="#c4a8f0" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M2 26 Q8 12 15 10 M21 10 Q28 12 34 26" fill="none" stroke="#c4a8f0" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="70" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">First hires</text>
+  <text x="320" y="84" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Split the domains</text>
+  <circle cx="320" cy="195" r="4" fill="#c4a8f0" opacity="0.5"/>
+  <text x="320" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Hire for domain fit</text>
+  <text x="320" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Embed in squads</text>
+  <text x="320" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Establish rituals</text>
 
   <!-- Arrow 2 -->
-  <path d="M410 175 Q430 174 448 175" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M442 170 L450 175 L442 180" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M392 195 Q412 194 430 195" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M424 190 L432 195 L424 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
-  <!-- ====== Phase 3: Practice ====== -->
-  <!-- Four people in a row -->
-  <g transform="translate(540, 130)">
-    <!-- Person 1 -->
-    <circle cx="-24" cy="-18" r="6" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M-24 -12 Q-25 -3 -24 6" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M-30 -4 Q-26 -6 -24 -5 Q-22 -6 -18 -4" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M-24 6 Q-26 12 -28 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M-24 6 Q-22 12 -20 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <!-- Person 2 -->
-    <circle cx="-8" cy="-18" r="6" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M-8 -12 Q-7 -3 -8 6" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M-14 -4 Q-10 -6 -8 -5 Q-6 -6 -2 -4" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M-8 6 Q-10 12 -12 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M-8 6 Q-6 12 -4 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <!-- Person 3 -->
-    <circle cx="8" cy="-18" r="6" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M8 -12 Q9 -3 8 6" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M2 -4 Q6 -6 8 -5 Q10 -6 14 -4" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M8 6 Q6 12 4 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M8 6 Q10 12 12 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <!-- Person 4 -->
-    <circle cx="24" cy="-18" r="6" fill="none" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M24 -12 Q23 -3 24 6" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M18 -4 Q22 -6 24 -5 Q26 -6 30 -4" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M24 6 Q22 12 20 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    <path d="M24 6 Q26 12 28 18" stroke="#c4a8f0" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <!-- ====== Phase 3: Practice — four small portraits in a row ====== -->
+  <!-- Person 1 - bun hair -->
+  <g transform="translate(478, 132)">
+    <ellipse cx="0" cy="-8" rx="9" ry="11" fill="none" stroke="#c4a8f0" stroke-width="1.2"/>
+    <circle cx="-2" cy="-22" r="5" fill="none" stroke="#c4a8f0" stroke-width="1.1"/>
+    <path d="M-9 -12 Q-8 -18 -2 -17" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <circle cx="-3" cy="-10" r="1" fill="#c4a8f0"/>
+    <circle cx="3" cy="-10" r="1" fill="#c4a8f0"/>
+    <path d="M-2 -4 Q0 -2 2 -4" fill="none" stroke="#c4a8f0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M-2 3 L-2 8 M2 3 L2 8" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <path d="M-12 20 Q-8 10 -2 8 M2 8 Q8 10 12 20" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
   </g>
-  <text x="540" y="82" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Practice</text>
-  <text x="540" y="96" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Compound &amp; scale</text>
-  <circle cx="540" cy="175" r="4" fill="#c4a8f0" opacity="0.5"/>
-  <text x="540" y="202" text-anchor="middle" fill="#7a6aad" font-size="9">Add research capacity</text>
-  <text x="540" y="216" text-anchor="middle" fill="#7a6aad" font-size="9">Cross-pollinate domains</text>
-  <text x="540" y="230" text-anchor="middle" fill="#7a6aad" font-size="9">Design influences roadmap</text>
+  <!-- Person 2 - messy hair -->
+  <g transform="translate(516, 132)">
+    <ellipse cx="0" cy="-8" rx="9" ry="11" fill="none" stroke="#c4a8f0" stroke-width="1.2"/>
+    <path d="M-9 -14 Q-10 -22 -4 -24 Q0 -26 4 -22 Q8 -26 10 -20 Q12 -16 9 -12" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M-6 -22 Q-4 -28 -1 -26" fill="none" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="-3" cy="-10" r="1" fill="#c4a8f0"/>
+    <circle cx="3" cy="-10" r="1" fill="#c4a8f0"/>
+    <path d="M-2 -4 Q0 -2 2 -4" fill="none" stroke="#c4a8f0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M-2 3 L-2 8 M2 3 L2 8" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <path d="M-12 20 Q-8 10 -2 8 M2 8 Q8 10 12 20" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+  <!-- Person 3 - straight bob -->
+  <g transform="translate(554, 132)">
+    <ellipse cx="0" cy="-8" rx="9" ry="11" fill="none" stroke="#c4a8f0" stroke-width="1.2"/>
+    <path d="M-10 -14 Q-10 -24 0 -24 Q10 -24 10 -14" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M-10 -14 Q-12 -4 -11 4" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M10 -14 Q12 -4 11 4" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <circle cx="-3" cy="-10" r="1" fill="#c4a8f0"/>
+    <circle cx="3" cy="-10" r="1" fill="#c4a8f0"/>
+    <path d="M-3 -4 Q0 -1 3 -4" fill="none" stroke="#c4a8f0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M-2 3 L-2 8 M2 3 L2 8" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <path d="M-12 20 Q-8 10 -2 8 M2 8 Q8 10 12 20" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+  <!-- Person 4 - round glasses, bald-ish -->
+  <g transform="translate(592, 132)">
+    <ellipse cx="0" cy="-8" rx="9" ry="11" fill="none" stroke="#c4a8f0" stroke-width="1.2"/>
+    <path d="M-8 -16 Q-6 -22 0 -22 Q6 -22 8 -16" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <circle cx="-4" cy="-10" r="3.5" fill="none" stroke="#c4a8f0" stroke-width="0.9" opacity="0.7"/>
+    <circle cx="4" cy="-10" r="3.5" fill="none" stroke="#c4a8f0" stroke-width="0.9" opacity="0.7"/>
+    <circle cx="-4" cy="-10" r="1" fill="#c4a8f0"/>
+    <circle cx="4" cy="-10" r="1" fill="#c4a8f0"/>
+    <path d="M-2 -4 Q0 -2 2 -4" fill="none" stroke="#c4a8f0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M-2 3 L-2 8 M2 3 L2 8" stroke="#c4a8f0" stroke-width="1" stroke-linecap="round"/>
+    <path d="M-12 20 Q-8 10 -2 8 M2 8 Q8 10 12 20" fill="none" stroke="#c4a8f0" stroke-width="1.1" stroke-linecap="round"/>
+    <!-- Collar -->
+    <path d="M-1 8 L0 13 L1 8" fill="none" stroke="#c4a8f0" stroke-width="0.9" stroke-linecap="round"/>
+  </g>
+  <text x="535" y="70" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Practice</text>
+  <text x="535" y="84" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Compound &amp; scale</text>
+  <circle cx="535" cy="195" r="4" fill="#c4a8f0" opacity="0.5"/>
+  <text x="535" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Add research capacity</text>
+  <text x="535" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Cross-pollinate domains</text>
+  <text x="535" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Design influences roadmap</text>
 
   <!-- Arrow 3 -->
-  <path d="M610 175 Q630 174 648 175" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M642 170 L650 175 L642 180" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M618 195 Q638 194 656 195" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M650 190 L658 195 L650 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
 
-  <!-- ====== Phase 4: Growing ====== -->
-  <!-- Hand-drawn star/sparkle instead of rocket -->
-  <g transform="translate(700, 140)">
-    <!-- Upward arrow with sparkles - growth symbol -->
-    <path d="M0 20 Q-1 5 0 -10" stroke="#c4a8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M-6 -3 L0 -12 L6 -3" stroke="#c4a8f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Sparkle left -->
-    <path d="M-12 2 L-10 0 L-8 2 L-10 4 Z" fill="#c4a8f0" opacity="0.5"/>
-    <!-- Sparkle right -->
-    <path d="M10 -4 L12 -6 L14 -4 L12 -2 Z" fill="#c4a8f0" opacity="0.4"/>
-    <!-- Small sparkle -->
-    <circle cx="12" cy="8" r="1.5" fill="#c4a8f0" opacity="0.3"/>
+  <!-- ====== Phase 4: Growing — upward arrow with sparkles ====== -->
+  <g transform="translate(700, 148)">
+    <path d="M0 24 Q-1 8 0 -8" stroke="#c4a8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M-7 0 L0 -12 L7 0" stroke="#c4a8f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Sparkles -->
+    <path d="M-14 4 L-12 0 L-10 4 L-12 8 Z" fill="#c4a8f0" opacity="0.4"/>
+    <path d="M12 -6 L14 -10 L16 -6 L14 -2 Z" fill="#c4a8f0" opacity="0.35"/>
+    <circle cx="14" cy="10" r="1.8" fill="#c4a8f0" opacity="0.25"/>
+    <circle cx="-10" cy="-10" r="1.2" fill="#c4a8f0" opacity="0.3"/>
   </g>
-  <text x="700" y="82" text-anchor="middle" fill="#8a6ebf" font-size="12" font-weight="500">Growing</text>
-  <circle cx="700" cy="175" r="4" fill="#c4a8f0" opacity="0.3" stroke="#c4a8f0" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="700" y="74" text-anchor="middle" fill="#8a6ebf" font-size="12" font-weight="500">Growing</text>
+  <circle cx="700" cy="195" r="4" fill="#c4a8f0" opacity="0.25" stroke="#c4a8f0" stroke-width="1" stroke-dasharray="2,2"/>
 
   <!-- Bottom note -->
-  <rect x="180" y="270" width="440" height="36" rx="18" fill="#c4a8f0" opacity="0.06" stroke="#4a2d6b" stroke-width="1"/>
-  <text x="400" y="293" text-anchor="middle" fill="#8a6ebf" font-size="11">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
+  <rect x="180" y="285" width="440" height="36" rx="18" fill="#c4a8f0" opacity="0.06" stroke="#4a2d6b" stroke-width="1"/>
+  <text x="400" y="308" text-anchor="middle" fill="#8a6ebf" font-size="11">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
 </svg>
