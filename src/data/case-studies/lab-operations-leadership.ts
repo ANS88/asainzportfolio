@@ -122,15 +122,38 @@ export const labOperationsLeadership: CaseStudy = {
       content: [
         {
           type: "text",
-          data: `<!-- TODO: Fill in the specifics of your team-building story. Questions to address:
-- What was the state of design when you started? (first designer? inheriting a team?)
-- How many designers did you grow the team to?
-- How did you structure coverage across wet lab and dry lab?
-- Embedded designers vs. centralized team?
-- Any key hires, mentorship approaches, or design rituals you established?
-- How did you handle the tension between shipping and growing the team simultaneously?
-- What's the team structure now?
-This section is the core of the leadership story — it should come from you, not be fabricated. -->`,
+          data: `<p>When I joined, there was no design function for lab operations. No team, no process, no seat at the table. The first job was to prove the value of design by shipping — not by building a team in the abstract and waiting for it to mature. Every hire had to make the work better immediately.</p>`,
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/lab-operations-leadership/hiring-journey.svg",
+            alt: "Growing the design practice from solo designer to embedded team across wet and dry lab",
+            caption: "",
+          },
+        },
+        {
+          type: "text",
+          data: `<h4>Hiring for domain, not just craft</h4>
+<p>Lab operations design requires a specific kind of designer — someone comfortable with ambiguity, regulated environments, and users who can't pause their work to explain what's wrong. I hired for curiosity about the domain and comfort with complexity, not portfolio polish. Every new designer spent their first weeks in the lab, not in Figma.</p>`,
+        },
+        {
+          type: "text",
+          data: `<h4>Embedded in squads, connected through practice</h4>
+<p>The team structure mirrors the domain split. Designers are embedded directly in wet lab and dry lab squads — sitting with engineers, attending standups, understanding the technical constraints firsthand. But they stay connected through shared rituals: weekly design critiques that cross domain boundaries, paired research sessions, and a shared design system that keeps the visual language coherent across tools that lab staff use back-to-back throughout their day.</p>`,
+        },
+        {
+          type: "image",
+          data: {
+            src: "/images/case-studies/lab-operations-leadership/team-structure.svg",
+            alt: "Team structure: designers embedded in wet lab and dry lab squads, connected by shared practice",
+            caption: "",
+          },
+        },
+        {
+          type: "text",
+          data: `<h4>Rituals that compound</h4>
+<p>The rituals matter more than the org chart. Cross-domain design reviews where wet lab designers pressure-test dry lab flows — and vice versa — catch handoff problems that neither side sees alone. Research share-outs that bring lab observations to the whole product org. Portfolio reviews that ensure consistency across tools that different lab roles touch in sequence. Each ritual exists because it solved a real coordination problem, not because a design maturity model prescribed it.</p>`,
         },
       ],
     },
