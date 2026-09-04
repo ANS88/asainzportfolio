@@ -11,6 +11,7 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "identity-portal": { from: "Scattered", to: "Connected" },
   "perimenopause-tracking": { from: "Measured", to: "Understood" },
   "ai-design-practice": { from: "Manual", to: "Augmented" },
+  "lab-operations-leadership": { from: "Zero", to: "Embedded" },
 };
 
 function ProjectCard({

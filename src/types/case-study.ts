@@ -53,7 +53,8 @@ export interface CaseStudySection {
     | "impact"
     | "reflection"
     | "judgment"
-    | "beyond";
+    | "beyond"
+    | "leadership";
   content: CaseStudySectionContent[];
 }
 
