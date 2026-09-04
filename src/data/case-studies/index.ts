@@ -5,6 +5,7 @@ import { identityPortal } from "./identity-portal";
 import { histopathologyWorkflow } from "./histopathology-workflow";
 import { aiDesignPractice } from "./ai-design-practice";
 import { labOperationsLeadership } from "./lab-operations-leadership";
+import { clinicalTrialScreening } from "./clinical-trial-screening";
 import type { CaseStudy } from "@/types/case-study";
 
 export const caseStudies: Record<string, CaseStudy> = {
@@ -15,6 +16,7 @@ export const caseStudies: Record<string, CaseStudy> = {
   "identity-portal": identityPortal,
   "ai-design-practice": aiDesignPractice,
   "lab-operations-leadership": labOperationsLeadership,
+  "clinical-trial-screening": clinicalTrialScreening,
 };
 
 export const caseStudyList: CaseStudy[] = Object.values(caseStudies);

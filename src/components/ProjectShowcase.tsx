@@ -12,6 +12,7 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "perimenopause-tracking": { from: "Measured", to: "Understood" },
   "ai-design-practice": { from: "Manual", to: "Augmented" },
   "lab-operations-leadership": { from: "Zero", to: "Embedded" },
+  "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
 function ProjectCard({
