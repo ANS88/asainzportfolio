@@ -9,14 +9,14 @@ import MapSection from "@/components/MapSection";
 export const metadata: Metadata = {
   title: "About, Adriana Navarro Sainz",
   description:
-    "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+    "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   openGraph: {
     description:
-      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   },
   twitter: {
     description:
-      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 585K patients/yr impacted. Based in San Francisco.",
+      "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   },
 };
 

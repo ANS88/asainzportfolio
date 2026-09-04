@@ -4,7 +4,7 @@ export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
   title: "Clinical Review",
   stakesLine:
-    "When genetic test reports are delayed, treatment decisions are delayed. I identified the bottleneck, made the case for a platform investment, and led the cross-functional effort that redesigned how 585,000 patients a year get their results.",
+    "When genetic test reports are delayed, treatment decisions are delayed. I identified the bottleneck, made the case for a platform investment, and led the cross-functional effort that redesigned how 3.5 million tests a year get reported.",
   judgment: "Reframed a usability audit into a platform investment by mapping the review process as a distributed system",
   role: "Design Leader",
   timeline: "0 → 1 (2024–2025)",
@@ -15,7 +15,7 @@ export const nateraClinicalReview: CaseStudy = {
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },
-    { value: "585K", metric: "Reports/year affected" },
+    { value: "3.5M+", metric: "Tests reported/year" },
     { value: "1", metric: "Tool replaced 4 legacy systems" },
     { value: "88", metric: "SUS score" },
   ],
@@ -44,7 +44,7 @@ export const nateraClinicalReview: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>In 2024, Natera processed over 3 million tests. Twenty percent, 585,000 reports, required manual review by genetic counselors and lab directors before reaching patients. That review was fragmented across four tools, and the delays weren't operational trivia: in prenatal testing, a late result can delay a decision about pregnancy management; in oncology, it can affect treatment timing.</p>",
+          data: "<p>In 2025, Natera reported over 3.5 million tests a year. A significant portion required manual review by genetic counselors and lab directors before reaching patients. That review was fragmented across four tools, and the delays weren't operational trivia: in prenatal testing, a late result can delay a decision about pregnancy management; in oncology, it can affect treatment timing.</p>",
         },
         {
           type: "text",
@@ -165,7 +165,7 @@ export const nateraClinicalReview: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>Report turnaround dropped 50%, directly accelerating clinical decisions for 585,000 patients a year. Four legacy systems became one, cutting training time and eliminating hours of weekly context-switching per reviewer.</p>",
+          data: "<p>Report turnaround dropped 50%, directly accelerating clinical decisions across 3.5M+ tests reported a year. Four legacy systems became one, cutting training time and eliminating hours of weekly context-switching per reviewer.</p>",
         },
         {
           type: "text",

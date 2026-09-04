@@ -5,7 +5,7 @@ export const labOperationsLeadership: CaseStudy = {
   title: "Building Design for Lab Operations",
   shortTitle: "From first designer to a design practice across Natera's entire lab pipeline",
   stakesLine:
-    "I built the design practice across Natera's lab operations — from the bench to the report. Two domains, different users, different constraints, one connected system. Wet lab: physical sample processing where mistakes affect patient outcomes. Dry lab: computational analysis where cognitive load determines report accuracy. I grew design's role from zero to a functioning practice embedded across both, while shipping the tools that serve 50+ labs and 585K patients a year.",
+    "I built the design practice across Natera's lab operations — from the bench to the report. Two domains, different users, different constraints, one connected system. Wet lab: physical sample processing where mistakes affect patient outcomes. Dry lab: computational analysis where cognitive load determines report accuracy. I grew design's role from zero to a functioning practice embedded across both, while shipping the tools that serve 50+ labs and 3.5M+ tests reported a year.",
   metaDescription:
     "How I built the design practice for Natera's lab operations from scratch — across wet lab execution and dry lab analysis — growing the team while shipping tools for 50+ labs.",
   judgment:
@@ -17,7 +17,7 @@ export const labOperationsLeadership: CaseStudy = {
   previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
 
   impact: [
-    { value: "585K", metric: "Patient reports per year across lab operations" },
+    { value: "3.5M+", metric: "Tests reported per year across lab operations" },
     { value: "50+", metric: "Labs served by tools I designed" },
     { value: "4→1", metric: "Legacy systems consolidated in clinical review" },
     { value: "50%", metric: "Reduction in report turnaround time" },
@@ -192,7 +192,7 @@ export const labOperationsLeadership: CaseStudy = {
           data: {
             title: "Dry lab",
             items: [
-              "Clinical Review — unified tool replacing 4 legacy systems, 50% reduction in turnaround time, 585K reports/year",
+              "Clinical Review — unified tool replacing 4 legacy systems, 50% reduction in turnaround time, 3.5M+ tests reported/year",
               "Result analysis workflows redesigned for cognitive load and accuracy",
             ],
           },

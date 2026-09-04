@@ -6,14 +6,14 @@ import DotCursor from "@/components/DotCursor";
 export const metadata: Metadata = {
   title: "Adriana Navarro Sainz",
   description:
-    "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
+    "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 3.5M+ tests reported a year.",
   openGraph: {
     description:
-      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
+      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 3.5M+ tests reported a year.",
   },
   twitter: {
     description:
-      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 585K patients a year.",
+      "Design and research leader for complex, high-stakes products. Ten years of experience across 50+ labs, 4 business units, and 3.5M+ tests reported a year.",
   },
 };
 
