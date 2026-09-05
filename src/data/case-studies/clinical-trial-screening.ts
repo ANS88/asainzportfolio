@@ -73,14 +73,6 @@ export const clinicalTrialScreening: CaseStudy = {
           data: `<p>Rather than building a new system from scratch, the approach was to optimize ClinVerify — the record review tool nurses already used — for clinical trial screening specifically. The design focused on three levers:</p>`,
         },
         {
-          type: "image",
-          data: {
-            src: "/images/case-studies/clinical-trial-screening/solution-overview.png",
-            alt: "The solution: filter by extracted data, score patients by criteria match and confidence, streamline in-record review for I/E criteria",
-            caption: "How it works — filter, score, and streamline to get from hundreds of patients to the ones that matter",
-          },
-        },
-        {
           type: "list",
           data: {
             title: "Three design levers",
