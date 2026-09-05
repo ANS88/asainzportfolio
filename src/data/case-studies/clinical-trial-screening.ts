@@ -198,22 +198,6 @@ export const clinicalTrialScreening: CaseStudy = {
     },
 
     {
-      id: "multi-site",
-      title: "Nine sites, one workflow",
-      type: "design",
-      content: [
-        {
-          type: "text",
-          data: `<p>The pilot spanned nine cancer centers — from Memorial Sloan Kettering to Stanford to MD Anderson. Each site has its own EHR configuration, its own documentation patterns, its own clinical workflows. A pathology report from Mayo Clinic doesn't look like one from Mass General.</p>`,
-        },
-        {
-          type: "text",
-          data: `<p>The design had to absorb this variation without forcing nurses to care about it. The patient queue filters by site, but the patient view is consistent regardless of source. The evidence trail handles different document formats. The criteria matching works across EHR systems. The hard work of normalization happens behind the interface, not in front of it.</p>`,
-        },
-      ],
-    },
-
-    {
       id: "what-shipped",
       title: "Impact & opportunity",
       type: "impact",
