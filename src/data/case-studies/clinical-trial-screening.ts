@@ -14,7 +14,7 @@ export const clinicalTrialScreening: CaseStudy = {
   timeline: "2024–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewVideo: "https://trial-pilot-lite.vercel.app/",
+  previewVideo: "/videos/clinical-trial-screening/walkthrough.mov",
 
   impact: [
     { value: "80%", metric: "Fewer patients to manually review" },
@@ -122,8 +122,9 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "https://trial-pilot-lite.vercel.app/",
-            caption: "Trial Pilot prototype — the patient queue surfaces AI-matched candidates ranked by confidence across cancer centers",
+            src: "/videos/clinical-trial-screening/walkthrough.mov",
+            caption: "Trial Pilot prototype walkthrough — from patient queue to criteria review to evidence verification",
+            autoplay: true,
           },
         },
         {
