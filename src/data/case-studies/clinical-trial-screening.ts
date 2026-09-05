@@ -155,6 +155,14 @@ export const clinicalTrialScreening: CaseStudy = {
           data: `<p>The most important screen in the tool isn't the patient queue. It's the criteria review panel — where a nurse sees why the AI thinks a patient matches (or doesn't) each inclusion criterion.</p>`,
         },
         {
+          type: "video",
+          data: {
+            src: "/videos/clinical-trial-screening/walkthrough-2.mov",
+            caption: "Evidence review — verifying AI matches against source documents inline",
+            autoplay: true,
+          },
+        },
+        {
           type: "image",
           data: {
             src: "/images/case-studies/clinical-trial-screening/next-steps.png",
