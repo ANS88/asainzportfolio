@@ -147,7 +147,7 @@ export const clinicalTrialScreening: CaseStudy = {
 
     {
       id: "evidence-first",
-      title: "Show the receipts",
+      title: "Evidence-first design",
       type: "design",
       content: [
         {
