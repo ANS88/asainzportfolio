@@ -14,7 +14,7 @@ export const labOperationsLeadership: CaseStudy = {
   timeline: "2023–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
+  previewImage: "/images/case-studies/lab-operations-leadership/team-structure.svg",
 
   impact: [
     { value: "3.5M+", metric: "Tests reported per year across lab operations" },
