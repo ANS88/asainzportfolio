@@ -2371,14 +2371,16 @@ section { padding: 5rem 0; }
 .carousel-slide {
   flex: 0 0 600px;
   scroll-snap-align: center;
-  transition: transform .5s cubic-bezier(.4, 0, .2, 1), opacity .5s ease;
-  transform: scale(.88) translateY(8px);
-  opacity: .5;
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1), opacity .5s ease, filter .5s ease;
+  transform: scale(.85);
+  opacity: .35;
+  filter: blur(2px);
   cursor: pointer;
 }
 .carousel-slide-active {
   transform: scale(1) translateY(0);
   opacity: 1;
+  filter: blur(0);
 }
 
 .carousel-card {
@@ -2448,6 +2450,14 @@ section { padding: 5rem 0; }
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity .4s ease, max-height .4s ease;
+}
+.carousel-slide-active .carousel-content {
+  opacity: 1;
+  max-height: 200px;
 }
 
 .carousel-meta {
