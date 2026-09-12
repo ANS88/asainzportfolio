@@ -2338,17 +2338,42 @@ section { padding: 5rem 0; }
 }
 
 /* ── Two-Column Project Grid ── */
-.sc-section {
+/* ── Project Carousel ── */
+.carousel-section {
   padding: 2rem 0 0;
 }
-.sc-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+
+.carousel-wrapper {
+  position: relative;
   margin-top: 2rem;
 }
 
-.sc-card {
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 1rem 0 2rem;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-slide {
+  flex: 0 0 420px;
+  scroll-snap-align: center;
+  transition: transform .5s cubic-bezier(.4, 0, .2, 1), opacity .5s ease;
+  transform: scale(.88) translateY(8px);
+  opacity: .5;
+  cursor: pointer;
+}
+.carousel-slide-active {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.carousel-card {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -2357,29 +2382,33 @@ section { padding: 5rem 0; }
   border: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
-  transition: border-color var(--transition-medium), box-shadow var(--transition-medium), transform var(--transition-medium);
+  transition: border-color var(--transition-medium), box-shadow var(--transition-medium);
+  height: 100%;
 }
-.sc-card:hover {
+.carousel-slide-active .carousel-card {
   border-color: var(--accent-soft);
-  box-shadow: var(--shadow-lg), 0 0 60px rgba(196, 168, 240, .08);
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(196, 168, 240, .1);
+}
+.carousel-card:hover {
+  border-color: var(--accent-soft);
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(196, 168, 240, .12);
 }
 
-/* Visual */
-.sc-visual {
+.carousel-visual {
   position: relative;
   overflow: hidden;
   background: var(--cream);
   aspect-ratio: 16 / 10;
 }
-.sc-media {
+.carousel-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform .6s cubic-bezier(.4, 0, .2, 1);
 }
-.sc-card:hover .sc-media { transform: scale(1.04); }
+.carousel-card:hover .carousel-media { transform: scale(1.04); }
+
 .sc-iframe {
   position: absolute;
   inset: 0;
@@ -2398,68 +2427,99 @@ section { padding: 5rem 0; }
   flex: 1 1 0;
   min-width: 0;
 }
-.sc-visual-overlay {
+
+.carousel-visual-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 50%, rgba(35, 12, 51, .4) 100%);
   pointer-events: none;
 }
 
-/* Content */
-.sc-content {
+.carousel-content {
   padding: 1.25rem 1.5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  gap: 1rem;
-}
-.sc-content-inner {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
 
-.sc-meta {
+.carousel-meta {
   font-size: .65rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .12em;
   color: var(--ink3);
 }
-.sc-title {
+.carousel-title {
   font-family: var(--sans);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--accent);
   line-height: 1.25;
   transition: color var(--transition-fast);
 }
-.sc-card:hover .sc-title { color: var(--accent2); }
+.carousel-card:hover .carousel-title { color: var(--accent2); }
 
-.sc-transform {
+.carousel-transform {
   display: flex;
   align-items: center;
   gap: .4rem;
   font-size: .8rem;
   font-weight: 600;
 }
-.sc-from { color: var(--ink3); }
-.sc-arr { color: var(--border-strong); font-size: .7rem; }
-.sc-to { color: var(--accent); }
+.carousel-from { color: var(--ink3); }
+.carousel-arr { color: var(--border-strong); font-size: .7rem; }
+.carousel-to { color: var(--accent); }
 
-.sc-cta {
-  font-size: .75rem;
-  font-weight: 600;
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--warm);
+  border: 1px solid var(--border);
   color: var(--accent);
-  letter-spacing: .03em;
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
-.sc-card:hover .sc-cta {
-  opacity: 1;
-  transform: translateY(0);
+.carousel-arrow:hover {
+  background: var(--cream);
+  border-color: var(--accent-soft);
+  box-shadow: 0 0 20px rgba(196, 168, 240, .15);
+}
+.carousel-arrow-left { left: -20px; }
+.carousel-arrow-right { right: -20px; }
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+.carousel-dot:hover {
+  border-color: var(--accent-soft);
+}
+.carousel-dot-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.25);
 }
 
 .sc-footer {
@@ -2468,13 +2528,12 @@ section { padding: 5rem 0; }
 }
 
 @media (max-width: 768px) {
-  .sc-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .carousel-slide {
+    flex: 0 0 300px;
   }
-  .sc-title { font-size: 1.15rem; }
-  .sc-content { padding: 1rem 1.25rem 1.25rem; }
-  .sc-cta { opacity: 1; transform: none; }
+  .carousel-arrow { display: none; }
+  .carousel-title { font-size: 1.05rem; }
+  .carousel-content { padding: 1rem 1.25rem 1.25rem; }
 }
 
 /* ── More Work (case study footer nav) ── */

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
 
@@ -15,15 +15,7 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
-function ProjectCard({
-  study,
-  index,
-  total,
-}: {
-  study: CaseStudy;
-  index: number;
-  total: number;
-}) {
+function CarouselCard({ study }: { study: CaseStudy }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [visible, setVisible] = useState(false);
@@ -55,9 +47,9 @@ function ProjectCard({
     <a
       ref={cardRef}
       href={`/work/${study.slug}`}
-      className="sc-card"
+      className="carousel-card"
     >
-      <div className="sc-visual">
+      <div className="carousel-visual">
         {study.previewVideos && study.previewVideos.length > 0 ? (
           <div className="sc-video-row">
             {study.previewVideos.map((src, i) => (
@@ -78,7 +70,7 @@ function ProjectCard({
             muted
             loop
             playsInline
-            className="sc-media"
+            className="carousel-media"
           />
         ) : isEmbed ? (
           <iframe
@@ -93,50 +85,125 @@ function ProjectCard({
             src={study.previewImage}
             alt={study.title}
             loading="lazy"
-            className="sc-media"
+            className="carousel-media"
           />
         ) : null}
-        <div className="sc-visual-overlay" />
+        <div className="carousel-visual-overlay" />
       </div>
 
-      <div className="sc-content">
-        <div className="sc-content-inner">
-          <span className="sc-meta">
-            {study.company} &middot; {study.timeline}
-          </span>
-          <h3 className="sc-title">{study.title}</h3>
-          {labels && (
-            <div className="sc-transform">
-              <span className="sc-from">{labels.from}</span>
-              <span className="sc-arr">&rarr;</span>
-              <span className="sc-to">{labels.to}</span>
-            </div>
-          )}
-        </div>
-
-        <span className="sc-cta">View project &rarr;</span>
+      <div className="carousel-content">
+        <span className="carousel-meta">
+          {study.company} &middot; {study.timeline}
+        </span>
+        <h3 className="carousel-title">{study.title}</h3>
+        {labels && (
+          <div className="carousel-transform">
+            <span className="carousel-from">{labels.from}</span>
+            <span className="carousel-arr">&rarr;</span>
+            <span className="carousel-to">{labels.to}</span>
+          </div>
+        )}
       </div>
     </a>
   );
 }
 
 export default function ProjectShowcase() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
   const total = caseStudyList.length;
 
+  const scrollToIndex = useCallback(
+    (index: number) => {
+      const track = trackRef.current;
+      if (!track) return;
+      const card = track.children[index] as HTMLElement | undefined;
+      if (!card) return;
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
+      const offset =
+        cardRect.left - trackRect.left + track.scrollLeft - (trackRect.width - cardRect.width) / 2;
+      track.scrollTo({ left: offset, behavior: "smooth" });
+    },
+    []
+  );
+
+  const advance = useCallback(() => {
+    setActiveIndex((prev) => {
+      const next = (prev + 1) % total;
+      return next;
+    });
+  }, [total]);
+
+  useEffect(() => {
+    scrollToIndex(activeIndex);
+  }, [activeIndex, scrollToIndex]);
+
+  useEffect(() => {
+    if (paused) return;
+    timerRef.current = setInterval(advance, 4000);
+    return () => clearInterval(timerRef.current);
+  }, [paused, advance]);
+
+  const goTo = (index: number) => {
+    setActiveIndex(index);
+    setPaused(true);
+    setTimeout(() => setPaused(false), 8000);
+  };
+
+  const prev = () => goTo((activeIndex - 1 + total) % total);
+  const next = () => goTo((activeIndex + 1) % total);
+
   return (
-    <section className="sc-section">
+    <section
+      className="carousel-section"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <p className="section-subtitle">
         I do my best work amid ambiguity and entangled systems, in pursuit of
         clarity.
       </p>
 
-      <div className="sc-grid">
+      <div className="carousel-wrapper">
+        <button
+          className="carousel-arrow carousel-arrow-left"
+          onClick={prev}
+          aria-label="Previous project"
+        >
+          &larr;
+        </button>
+
+        <div className="carousel-track" ref={trackRef}>
+          {caseStudyList.map((study, i) => (
+            <div
+              key={study.slug}
+              className={`carousel-slide${i === activeIndex ? " carousel-slide-active" : ""}`}
+              onClick={() => goTo(i)}
+            >
+              <CarouselCard study={study} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-arrow carousel-arrow-right"
+          onClick={next}
+          aria-label="Next project"
+        >
+          &rarr;
+        </button>
+      </div>
+
+      <div className="carousel-dots">
         {caseStudyList.map((study, i) => (
-          <ProjectCard
+          <button
             key={study.slug}
-            study={study}
-            index={i}
-            total={total}
+            className={`carousel-dot${i === activeIndex ? " carousel-dot-active" : ""}`}
+            onClick={() => goTo(i)}
+            aria-label={`Go to ${study.title}`}
           />
         ))}
       </div>
