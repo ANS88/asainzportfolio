@@ -15,7 +15,7 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
-function getSlideStyle(offset: number) {
+function getSlideStyle(offset: number, index: number) {
   if (offset === 0) {
     return {
       transform: "rotate(0deg) scale(1)",
@@ -24,9 +24,9 @@ function getSlideStyle(offset: number) {
     };
   }
 
-  const dir = offset > 0 ? 1 : -1;
   const abs = Math.abs(offset);
-  const rotate = dir * Math.min(abs * 0.8, 2);
+  const alternating = index % 2 === 0 ? 1 : -1;
+  const rotate = alternating * Math.min(abs * 0.8, 2);
   const scale = Math.max(0.7, 1 - abs * 0.1);
   const opacity = Math.max(0.3, 1 - abs * 0.25);
 
@@ -175,7 +175,7 @@ export default function ProjectShowcase() {
         <div className="gallery-track" ref={trackRef}>
           {caseStudyList.map((study, i) => {
             const offset = i - activeIndex;
-            const style = getSlideStyle(offset);
+            const style = getSlideStyle(offset, i);
             return (
               <div
                 key={study.slug}
