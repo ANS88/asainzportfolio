@@ -18,7 +18,7 @@ const transformLabels: Record<string, { from: string; to: string }> = {
 function getSlideStyle(offset: number) {
   if (offset === 0) {
     return {
-      transform: "perspective(1200px) rotateY(0deg) rotateZ(-2deg) scale(1)",
+      transform: "rotate(-1.5deg) scale(1)",
       opacity: 1,
       zIndex: 10,
     };
@@ -26,13 +26,12 @@ function getSlideStyle(offset: number) {
 
   const dir = offset > 0 ? 1 : -1;
   const abs = Math.abs(offset);
-  const rotateY = dir * Math.min(abs * 18, 45);
-  const rotateZ = dir * (abs === 1 ? 4 : 6);
-  const scale = Math.max(0.6, 1 - abs * 0.15);
-  const opacity = Math.max(0.2, 1 - abs * 0.3);
+  const rotate = dir * (abs === 1 ? 3 : 5);
+  const scale = Math.max(0.65, 1 - abs * 0.12);
+  const opacity = Math.max(0.25, 1 - abs * 0.3);
 
   return {
-    transform: `perspective(1200px) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale(${scale})`,
+    transform: `rotate(${rotate}deg) scale(${scale})`,
     opacity,
     zIndex: 10 - abs,
   };

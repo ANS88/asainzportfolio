@@ -2365,15 +2365,13 @@ section { padding: 5rem 0; }
   scrollbar-width: none;
   padding: 4rem 0 5rem;
   align-items: center;
-  perspective: 1200px;
 }
 .gallery-track::-webkit-scrollbar { display: none; }
 
 .gallery-slide {
   flex: 0 0 560px;
   scroll-snap-align: center;
-  transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .7s ease, z-index 0s;
-  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
   cursor: pointer;
 }
 
