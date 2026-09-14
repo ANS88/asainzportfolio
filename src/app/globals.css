@@ -2420,13 +2420,17 @@ section { padding: 5rem 0; }
 .sc-video-row {
   display: flex;
   position: absolute;
-  inset: 0;
+  inset: -8% -4%;
+  width: 108%;
+  height: 116%;
   pointer-events: none;
+  gap: 0;
 }
 .sc-video-row .sc-iframe {
   position: relative;
   flex: 1 1 0;
   min-width: 0;
+  margin: 0 -2%;
 }
 
 /* Gradient overlay for text legibility */
