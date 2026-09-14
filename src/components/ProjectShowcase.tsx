@@ -15,6 +15,29 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
+function getSlideStyle(offset: number) {
+  if (offset === 0) {
+    return {
+      transform: "perspective(1200px) rotateY(0deg) rotateZ(-2deg) scale(1)",
+      opacity: 1,
+      zIndex: 10,
+    };
+  }
+
+  const dir = offset > 0 ? 1 : -1;
+  const abs = Math.abs(offset);
+  const rotateY = dir * Math.min(abs * 18, 45);
+  const rotateZ = dir * (abs === 1 ? 4 : 6);
+  const scale = Math.max(0.6, 1 - abs * 0.15);
+  const opacity = Math.max(0.2, 1 - abs * 0.3);
+
+  return {
+    transform: `perspective(1200px) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale(${scale})`,
+    opacity,
+    zIndex: 10 - abs,
+  };
+}
+
 function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const cardRef = useRef<HTMLAnchorElement>(null);
@@ -37,7 +60,6 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
       href={`/work/${study.slug}`}
       className="gallery-card"
     >
-      {/* Full-bleed media */}
       <div className="gallery-media-wrap">
         {study.previewVideos && study.previewVideos.length > 0 ? (
           <div className="sc-video-row">
@@ -79,7 +101,6 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
         ) : null}
       </div>
 
-      {/* Text overlay at bottom */}
       <div className="gallery-overlay" />
       <div className="gallery-label">
         <span className="gallery-meta">
@@ -164,15 +185,24 @@ export default function ProjectShowcase() {
         </button>
 
         <div className="gallery-track" ref={trackRef}>
-          {caseStudyList.map((study, i) => (
-            <div
-              key={study.slug}
-              className={`gallery-slide${i === activeIndex ? " gallery-slide-active" : ""}`}
-              onClick={() => goTo(i)}
-            >
-              <GalleryCard study={study} active={i === activeIndex} />
-            </div>
-          ))}
+          {caseStudyList.map((study, i) => {
+            const offset = i - activeIndex;
+            const style = getSlideStyle(offset);
+            return (
+              <div
+                key={study.slug}
+                className={`gallery-slide${i === activeIndex ? " gallery-slide-active" : ""}`}
+                style={{
+                  transform: style.transform,
+                  opacity: style.opacity,
+                  zIndex: style.zIndex,
+                }}
+                onClick={() => goTo(i)}
+              >
+                <GalleryCard study={study} active={i === activeIndex} />
+              </div>
+            );
+          })}
         </div>
 
         <button

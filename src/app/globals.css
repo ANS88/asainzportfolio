@@ -2357,48 +2357,44 @@ section { padding: 5rem 0; }
 
 .gallery-track {
   display: flex;
-  gap: 2.5rem;
+  gap: 3.5rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 2rem 0 3rem;
+  padding: 4rem 0 5rem;
   align-items: center;
+  perspective: 1200px;
 }
 .gallery-track::-webkit-scrollbar { display: none; }
 
 .gallery-slide {
-  flex: 0 0 620px;
+  flex: 0 0 560px;
   scroll-snap-align: center;
-  transition: transform .6s cubic-bezier(.4, 0, .2, 1), opacity .6s ease;
-  transform: scale(.82);
-  opacity: .3;
+  transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .7s ease, z-index 0s;
+  transform-style: preserve-3d;
   cursor: pointer;
 }
-.gallery-slide-active {
-  transform: scale(1);
-  opacity: 1;
-}
 
-/* Card: credit-card-style object */
+/* Card: credit-card-style floating object */
 .gallery-card {
   position: relative;
   display: block;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, .4), 0 2px 8px rgba(0, 0, 0, .2);
-  transition: box-shadow var(--transition-medium), transform var(--transition-medium);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .5), 0 4px 12px rgba(0, 0, 0, .3);
+  transition: box-shadow .5s ease, transform .3s ease;
 }
 .gallery-slide-active .gallery-card {
-  box-shadow: 0 16px 60px rgba(0, 0, 0, .5), 0 4px 16px rgba(0, 0, 0, .3), 0 0 40px rgba(196, 168, 240, .08);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .6), 0 8px 24px rgba(0, 0, 0, .35), 0 0 60px rgba(196, 168, 240, .1);
 }
 .gallery-card:hover {
-  box-shadow: 0 20px 70px rgba(0, 0, 0, .55), 0 4px 16px rgba(0, 0, 0, .3), 0 0 60px rgba(196, 168, 240, .12);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .6), 0 8px 24px rgba(0, 0, 0, .35), 0 0 80px rgba(196, 168, 240, .15);
 }
 
 /* Full-bleed media */
@@ -2564,9 +2560,9 @@ section { padding: 5rem 0; }
 
 @media (max-width: 768px) {
   .gallery-slide {
-    flex: 0 0 85vw;
+    flex: 0 0 80vw;
   }
-  .gallery-track { gap: 1.25rem; }
+  .gallery-track { gap: 1.5rem; padding: 3rem 0 4rem; }
   .gallery-arrow { display: none; }
   .gallery-title { font-size: 1.1rem; }
   .gallery-label { padding: 1rem 1.25rem; }
