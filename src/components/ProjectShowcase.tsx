@@ -26,7 +26,7 @@ function getSlideStyle(offset: number) {
 
   const dir = offset > 0 ? 1 : -1;
   const abs = Math.abs(offset);
-  const rotate = dir * Math.min(abs * 1.5, 4);
+  const rotate = dir * Math.min(abs * 0.8, 2);
   const scale = Math.max(0.7, 1 - abs * 0.1);
   const opacity = Math.max(0.3, 1 - abs * 0.25);
 
