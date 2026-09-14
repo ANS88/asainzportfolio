@@ -160,9 +160,6 @@ export default function ProjectShowcase() {
     setTimeout(() => setPaused(false), 8000);
   };
 
-  const prev = () => goTo((activeIndex - 1 + total) % total);
-  const next = () => goTo((activeIndex + 1) % total);
-
   return (
     <section
       className="gallery-section"
@@ -175,14 +172,6 @@ export default function ProjectShowcase() {
       </p>
 
       <div className="gallery-wrapper">
-        <button
-          className="gallery-arrow gallery-arrow-left"
-          onClick={prev}
-          aria-label="Previous project"
-        >
-          &larr;
-        </button>
-
         <div className="gallery-track" ref={trackRef}>
           {caseStudyList.map((study, i) => {
             const offset = i - activeIndex;
@@ -203,25 +192,6 @@ export default function ProjectShowcase() {
             );
           })}
         </div>
-
-        <button
-          className="gallery-arrow gallery-arrow-right"
-          onClick={next}
-          aria-label="Next project"
-        >
-          &rarr;
-        </button>
-      </div>
-
-      <div className="gallery-dots">
-        {caseStudyList.map((study, i) => (
-          <button
-            key={study.slug}
-            className={`gallery-dot${i === activeIndex ? " gallery-dot-active" : ""}`}
-            onClick={() => goTo(i)}
-            aria-label={`Go to ${study.title}`}
-          />
-        ))}
       </div>
 
       <div className="sc-footer">
