@@ -1,88 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="Inter, system-ui, sans-serif">
-  <rect width="800" height="380" fill="#2e1440" rx="16"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" fill="none">
+  <style>
+    text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .title { font-size: 13px; font-weight: 600; fill: #c4a8f0; letter-spacing: 0.1em; text-anchor: middle; }
+    .phase-label { font-size: 14px; font-weight: 700; fill: #c4a8f0; text-anchor: middle; }
+    .phase-sub { font-size: 11px; fill: #8a6ebf; text-anchor: middle; }
+    .detail { font-size: 11px; fill: #b8a9e0; text-anchor: middle; }
+    .note { font-size: 11px; fill: #8a6ebf; text-anchor: middle; }
+  </style>
 
-  <!-- Title -->
-  <text x="400" y="38" text-anchor="middle" fill="#c4a8f0" font-size="14" font-weight="600" letter-spacing="0.1em">GROWING THE PRACTICE</text>
-
-  <!-- Timeline -->
-  <line x1="80" y1="195" x2="720" y2="195" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- ====== Phase 1: Solo ====== -->
-  <!-- Single person silhouette -->
-  <g transform="translate(140, 148)">
-    <circle cx="0" cy="-14" r="9" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M-14 18 Q-12 4 0 2 Q12 4 14 18" fill="#c4a8f0" opacity="0.18"/>
-  </g>
-  <text x="140" y="76" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Solo</text>
-  <text x="140" y="90" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Ship &amp; learn</text>
-  <circle cx="140" cy="195" r="4" fill="#c4a8f0" opacity="0.4"/>
-  <text x="140" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Audit the landscape</text>
-  <text x="140" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Build credibility</text>
-  <text x="140" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Define the gaps</text>
+  <!-- Phase 1: Solo -->
+  <rect x="40" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <!-- Single dot -->
+  <circle cx="140" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <text x="140" y="148" class="phase-label">Solo</text>
+  <text x="140" y="166" class="phase-sub">Ship &amp; learn</text>
+  <line x1="100" y1="184" x2="180" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <text x="140" y="208" class="detail">Audit the landscape</text>
+  <text x="140" y="228" class="detail">Build credibility</text>
+  <text x="140" y="248" class="detail">Define the gaps</text>
 
   <!-- Arrow 1 -->
-  <path d="M240 190 L248 195 L240 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="252" y1="180" x2="276" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M272 175 L280 180 L272 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- ====== Phase 2: First hires ====== -->
-  <!-- Two people -->
-  <g transform="translate(310, 148)">
-    <!-- Person 1 -->
-    <circle cx="-14" cy="-14" r="8" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M-26 18 Q-24 4 -14 2 Q-4 4 -2 18" fill="#c4a8f0" opacity="0.18"/>
-    <!-- Person 2 -->
-    <circle cx="14" cy="-14" r="8" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M2 18 Q4 4 14 2 Q24 4 26 18" fill="#c4a8f0" opacity="0.18"/>
-  </g>
-  <text x="310" y="76" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">First hires</text>
-  <text x="310" y="90" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Split the domains</text>
-  <circle cx="310" cy="195" r="4" fill="#c4a8f0" opacity="0.4"/>
-  <text x="310" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Hire for domain fit</text>
-  <text x="310" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Embed in squads</text>
-  <text x="310" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Establish rituals</text>
+  <!-- Phase 2: First hires -->
+  <rect x="280" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <!-- Two dots -->
+  <circle cx="365" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="395" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <text x="380" y="148" class="phase-label">First hires</text>
+  <text x="380" y="166" class="phase-sub">Split the domains</text>
+  <line x1="340" y1="184" x2="420" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <text x="380" y="208" class="detail">Hire for domain fit</text>
+  <text x="380" y="228" class="detail">Embed in squads</text>
+  <text x="380" y="248" class="detail">Establish rituals</text>
 
   <!-- Arrow 2 -->
-  <path d="M410 190 L418 195 L410 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="492" y1="180" x2="516" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M512 175 L520 180 L512 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- ====== Phase 3: Practice ====== -->
-  <!-- Four people -->
-  <g transform="translate(530, 148)">
-    <!-- Person 1 -->
-    <circle cx="-36" cy="-14" r="7" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M-46 18 Q-44 6 -36 4 Q-28 6 -26 18" fill="#c4a8f0" opacity="0.18"/>
-    <!-- Person 2 -->
-    <circle cx="-12" cy="-14" r="7" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M-22 18 Q-20 6 -12 4 Q-4 6 -2 18" fill="#c4a8f0" opacity="0.18"/>
-    <!-- Person 3 -->
-    <circle cx="12" cy="-14" r="7" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M2 18 Q4 6 12 4 Q20 6 22 18" fill="#c4a8f0" opacity="0.18"/>
-    <!-- Person 4 -->
-    <circle cx="36" cy="-14" r="7" fill="#c4a8f0" opacity="0.18"/>
-    <path d="M26 18 Q28 6 36 4 Q44 6 46 18" fill="#c4a8f0" opacity="0.18"/>
-  </g>
-  <text x="530" y="76" text-anchor="middle" fill="#c4a8f0" font-size="13" font-weight="600">Practice</text>
-  <text x="530" y="90" text-anchor="middle" fill="#b8a9e0" font-size="10" opacity="0.7">Compound &amp; scale</text>
-  <circle cx="530" cy="195" r="4" fill="#c4a8f0" opacity="0.4"/>
-  <text x="530" y="222" text-anchor="middle" fill="#7a6aad" font-size="9">Add research capacity</text>
-  <text x="530" y="236" text-anchor="middle" fill="#7a6aad" font-size="9">Cross-pollinate domains</text>
-  <text x="530" y="250" text-anchor="middle" fill="#7a6aad" font-size="9">Design influences roadmap</text>
+  <!-- Phase 3: Practice -->
+  <rect x="520" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <!-- Four dots in a row -->
+  <circle cx="584" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="606" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="628" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="650" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <text x="620" y="148" class="phase-label">Practice</text>
+  <text x="620" y="166" class="phase-sub">Compound &amp; scale</text>
+  <line x1="580" y1="184" x2="660" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <text x="620" y="208" class="detail">Add research capacity</text>
+  <text x="620" y="228" class="detail">Cross-pollinate domains</text>
+  <text x="620" y="248" class="detail">Design influences roadmap</text>
 
   <!-- Arrow 3 -->
-  <path d="M630 190 L638 195 L630 200" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="732" y1="180" x2="756" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M752 175 L760 180 L752 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- ====== Phase 4: Growing ====== -->
-  <g transform="translate(700, 150)">
-    <!-- Upward arrow -->
-    <line x1="0" y1="16" x2="0" y2="-8" stroke="#c4a8f0" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
-    <path d="M-6 -2 L0 -10 L6 -2" fill="none" stroke="#c4a8f0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-    <!-- Small dots -->
-    <circle cx="-10" cy="2" r="2" fill="#c4a8f0" opacity="0.15"/>
-    <circle cx="10" cy="-4" r="1.5" fill="#c4a8f0" opacity="0.12"/>
-    <circle cx="8" cy="10" r="1" fill="#c4a8f0" opacity="0.1"/>
-  </g>
-  <text x="700" y="80" text-anchor="middle" fill="#8a6ebf" font-size="12" font-weight="500">Growing</text>
-  <circle cx="700" cy="195" r="4" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1" stroke-dasharray="2,2"/>
+  <!-- Phase 4: Growing -->
+  <rect x="760" y="60" width="160" height="240" rx="12" fill="#2e1440" stroke="#4a2d6b" stroke-width="1" stroke-dasharray="6 4"/>
+  <!-- Upward arrow icon -->
+  <line x1="840" y1="120" x2="840" y2="98" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M834 104 L840 96 L846 104" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <text x="840" y="148" class="phase-label" opacity="0.6">Growing</text>
+  <text x="840" y="166" class="phase-sub" opacity="0.5">Expanding scope</text>
 
   <!-- Bottom note -->
-  <rect x="180" y="285" width="440" height="36" rx="18" fill="#c4a8f0" opacity="0.06" stroke="#4a2d6b" stroke-width="1"/>
-  <text x="400" y="308" text-anchor="middle" fill="#8a6ebf" font-size="11">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
+  <rect x="200" y="326" width="560" height="36" rx="18" fill="#c4a8f0" opacity="0.06" stroke="#3a1d5b" stroke-width="1"/>
+  <text x="480" y="349" class="note">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
 </svg>
