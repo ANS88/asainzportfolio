@@ -15,10 +15,9 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
-function CarouselCard({ study }: { study: CaseStudy }) {
+function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const cardRef = useRef<HTMLAnchorElement>(null);
-  const [visible, setVisible] = useState(false);
   const labels = transformLabels[study.slug];
 
   const isLocalVideo =
@@ -27,29 +26,19 @@ function CarouselCard({ study }: { study: CaseStudy }) {
     study.previewVideo && !study.previewVideo.startsWith("/");
 
   useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  useEffect(() => {
     if (!videoRef.current) return;
-    if (visible) videoRef.current.play().catch(() => {});
+    if (active) videoRef.current.play().catch(() => {});
     else videoRef.current.pause();
-  }, [visible]);
+  }, [active]);
 
   return (
     <a
       ref={cardRef}
       href={`/work/${study.slug}`}
-      className="carousel-card"
+      className="gallery-card"
     >
-      <div className="carousel-visual">
+      {/* Full-bleed media */}
+      <div className="gallery-media-wrap">
         {study.previewVideos && study.previewVideos.length > 0 ? (
           <div className="sc-video-row">
             {study.previewVideos.map((src, i) => (
@@ -70,7 +59,7 @@ function CarouselCard({ study }: { study: CaseStudy }) {
             muted
             loop
             playsInline
-            className="carousel-media"
+            className="gallery-media"
           />
         ) : isEmbed ? (
           <iframe
@@ -85,22 +74,23 @@ function CarouselCard({ study }: { study: CaseStudy }) {
             src={study.previewImage}
             alt={study.title}
             loading="lazy"
-            className="carousel-media"
+            className="gallery-media"
           />
         ) : null}
-        <div className="carousel-visual-overlay" />
       </div>
 
-      <div className="carousel-content">
-        <span className="carousel-meta">
+      {/* Text overlay at bottom */}
+      <div className="gallery-overlay" />
+      <div className="gallery-label">
+        <span className="gallery-meta">
           {study.company} &middot; {study.timeline}
         </span>
-        <h3 className="carousel-title">{study.title}</h3>
+        <h3 className="gallery-title">{study.title}</h3>
         {labels && (
-          <div className="carousel-transform">
-            <span className="carousel-from">{labels.from}</span>
-            <span className="carousel-arr">&rarr;</span>
-            <span className="carousel-to">{labels.to}</span>
+          <div className="gallery-transform">
+            <span className="gallery-from">{labels.from}</span>
+            <span className="gallery-arr">&rarr;</span>
+            <span className="gallery-to">{labels.to}</span>
           </div>
         )}
       </div>
@@ -131,10 +121,7 @@ export default function ProjectShowcase() {
   );
 
   const advance = useCallback(() => {
-    setActiveIndex((prev) => {
-      const next = (prev + 1) % total;
-      return next;
-    });
+    setActiveIndex((prev) => (prev + 1) % total);
   }, [total]);
 
   useEffect(() => {
@@ -158,7 +145,7 @@ export default function ProjectShowcase() {
 
   return (
     <section
-      className="carousel-section"
+      className="gallery-section"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -167,29 +154,29 @@ export default function ProjectShowcase() {
         clarity.
       </p>
 
-      <div className="carousel-wrapper">
+      <div className="gallery-wrapper">
         <button
-          className="carousel-arrow carousel-arrow-left"
+          className="gallery-arrow gallery-arrow-left"
           onClick={prev}
           aria-label="Previous project"
         >
           &larr;
         </button>
 
-        <div className="carousel-track" ref={trackRef}>
+        <div className="gallery-track" ref={trackRef}>
           {caseStudyList.map((study, i) => (
             <div
               key={study.slug}
-              className={`carousel-slide${i === activeIndex ? " carousel-slide-active" : ""}`}
+              className={`gallery-slide${i === activeIndex ? " gallery-slide-active" : ""}`}
               onClick={() => goTo(i)}
             >
-              <CarouselCard study={study} />
+              <GalleryCard study={study} active={i === activeIndex} />
             </div>
           ))}
         </div>
 
         <button
-          className="carousel-arrow carousel-arrow-right"
+          className="gallery-arrow gallery-arrow-right"
           onClick={next}
           aria-label="Next project"
         >
@@ -197,11 +184,11 @@ export default function ProjectShowcase() {
         </button>
       </div>
 
-      <div className="carousel-dots">
+      <div className="gallery-dots">
         {caseStudyList.map((study, i) => (
           <button
             key={study.slug}
-            className={`carousel-dot${i === activeIndex ? " carousel-dot-active" : ""}`}
+            className={`gallery-dot${i === activeIndex ? " gallery-dot-active" : ""}`}
             onClick={() => goTo(i)}
             aria-label={`Go to ${study.title}`}
           />
