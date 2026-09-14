@@ -41,11 +41,12 @@
 
   <!-- Phase 3: Practice -->
   <rect x="520" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
-  <!-- Four dots in a row -->
-  <circle cx="584" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="606" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="628" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="650" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <!-- Five dots in a row -->
+  <circle cx="573" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="597" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="621" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="645" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <circle cx="669" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
   <text x="620" y="148" class="phase-label">Practice</text>
   <text x="620" y="166" class="phase-sub">Compound &amp; scale</text>
   <line x1="580" y1="184" x2="660" y2="184" stroke="#3a1d5b" stroke-width="1"/>
