@@ -2353,12 +2353,12 @@ section { padding: 5rem 0; }
 .collage-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 340px 300px 280px 280px;
+  grid-template-rows: 380px 300px 280px 280px;
   grid-template-areas:
-    "a a a a a a a b b b b b"
+    "h h h h h h h a a a a a"
     "d d d d d e e e e e e e"
     "f f f f f g g g g g g g"
-    "h h h h h h c c c c c c";
+    "b b b b b b c c c c c c";
   gap: 6px;
   padding: 2.5rem clamp(1rem, 3vw, 3rem) 0;
 }
@@ -2499,12 +2499,13 @@ section { padding: 5rem 0; }
 @media (max-width: 768px) {
   .collage-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 180px 180px;
+    grid-template-rows: 240px 200px 180px 180px;
     grid-template-areas:
-      "a b"
-      "d e"
-      "f g"
-      "h c";
+      "h h"
+      "a d"
+      "e f"
+      "g b"
+      "c c";
     gap: 4px;
     padding: 1.5rem 0.75rem 0;
   }
