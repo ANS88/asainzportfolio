@@ -2390,6 +2390,7 @@ section { padding: 5rem 0; }
   position: absolute;
   inset: 0;
   overflow: hidden;
+  border-radius: 16px;
   background: var(--cream);
 }
 .collage-media {
