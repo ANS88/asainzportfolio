@@ -2355,10 +2355,10 @@ section { padding: 5rem 0; }
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 380px 300px 280px 280px;
   grid-template-areas:
-    "h h h h h h h a a a a a"
-    "d d d d d e e e e e e e"
-    "f f f f f g g g g g g g"
-    "b b b b b b c c c c c c";
+    "h h h h h h h b b b b b"
+    "a a a a a d d d d d d d"
+    "e e e e e e f f f f f f"
+    "g g g g g g c c c c c c";
   gap: 6px;
   padding: 2.5rem clamp(1rem, 3vw, 3rem) 0;
 }
@@ -2501,11 +2501,10 @@ section { padding: 5rem 0; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 240px 200px 180px 180px;
     grid-template-areas:
-      "h h"
+      "h b"
       "a d"
       "e f"
-      "g b"
-      "c c";
+      "g c";
     gap: 4px;
     padding: 1.5rem 0.75rem 0;
   }
