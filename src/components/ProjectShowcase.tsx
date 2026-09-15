@@ -139,6 +139,7 @@ export default function ProjectShowcase() {
             <div
               key={slot.slug}
               className="collage-cell"
+              data-slug={slot.slug}
               style={{ gridArea: slot.gridArea }}
             >
               <CollageCard study={study} />
