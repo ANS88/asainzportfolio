@@ -2337,78 +2337,67 @@ section { padding: 5rem 0; }
   .blowout-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ── Project Gallery Carousel ── */
-.gallery-section {
+/* ── Project Collage Grid ── */
+.collage-section {
   padding: 2rem 0 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
-.gallery-section > .section-subtitle {
+.collage-section > .section-subtitle {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 clamp(1.5rem, 5vw, 4rem);
 }
 
-.gallery-wrapper {
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 340px 240px 300px 260px;
+  grid-template-areas:
+    "a a a a a a a b b b b b"
+    "c c c c c c c c c c c c"
+    "d d d d d e e e e e e e"
+    "f f f f g g g g h h h h";
+  gap: 6px;
+  padding: 2.5rem clamp(1rem, 3vw, 3rem) 0;
+}
+
+.collage-cell {
   position: relative;
-  margin-top: 2.5rem;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
 }
 
-.gallery-track {
-  display: flex;
-  gap: 3.5rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 4rem 0 5rem;
-  align-items: center;
-}
-.gallery-track::-webkit-scrollbar { display: none; }
-
-.gallery-slide {
-  flex: 0 0 560px;
-  scroll-snap-align: center;
-  transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .7s ease;
-  cursor: pointer;
-}
-
-/* Card: credit-card-style floating object */
-.gallery-card {
+.collage-card {
   position: relative;
   display: block;
-  border-radius: 18px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, .5), 0 4px 12px rgba(0, 0, 0, .3);
-  transition: box-shadow .5s ease, transform .3s ease;
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1);
 }
-.gallery-slide-active .gallery-card {
-  box-shadow: 0 24px 80px rgba(0, 0, 0, .6), 0 8px 24px rgba(0, 0, 0, .35), 0 0 60px rgba(196, 168, 240, .1);
-}
-.gallery-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, .6), 0 8px 24px rgba(0, 0, 0, .35), 0 0 80px rgba(196, 168, 240, .15);
+.collage-card:hover {
+  transform: scale(1.015);
+  z-index: 2;
 }
 
-/* Full-bleed media */
-.gallery-media-wrap {
+.collage-media-wrap {
   position: absolute;
   inset: 0;
   background: var(--cream);
 }
-.gallery-media {
+.collage-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform .8s cubic-bezier(.4, 0, .2, 1);
 }
-.gallery-card:hover .gallery-media { transform: scale(1.05); }
+.collage-card:hover .collage-media { transform: scale(1.06); }
 
 .sc-iframe {
   position: absolute;
@@ -2433,69 +2422,68 @@ section { padding: 5rem 0; }
   margin: 0 -2%;
 }
 
-/* Gradient overlay for text legibility */
-.gallery-overlay {
+.collage-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 35%,
-    rgba(35, 12, 51, .25) 60%,
-    rgba(35, 12, 51, .85) 100%
+    transparent 30%,
+    rgba(35, 12, 51, .2) 55%,
+    rgba(35, 12, 51, .82) 100%
   );
   pointer-events: none;
-  transition: opacity .4s ease;
-}
-.gallery-slide:not(.gallery-slide-active) .gallery-overlay {
   opacity: 0;
+  transition: opacity .35s ease;
+}
+.collage-card:hover .collage-overlay {
+  opacity: 1;
 }
 
-/* Text overlay at bottom */
-.gallery-label {
+.collage-label {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem 1.75rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: .35rem;
+  gap: .3rem;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .4s ease .1s, transform .4s ease .1s;
+  transform: translateY(10px);
+  transition: opacity .35s ease, transform .35s ease;
 }
-.gallery-slide-active .gallery-label {
+.collage-card:hover .collage-label {
   opacity: 1;
   transform: translateY(0);
 }
 
-.gallery-meta {
-  font-size: .6rem;
+.collage-meta {
+  font-size: .55rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .14em;
   color: rgba(255, 255, 255, .6);
 }
-.gallery-title {
+.collage-title {
   font-family: var(--sans);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
   transition: color var(--transition-fast);
 }
-.gallery-card:hover .gallery-title { color: var(--accent2); }
+.collage-card:hover .collage-title { color: var(--accent2); }
 
-.gallery-transform {
+.collage-transform {
   display: flex;
   align-items: center;
   gap: .4rem;
-  font-size: .8rem;
+  font-size: .75rem;
   font-weight: 600;
 }
-.gallery-from { color: rgba(255, 255, 255, .5); }
-.gallery-arr { color: rgba(255, 255, 255, .3); font-size: .7rem; }
-.gallery-to { color: var(--accent); }
+.collage-from { color: rgba(255, 255, 255, .5); }
+.collage-arr { color: rgba(255, 255, 255, .3); font-size: .65rem; }
+.collage-to { color: var(--accent); }
 
 .sc-footer {
   margin-top: 3rem;
@@ -2508,12 +2496,30 @@ section { padding: 5rem 0; }
 }
 
 @media (max-width: 768px) {
-  .gallery-slide {
-    flex: 0 0 80vw;
+  .collage-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 180px 200px 180px 180px;
+    grid-template-areas:
+      "a b"
+      "c c"
+      "d e"
+      "f g"
+      "h h";
+    gap: 4px;
+    padding: 1.5rem 0.75rem 0;
   }
-  .gallery-track { gap: 1.5rem; padding: 3rem 0 4rem; }
-  .gallery-title { font-size: 1.1rem; }
-  .gallery-label { padding: 1rem 1.25rem; }
+  .collage-title { font-size: 1rem; }
+  .collage-label { padding: 0.75rem 1rem; }
+}
+
+@media (max-width: 480px) {
+  .collage-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 200px);
+    grid-template-areas:
+      "a" "b" "c" "d" "e" "f" "g" "h";
+    gap: 4px;
+  }
 }
 
 /* ── More Work (case study footer nav) ── */

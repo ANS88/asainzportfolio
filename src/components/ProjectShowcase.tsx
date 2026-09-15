@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
 
@@ -15,31 +15,33 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
-function getSlideStyle(offset: number, index: number) {
-  if (offset === 0) {
-    return {
-      transform: "rotate(0deg) scale(1)",
-      opacity: 1,
-      zIndex: 10,
-    };
-  }
-
-  const abs = Math.abs(offset);
-  const alternating = index % 2 === 0 ? 1 : -1;
-  const rotate = alternating * Math.min(abs * 0.8, 2);
-  const scale = Math.max(0.7, 1 - abs * 0.1);
-  const opacity = Math.max(0.3, 1 - abs * 0.25);
-
-  return {
-    transform: `rotate(${rotate}deg) scale(${scale})`,
-    opacity,
-    zIndex: 10 - abs,
-  };
+interface GridSlot {
+  slug: string;
+  gridArea: string;
+  radius: string;
 }
 
-function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
+const gridSlots: GridSlot[] = [
+  { slug: "natera-clinical-review", gridArea: "a", radius: "24px" },
+  { slug: "unified-patient-portal", gridArea: "b", radius: "8px" },
+  { slug: "histopathology-workflow", gridArea: "c", radius: "32px" },
+  { slug: "identity-portal", gridArea: "d", radius: "14px" },
+  { slug: "perimenopause-tracking", gridArea: "e", radius: "20px" },
+  { slug: "ai-design-practice", gridArea: "f", radius: "6px" },
+  { slug: "lab-operations-leadership", gridArea: "g", radius: "28px" },
+  { slug: "clinical-trial-screening", gridArea: "h", radius: "16px" },
+];
+
+const studyMap = Object.fromEntries(caseStudyList.map((s) => [s.slug, s]));
+
+function CollageCard({
+  study,
+  radius,
+}: {
+  study: CaseStudy;
+  radius: string;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const cardRef = useRef<HTMLAnchorElement>(null);
   const labels = transformLabels[study.slug];
 
   const isLocalVideo =
@@ -49,17 +51,24 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
 
   useEffect(() => {
     if (!videoRef.current) return;
-    if (active) videoRef.current.play().catch(() => {});
-    else videoRef.current.pause();
-  }, [active]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) videoRef.current?.play().catch(() => {});
+        else videoRef.current?.pause();
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(videoRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <a
-      ref={cardRef}
       href={`/work/${study.slug}`}
-      className="gallery-card"
+      className="collage-card"
+      style={{ borderRadius: radius }}
     >
-      <div className="gallery-media-wrap">
+      <div className="collage-media-wrap">
         {study.previewVideos && study.previewVideos.length > 0 ? (
           <div className="sc-video-row">
             {study.previewVideos.map((src, i) => (
@@ -80,7 +89,7 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
             muted
             loop
             playsInline
-            className="gallery-media"
+            className="collage-media"
           />
         ) : isEmbed ? (
           <iframe
@@ -95,22 +104,22 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
             src={study.previewImage}
             alt={study.title}
             loading="lazy"
-            className="gallery-media"
+            className="collage-media"
           />
         ) : null}
       </div>
 
-      <div className="gallery-overlay" />
-      <div className="gallery-label">
-        <span className="gallery-meta">
+      <div className="collage-overlay" />
+      <div className="collage-label">
+        <span className="collage-meta">
           {study.company} &middot; {study.timeline}
         </span>
-        <h3 className="gallery-title">{study.title}</h3>
+        <h3 className="collage-title">{study.title}</h3>
         {labels && (
-          <div className="gallery-transform">
-            <span className="gallery-from">{labels.from}</span>
-            <span className="gallery-arr">&rarr;</span>
-            <span className="gallery-to">{labels.to}</span>
+          <div className="collage-transform">
+            <span className="collage-from">{labels.from}</span>
+            <span className="collage-arr">&rarr;</span>
+            <span className="collage-to">{labels.to}</span>
           </div>
         )}
       </div>
@@ -119,79 +128,27 @@ function GalleryCard({ study, active }: { study: CaseStudy; active: boolean }) {
 }
 
 export default function ProjectShowcase() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
-  const total = caseStudyList.length;
-
-  const scrollToIndex = useCallback(
-    (index: number) => {
-      const track = trackRef.current;
-      if (!track) return;
-      const card = track.children[index] as HTMLElement | undefined;
-      if (!card) return;
-      const trackRect = track.getBoundingClientRect();
-      const cardRect = card.getBoundingClientRect();
-      const offset =
-        cardRect.left - trackRect.left + track.scrollLeft - (trackRect.width - cardRect.width) / 2;
-      track.scrollTo({ left: offset, behavior: "smooth" });
-    },
-    []
-  );
-
-  const advance = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % total);
-  }, [total]);
-
-  useEffect(() => {
-    scrollToIndex(activeIndex);
-  }, [activeIndex, scrollToIndex]);
-
-  useEffect(() => {
-    if (paused) return;
-    timerRef.current = setInterval(advance, 4000);
-    return () => clearInterval(timerRef.current);
-  }, [paused, advance]);
-
-  const goTo = (index: number) => {
-    setActiveIndex(index);
-    setPaused(true);
-    setTimeout(() => setPaused(false), 8000);
-  };
-
   return (
-    <section
-      className="gallery-section"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+    <section className="collage-section">
       <p className="section-subtitle">
         I do my best work amid ambiguity and entangled systems, in pursuit of
         clarity.
       </p>
 
-      <div className="gallery-wrapper">
-        <div className="gallery-track" ref={trackRef}>
-          {caseStudyList.map((study, i) => {
-            const offset = i - activeIndex;
-            const style = getSlideStyle(offset, i);
-            return (
-              <div
-                key={study.slug}
-                className={`gallery-slide${i === activeIndex ? " gallery-slide-active" : ""}`}
-                style={{
-                  transform: style.transform,
-                  opacity: style.opacity,
-                  zIndex: style.zIndex,
-                }}
-                onClick={() => goTo(i)}
-              >
-                <GalleryCard study={study} active={i === activeIndex} />
-              </div>
-            );
-          })}
-        </div>
+      <div className="collage-grid">
+        {gridSlots.map((slot) => {
+          const study = studyMap[slot.slug];
+          if (!study) return null;
+          return (
+            <div
+              key={slot.slug}
+              className="collage-cell"
+              style={{ gridArea: slot.gridArea }}
+            >
+              <CollageCard study={study} radius={slot.radius} />
+            </div>
+          );
+        })}
       </div>
 
       <div className="sc-footer">
