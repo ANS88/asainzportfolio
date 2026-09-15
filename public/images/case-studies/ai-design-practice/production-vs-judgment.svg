@@ -1,66 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
   <style>
-    text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .col-header { font-size: 14px; font-weight: 700; fill: #7dd3fc; text-anchor: middle; }
-    .col-sub { font-size: 11px; fill: #4b8db8; text-anchor: middle; }
-    .item { font-size: 12px; fill: #d4e8f5; }
-    .arrow { font-size: 20px; fill: #1e3a5c; text-anchor: middle; }
-    .divider { stroke: #163050; stroke-width: 1; stroke-dasharray: 6 4; }
-    .tag-ai { font-size: 10px; font-weight: 600; fill: #4b8db8; }
-    .tag-human { font-size: 10px; font-weight: 600; fill: #7dd3fc; }
+    text { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
+    .terminal-title { font-size: 9px; font-weight: 700; fill: #5a9abf; letter-spacing: 0.15em; text-transform: uppercase; }
+    .item-text { font-size: 10px; fill: #d4e8f5; }
+    .line-num { font-size: 9px; fill: #2a5070; }
+    .tag { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; }
+    .tag-ai { fill: #3a6a8a; }
+    .tag-human { fill: #7dd3fc; }
+    .gate-label { font-size: 10px; font-weight: 700; fill: #7dd3fc; text-anchor: middle; letter-spacing: 0.12em; text-transform: uppercase; }
+    .gate-sub { font-size: 8px; fill: #5a9abf; text-anchor: middle; letter-spacing: 0.05em; }
+    .col-title { font-size: 11px; font-weight: 700; fill: #7dd3fc; letter-spacing: 0.15em; text-transform: uppercase; }
+    .col-sub { font-size: 9px; fill: #3a6a8a; letter-spacing: 0.05em; }
   </style>
 
-  <!-- Left column: Production (AI accelerates) -->
-  <text x="240" y="40" class="col-header">Production</text>
-  <text x="240" y="58" class="col-sub">AI accelerates</text>
+  <!-- Dot grid background -->
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.6" fill="#1e3a5c" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="420" fill="url(#dots)"/>
 
-  <rect x="60" y="80" width="360" height="36" rx="3" fill="#122240" stroke="#163050" stroke-width="1"/>
-  <text x="80" y="104" class="item">Transcription &amp; first-pass coding</text>
-  <text x="370" y="104" class="tag-ai">AI</text>
+  <!-- Left terminal: PRODUCTION -->
+  <rect x="40" y="30" width="360" height="360" fill="#0a1520" stroke="#1e3a5c" stroke-width="1"/>
+  <!-- Terminal title bar -->
+  <rect x="40" y="30" width="360" height="24" fill="#0e1c2c" stroke="#1e3a5c" stroke-width="1"/>
+  <circle cx="56" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <circle cx="70" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <circle cx="84" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <text x="220" y="46" class="terminal-title" text-anchor="middle">production.log</text>
 
-  <rect x="60" y="126" width="360" height="36" rx="3" fill="#122240" stroke="#163050" stroke-width="1"/>
-  <text x="80" y="150" class="item">Affinity clusters &amp; theme drafts</text>
-  <text x="370" y="150" class="tag-ai">AI</text>
+  <!-- Column header -->
+  <text x="60" y="80" class="col-title">Production</text>
+  <text x="60" y="94" class="col-sub">// AI accelerates these</text>
 
-  <rect x="60" y="172" width="360" height="36" rx="3" fill="#122240" stroke="#163050" stroke-width="1"/>
-  <text x="80" y="196" class="item">Prototype scaffolding &amp; boilerplate</text>
-  <text x="370" y="196" class="tag-ai">AI</text>
+  <!-- Production items with line numbers -->
+  <text x="60" y="130" class="line-num">01</text>
+  <rect x="82" y="116" width="300" height="26" fill="#122240" stroke="#163050" stroke-width="0.5" rx="2"/>
+  <text x="92" y="134" class="item-text">Transcription &amp; first-pass coding</text>
+  <text x="356" y="134" class="tag tag-ai">AI</text>
 
-  <rect x="60" y="218" width="360" height="36" rx="3" fill="#122240" stroke="#163050" stroke-width="1"/>
-  <text x="80" y="242" class="item">Component variants &amp; documentation</text>
-  <text x="370" y="242" class="tag-ai">AI</text>
+  <text x="60" y="170" class="line-num">02</text>
+  <rect x="82" y="156" width="300" height="26" fill="#122240" stroke="#163050" stroke-width="0.5" rx="2"/>
+  <text x="92" y="174" class="item-text">Affinity clusters &amp; theme drafts</text>
+  <text x="356" y="174" class="tag tag-ai">AI</text>
 
-  <rect x="60" y="264" width="360" height="36" rx="3" fill="#122240" stroke="#163050" stroke-width="1"/>
-  <text x="80" y="288" class="item">Report drafts &amp; meeting notes</text>
-  <text x="370" y="288" class="tag-ai">AI</text>
+  <text x="60" y="210" class="line-num">03</text>
+  <rect x="82" y="196" width="300" height="26" fill="#122240" stroke="#163050" stroke-width="0.5" rx="2"/>
+  <text x="92" y="214" class="item-text">Prototype scaffolding &amp; boilerplate</text>
+  <text x="356" y="214" class="tag tag-ai">AI</text>
 
-  <!-- Arrow -->
-  <text x="480" y="196" class="arrow">&#x2192;</text>
+  <text x="60" y="250" class="line-num">04</text>
+  <rect x="82" y="236" width="300" height="26" fill="#122240" stroke="#163050" stroke-width="0.5" rx="2"/>
+  <text x="92" y="254" class="item-text">Component variants &amp; documentation</text>
+  <text x="356" y="254" class="tag tag-ai">AI</text>
 
-  <!-- Vertical dashed divider -->
-  <line x1="480" y1="70" x2="480" y2="310" class="divider"/>
+  <text x="60" y="290" class="line-num">05</text>
+  <rect x="82" y="276" width="300" height="26" fill="#122240" stroke="#163050" stroke-width="0.5" rx="2"/>
+  <text x="92" y="294" class="item-text">Report drafts &amp; meeting notes</text>
+  <text x="356" y="294" class="tag tag-ai">AI</text>
 
-  <!-- Right column: Judgment (Humans own) -->
-  <text x="720" y="40" class="col-header">Judgment</text>
-  <text x="720" y="58" class="col-sub">Humans own</text>
+  <!-- Blinking cursor -->
+  <rect x="60" y="318" width="8" height="14" fill="#7dd3fc" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
 
-  <rect x="540" y="80" width="360" height="36" rx="3" fill="#0c1a2e" stroke="#1e3a5c" stroke-width="1.2"/>
-  <text x="560" y="104" class="item">What to build &amp; what evidence means</text>
-  <text x="850" y="104" class="tag-human">HUMAN</text>
+  <!-- Center gate -->
+  <polygon points="480,140 510,160 510,280 480,300 450,280 450,160" fill="#0a1520" stroke="#7dd3fc" stroke-width="1.5"/>
+  <polygon points="480,150 504,166 504,274 480,290 456,274 456,166" fill="none" stroke="#1e3a5c" stroke-width="0.5" stroke-dasharray="3 4"/>
+  <text x="480" y="210" class="gate-label">Review</text>
+  <text x="480" y="226" class="gate-sub">Gate</text>
+  <!-- Diamond indicators -->
+  <polygon points="480,140 484,132 480,124 476,132" fill="#7dd3fc" opacity="0.5"/>
+  <polygon points="480,300 484,308 480,316 476,308" fill="#7dd3fc" opacity="0.5"/>
 
-  <rect x="540" y="126" width="360" height="36" rx="3" fill="#0c1a2e" stroke="#1e3a5c" stroke-width="1.2"/>
-  <text x="560" y="150" class="item">Theme validation against field memory</text>
-  <text x="850" y="150" class="tag-human">HUMAN</text>
+  <!-- Flow arrows left to center -->
+  <line x1="400" y1="130" x2="450" y2="160" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="400" y1="170" x2="450" y2="186" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="400" y1="210" x2="450" y2="220" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="400" y1="250" x2="450" y2="254" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="400" y1="290" x2="450" y2="280" stroke="#1e3a5c" stroke-width="1"/>
 
-  <rect x="540" y="172" width="360" height="36" rx="3" fill="#0c1a2e" stroke="#1e3a5c" stroke-width="1.2"/>
-  <text x="560" y="196" class="item">Interaction refinement &amp; craft</text>
-  <text x="850" y="196" class="tag-human">HUMAN</text>
+  <!-- Flow arrows center to right -->
+  <line x1="510" y1="160" x2="560" y2="130" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="510" y1="186" x2="560" y2="170" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="510" y1="220" x2="560" y2="210" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="510" y1="254" x2="560" y2="250" stroke="#1e3a5c" stroke-width="1"/>
+  <line x1="510" y1="280" x2="560" y2="290" stroke="#1e3a5c" stroke-width="1"/>
 
-  <rect x="540" y="218" width="360" height="36" rx="3" fill="#0c1a2e" stroke="#1e3a5c" stroke-width="1.2"/>
-  <text x="560" y="242" class="item">Quality standards &amp; what ships</text>
-  <text x="850" y="242" class="tag-human">HUMAN</text>
+  <!-- Right terminal: JUDGMENT -->
+  <rect x="560" y="30" width="360" height="360" fill="#0a1520" stroke="#1e3a5c" stroke-width="1"/>
+  <!-- Terminal title bar -->
+  <rect x="560" y="30" width="360" height="24" fill="#0e1c2c" stroke="#1e3a5c" stroke-width="1"/>
+  <circle cx="576" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <circle cx="590" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <circle cx="604" cy="42" r="4" fill="#1e3a5c" opacity="0.6"/>
+  <text x="740" y="46" class="terminal-title" text-anchor="middle">judgment.log</text>
 
-  <rect x="540" y="264" width="360" height="36" rx="3" fill="#0c1a2e" stroke="#1e3a5c" stroke-width="1.2"/>
-  <text x="560" y="288" class="item">Domain review &amp; final authority</text>
-  <text x="850" y="288" class="tag-human">HUMAN</text>
+  <!-- Column header -->
+  <text x="580" y="80" class="col-title">Judgment</text>
+  <text x="580" y="94" class="col-sub">// humans own these</text>
+
+  <!-- Judgment items with line numbers -->
+  <text x="580" y="130" class="line-num">01</text>
+  <rect x="602" y="116" width="300" height="26" fill="none" stroke="#1e3a5c" stroke-width="1" rx="2"/>
+  <text x="612" y="134" class="item-text">What to build &amp; what evidence means</text>
+  <text x="858" y="134" class="tag tag-human">HUMAN</text>
+
+  <text x="580" y="170" class="line-num">02</text>
+  <rect x="602" y="156" width="300" height="26" fill="none" stroke="#1e3a5c" stroke-width="1" rx="2"/>
+  <text x="612" y="174" class="item-text">Theme validation against field memory</text>
+  <text x="858" y="174" class="tag tag-human">HUMAN</text>
+
+  <text x="580" y="210" class="line-num">03</text>
+  <rect x="602" y="196" width="300" height="26" fill="none" stroke="#1e3a5c" stroke-width="1" rx="2"/>
+  <text x="612" y="214" class="item-text">Interaction refinement &amp; craft</text>
+  <text x="858" y="214" class="tag tag-human">HUMAN</text>
+
+  <text x="580" y="250" class="line-num">04</text>
+  <rect x="602" y="236" width="300" height="26" fill="none" stroke="#1e3a5c" stroke-width="1" rx="2"/>
+  <text x="612" y="254" class="item-text">Quality standards &amp; what ships</text>
+  <text x="858" y="254" class="tag tag-human">HUMAN</text>
+
+  <text x="580" y="290" class="line-num">05</text>
+  <rect x="602" y="276" width="300" height="26" fill="none" stroke="#1e3a5c" stroke-width="1" rx="2"/>
+  <text x="612" y="294" class="item-text">Domain review &amp; final authority</text>
+  <text x="858" y="294" class="tag tag-human">HUMAN</text>
+
+  <!-- Lock icon suggestion -->
+  <rect x="580" y="318" width="8" height="14" fill="#7dd3fc" opacity="0.3"/>
 </svg>
