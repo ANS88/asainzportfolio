@@ -957,6 +957,118 @@ a:hover { opacity: .85; }
   .cs-footer { grid-template-columns: 1fr; gap: 1rem; }
 }
 
+/* ── AI Design Practice theme ── */
+.case-study[data-slug="ai-design-practice"] {
+  --cs-accent: #7dd3fc;
+  --cs-accent-soft: #4ba3d4;
+  --cs-accent-bg: rgba(125, 211, 252, .06);
+  --cs-accent-border: rgba(125, 211, 252, .25);
+  --cs-title-font: 'Inter', system-ui, sans-serif;
+}
+.case-study[data-slug="ai-design-practice"] .cs-title {
+  font-family: var(--cs-title-font);
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+.case-study[data-slug="ai-design-practice"] .cs-judgment {
+  color: var(--cs-accent);
+}
+.case-study[data-slug="ai-design-practice"] .cs-impact-hero-value {
+  color: var(--cs-accent);
+}
+.case-study[data-slug="ai-design-practice"] .cs-hero-tag {
+  color: var(--cs-accent);
+  background: var(--cs-accent-bg);
+}
+.case-study[data-slug="ai-design-practice"] .section-line {
+  border-image: linear-gradient(90deg, var(--cs-accent-border), transparent) 1;
+}
+.case-study[data-slug="ai-design-practice"] .section-title {
+  font-family: var(--cs-title-font);
+  font-weight: 700;
+  letter-spacing: -.01em;
+  text-transform: none;
+}
+.case-study[data-slug="ai-design-practice"] .cs-section-judgment {
+  border-top-color: var(--cs-accent);
+  background: rgba(125, 211, 252, .04);
+}
+.case-study[data-slug="ai-design-practice"] .cs-section-judgment .section-title {
+  color: var(--cs-accent);
+}
+.case-study[data-slug="ai-design-practice"] .cs-quote-block {
+  border-left-color: var(--cs-accent-soft);
+}
+.case-study[data-slug="ai-design-practice"] .cs-tag {
+  color: var(--cs-accent);
+  background: var(--cs-accent-bg);
+}
+.case-study[data-slug="ai-design-practice"] .cs-meta-dot {
+  color: var(--cs-accent-soft);
+}
+
+/* ── Lab Operations Leadership theme ── */
+.case-study[data-slug="lab-operations-leadership"] {
+  --cs-accent: #e8a87c;
+  --cs-accent-soft: #c4825a;
+  --cs-accent-bg: rgba(232, 168, 124, .07);
+  --cs-accent-border: rgba(232, 168, 124, .25);
+  --cs-title-font: 'Cormorant Garamond', Georgia, serif;
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-title {
+  font-family: var(--cs-title-font);
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  letter-spacing: -.01em;
+  font-style: italic;
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-judgment {
+  color: var(--cs-accent);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-impact-hero-value {
+  font-family: var(--cs-title-font);
+  color: var(--cs-accent);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-hero-tag {
+  color: var(--cs-accent);
+  background: var(--cs-accent-bg);
+}
+.case-study[data-slug="lab-operations-leadership"] .section-line {
+  border-image: linear-gradient(90deg, var(--cs-accent-border), transparent) 1;
+}
+.case-study[data-slug="lab-operations-leadership"] .section-title {
+  font-family: var(--cs-title-font);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.8rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-section-judgment {
+  border-top-color: var(--cs-accent);
+  background: rgba(232, 168, 124, .04);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-section-judgment .section-title {
+  color: var(--cs-accent);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-quote-block {
+  border-left-color: var(--cs-accent-soft);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-tag {
+  color: var(--cs-accent);
+  background: var(--cs-accent-bg);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-meta-dot {
+  color: var(--cs-accent-soft);
+}
+.case-study[data-slug="lab-operations-leadership"] .cs-text-block h4 {
+  font-family: var(--cs-title-font);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+}
+
 /* ═══ THINKING PAGE ═══ */
 .essay-toggle {
   display: flex;

@@ -186,7 +186,7 @@ export default function CaseStudyTemplate({
   caseStudy: CaseStudy;
 }) {
   return (
-    <article className="case-study">
+    <article className="case-study" data-slug={caseStudy.slug}>
       <ImageLightbox />
 
       {/* ── HERO ── */}
