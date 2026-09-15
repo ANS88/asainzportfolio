@@ -88,23 +88,13 @@ function CollageCard({
             className="collage-media"
           />
         ) : isEmbed ? (
-          <>
-            {study.previewImage && (
-              <img
-                src={study.previewImage}
-                alt={study.title}
-                loading="lazy"
-                className="collage-media"
-              />
-            )}
-            <iframe
-              src={study.previewVideo}
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              allowFullScreen
-              loading="lazy"
-              className="sc-iframe"
-            />
-          </>
+          <iframe
+            src={study.previewVideo}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            allowFullScreen
+            loading="lazy"
+            className="sc-iframe"
+          />
         ) : study.previewImage ? (
           <img
             src={study.previewImage}
