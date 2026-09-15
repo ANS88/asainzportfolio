@@ -18,28 +18,25 @@ const transformLabels: Record<string, { from: string; to: string }> = {
 interface GridSlot {
   slug: string;
   gridArea: string;
-  radius: string;
 }
 
 const gridSlots: GridSlot[] = [
-  { slug: "natera-clinical-review", gridArea: "a", radius: "24px" },
-  { slug: "unified-patient-portal", gridArea: "b", radius: "8px" },
-  { slug: "histopathology-workflow", gridArea: "c", radius: "32px" },
-  { slug: "identity-portal", gridArea: "d", radius: "14px" },
-  { slug: "perimenopause-tracking", gridArea: "e", radius: "20px" },
-  { slug: "ai-design-practice", gridArea: "f", radius: "6px" },
-  { slug: "lab-operations-leadership", gridArea: "g", radius: "28px" },
-  { slug: "clinical-trial-screening", gridArea: "h", radius: "16px" },
+  { slug: "natera-clinical-review", gridArea: "a" },
+  { slug: "unified-patient-portal", gridArea: "b" },
+  { slug: "histopathology-workflow", gridArea: "c" },
+  { slug: "identity-portal", gridArea: "d" },
+  { slug: "perimenopause-tracking", gridArea: "e" },
+  { slug: "ai-design-practice", gridArea: "f" },
+  { slug: "lab-operations-leadership", gridArea: "g" },
+  { slug: "clinical-trial-screening", gridArea: "h" },
 ];
 
 const studyMap = Object.fromEntries(caseStudyList.map((s) => [s.slug, s]));
 
 function CollageCard({
   study,
-  radius,
 }: {
   study: CaseStudy;
-  radius: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const labels = transformLabels[study.slug];
@@ -66,7 +63,6 @@ function CollageCard({
     <a
       href={`/work/${study.slug}`}
       className="collage-card"
-      style={{ borderRadius: radius }}
     >
       <div className="collage-media-wrap">
         {study.previewVideos && study.previewVideos.length > 0 ? (
@@ -145,7 +141,7 @@ export default function ProjectShowcase() {
               className="collage-cell"
               style={{ gridArea: slot.gridArea }}
             >
-              <CollageCard study={study} radius={slot.radius} />
+              <CollageCard study={study} />
             </div>
           );
         })}
