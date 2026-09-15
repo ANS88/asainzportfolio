@@ -2408,11 +2408,6 @@ section { padding: 5rem 0; }
   height: 100%;
   border: none;
 }
-.collage-cell[data-slug="histopathology-workflow"] .collage-media-wrap {
-  inset: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-}
 .sc-video-row {
   display: flex;
   position: absolute;
