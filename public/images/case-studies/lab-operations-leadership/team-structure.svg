@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 460" fill="none">
   <style>
     text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .lead-title { font-size: 13px; font-weight: 700; fill: #c4a8f0; text-anchor: middle; }
-    .lead-sub { font-size: 11px; fill: #8a6ebf; text-anchor: middle; }
-    .domain-label { font-size: 13px; font-weight: 700; fill: #c4a8f0; text-anchor: middle; }
-    .domain-sub { font-size: 10px; fill: #8a6ebf; text-anchor: middle; }
-    .role-title { font-size: 12px; font-weight: 600; fill: #b8a9e0; text-anchor: middle; }
-    .role-focus { font-size: 10px; fill: #7a6aad; text-anchor: middle; }
-    .shared-label { font-size: 11px; font-weight: 500; fill: #8a6ebf; text-anchor: middle; }
-    .shared-sub { font-size: 10px; fill: #7a6aad; text-anchor: middle; }
-    .connector { stroke: #4a2d6b; stroke-width: 1.5; fill: none; }
-    .connector-dash { stroke: #4a2d6b; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+    .lead-title { font-size: 13px; font-weight: 700; fill: #e8a87c; text-anchor: middle; }
+    .lead-sub { font-size: 11px; fill: #b07a52; text-anchor: middle; }
+    .domain-label { font-size: 13px; font-weight: 700; fill: #e8a87c; text-anchor: middle; }
+    .domain-sub { font-size: 10px; fill: #b07a52; text-anchor: middle; }
+    .role-title { font-size: 12px; font-weight: 600; fill: #c4a08a; text-anchor: middle; }
+    .role-focus { font-size: 10px; fill: #8a6e58; text-anchor: middle; }
+    .shared-label { font-size: 11px; font-weight: 500; fill: #b07a52; text-anchor: middle; }
+    .shared-sub { font-size: 10px; fill: #8a6e58; text-anchor: middle; }
+    .connector { stroke: #4a3528; stroke-width: 1.5; fill: none; }
+    .connector-dash { stroke: #4a3528; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
   </style>
 
   <!-- ===== Design Lead (top) ===== -->
-  <rect x="410" y="30" width="240" height="52" rx="26" fill="#c4a8f0" opacity="0.12" stroke="#c4a8f0" stroke-width="1.5"/>
+  <rect x="410" y="30" width="240" height="52" rx="26" fill="#e8a87c" opacity="0.12" stroke="#e8a87c" stroke-width="1.5"/>
   <text x="530" y="54" class="lead-title">Design Lead</text>
   <text x="530" y="70" class="lead-sub">Lab Operations</text>
 
@@ -23,44 +23,42 @@
   <line x1="610" y1="82" x2="790" y2="130" class="connector"/>
 
   <!-- ===== Wet Lab domain ===== -->
-  <rect x="80" y="130" width="360" height="44" rx="22" fill="#8a6ebf" opacity="0.1" stroke="#8a6ebf" stroke-width="1"/>
+  <rect x="80" y="130" width="360" height="44" rx="22" fill="#b07a52" opacity="0.1" stroke="#b07a52" stroke-width="1"/>
   <text x="260" y="151" class="domain-label">Wet Lab</text>
   <text x="260" y="165" class="domain-sub">Physical sample processing</text>
 
   <!-- ===== Dry Lab domain ===== -->
-  <rect x="560" y="130" width="460" height="44" rx="22" fill="#8a6ebf" opacity="0.1" stroke="#8a6ebf" stroke-width="1"/>
+  <rect x="560" y="130" width="460" height="44" rx="22" fill="#b07a52" opacity="0.1" stroke="#b07a52" stroke-width="1"/>
   <text x="790" y="151" class="domain-label">Dry Lab</text>
   <text x="790" y="165" class="domain-sub">Results &amp; reporting</text>
 
   <!-- Dashed connectors to role cards -->
-  <!-- Wet Lab: 2 cards -->
   <line x1="180" y1="174" x2="180" y2="212" class="connector-dash"/>
   <line x1="340" y1="174" x2="340" y2="212" class="connector-dash"/>
-  <!-- Dry Lab: 3 cards -->
   <line x1="640" y1="174" x2="640" y2="212" class="connector-dash"/>
   <line x1="790" y1="174" x2="790" y2="212" class="connector-dash"/>
   <line x1="940" y1="174" x2="940" y2="212" class="connector-dash"/>
 
   <!-- ===== Role cards ===== -->
   <!-- Wet Lab cards -->
-  <rect x="100" y="212" width="160" height="80" rx="10" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="100" y="212" width="160" height="80" rx="12" fill="#241a14" stroke="#3a2a1e" stroke-width="1"/>
   <text x="180" y="244" class="role-title">Product Designer</text>
   <text x="180" y="276" class="role-focus">Histopathology, QC</text>
 
-  <rect x="260" y="212" width="160" height="80" rx="10" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="260" y="212" width="160" height="80" rx="12" fill="#241a14" stroke="#3a2a1e" stroke-width="1"/>
   <text x="340" y="244" class="role-title">UX Researcher</text>
   <text x="340" y="276" class="role-focus">Ethnography, lab visits</text>
 
   <!-- Dry Lab cards -->
-  <rect x="560" y="212" width="160" height="80" rx="10" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="560" y="212" width="160" height="80" rx="12" fill="#241a14" stroke="#3a2a1e" stroke-width="1"/>
   <text x="640" y="244" class="role-title">Product Designer</text>
   <text x="640" y="276" class="role-focus">Clinical Review, Portal</text>
 
-  <rect x="710" y="212" width="160" height="80" rx="10" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="710" y="212" width="160" height="80" rx="12" fill="#241a14" stroke="#3a2a1e" stroke-width="1"/>
   <text x="790" y="244" class="role-title">UX Designer</text>
   <text x="790" y="276" class="role-focus">Workflows, usability</text>
 
-  <rect x="860" y="212" width="160" height="80" rx="10" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="860" y="212" width="160" height="80" rx="12" fill="#241a14" stroke="#3a2a1e" stroke-width="1"/>
   <text x="940" y="244" class="role-title">Content Designer</text>
   <text x="940" y="276" class="role-focus">Reports, patient comms</text>
 
@@ -72,7 +70,7 @@
   <line x1="940" y1="292" x2="700" y2="340" class="connector-dash" opacity="0.5"/>
 
   <!-- ===== Shared layer ===== -->
-  <rect x="180" y="340" width="700" height="52" rx="26" fill="#c4a8f0" opacity="0.06" stroke="#3a1d5b" stroke-width="1" stroke-dasharray="6 4"/>
+  <rect x="180" y="340" width="700" height="52" rx="26" fill="#e8a87c" opacity="0.06" stroke="#3a2a1e" stroke-width="1" stroke-dasharray="6 4"/>
   <text x="530" y="363" class="shared-label">design system  ·  research ops  ·  critique rituals  ·  cross-domain reviews</text>
   <text x="530" y="380" class="shared-sub">Embedded in squads, connected through practice</text>
 

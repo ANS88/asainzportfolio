@@ -1,72 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" fill="none">
   <style>
     text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .title { font-size: 13px; font-weight: 600; fill: #c4a8f0; letter-spacing: 0.1em; text-anchor: middle; }
-    .phase-label { font-size: 14px; font-weight: 700; fill: #c4a8f0; text-anchor: middle; }
-    .phase-sub { font-size: 11px; fill: #8a6ebf; text-anchor: middle; }
-    .detail { font-size: 11px; fill: #b8a9e0; text-anchor: middle; }
-    .note { font-size: 11px; fill: #8a6ebf; text-anchor: middle; }
+    .phase-label { font-size: 14px; font-weight: 700; fill: #e8a87c; text-anchor: middle; }
+    .phase-sub { font-size: 11px; fill: #b07a52; text-anchor: middle; }
+    .detail { font-size: 11px; fill: #c4a08a; text-anchor: middle; }
+    .note { font-size: 11px; fill: #b07a52; text-anchor: middle; }
   </style>
 
   <!-- Phase 1: Solo -->
-  <rect x="40" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
-  <!-- Single dot -->
-  <circle cx="140" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <rect x="40" y="60" width="200" height="240" rx="16" fill="#241a14" stroke="#4a3528" stroke-width="1"/>
+  <circle cx="140" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
   <text x="140" y="148" class="phase-label">Solo</text>
   <text x="140" y="166" class="phase-sub">Ship &amp; learn</text>
-  <line x1="100" y1="184" x2="180" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <line x1="100" y1="184" x2="180" y2="184" stroke="#3a2a1e" stroke-width="1"/>
   <text x="140" y="208" class="detail">Audit the landscape</text>
   <text x="140" y="228" class="detail">Build credibility</text>
   <text x="140" y="248" class="detail">Define the gaps</text>
 
   <!-- Arrow 1 -->
-  <line x1="252" y1="180" x2="276" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M272 175 L280 180 L272 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="252" y1="180" x2="276" y2="180" stroke="#4a3528" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M272 175 L280 180 L272 185" stroke="#4a3528" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Phase 2: First hires -->
-  <rect x="280" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
-  <!-- Two dots -->
-  <circle cx="365" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="395" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <rect x="280" y="60" width="200" height="240" rx="16" fill="#241a14" stroke="#4a3528" stroke-width="1"/>
+  <circle cx="365" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="395" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
   <text x="380" y="148" class="phase-label">First hires</text>
   <text x="380" y="166" class="phase-sub">Split the domains</text>
-  <line x1="340" y1="184" x2="420" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <line x1="340" y1="184" x2="420" y2="184" stroke="#3a2a1e" stroke-width="1"/>
   <text x="380" y="208" class="detail">Hire for domain fit</text>
   <text x="380" y="228" class="detail">Embed in squads</text>
   <text x="380" y="248" class="detail">Establish rituals</text>
 
   <!-- Arrow 2 -->
-  <line x1="492" y1="180" x2="516" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M512 175 L520 180 L512 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="492" y1="180" x2="516" y2="180" stroke="#4a3528" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M512 175 L520 180 L512 185" stroke="#4a3528" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Phase 3: Practice -->
-  <rect x="520" y="60" width="200" height="240" rx="12" fill="#2a1239" stroke="#3a1d5b" stroke-width="1"/>
-  <!-- Five dots in a row -->
-  <circle cx="573" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="597" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="621" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="645" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
-  <circle cx="669" cy="110" r="8" fill="#c4a8f0" opacity="0.2" stroke="#c4a8f0" stroke-width="1.5"/>
+  <rect x="520" y="60" width="200" height="240" rx="16" fill="#241a14" stroke="#4a3528" stroke-width="1"/>
+  <circle cx="573" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="597" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="621" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="645" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
+  <circle cx="669" cy="110" r="8" fill="#e8a87c" opacity="0.2" stroke="#e8a87c" stroke-width="1.5"/>
   <text x="620" y="148" class="phase-label">Practice</text>
   <text x="620" y="166" class="phase-sub">Compound &amp; scale</text>
-  <line x1="580" y1="184" x2="660" y2="184" stroke="#3a1d5b" stroke-width="1"/>
+  <line x1="580" y1="184" x2="660" y2="184" stroke="#3a2a1e" stroke-width="1"/>
   <text x="620" y="208" class="detail">Add research capacity</text>
   <text x="620" y="228" class="detail">Cross-pollinate domains</text>
   <text x="620" y="248" class="detail">Design influences roadmap</text>
 
   <!-- Arrow 3 -->
-  <line x1="732" y1="180" x2="756" y2="180" stroke="#4a2d6b" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M752 175 L760 180 L752 185" stroke="#4a2d6b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="732" y1="180" x2="756" y2="180" stroke="#4a3528" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M752 175 L760 180 L752 185" stroke="#4a3528" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Phase 4: Growing -->
-  <rect x="760" y="60" width="160" height="240" rx="12" fill="#2e1440" stroke="#4a2d6b" stroke-width="1" stroke-dasharray="6 4"/>
-  <!-- Upward arrow icon -->
-  <line x1="840" y1="120" x2="840" y2="98" stroke="#c4a8f0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-  <path d="M834 104 L840 96 L846 104" stroke="#c4a8f0" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <rect x="760" y="60" width="160" height="240" rx="16" fill="#1a1210" stroke="#4a3528" stroke-width="1" stroke-dasharray="6 4"/>
+  <line x1="840" y1="120" x2="840" y2="98" stroke="#e8a87c" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M834 104 L840 96 L846 104" stroke="#e8a87c" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
   <text x="840" y="148" class="phase-label" opacity="0.6">Growing</text>
   <text x="840" y="166" class="phase-sub" opacity="0.5">Expanding scope</text>
 
   <!-- Bottom note -->
-  <rect x="200" y="326" width="560" height="36" rx="18" fill="#c4a8f0" opacity="0.06" stroke="#3a1d5b" stroke-width="1"/>
+  <rect x="200" y="326" width="560" height="36" rx="18" fill="#e8a87c" opacity="0.06" stroke="#3a2a1e" stroke-width="1"/>
   <text x="480" y="349" class="note">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
 </svg>
