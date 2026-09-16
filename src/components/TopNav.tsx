@@ -13,8 +13,16 @@ const links = [
 export default function TopNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => { setOpen(false); }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -29,7 +37,7 @@ export default function TopNav() {
   return (
     <>
       {/* Desktop nav */}
-      <nav className="top-bar">
+      <nav className={`top-bar${scrolled ? " scrolled" : ""}`}>
         <Link href="/" className="site-name">Adriana Sainz</Link>
         <div className="top-bar-links">
           {links.map((link) => (
@@ -45,7 +53,7 @@ export default function TopNav() {
       </nav>
 
       {/* Mobile hamburger */}
-      <div className="mobile-nav">
+      <div className={`mobile-nav${scrolled ? " scrolled" : ""}`}>
         <Link href="/" className="site-name">Adriana Sainz</Link>
         <button
           className="hamburger-btn"
