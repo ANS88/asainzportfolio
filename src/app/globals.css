@@ -2351,7 +2351,7 @@ section { padding: 5rem 0; }
 .collage-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 720px 300px 280px 280px;
+  grid-template-rows: 720px 400px 280px 280px;
   grid-template-areas:
     "b b b b b b b b h h h h"
     "a a a a a d d d d d d d"
