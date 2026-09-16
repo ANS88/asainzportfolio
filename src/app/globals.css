@@ -2389,6 +2389,7 @@ section { padding: 5rem 0; }
   inset: 0;
   overflow: hidden;
   border-radius: 16px;
+  clip-path: inset(0 round 16px);
   background: var(--cream);
 }
 .collage-media {
