@@ -21,14 +21,14 @@ interface GridSlot {
 }
 
 const gridSlots: GridSlot[] = [
-  { slug: "natera-clinical-review", gridArea: "a" },
+  { slug: "clinical-trial-screening", gridArea: "a" },
   { slug: "unified-patient-portal", gridArea: "b" },
   { slug: "histopathology-workflow", gridArea: "c" },
   { slug: "identity-portal", gridArea: "d" },
   { slug: "perimenopause-tracking", gridArea: "e" },
   { slug: "ai-design-practice", gridArea: "f" },
   { slug: "lab-operations-leadership", gridArea: "g" },
-  { slug: "clinical-trial-screening", gridArea: "h" },
+  { slug: "natera-clinical-review", gridArea: "h" },
 ];
 
 const studyMap = Object.fromEntries(caseStudyList.map((s) => [s.slug, s]));
