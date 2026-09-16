@@ -2357,7 +2357,7 @@ section { padding: 5rem 0; }
     "a a a a a d d d d d d d"
     "e e e e e e f f f f f f"
     "g g g g g g c c c c c c";
-  gap: 6px;
+  gap: 25px;
   padding: 2.5rem clamp(1rem, 3vw, 3rem) 0;
 }
 
