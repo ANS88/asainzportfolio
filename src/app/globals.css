@@ -2351,7 +2351,7 @@ section { padding: 5rem 0; }
 .collage-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 480px 300px 280px 280px;
+  grid-template-rows: 600px 300px 280px 280px;
   grid-template-areas:
     "b b b b b b b b h h h h"
     "a a a a a d d d d d d d"
@@ -2423,10 +2423,10 @@ section { padding: 5rem 0; }
   min-width: 0;
   inset: auto;
   width: auto;
-  height: 200%;
-  margin-top: -50%;
-  margin-left: -30%;
-  margin-right: -30%;
+  height: 160%;
+  margin-top: -30%;
+  margin-left: -25%;
+  margin-right: -25%;
 }
 
 .collage-overlay {
