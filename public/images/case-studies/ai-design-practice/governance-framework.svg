@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
   <style>
-    text { font-family: 'Inter', 'Helvetica Neue', system-ui, sans-serif; }
-    .header { font-size: 12px; font-weight: 600; fill: #ffffff; letter-spacing: 0.1em; text-transform: uppercase; }
-    .header-sub { font-size: 10px; fill: #707078; }
-    .rule-num { font-size: 10px; fill: #505058; letter-spacing: 0.06em; font-weight: 500; }
-    .rule-title { font-size: 12px; font-weight: 600; fill: #ffffff; }
-    .rule-desc { font-size: 10px; fill: #888890; }
-    .status { font-size: 9px; font-weight: 500; fill: #888890; letter-spacing: 0.08em; text-transform: uppercase; }
+    text { font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', 'Marker Felt', cursive; }
+    .header { font-size: 22px; font-weight: 700; fill: #ffffff; }
+    .header-sub { font-size: 14px; fill: #888; }
+    .num { font-size: 16px; fill: #555; }
+    .rule-title { font-size: 18px; font-weight: 700; fill: #ffffff; }
+    .rule-desc { font-size: 14px; fill: #999; }
+    .check { font-size: 16px; fill: #888; }
   </style>
 
   <!-- Header -->
-  <text x="60" y="44" class="header">Governance Framework</text>
-  <text x="60" y="62" class="header-sub">Five non-negotiable rules for AI in design practice</text>
-  <line x1="60" y1="78" x2="900" y2="78" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+  <text x="60" y="50" class="header">Governance Framework</text>
+  <path d="M58,56 C140,52 280,60 420,54" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.2" stroke-linecap="round"/>
+  <text x="60" y="76" class="header-sub">5 non-negotiable rules for AI in design</text>
 
   <!-- Rule 1 -->
-  <text x="60" y="116" class="rule-num">01</text>
-  <text x="100" y="116" class="rule-title">Data Boundaries Are Absolute</text>
-  <text x="860" y="116" class="status">Enforced</text>
-  <text x="100" y="136" class="rule-desc">No PHI, patient data, or sensitive lab data enters any AI tool. Research data de-identified</text>
-  <text x="100" y="152" class="rule-desc">before processing. All tools run through company-approved accounts.</text>
-  <line x1="60" y1="170" x2="900" y2="170" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+  <text x="60" y="130" class="num">01</text>
+  <text x="100" y="130" class="rule-title">Data Boundaries Are Absolute</text>
+  <text x="860" y="130" class="check">✓</text>
+  <text x="100" y="154" class="rule-desc">No PHI or patient data enters any AI tool.</text>
+  <text x="100" y="174" class="rule-desc">Research data de-identified before processing.</text>
+  <path d="M95,186 C300,183 500,189 700,185" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
 
   <!-- Rule 2 -->
-  <text x="60" y="198" class="rule-num">02</text>
-  <text x="100" y="198" class="rule-title">AI Output Is Always a Draft</text>
-  <text x="860" y="198" class="status">Enforced</text>
-  <text x="100" y="218" class="rule-desc">Findings, copy, code, documentation require human review by someone accountable</text>
-  <text x="100" y="234" class="rule-desc">for the result. No exceptions.</text>
-  <line x1="60" y1="252" x2="900" y2="252" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+  <text x="60" y="218" class="num">02</text>
+  <text x="100" y="218" class="rule-title">AI Output Is Always a Draft</text>
+  <text x="860" y="218" class="check">✓</text>
+  <text x="100" y="242" class="rule-desc">Everything requires human review by someone</text>
+  <text x="100" y="262" class="rule-desc">accountable for the result. No exceptions.</text>
+  <path d="M95,274 C300,271 500,277 700,273" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
 
   <!-- Rule 3 -->
-  <text x="60" y="280" class="rule-num">03</text>
-  <text x="100" y="280" class="rule-title">Provenance Is Tracked</text>
-  <text x="860" y="280" class="status">Enforced</text>
-  <text x="100" y="300" class="rule-desc">Reports and deliverables note where AI assisted, so review effort can be</text>
-  <text x="100" y="316" class="rule-desc">calibrated honestly.</text>
-  <line x1="60" y1="334" x2="900" y2="334" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+  <text x="60" y="306" class="num">03</text>
+  <text x="100" y="306" class="rule-title">Provenance Is Tracked</text>
+  <text x="860" y="306" class="check">✓</text>
+  <text x="100" y="330" class="rule-desc">Deliverables note where AI assisted, so review</text>
+  <text x="100" y="350" class="rule-desc">effort can be calibrated honestly.</text>
+  <path d="M95,362 C300,359 500,365 700,361" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
 
   <!-- Rule 4 -->
-  <text x="60" y="362" class="rule-num">04</text>
-  <text x="100" y="362" class="rule-title">Centrally Approved, Individually Explored</text>
-  <text x="860" y="362" class="status">Enforced</text>
-  <text x="100" y="382" class="rule-desc">Short list of sanctioned tools with lightweight process for proposing new ones.</text>
-  <text x="100" y="398" class="rule-desc">Experimentation without shadow-IT sprawl.</text>
-  <line x1="60" y1="416" x2="900" y2="416" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+  <text x="60" y="394" class="num">04</text>
+  <text x="100" y="394" class="rule-title">Centrally Approved, Individually Explored</text>
+  <text x="860" y="394" class="check">✓</text>
+  <text x="100" y="418" class="rule-desc">Sanctioned tools + lightweight process for new ones.</text>
+  <text x="100" y="438" class="rule-desc">Experimentation without shadow-IT sprawl.</text>
+  <path d="M95,450 C300,447 500,453 700,449" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
 
   <!-- Rule 5 -->
-  <text x="60" y="444" class="rule-num">05</text>
-  <text x="100" y="444" class="rule-title">Skill-Building Is Deliberate</text>
-  <text x="860" y="444" class="status">Enforced</text>
-  <text x="100" y="464" class="rule-desc">AI fluency is a team competency, not an individual hobby. Structured learning, shared prompts,</text>
-  <text x="100" y="480" class="rule-desc">regular retrospectives on what worked.</text>
+  <text x="60" y="482" class="num">05</text>
+  <text x="100" y="482" class="rule-title">Skill-Building Is Deliberate</text>
+  <text x="860" y="482" class="check">✓</text>
+  <text x="100" y="506" class="rule-desc">AI fluency is a team competency. Structured learning,</text>
+  <text x="100" y="522" class="rule-desc">shared prompts, regular retros on what worked.</text>
 </svg>
