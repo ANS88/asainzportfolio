@@ -3,8 +3,13 @@
 import { useState, useRef } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-const TOOLTIP_TEXT =
-  "clinical decision support systems, genetic testing interpretation tools, patient portals, symptom trackers, process execution and automatization software";
+const TOOLTIP_ITEMS = [
+  "clinical decision support systems",
+  "genetic testing interpretation tools",
+  "patient portals",
+  "symptom trackers",
+  "process execution & automatization software",
+];
 
 export default function Hero() {
   const [show, setShow] = useState(false);
@@ -23,7 +28,16 @@ export default function Hero() {
           >
             complex
             {show && (
-              <span className="hero-keyword-tooltip">{TOOLTIP_TEXT}</span>
+              <span className="hero-keyword-tooltip">
+                <svg className="hero-tooltip-border" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6,4 C20,1 50,5 75,2 C88,3 95,2 97,7 C99,28 98,55 97,78 C98,90 96,97 92,98 C70,100 45,97 22,99 C10,98 3,100 2,95 C0,75 1,48 2,25 C1,12 2,6 6,4Z" stroke="#F0386B" strokeWidth="2.2" strokeLinecap="round" opacity="0.8" />
+                </svg>
+                <span className="hero-tooltip-items">
+                  {TOOLTIP_ITEMS.map((item, i) => (
+                    <span key={i} className="hero-tooltip-item">{item}</span>
+                  ))}
+                </span>
+              </span>
             )}
           </span>
           , high-stakes products.
