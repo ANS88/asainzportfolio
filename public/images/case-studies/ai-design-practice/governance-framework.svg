@@ -11,7 +11,7 @@
 
   <!-- Header -->
   <text x="60" y="50" class="header">Governance Framework</text>
-  <path d="M58,56 C140,52 280,60 420,54" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.2" stroke-linecap="round"/>
+  <path d="M58,56 C140,52 280,60 420,54" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
   <text x="60" y="76" class="header-sub">5 non-negotiable rules for AI in design</text>
 
   <!-- Rule 1 -->
@@ -20,7 +20,7 @@
   <text x="860" y="130" class="check">✓</text>
   <text x="100" y="154" class="rule-desc">No PHI or patient data enters any AI tool.</text>
   <text x="100" y="174" class="rule-desc">Research data de-identified before processing.</text>
-  <path d="M95,186 C300,183 500,189 700,185" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
+  <path d="M95,186 C300,183 500,189 700,185" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
   <!-- Rule 2 -->
   <text x="60" y="218" class="num">02</text>
@@ -28,7 +28,7 @@
   <text x="860" y="218" class="check">✓</text>
   <text x="100" y="242" class="rule-desc">Everything requires human review by someone</text>
   <text x="100" y="262" class="rule-desc">accountable for the result. No exceptions.</text>
-  <path d="M95,274 C300,271 500,277 700,273" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
+  <path d="M95,274 C300,271 500,277 700,273" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
   <!-- Rule 3 -->
   <text x="60" y="306" class="num">03</text>
@@ -36,7 +36,7 @@
   <text x="860" y="306" class="check">✓</text>
   <text x="100" y="330" class="rule-desc">Deliverables note where AI assisted, so review</text>
   <text x="100" y="350" class="rule-desc">effort can be calibrated honestly.</text>
-  <path d="M95,362 C300,359 500,365 700,361" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
+  <path d="M95,362 C300,359 500,365 700,361" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
   <!-- Rule 4 -->
   <text x="60" y="394" class="num">04</text>
@@ -44,7 +44,7 @@
   <text x="860" y="394" class="check">✓</text>
   <text x="100" y="418" class="rule-desc">Sanctioned tools + lightweight process for new ones.</text>
   <text x="100" y="438" class="rule-desc">Experimentation without shadow-IT sprawl.</text>
-  <path d="M95,450 C300,447 500,453 700,449" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08" stroke-linecap="round"/>
+  <path d="M95,450 C300,447 500,453 700,449" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
   <!-- Rule 5 -->
   <text x="60" y="482" class="num">05</text>

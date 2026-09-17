@@ -10,51 +10,51 @@
   </style>
 
   <!-- Center hub - wobbly circle -->
-  <path d="M480,188 C510,185 535,200 538,230 C541,260 520,290 490,292 C460,294 430,275 427,245 C424,215 450,191 480,188Z" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.7"/>
+  <path d="M480,188 C510,185 535,200 538,230 C541,260 520,290 490,292 C460,294 430,275 427,245 C424,215 450,191 480,188Z" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.7"/>
   <text x="480" y="238" class="hub-label">Judgment</text>
   <text x="480" y="258" class="hub-sub">(humans own this)</text>
 
   <!-- Sketchy lines to nodes -->
-  <path d="M478,188 C475,150 472,110 470,75" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
-  <path d="M536,210 C570,195 630,165 695,138" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
-  <path d="M536,265 C575,290 640,330 698,355" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
-  <path d="M427,265 C390,290 320,330 262,355" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
-  <path d="M427,210 C390,195 320,165 265,138" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <path d="M478,188 C475,150 472,110 470,75" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M536,210 C570,195 630,165 695,138" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M536,265 C575,290 640,330 698,355" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M427,265 C390,290 320,330 262,355" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M427,210 C390,195 320,165 265,138" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
 
   <!-- Arrow heads (sketchy) -->
-  <path d="M465,80 L470,68 L478,78" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
-  <path d="M688,143 L700,132 L702,146" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
-  <path d="M690,350 L702,358 L695,368" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
-  <path d="M270,350 L258,358 L265,368" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
-  <path d="M272,143 L260,132 L263,146" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  <path d="M465,80 L470,68 L478,78" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <path d="M688,143 L700,132 L702,146" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <path d="M690,350 L702,358 L695,368" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <path d="M270,350 L258,358 L265,368" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <path d="M272,143 L260,132 L263,146" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
 
   <!-- Node 1: Research Synthesis (top) -->
-  <path d="M370,30 C372,28 570,26 572,30 C574,34 576,82 572,84 C568,86 374,88 370,84 C366,80 368,32 370,30Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <path d="M370,30 C372,28 570,26 572,30 C574,34 576,82 572,84 C568,86 374,88 370,84 C366,80 368,32 370,30Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
   <text x="390" y="52" class="node-label">Research Synthesis</text>
   <text x="390" y="72" class="node-desc">AI drafts themes; researchers decide</text>
   <text x="538" y="52" class="tag">← highest leverage</text>
 
   <!-- Node 2: Prototyping (right-top) -->
-  <path d="M695,96 C697,94 905,92 907,96 C909,100 911,148 907,150 C903,152 699,154 695,150 C691,146 693,98 695,96Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <path d="M695,96 C697,94 905,92 907,96 C909,100 911,148 907,150 C903,152 699,154 695,150 C691,146 693,98 695,96Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
   <text x="710" y="120" class="node-label">Prototyping</text>
   <text x="710" y="140" class="node-desc">AI scaffolds; designers refine</text>
 
   <!-- Node 3: Design Systems (right-bottom) -->
-  <path d="M695,326 C697,324 905,322 907,326 C909,330 911,378 907,380 C903,382 699,384 695,380 C691,376 693,328 695,326Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <path d="M695,326 C697,324 905,322 907,326 C909,330 911,378 907,380 C903,382 699,384 695,380 C691,376 693,328 695,326Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
   <text x="710" y="350" class="node-label">Design Systems</text>
   <text x="710" y="370" class="node-desc">AI generates variants; designers ship</text>
 
   <!-- Node 4: Content (left-bottom) -->
-  <path d="M45,326 C47,324 275,322 277,326 C279,330 281,378 277,380 C273,382 49,384 45,380 C41,376 43,328 45,326Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <path d="M45,326 C47,324 275,322 277,326 C279,330 281,378 277,380 C273,382 49,384 45,380 C41,376 43,328 45,326Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
   <text x="60" y="350" class="node-label">Content &amp; Comms</text>
   <text x="60" y="370" class="node-desc">AI drafts; humans review w/ context</text>
 
   <!-- Node 5: Design Ops (left-top) -->
-  <path d="M45,96 C47,94 275,92 277,96 C279,100 281,148 277,150 C273,152 49,154 45,150 C41,146 43,98 45,96Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <path d="M45,96 C47,94 275,92 277,96 C279,100 281,148 277,150 C273,152 49,154 45,150 C41,146 43,98 45,96Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
   <text x="60" y="120" class="node-label">Design Operations</text>
   <text x="60" y="140" class="node-desc">AI automates notes, tagging, onboarding</text>
 
   <!-- Bottom scribble line -->
-  <path d="M120,488 C200,484 300,492 400,486 C500,480 600,494 700,488 C750,485 800,490 840,487" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.12" stroke-linecap="round"/>
+  <path d="M120,488 C200,484 300,492 400,486 C500,480 600,494 700,488 C750,485 800,490 840,487" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
   <text x="480" y="520" class="gov">data boundaries · draft ≠ final · provenance · approved tools · skill building</text>
 </svg>
