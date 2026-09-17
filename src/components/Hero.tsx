@@ -40,7 +40,7 @@ export default function Hero() {
               </span>
             )}
           </span>
-          , high-stakes products.
+          <span className="hero-after-keyword">, high-stakes products.</span>
         </h1>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={300}>
