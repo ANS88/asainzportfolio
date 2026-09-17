@@ -1,78 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
   <style>
-    text { font-family: 'Cormorant Garamond', 'Georgia', serif; }
-    .lead-title { font-size: 24px; font-weight: 700; fill: #e8a87c; text-anchor: middle; }
-    .lead-sub { font-size: 14px; fill: #b07a52; text-anchor: middle; font-style: italic; }
-    .domain-label { font-size: 18px; font-weight: 600; fill: #e8a87c; text-anchor: middle; }
-    .domain-sub { font-size: 12px; fill: #b07a52; text-anchor: middle; font-style: italic; }
-    .role-name { font-size: 14px; font-weight: 600; fill: #c4a08a; text-anchor: middle; }
-    .role-focus { font-size: 11px; fill: #8a6e58; text-anchor: middle; font-style: italic; }
-    .shared-text { font-size: 13px; fill: #b07a52; text-anchor: middle; letter-spacing: 0.08em; }
-    .shared-sub { font-size: 11px; fill: #8a6e58; text-anchor: middle; font-style: italic; }
-    .connector { stroke: #4a3528; stroke-width: 0.5; fill: none; }
+    text { font-family: 'Inter', 'Helvetica Neue', system-ui, sans-serif; }
+    .lead-title { font-size: 16px; font-weight: 600; fill: #ffffff; text-anchor: middle; letter-spacing: 0.04em; }
+    .lead-sub { font-size: 11px; fill: #707078; text-anchor: middle; }
+    .domain-label { font-size: 14px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+    .domain-sub { font-size: 10px; fill: #707078; text-anchor: middle; }
+    .role-name { font-size: 12px; font-weight: 500; fill: #d0d0d4; text-anchor: middle; }
+    .role-focus { font-size: 10px; fill: #707078; text-anchor: middle; }
+    .shared-text { font-size: 11px; fill: #888890; text-anchor: middle; letter-spacing: 0.06em; }
+    .shared-sub { font-size: 10px; fill: #707078; text-anchor: middle; }
   </style>
 
   <!-- Design Lead at top -->
   <text x="480" y="52" class="lead-title">Design Lead</text>
-  <text x="480" y="74" class="lead-sub">Lab Operations</text>
+  <text x="480" y="72" class="lead-sub">Lab Operations</text>
 
-  <!-- Thin hairline from lead down -->
-  <line x1="480" y1="84" x2="480" y2="120" stroke="#4a3528" stroke-width="0.5"/>
-  <line x1="480" y1="120" x2="280" y2="120" stroke="#4a3528" stroke-width="0.5"/>
-  <line x1="480" y1="120" x2="680" y2="120" stroke="#4a3528" stroke-width="0.5"/>
+  <!-- Lines from lead down -->
+  <line x1="480" y1="82" x2="480" y2="116" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  <line x1="480" y1="116" x2="280" y2="116" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  <line x1="480" y1="116" x2="680" y2="116" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
 
-  <!-- Wet Lab — large translucent circle -->
-  <circle cx="280" cy="240" r="140" fill="#e8a87c" fill-opacity="0.03" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.15"/>
-  <circle cx="280" cy="240" r="100" fill="none" stroke="#e8a87c" stroke-width="0.3" opacity="0.08" stroke-dasharray="3 6"/>
+  <!-- Wet Lab circle -->
+  <circle cx="280" cy="240" r="130" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
 
-  <line x1="280" y1="120" x2="280" y2="150" stroke="#4a3528" stroke-width="0.5"/>
+  <line x1="280" y1="116" x2="280" y2="148" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
   <text x="280" y="172" class="domain-label">Wet Lab</text>
-  <text x="280" y="192" class="domain-sub">Physical sample processing</text>
+  <text x="280" y="190" class="domain-sub">Physical sample processing</text>
 
-  <!-- Wet Lab roles as floating text -->
-  <circle cx="230" cy="250" r="4" fill="#e8a87c" opacity="0.2"/>
-  <text x="230" y="275" class="role-name">Product Designer</text>
-  <text x="230" y="293" class="role-focus">Histopathology, QC</text>
+  <!-- Wet Lab roles -->
+  <circle cx="230" cy="240" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="230" y="264" class="role-name">Product Designer</text>
+  <text x="230" y="280" class="role-focus">Histopathology, QC</text>
 
-  <circle cx="330" cy="290" r="4" fill="#e8a87c" opacity="0.2"/>
-  <text x="330" y="315" class="role-name">UX Researcher</text>
-  <text x="330" y="333" class="role-focus">Ethnography, lab visits</text>
+  <circle cx="330" cy="280" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="330" y="304" class="role-name">UX Researcher</text>
+  <text x="330" y="320" class="role-focus">Ethnography, lab visits</text>
 
-  <!-- Dry Lab — large translucent circle -->
-  <circle cx="680" cy="240" r="160" fill="#e8a87c" fill-opacity="0.03" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.15"/>
-  <circle cx="680" cy="240" r="120" fill="none" stroke="#e8a87c" stroke-width="0.3" opacity="0.08" stroke-dasharray="3 6"/>
+  <!-- Dry Lab circle -->
+  <circle cx="680" cy="240" r="150" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
 
-  <line x1="680" y1="120" x2="680" y2="150" stroke="#4a3528" stroke-width="0.5"/>
+  <line x1="680" y1="116" x2="680" y2="148" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
   <text x="680" y="172" class="domain-label">Dry Lab</text>
-  <text x="680" y="192" class="domain-sub">Results &amp; reporting</text>
+  <text x="680" y="190" class="domain-sub">Results &amp; reporting</text>
 
-  <!-- Dry Lab roles as floating text -->
-  <circle cx="610" cy="240" r="4" fill="#e8a87c" opacity="0.2"/>
-  <text x="610" y="265" class="role-name">Product Designer</text>
-  <text x="610" y="283" class="role-focus">Clinical Review, Portal</text>
+  <!-- Dry Lab roles -->
+  <circle cx="610" cy="236" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="610" y="260" class="role-name">Product Designer</text>
+  <text x="610" y="276" class="role-focus">Clinical Review, Portal</text>
 
-  <circle cx="700" cy="270" r="4" fill="#e8a87c" opacity="0.2"/>
-  <text x="700" y="295" class="role-name">UX Designer</text>
-  <text x="700" y="313" class="role-focus">Workflows, usability</text>
+  <circle cx="700" cy="266" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="700" y="290" class="role-name">UX Designer</text>
+  <text x="700" y="306" class="role-focus">Workflows, usability</text>
 
-  <circle cx="770" cy="240" r="4" fill="#e8a87c" opacity="0.2"/>
-  <text x="770" y="265" class="role-name">Content Designer</text>
-  <text x="770" y="283" class="role-focus">Reports, patient comms</text>
+  <circle cx="770" cy="236" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="770" y="260" class="role-name">Content Designer</text>
+  <text x="770" y="276" class="role-focus">Reports, patient comms</text>
 
-  <!-- Shared practice layer — flowing curve at bottom -->
-  <path d="M100,430 Q280,400 480,430 Q680,460 860,430" stroke="#e8a87c" stroke-width="0.5" fill="none" opacity="0.2"/>
-  <path d="M100,436 Q280,406 480,436 Q680,466 860,436" stroke="#4a3528" stroke-width="0.3" fill="none" opacity="0.3" stroke-dasharray="4 6"/>
+  <!-- Shared practice layer -->
+  <line x1="120" y1="430" x2="840" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
 
-  <!-- Thin connectors from roles to shared layer -->
-  <path d="M230,295 Q230,380 360,430" class="connector" stroke-dasharray="2 4" opacity="0.3"/>
-  <path d="M330,335 Q330,390 420,430" class="connector" stroke-dasharray="2 4" opacity="0.3"/>
-  <path d="M610,285 Q610,370 540,430" class="connector" stroke-dasharray="2 4" opacity="0.3"/>
-  <path d="M700,315 Q700,380 580,432" class="connector" stroke-dasharray="2 4" opacity="0.3"/>
-  <path d="M770,285 Q770,370 640,432" class="connector" stroke-dasharray="2 4" opacity="0.3"/>
+  <!-- Connectors from roles to shared layer -->
+  <line x1="230" y1="282" x2="300" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.05" stroke-dasharray="2 4"/>
+  <line x1="330" y1="322" x2="380" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.05" stroke-dasharray="2 4"/>
+  <line x1="610" y1="278" x2="540" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.05" stroke-dasharray="2 4"/>
+  <line x1="700" y1="308" x2="600" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.05" stroke-dasharray="2 4"/>
+  <line x1="770" y1="278" x2="660" y2="430" stroke="#ffffff" stroke-width="0.5" opacity="0.05" stroke-dasharray="2 4"/>
 
-  <text x="480" y="460" class="shared-text">design system  ·  research ops  ·  critique rituals  ·  cross-domain reviews</text>
-  <text x="480" y="480" class="shared-sub">Embedded in squads, connected through practice</text>
+  <text x="480" y="456" class="shared-text">design system · research ops · critique rituals · cross-domain reviews</text>
+  <text x="480" y="476" class="shared-sub">Embedded in squads, connected through practice</text>
 
-  <!-- Bottom caption -->
-  <text x="480" y="510" class="shared-sub" opacity="0.5">Designers embedded in domain squads, united by shared practice rituals</text>
+  <text x="480" y="510" class="shared-sub" opacity="0.4">Designers embedded in domain squads, united by shared practice rituals</text>
 </svg>

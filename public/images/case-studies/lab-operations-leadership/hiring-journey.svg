@@ -1,63 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" fill="none">
   <style>
-    text { font-family: 'Cormorant Garamond', 'Georgia', serif; }
-    .phase-num { font-size: 72px; font-weight: 700; fill: #e8a87c; opacity: 0.12; }
-    .phase-name { font-size: 22px; font-weight: 600; fill: #e8a87c; }
-    .phase-sub { font-size: 13px; fill: #b07a52; font-style: italic; }
-    .detail { font-size: 12px; fill: #c4a08a; }
-    .note { font-size: 13px; fill: #b07a52; font-style: italic; text-anchor: middle; }
+    text { font-family: 'Inter', 'Helvetica Neue', system-ui, sans-serif; }
+    .phase-num { font-size: 64px; font-weight: 700; fill: #ffffff; opacity: 0.06; }
+    .phase-name { font-size: 16px; font-weight: 600; fill: #ffffff; }
+    .phase-sub { font-size: 11px; fill: #707078; }
+    .detail { font-size: 11px; fill: #888890; }
+    .note { font-size: 11px; fill: #707078; text-anchor: middle; }
   </style>
 
-  <!-- Flowing curved path connecting phases -->
-  <path d="M120,220 C200,100 280,320 400,200 S560,80 680,220 S800,340 880,200"
-        stroke="#e8a87c" stroke-width="1" fill="none" opacity="0.15"/>
-  <path d="M120,230 C200,110 280,330 400,210 S560,90 680,230 S800,350 880,210"
-        stroke="#4a3528" stroke-width="0.5" fill="none" opacity="0.3" stroke-dasharray="4 6"/>
+  <!-- Connecting line -->
+  <line x1="120" y1="200" x2="860" y2="200" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
 
   <!-- Phase 1: Solo -->
-  <text x="60" y="130" class="phase-num">1</text>
-  <circle cx="120" cy="220" r="40" fill="#e8a87c" fill-opacity="0.04" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.2"/>
-  <circle cx="120" cy="220" r="6" fill="#e8a87c" opacity="0.3"/>
-  <text x="80" y="286" class="phase-name">Solo</text>
-  <text x="80" y="306" class="phase-sub">Ship &amp; learn</text>
-  <line x1="80" y1="316" x2="170" y2="316" stroke="#4a3528" stroke-width="0.5"/>
-  <text x="80" y="338" class="detail">Audit the landscape</text>
-  <text x="80" y="356" class="detail">Build credibility</text>
-  <text x="80" y="374" class="detail">Define the gaps</text>
+  <text x="60" y="140" class="phase-num">1</text>
+  <circle cx="120" cy="200" r="24" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="120" cy="200" r="4" fill="#ffffff" opacity="0.3"/>
+  <text x="80" y="256" class="phase-name">Solo</text>
+  <text x="80" y="274" class="phase-sub">Ship &amp; learn</text>
+  <line x1="80" y1="286" x2="170" y2="286" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+  <text x="80" y="308" class="detail">Audit the landscape</text>
+  <text x="80" y="326" class="detail">Build credibility</text>
+  <text x="80" y="344" class="detail">Define the gaps</text>
 
   <!-- Phase 2: First Hires -->
-  <text x="300" y="100" class="phase-num">2</text>
-  <circle cx="400" cy="200" r="56" fill="#e8a87c" fill-opacity="0.04" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.2"/>
-  <circle cx="388" cy="200" r="6" fill="#e8a87c" opacity="0.3"/>
-  <circle cx="412" cy="200" r="6" fill="#e8a87c" opacity="0.3"/>
-  <text x="348" y="272" class="phase-name">First Hires</text>
-  <text x="348" y="292" class="phase-sub">Split the domains</text>
-  <line x1="348" y1="302" x2="460" y2="302" stroke="#4a3528" stroke-width="0.5"/>
-  <text x="348" y="324" class="detail">Hire for domain fit</text>
-  <text x="348" y="342" class="detail">Embed in squads</text>
-  <text x="348" y="360" class="detail">Establish rituals</text>
+  <text x="300" y="120" class="phase-num">2</text>
+  <circle cx="380" cy="200" r="36" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="372" cy="196" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="388" cy="204" r="4" fill="#ffffff" opacity="0.3"/>
+  <text x="338" y="256" class="phase-name">First Hires</text>
+  <text x="338" y="274" class="phase-sub">Split the domains</text>
+  <line x1="338" y1="286" x2="440" y2="286" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+  <text x="338" y="308" class="detail">Hire for domain fit</text>
+  <text x="338" y="326" class="detail">Embed in squads</text>
+  <text x="338" y="344" class="detail">Establish rituals</text>
 
   <!-- Phase 3: Practice -->
-  <text x="570" y="120" class="phase-num">3</text>
-  <circle cx="680" cy="220" r="72" fill="#e8a87c" fill-opacity="0.04" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.2"/>
-  <circle cx="656" cy="212" r="6" fill="#e8a87c" opacity="0.3"/>
-  <circle cx="674" cy="228" r="6" fill="#e8a87c" opacity="0.3"/>
-  <circle cx="692" cy="212" r="6" fill="#e8a87c" opacity="0.3"/>
-  <circle cx="664" cy="200" r="6" fill="#e8a87c" opacity="0.3"/>
-  <circle cx="700" cy="228" r="6" fill="#e8a87c" opacity="0.3"/>
-  <text x="628" y="310" class="phase-name">Practice</text>
-  <text x="628" y="330" class="phase-sub">Compound &amp; scale</text>
-  <line x1="628" y1="340" x2="746" y2="340" stroke="#4a3528" stroke-width="0.5"/>
-  <text x="628" y="362" class="detail">Add research capacity</text>
-  <text x="628" y="380" class="detail">Cross-pollinate domains</text>
-  <text x="628" y="398" class="detail">Design influences roadmap</text>
+  <text x="560" y="110" class="phase-num">3</text>
+  <circle cx="660" cy="200" r="52" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="642" cy="190" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="660" cy="206" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="678" cy="190" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="650" cy="210" r="4" fill="#ffffff" opacity="0.3"/>
+  <circle cx="672" cy="210" r="4" fill="#ffffff" opacity="0.3"/>
+  <text x="620" y="272" class="phase-name">Practice</text>
+  <text x="620" y="290" class="phase-sub">Compound &amp; scale</text>
+  <line x1="620" y1="302" x2="720" y2="302" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+  <text x="620" y="324" class="detail">Add research capacity</text>
+  <text x="620" y="342" class="detail">Cross-pollinate domains</text>
+  <text x="620" y="360" class="detail">Design influences roadmap</text>
 
   <!-- Phase 4: Growing (faded) -->
-  <text x="830" y="100" class="phase-num" opacity="0.06">4</text>
-  <circle cx="880" cy="200" r="88" fill="none" stroke="#e8a87c" stroke-width="0.5" stroke-opacity="0.08" stroke-dasharray="4 6"/>
-  <text x="852" y="282" class="phase-name" opacity="0.4">Growing</text>
-  <text x="852" y="302" class="phase-sub" opacity="0.3">Expanding scope</text>
+  <text x="830" y="110" class="phase-num" opacity="0.03">4</text>
+  <circle cx="880" cy="200" r="64" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06" stroke-dasharray="4 6"/>
+  <text x="852" y="272" class="phase-name" opacity="0.3">Growing</text>
+  <text x="852" y="290" class="phase-sub" opacity="0.2">Expanding scope</text>
 
   <!-- Bottom note -->
-  <text x="480" y="432" class="note">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
+  <text x="480" y="420" class="note">Every hire shipped within their first month — learning by doing, not onboarding decks</text>
 </svg>
