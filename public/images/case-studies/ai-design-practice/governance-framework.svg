@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
   <style>
-    text { font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', 'Marker Felt', cursive; }
+    text { font-family: 'Inter', system-ui, sans-serif; }
     .header { font-size: 22px; font-weight: 700; fill: #ffffff; }
     .header-sub { font-size: 14px; fill: #888; }
     .num { font-size: 16px; fill: #555; }

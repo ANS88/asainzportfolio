@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" fill="none">
   <style>
-    text { font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', 'Marker Felt', cursive; }
+    text { font-family: 'Inter', system-ui, sans-serif; }
     .phase-num { font-size: 56px; font-weight: 700; fill: #ffffff; opacity: 0.08; }
     .phase-name { font-size: 20px; font-weight: 700; fill: #ffffff; }
     .phase-sub { font-size: 14px; fill: #888; }
