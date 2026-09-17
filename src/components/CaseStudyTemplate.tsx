@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import ImageLightbox, { triggerLightbox, triggerVideoLightbox, triggerEmbedLightbox } from "./ImageLightbox";
 import type {
@@ -8,13 +9,51 @@ import type {
   CaseStudySectionContent,
 } from "@/types/case-study";
 
+function InlineSVG({ src, alt }: { src: string; alt: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    fetch(src)
+      .then((r) => r.text())
+      .then((svg) => {
+        if (containerRef.current) {
+          containerRef.current.innerHTML = svg;
+          const el = containerRef.current.querySelector("svg");
+          if (el) {
+            el.setAttribute("role", "img");
+            el.setAttribute("aria-label", alt);
+            el.style.width = "100%";
+            el.style.height = "auto";
+            el.style.display = "block";
+          }
+          setLoaded(true);
+        }
+      });
+  }, [src, alt]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="cs-inline-svg"
+      style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.3s" }}
+    />
+  );
+}
+
 function ClickableImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+  const isSVG = src.endsWith(".svg");
+
   return (
     <figure
       className="cs-image-block cs-image-clickable"
       onClick={() => triggerLightbox(src, alt)}
     >
-      <img src={src} alt={alt} loading="lazy" />
+      {isSVG ? (
+        <InlineSVG src={src} alt={alt} />
+      ) : (
+        <img src={src} alt={alt} loading="lazy" />
+      )}
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   );
