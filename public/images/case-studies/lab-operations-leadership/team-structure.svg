@@ -1,71 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
   <style>
-    text { font-family: 'Inter', system-ui, sans-serif; }
-    .lead-title { font-size: 22px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-    .lead-sub { font-size: 14px; fill: #888; text-anchor: middle; }
-    .domain-label { font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-    .domain-sub { font-size: 13px; fill: #888; text-anchor: middle; }
-    .role-name { font-size: 15px; font-weight: 500; fill: #ddd; text-anchor: middle; }
-    .role-focus { font-size: 13px; fill: #888; text-anchor: middle; }
-    .shared { font-size: 14px; fill: #888; text-anchor: middle; }
-    .shared-sub { font-size: 13px; fill: #777; text-anchor: middle; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .title { font-size: 28px; font-weight: 400; fill: #ffffff; text-anchor: middle; }
+    .sub { font-size: 12px; font-weight: 400; fill: #777; text-anchor: middle; letter-spacing: 0.08em; text-transform: uppercase; }
+    .domain { font-size: 22px; font-weight: 400; fill: #ffffff; text-anchor: middle; }
+    .domain-sub { font-size: 11px; fill: #666; text-anchor: middle; letter-spacing: 0.05em; text-transform: uppercase; }
+    .role { font-size: 13px; font-weight: 500; fill: #ccc; text-anchor: middle; }
+    .focus { font-size: 11px; fill: #777; text-anchor: middle; }
+    .shared { font-size: 12px; fill: #888; text-anchor: middle; letter-spacing: 0.04em; }
+    .shared-sub { font-size: 11px; fill: #666; text-anchor: middle; font-style: italic; }
   </style>
 
+  <!-- Subtle dot texture -->
+  <circle cx="120" cy="80" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="340" cy="460" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="780" cy="90" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="620" cy="450" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="150" cy="380" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="860" cy="320" r="1.5" fill="#ffffff" opacity="0.04"/>
+
   <!-- Design Lead -->
-  <text x="480" y="48" class="lead-title">Design Lead</text>
-  <text x="480" y="70" class="lead-sub">Lab Operations</text>
+  <text x="480" y="46" class="serif title">Design Lead</text>
+  <text x="480" y="68" class="sans sub">Lab Operations</text>
 
-  <!-- Sketchy lines down -->
-  <path d="M480,78 C478,90 482,105 480,118" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
-  <path d="M480,118 C420,118 350,120 280,118" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <path d="M480,118 C540,118 610,120 680,118" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
+  <!-- Connector down -->
+  <path d="M480,76 C477,92 483,108 479,120" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
+  <!-- Branch left -->
+  <path d="M479,120 C440,122 380,118 280,121" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.2" stroke-linecap="round"/>
+  <!-- Branch right -->
+  <path d="M479,120 C520,118 600,122 680,119" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.2" stroke-linecap="round"/>
 
-  <!-- Wet Lab - wobbly circle -->
-  <path d="M280,110 C360,100 420,160 410,240 C400,320 340,375 260,370 C180,365 140,300 148,230 C156,160 200,120 280,110Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.15" stroke-linecap="round"/>
+  <!-- Wet Lab - wobbly organic blob -->
+  <path d="M280,108 C355,96 425,155 418,240 C411,325 345,380 262,374 C179,368 135,298 144,225 C153,152 205,118 280,108Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.12" stroke-linecap="round"/>
 
-  <path d="M280,118 C278,130 282,142 280,150" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <text x="280" y="175" class="domain-label">Wet Lab</text>
-  <text x="280" y="195" class="domain-sub">physical sample processing</text>
+  <path d="M280,121 C278,134 282,146 279,155" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.2" stroke-linecap="round"/>
+  <text x="280" y="180" class="serif domain">Wet Lab</text>
+  <text x="280" y="198" class="sans domain-sub">Physical sample processing</text>
 
-  <circle cx="230" cy="248" r="4" fill="#ffffff" opacity="0.2"/>
-  <text x="230" y="272" class="role-name">Product Designer</text>
-  <text x="230" y="290" class="role-focus">Histopathology, QC</text>
+  <!-- Wet Lab roles -->
+  <g transform="translate(225, 245) rotate(-1.5)">
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" opacity="0.15"/>
+    <text x="0" y="22" class="sans role">Product Designer</text>
+    <text x="0" y="38" class="sans focus">Histopathology, QC</text>
+  </g>
 
-  <circle cx="330" cy="288" r="4" fill="#ffffff" opacity="0.2"/>
-  <text x="330" y="312" class="role-name">UX Researcher</text>
-  <text x="330" y="330" class="role-focus">Ethnography, lab visits</text>
+  <g transform="translate(335, 285) rotate(1)">
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" opacity="0.15"/>
+    <text x="0" y="22" class="sans role">UX Researcher</text>
+    <text x="0" y="38" class="sans focus">Ethnography, lab visits</text>
+  </g>
 
-  <!-- Dry Lab - wobbly circle -->
-  <path d="M680,100 C775,90 840,160 835,250 C830,340 760,395 665,390 C570,385 520,310 530,230 C540,150 590,110 680,100Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.15" stroke-linecap="round"/>
+  <!-- Dry Lab - wobbly organic blob -->
+  <path d="M680,98 C770,88 842,155 837,248 C832,341 762,398 668,392 C574,386 522,312 532,228 C542,144 592,108 680,98Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.12" stroke-linecap="round"/>
 
-  <path d="M680,118 C678,130 682,142 680,150" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <text x="680" y="175" class="domain-label">Dry Lab</text>
-  <text x="680" y="195" class="domain-sub">results &amp; reporting</text>
+  <path d="M680,119 C678,132 682,144 679,155" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.2" stroke-linecap="round"/>
+  <text x="680" y="180" class="serif domain">Dry Lab</text>
+  <text x="680" y="198" class="sans domain-sub">Results &amp; reporting</text>
 
-  <circle cx="610" cy="240" r="4" fill="#ffffff" opacity="0.2"/>
-  <text x="610" y="264" class="role-name">Product Designer</text>
-  <text x="610" y="282" class="role-focus">Clinical Review, Portal</text>
+  <!-- Dry Lab roles -->
+  <g transform="translate(608, 238) rotate(1.2)">
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" opacity="0.15"/>
+    <text x="0" y="22" class="sans role">Product Designer</text>
+    <text x="0" y="38" class="sans focus">Clinical Review, Portal</text>
+  </g>
 
-  <circle cx="700" cy="270" r="4" fill="#ffffff" opacity="0.2"/>
-  <text x="700" y="294" class="role-name">UX Designer</text>
-  <text x="700" y="312" class="role-focus">Workflows, usability</text>
+  <g transform="translate(700, 268) rotate(-0.8)">
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" opacity="0.15"/>
+    <text x="0" y="22" class="sans role">UX Designer</text>
+    <text x="0" y="38" class="sans focus">Workflows, usability</text>
+  </g>
 
-  <circle cx="770" cy="240" r="4" fill="#ffffff" opacity="0.2"/>
-  <text x="770" y="264" class="role-name">Content Designer</text>
-  <text x="770" y="282" class="role-focus">Reports, patient comms</text>
+  <g transform="translate(775, 238) rotate(0.6)">
+    <circle cx="0" cy="0" r="3.5" fill="#ffffff" opacity="0.15"/>
+    <text x="0" y="22" class="sans role">Content Designer</text>
+    <text x="0" y="38" class="sans focus">Reports, patient comms</text>
+  </g>
+
+  <!-- Dashed connectors to shared layer -->
+  <path d="M225,305 C230,360 270,400 315,430" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round" stroke-dasharray="3 5"/>
+  <path d="M335,325 C338,368 358,400 398,430" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round" stroke-dasharray="3 5"/>
+  <path d="M608,278 C605,338 578,400 548,430" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round" stroke-dasharray="3 5"/>
+  <path d="M700,308 C698,358 668,400 628,430" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round" stroke-dasharray="3 5"/>
+  <path d="M775,278 C772,338 728,400 688,430" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round" stroke-dasharray="3 5"/>
 
   <!-- Shared practice - wobbly line -->
-  <path d="M120,430 C250,424 380,436 480,428 C580,420 700,436 840,430" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.18" stroke-linecap="round"/>
+  <path d="M130,432 C240,426 370,438 480,430 C590,422 710,438 830,432" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.15" stroke-linecap="round"/>
 
-  <!-- Sketchy connectors to shared layer -->
-  <path d="M230,292 C235,350 280,400 320,428" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round" stroke-dasharray="4 6"/>
-  <path d="M330,332 C335,370 360,400 400,428" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round" stroke-dasharray="4 6"/>
-  <path d="M610,284 C605,340 575,400 545,428" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round" stroke-dasharray="4 6"/>
-  <path d="M700,314 C695,360 660,400 620,428" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round" stroke-dasharray="4 6"/>
-  <path d="M770,284 C765,340 720,400 680,428" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round" stroke-dasharray="4 6"/>
+  <text x="480" y="460" class="sans shared">design system  ·  research ops  ·  critique rituals  ·  cross-domain reviews</text>
+  <text x="480" y="482" class="serif shared-sub">embedded in squads, connected through practice</text>
 
-  <text x="480" y="458" class="shared">design system · research ops · critique rituals · cross-domain reviews</text>
-  <text x="480" y="480" class="shared-sub">embedded in squads, connected through practice</text>
-
-  <text x="480" y="512" class="shared-sub" opacity="0.4">designers embedded in domain squads, united by shared practice rituals</text>
+  <text x="480" y="510" class="sans focus" opacity="0.35">designers embedded in domain squads, united by shared practice rituals</text>
 </svg>

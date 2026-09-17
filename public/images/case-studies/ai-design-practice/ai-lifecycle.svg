@@ -1,60 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none">
   <style>
-    text { font-family: 'Inter', system-ui, sans-serif; }
-    .hub-label { font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-    .hub-sub { font-size: 14px; fill: #999; text-anchor: middle; }
-    .node-label { font-size: 16px; font-weight: 700; fill: #ffffff; }
-    .node-desc { font-size: 13px; fill: #aaa; }
-    .tag { font-size: 12px; fill: #777; }
-    .gov { font-size: 13px; fill: #666; text-anchor: middle; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .hub-label { font-size: 24px; font-weight: 400; fill: #ffffff; text-anchor: middle; }
+    .hub-sub { font-size: 11px; fill: #888; text-anchor: middle; letter-spacing: 0.05em; text-transform: uppercase; }
+    .node-label { font-size: 16px; font-weight: 400; fill: #ffffff; }
+    .node-desc { font-size: 12px; fill: #999; }
+    .tag { font-size: 10px; fill: #666; letter-spacing: 0.06em; text-transform: uppercase; }
+    .gov { font-size: 11px; fill: #555; text-anchor: middle; letter-spacing: 0.04em; }
   </style>
 
+  <!-- Dot texture -->
+  <circle cx="90" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="870" cy="80" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="180" cy="480" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="800" cy="460" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="480" cy="430" r="1.5" fill="#ffffff" opacity="0.04"/>
+
   <!-- Center hub - wobbly circle -->
-  <path d="M480,188 C510,185 535,200 538,230 C541,260 520,290 490,292 C460,294 430,275 427,245 C424,215 450,191 480,188Z" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.7"/>
-  <text x="480" y="238" class="hub-label">Judgment</text>
-  <text x="480" y="258" class="hub-sub">(humans own this)</text>
+  <path d="M480,185 C514,181 542,198 545,232 C548,266 524,298 492,300 C460,302 428,280 425,248 C422,216 448,189 480,185Z" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <text x="482" y="242" class="serif hub-label">Judgment</text>
+  <text x="482" y="262" class="sans hub-sub">Humans own this</text>
 
   <!-- Sketchy lines to nodes -->
-  <path d="M478,188 C475,150 472,110 470,75" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
-  <path d="M536,210 C570,195 630,165 695,138" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
-  <path d="M536,265 C575,290 640,330 698,355" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
-  <path d="M427,265 C390,290 320,330 262,355" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
-  <path d="M427,210 C390,195 320,165 265,138" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M478,185 C474,148 471,108 469,72" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
+  <path d="M543,212 C578,196 638,164 700,136" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
+  <path d="M543,270 C580,296 645,335 705,358" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
+  <path d="M425,270 C388,296 318,335 258,358" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
+  <path d="M425,212 C388,196 318,164 262,136" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
 
-  <!-- Arrow heads (sketchy) -->
-  <path d="M465,80 L470,68 L478,78" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <path d="M688,143 L700,132 L702,146" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <path d="M690,350 L702,358 L695,368" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <path d="M270,350 L258,358 L265,368" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <path d="M272,143 L260,132 L263,146" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <!-- Arrow heads -->
+  <path d="M464,78 L469,64 L477,76" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+  <path d="M692,142 L705,130 L706,146" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+  <path d="M697,352 L708,360 L700,370" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+  <path d="M266,352 L254,360 L260,370" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+  <path d="M270,142 L258,130 L262,146" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
 
   <!-- Node 1: Research Synthesis (top) -->
-  <path d="M370,30 C372,28 570,26 572,30 C574,34 576,82 572,84 C568,86 374,88 370,84 C366,80 368,32 370,30Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <text x="390" y="52" class="node-label">Research Synthesis</text>
-  <text x="390" y="72" class="node-desc">AI drafts themes; researchers decide</text>
-  <text x="538" y="52" class="tag">← highest leverage</text>
+  <g transform="rotate(-0.8, 471, 57)">
+    <path d="M368,28 C370,25 574,24 576,28 C578,32 580,84 576,86 C572,88 372,90 368,86 C364,82 366,30 368,28Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+    <text x="388" y="52" class="serif node-label">Research Synthesis</text>
+    <text x="388" y="72" class="sans node-desc">AI drafts themes; researchers decide</text>
+  </g>
+  <text x="540" y="46" class="sans tag">Highest leverage</text>
 
   <!-- Node 2: Prototyping (right-top) -->
-  <path d="M695,96 C697,94 905,92 907,96 C909,100 911,148 907,150 C903,152 699,154 695,150 C691,146 693,98 695,96Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <text x="710" y="120" class="node-label">Prototyping</text>
-  <text x="710" y="140" class="node-desc">AI scaffolds; designers refine</text>
+  <g transform="rotate(0.6, 800, 122)">
+    <path d="M693,94 C695,91 908,90 910,94 C912,98 914,150 910,152 C906,154 697,156 693,152 C689,148 691,96 693,94Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+    <text x="710" y="120" class="serif node-label">Prototyping</text>
+    <text x="710" y="140" class="sans node-desc">AI scaffolds; designers refine</text>
+  </g>
 
   <!-- Node 3: Design Systems (right-bottom) -->
-  <path d="M695,326 C697,324 905,322 907,326 C909,330 911,378 907,380 C903,382 699,384 695,380 C691,376 693,328 695,326Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <text x="710" y="350" class="node-label">Design Systems</text>
-  <text x="710" y="370" class="node-desc">AI generates variants; designers ship</text>
+  <g transform="rotate(-0.5, 800, 353)">
+    <path d="M693,324 C695,321 908,320 910,324 C912,328 914,380 910,382 C906,384 697,386 693,382 C689,378 691,326 693,324Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+    <text x="710" y="350" class="serif node-label">Design Systems</text>
+    <text x="710" y="370" class="sans node-desc">AI generates variants; designers ship</text>
+  </g>
 
   <!-- Node 4: Content (left-bottom) -->
-  <path d="M45,326 C47,324 275,322 277,326 C279,330 281,378 277,380 C273,382 49,384 45,380 C41,376 43,328 45,326Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <text x="60" y="350" class="node-label">Content &amp; Comms</text>
-  <text x="60" y="370" class="node-desc">AI drafts; humans review w/ context</text>
+  <g transform="rotate(0.7, 162, 353)">
+    <path d="M43,324 C45,321 278,320 280,324 C282,328 284,380 280,382 C276,384 47,386 43,382 C39,378 41,326 43,324Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+    <text x="58" y="350" class="serif node-label">Content &amp; Comms</text>
+    <text x="58" y="370" class="sans node-desc">AI drafts; humans review w/ context</text>
+  </g>
 
   <!-- Node 5: Design Ops (left-top) -->
-  <path d="M45,96 C47,94 275,92 277,96 C279,100 281,148 277,150 C273,152 49,154 45,150 C41,146 43,98 45,96Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
-  <text x="60" y="120" class="node-label">Design Operations</text>
-  <text x="60" y="140" class="node-desc">AI automates notes, tagging, onboarding</text>
+  <g transform="rotate(-0.4, 162, 122)">
+    <path d="M43,94 C45,91 278,90 280,94 C282,98 284,150 280,152 C276,154 47,156 43,152 C39,148 41,96 43,94Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22" stroke-linecap="round"/>
+    <text x="58" y="120" class="serif node-label">Design Operations</text>
+    <text x="58" y="140" class="sans node-desc">AI automates notes, tagging, onboarding</text>
+  </g>
 
-  <!-- Bottom scribble line -->
-  <path d="M120,488 C200,484 300,492 400,486 C500,480 600,494 700,488 C750,485 800,490 840,487" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
-  <text x="480" y="520" class="gov">data boundaries · draft ≠ final · provenance · approved tools · skill building</text>
+  <!-- Bottom governance line -->
+  <path d="M130,488 C220,483 340,494 460,487 C580,480 680,494 830,488" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="480" y="520" class="sans gov">data boundaries  ·  draft ≠ final  ·  provenance  ·  approved tools  ·  skill building</text>
 </svg>

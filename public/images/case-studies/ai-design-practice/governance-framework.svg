@@ -1,55 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
   <style>
-    text { font-family: 'Inter', system-ui, sans-serif; }
-    .header { font-size: 22px; font-weight: 700; fill: #ffffff; }
-    .header-sub { font-size: 14px; fill: #888; }
-    .num { font-size: 16px; fill: #555; }
-    .rule-title { font-size: 18px; font-weight: 700; fill: #ffffff; }
-    .rule-desc { font-size: 14px; fill: #999; }
-    .check { font-size: 16px; fill: #888; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .header { font-size: 28px; font-weight: 400; fill: #ffffff; }
+    .header-sub { font-size: 11px; fill: #777; letter-spacing: 0.06em; text-transform: uppercase; }
+    .num { font-size: 13px; fill: #444; letter-spacing: 0.02em; }
+    .rule-title { font-size: 17px; font-weight: 400; fill: #ffffff; }
+    .rule-desc { font-size: 12px; fill: #888; line-height: 1.5; }
+    .check { font-size: 14px; fill: #777; }
   </style>
 
+  <!-- Dot texture -->
+  <circle cx="900" cy="50" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="50" cy="500" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="700" cy="480" r="1.5" fill="#ffffff" opacity="0.04"/>
+
   <!-- Header -->
-  <text x="60" y="50" class="header">Governance Framework</text>
-  <path d="M58,56 C140,52 280,60 420,54" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
-  <text x="60" y="76" class="header-sub">5 non-negotiable rules for AI in design</text>
+  <text x="60" y="52" class="serif header">Governance Framework</text>
+  <path d="M58,58 C150,54 300,62 440,55" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.2" stroke-linecap="round"/>
+  <text x="60" y="78" class="sans header-sub">5 non-negotiable rules for AI in design</text>
 
   <!-- Rule 1 -->
-  <text x="60" y="130" class="num">01</text>
-  <text x="100" y="130" class="rule-title">Data Boundaries Are Absolute</text>
-  <text x="860" y="130" class="check">✓</text>
-  <text x="100" y="154" class="rule-desc">No PHI or patient data enters any AI tool.</text>
-  <text x="100" y="174" class="rule-desc">Research data de-identified before processing.</text>
-  <path d="M95,186 C300,183 500,189 700,185" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <g transform="rotate(-0.3, 400, 130)">
+    <text x="60" y="132" class="sans num">01</text>
+    <text x="100" y="132" class="serif rule-title">Data Boundaries Are Absolute</text>
+    <text x="860" y="132" class="sans check">&#10003;</text>
+    <text x="100" y="156" class="sans rule-desc">No PHI or patient data enters any AI tool.</text>
+    <text x="100" y="174" class="sans rule-desc">Research data de-identified before processing.</text>
+  </g>
+  <path d="M95,188 C280,184 480,192 700,186" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.1" stroke-linecap="round"/>
 
   <!-- Rule 2 -->
-  <text x="60" y="218" class="num">02</text>
-  <text x="100" y="218" class="rule-title">AI Output Is Always a Draft</text>
-  <text x="860" y="218" class="check">✓</text>
-  <text x="100" y="242" class="rule-desc">Everything requires human review by someone</text>
-  <text x="100" y="262" class="rule-desc">accountable for the result. No exceptions.</text>
-  <path d="M95,274 C300,271 500,277 700,273" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <g transform="rotate(0.2, 400, 222)">
+    <text x="60" y="222" class="sans num">02</text>
+    <text x="100" y="222" class="serif rule-title">AI Output Is Always a Draft</text>
+    <text x="860" y="222" class="sans check">&#10003;</text>
+    <text x="100" y="246" class="sans rule-desc">Everything requires human review by someone</text>
+    <text x="100" y="264" class="sans rule-desc">accountable for the result. No exceptions.</text>
+  </g>
+  <path d="M95,278 C280,274 480,282 700,276" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.1" stroke-linecap="round"/>
 
   <!-- Rule 3 -->
-  <text x="60" y="306" class="num">03</text>
-  <text x="100" y="306" class="rule-title">Provenance Is Tracked</text>
-  <text x="860" y="306" class="check">✓</text>
-  <text x="100" y="330" class="rule-desc">Deliverables note where AI assisted, so review</text>
-  <text x="100" y="350" class="rule-desc">effort can be calibrated honestly.</text>
-  <path d="M95,362 C300,359 500,365 700,361" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <g transform="rotate(-0.4, 400, 312)">
+    <text x="60" y="312" class="sans num">03</text>
+    <text x="100" y="312" class="serif rule-title">Provenance Is Tracked</text>
+    <text x="860" y="312" class="sans check">&#10003;</text>
+    <text x="100" y="336" class="sans rule-desc">Deliverables note where AI assisted, so review</text>
+    <text x="100" y="354" class="sans rule-desc">effort can be calibrated honestly.</text>
+  </g>
+  <path d="M95,368 C280,364 480,372 700,366" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.1" stroke-linecap="round"/>
 
   <!-- Rule 4 -->
-  <text x="60" y="394" class="num">04</text>
-  <text x="100" y="394" class="rule-title">Centrally Approved, Individually Explored</text>
-  <text x="860" y="394" class="check">✓</text>
-  <text x="100" y="418" class="rule-desc">Sanctioned tools + lightweight process for new ones.</text>
-  <text x="100" y="438" class="rule-desc">Experimentation without shadow-IT sprawl.</text>
-  <path d="M95,450 C300,447 500,453 700,449" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <g transform="rotate(0.3, 400, 402)">
+    <text x="60" y="402" class="sans num">04</text>
+    <text x="100" y="402" class="serif rule-title">Centrally Approved, Individually Explored</text>
+    <text x="860" y="402" class="sans check">&#10003;</text>
+    <text x="100" y="426" class="sans rule-desc">Sanctioned tools + lightweight process for new ones.</text>
+    <text x="100" y="444" class="sans rule-desc">Experimentation without shadow-IT sprawl.</text>
+  </g>
+  <path d="M95,458 C280,454 480,462 700,456" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.1" stroke-linecap="round"/>
 
   <!-- Rule 5 -->
-  <text x="60" y="482" class="num">05</text>
-  <text x="100" y="482" class="rule-title">Skill-Building Is Deliberate</text>
-  <text x="860" y="482" class="check">✓</text>
-  <text x="100" y="506" class="rule-desc">AI fluency is a team competency. Structured learning,</text>
-  <text x="100" y="522" class="rule-desc">shared prompts, regular retros on what worked.</text>
+  <g transform="rotate(-0.2, 400, 492)">
+    <text x="60" y="492" class="sans num">05</text>
+    <text x="100" y="492" class="serif rule-title">Skill-Building Is Deliberate</text>
+    <text x="860" y="492" class="sans check">&#10003;</text>
+    <text x="100" y="516" class="sans rule-desc">AI fluency is a team competency. Structured learning,</text>
+    <text x="100" y="534" class="sans rule-desc">shared prompts, regular retros on what worked.</text>
+  </g>
 </svg>

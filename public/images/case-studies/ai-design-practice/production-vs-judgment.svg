@@ -1,76 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" fill="none">
   <style>
-    text { font-family: 'Inter', system-ui, sans-serif; }
-    .title { font-size: 20px; font-weight: 700; fill: #ffffff; }
-    .subtitle { font-size: 13px; fill: #888; }
-    .item { font-size: 15px; fill: #ddd; }
-    .num { font-size: 14px; fill: #555; }
-    .tag-ai { font-size: 13px; fill: #888; }
-    .tag-human { font-size: 13px; fill: #fff; }
-    .gate { font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-    .gate-sub { font-size: 13px; fill: #888; text-anchor: middle; }
-    .note { font-size: 13px; fill: #666; text-anchor: middle; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .title { font-size: 26px; font-weight: 400; fill: #ffffff; }
+    .subtitle { font-size: 11px; fill: #777; letter-spacing: 0.06em; text-transform: uppercase; }
+    .item { font-size: 14px; fill: #ccc; }
+    .num { font-size: 12px; fill: #555; }
+    .tag-ai { font-size: 10px; fill: #777; letter-spacing: 0.08em; text-transform: uppercase; }
+    .tag-human { font-size: 10px; fill: #ddd; letter-spacing: 0.08em; text-transform: uppercase; }
+    .gate { font-size: 20px; font-weight: 400; fill: #ffffff; text-anchor: middle; }
+    .gate-sub { font-size: 11px; fill: #777; text-anchor: middle; letter-spacing: 0.05em; text-transform: uppercase; }
+    .note { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
   </style>
 
+  <!-- Dot texture -->
+  <circle cx="460" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="100" cy="350" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="850" cy="340" r="1.5" fill="#ffffff" opacity="0.04"/>
+
   <!-- Left: Production -->
-  <text x="60" y="48" class="title">Production</text>
-  <text x="60" y="68" class="subtitle">(AI accelerates these)</text>
+  <text x="60" y="48" class="serif title">Production</text>
+  <text x="60" y="68" class="sans subtitle">AI accelerates these</text>
+  <path d="M58,55 C105,52 168,57 235,53" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
 
-  <!-- Sketchy underline -->
-  <path d="M58,54 C100,52 160,56 220,53" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <text x="60" y="114" class="sans num">01</text><text x="95" y="114" class="sans item">Transcription &amp; first-pass coding</text>
+  <text x="382" y="114" class="sans tag-ai">AI</text>
 
-  <text x="60" y="112" class="num">1.</text><text x="88" y="112" class="item">Transcription &amp; first-pass coding</text>
-  <text x="380" y="112" class="tag-ai">— AI</text>
+  <text x="60" y="154" class="sans num">02</text><text x="95" y="154" class="sans item">Affinity clusters &amp; theme drafts</text>
+  <text x="382" y="154" class="sans tag-ai">AI</text>
 
-  <text x="60" y="152" class="num">2.</text><text x="88" y="152" class="item">Affinity clusters &amp; theme drafts</text>
-  <text x="380" y="152" class="tag-ai">— AI</text>
+  <text x="60" y="194" class="sans num">03</text><text x="95" y="194" class="sans item">Prototype scaffolding</text>
+  <text x="382" y="194" class="sans tag-ai">AI</text>
 
-  <text x="60" y="192" class="num">3.</text><text x="88" y="192" class="item">Prototype scaffolding</text>
-  <text x="380" y="192" class="tag-ai">— AI</text>
+  <text x="60" y="234" class="sans num">04</text><text x="95" y="234" class="sans item">Component variants &amp; docs</text>
+  <text x="382" y="234" class="sans tag-ai">AI</text>
 
-  <text x="60" y="232" class="num">4.</text><text x="88" y="232" class="item">Component variants &amp; docs</text>
-  <text x="380" y="232" class="tag-ai">— AI</text>
+  <text x="60" y="274" class="sans num">05</text><text x="95" y="274" class="sans item">Report drafts &amp; notes</text>
+  <text x="382" y="274" class="sans tag-ai">AI</text>
 
-  <text x="60" y="272" class="num">5.</text><text x="88" y="272" class="item">Report drafts &amp; notes</text>
-  <text x="380" y="272" class="tag-ai">— AI</text>
+  <!-- Center: Review Gate -->
+  <path d="M480,96 C522,90 550,128 546,172 C542,216 516,248 484,250 C452,252 420,220 418,176 C416,132 448,102 480,96Z" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <text x="482" y="168" class="serif gate">Review</text>
+  <text x="482" y="188" class="sans gate-sub">Gate</text>
 
-  <!-- Center: Review Gate (wobbly circle) -->
-  <path d="M480,100 C520,95 545,130 542,170 C539,210 515,240 485,242 C455,244 425,215 422,175 C419,135 445,105 480,100Z" fill="none" stroke="#ffffff" stroke-width="3.5" opacity="0.35" stroke-linecap="round"/>
-  <text x="482" y="164" class="gate">Review</text>
-  <text x="482" y="184" class="gate-sub">gate</text>
+  <!-- Scribble arrows left to center -->
+  <path d="M415,114 C432,122 444,138 454,152" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  <path d="M415,194 C438,192 448,182 456,174" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  <path d="M415,274 C438,258 450,235 458,216" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
 
-  <!-- Scribble arrows left → center -->
-  <path d="M420,112 C435,120 445,135 455,148" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <path d="M420,192 C440,190 450,180 458,172" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <path d="M420,272 C440,258 450,235 458,215" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-
-  <!-- Scribble arrows center → right -->
-  <path d="M510,148 C520,135 530,120 545,112" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <path d="M510,172 C525,180 535,190 545,192" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
-  <path d="M510,215 C520,235 530,258 545,272" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
+  <!-- Scribble arrows center to right -->
+  <path d="M512,152 C522,138 534,122 548,114" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  <path d="M512,174 C528,182 538,192 548,194" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  <path d="M512,216 C522,235 534,258 548,274" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
 
   <!-- Right: Judgment -->
-  <text x="548" y="48" class="title">Judgment</text>
-  <text x="548" y="68" class="subtitle">(humans own these)</text>
+  <text x="548" y="48" class="serif title">Judgment</text>
+  <text x="548" y="68" class="sans subtitle">Humans own these</text>
+  <path d="M546,55 C593,52 658,57 723,53" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
 
-  <path d="M546,54 C588,52 648,56 708,53" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <text x="548" y="114" class="sans num">01</text><text x="583" y="114" class="sans item">What to build &amp; what it means</text>
+  <text x="870" y="114" class="sans tag-human">Human</text>
 
-  <text x="548" y="112" class="num">1.</text><text x="576" y="112" class="item">What to build &amp; what it means</text>
-  <text x="870" y="112" class="tag-human">— Human</text>
+  <text x="548" y="154" class="sans num">02</text><text x="583" y="154" class="sans item">Theme validation vs. field memory</text>
+  <text x="870" y="154" class="sans tag-human">Human</text>
 
-  <text x="548" y="152" class="num">2.</text><text x="576" y="152" class="item">Theme validation vs. field memory</text>
-  <text x="870" y="152" class="tag-human">— Human</text>
+  <text x="548" y="194" class="sans num">03</text><text x="583" y="194" class="sans item">Interaction refinement &amp; craft</text>
+  <text x="870" y="194" class="sans tag-human">Human</text>
 
-  <text x="548" y="192" class="num">3.</text><text x="576" y="192" class="item">Interaction refinement &amp; craft</text>
-  <text x="870" y="192" class="tag-human">— Human</text>
+  <text x="548" y="234" class="sans num">04</text><text x="583" y="234" class="sans item">Quality standards &amp; what ships</text>
+  <text x="870" y="234" class="sans tag-human">Human</text>
 
-  <text x="548" y="232" class="num">4.</text><text x="576" y="232" class="item">Quality standards &amp; what ships</text>
-  <text x="870" y="232" class="tag-human">— Human</text>
-
-  <text x="548" y="272" class="num">5.</text><text x="576" y="272" class="item">Domain review &amp; final call</text>
-  <text x="870" y="272" class="tag-human">— Human</text>
+  <text x="548" y="274" class="sans num">05</text><text x="583" y="274" class="sans item">Domain review &amp; final call</text>
+  <text x="870" y="274" class="sans tag-human">Human</text>
 
   <!-- Bottom scribble -->
-  <path d="M100,370 C250,366 400,374 550,368 C700,362 800,372 860,369" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
-  <text x="480" y="400" class="note">AI handles volume; humans hold the line on meaning, craft &amp; consequence</text>
+  <path d="M120,370 C260,365 420,375 560,368 C700,361 810,372 870,369" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round"/>
+  <text x="480" y="400" class="serif note">AI handles volume; humans hold the line on meaning, craft &amp; consequence</text>
 </svg>
