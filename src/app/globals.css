@@ -856,25 +856,35 @@ a:hover { opacity: .85; }
 }
 .cs-section-body--videos-row {
   max-width: none;
-  gap: 1.5rem;
+  gap: 2.5rem;
   flex-direction: row;
+  justify-content: center;
 }
 .cs-section-body--videos-row > * {
-  flex: 1 1 0;
+  flex: 0 1 260px;
   min-width: 0;
   overflow: hidden;
 }
-.cs-section-body--videos-row .cs-video-wrapper {
-  padding-bottom: 0;
-  height: clamp(400px, 50vw, 640px);
+.cs-section-body--videos-row .cs-video-block {
+  border-radius: 24px;
 }
-@media (max-width: 768px) {
+.cs-section-body--videos-row .cs-video-wrapper {
+  padding-bottom: 177%;
+  height: 0;
+}
+@media (max-width: 900px) {
   .cs-section-body--videos-row {
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
   }
-  .cs-section-body--videos-row .cs-video-wrapper {
-    height: 500px;
+  .cs-section-body--videos-row > * {
+    flex: 0 1 220px;
+  }
+}
+@media (max-width: 600px) {
+  .cs-section-body--videos-row > * {
+    flex: 0 1 280px;
   }
 }
 .cs-video-block {
