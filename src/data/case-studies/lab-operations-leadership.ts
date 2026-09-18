@@ -15,6 +15,7 @@ export const labOperationsLeadership: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/lab-operations-leadership/team-structure.svg",
+  previewCrop: { position: "50% 55%", scale: 1.6 },
 
   impact: [
     { value: "3.5M+", metric: "Tests reported per year across lab operations" },

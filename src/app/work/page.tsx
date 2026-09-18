@@ -43,7 +43,15 @@ export default function Work() {
                     <HoverVideoEmbed src={study.previewVideo} />
                   ) : study.previewImage ? (
                     <div className="cs-preview-image">
-                      <img src={study.previewImage} alt={study.title} loading="lazy" />
+                      <img
+                        src={study.previewImage}
+                        alt={study.title}
+                        loading="lazy"
+                        style={study.previewCrop ? {
+                          objectPosition: study.previewCrop.position || "center",
+                          ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
+                        } : undefined}
+                      />
                     </div>
                   ) : null}
                   <div className="cs-preview-body">

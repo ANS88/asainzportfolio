@@ -101,6 +101,10 @@ function CollageCard({
             alt={study.title}
             loading="lazy"
             className="collage-media"
+            style={study.previewCrop ? {
+              objectPosition: study.previewCrop.position || "center",
+              ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
+            } : undefined}
           />
         ) : null}
       </div>

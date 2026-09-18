@@ -21,6 +21,10 @@ export default function MoreWork({ currentSlug }: { currentSlug: string }) {
                 src={study.previewImage}
                 alt={study.title}
                 loading="lazy"
+                style={study.previewCrop ? {
+                  objectPosition: study.previewCrop.position || "center",
+                  ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
+                } : undefined}
               />
             </div>
             <div className="more-work-info">

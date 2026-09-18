@@ -109,7 +109,15 @@ export default function WorkGallery() {
           >
             {study.previewImage && (
               <div className="work-gallery-thumb">
-                <img src={study.previewImage} alt="" loading="lazy" />
+                <img
+                  src={study.previewImage}
+                  alt=""
+                  loading="lazy"
+                  style={study.previewCrop ? {
+                    objectPosition: study.previewCrop.position || "center",
+                    ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
+                  } : undefined}
+                />
               </div>
             )}
             <div className="work-gallery-card-body">

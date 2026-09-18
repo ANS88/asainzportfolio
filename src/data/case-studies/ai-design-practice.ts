@@ -13,6 +13,7 @@ export const aiDesignPractice: CaseStudy = {
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: "/images/case-studies/ai-design-practice/ai-lifecycle.svg",
+  previewCrop: { position: "50% 38%", scale: 1.8 },
 
   impact: [
     { value: "5", metric: "Practice areas with AI integration" },

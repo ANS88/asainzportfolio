@@ -23,6 +23,10 @@ export interface CaseStudy {
   previewImage?: string;
   previewVideo?: string;
   previewVideos?: string[];
+  previewCrop?: {
+    position?: string;
+    scale?: number;
+  };
 
   // Hero image
   heroImage?: {

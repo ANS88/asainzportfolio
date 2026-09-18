@@ -500,9 +500,10 @@ a:hover { opacity: .85; }
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-medium);
+  transform: scale(var(--crop-scale, 1));
 }
 .cs-preview-card:hover .cs-preview-image img {
-  transform: scale(1.03);
+  transform: scale(calc(var(--crop-scale, 1) * 1.03));
 }
 .cs-preview-body {
   padding: 1.5rem 1.75rem 1.75rem;
@@ -2116,9 +2117,10 @@ section { padding: 5rem 0; }
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-medium);
+  transform: scale(var(--crop-scale, 1));
 }
 .work-gallery-card:hover .work-gallery-thumb img {
-  transform: scale(1.03);
+  transform: scale(calc(var(--crop-scale, 1) * 1.03));
 }
 .work-gallery-card-body {
   padding: 1rem 1.15rem 1.25rem;
@@ -2434,8 +2436,9 @@ section { padding: 5rem 0; }
   object-fit: cover;
   display: block;
   transition: transform .8s cubic-bezier(.4, 0, .2, 1);
+  transform: scale(var(--crop-scale, 1));
 }
-.collage-card:hover .collage-media { transform: scale(1.06); }
+.collage-card:hover .collage-media { transform: scale(calc(var(--crop-scale, 1) * 1.06)); }
 
 .sc-iframe {
   position: absolute;
@@ -2608,9 +2611,10 @@ section { padding: 5rem 0; }
   object-fit: cover;
   display: block;
   transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+  transform: scale(var(--crop-scale, 1));
 }
 .more-work-card:hover .more-work-thumb img {
-  transform: scale(1.06);
+  transform: scale(calc(var(--crop-scale, 1) * 1.06));
 }
 .more-work-info {
   padding: .65rem .75rem .75rem;
