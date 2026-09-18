@@ -856,16 +856,26 @@ a:hover { opacity: .85; }
 }
 .cs-section-body--videos-row {
   max-width: none;
-  gap: 0;
+  gap: 1.5rem;
   flex-direction: row;
 }
 .cs-section-body--videos-row > * {
   flex: 1 1 0;
   min-width: 0;
+  overflow: hidden;
 }
 .cs-section-body--videos-row .cs-video-wrapper {
   padding-bottom: 0;
-  height: 640px;
+  height: clamp(400px, 50vw, 640px);
+}
+@media (max-width: 768px) {
+  .cs-section-body--videos-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cs-section-body--videos-row .cs-video-wrapper {
+    height: 500px;
+  }
 }
 .cs-video-block {
   border-radius: 20px;
