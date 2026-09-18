@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
@@ -38,7 +37,7 @@ export default function About() {
           <AnimateOnScroll animation="fade-up">
             <div className="about-intro">
               <div className="about-intro-photo">
-                <Image
+                <img
                   src="/images/profile-purple.png"
                   alt="Adriana Sainz"
                   width={320}
