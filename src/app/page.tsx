@@ -6,7 +6,6 @@ export default function Home() {
     <>
       <div className="container">
         <Hero />
-        <hr className="section-line" />
         <ProjectShowcase />
       </div>
       <ContactBlock />

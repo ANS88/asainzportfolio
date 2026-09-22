@@ -33,7 +33,7 @@ export default function Hero() {
       <AnimateOnScroll animation="fade-up">
         <h1>
           I am a systems thinker and builder. Currently, leading design and research at{" "}
-          <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer" className="hero-company-link">Natera</a>
+          <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer" className="hero-company-link">Natera<svg className="hero-dna" viewBox="0 0 16 24" fill="currentColor" aria-hidden="true"><rect x="2" y="0" width="2" height="2"/><rect x="12" y="0" width="2" height="2"/><rect x="4" y="2" width="2" height="2"/><rect x="10" y="2" width="2" height="2"/><rect x="6" y="4" width="4" height="2"/><rect x="4" y="6" width="2" height="2"/><rect x="10" y="6" width="2" height="2"/><rect x="2" y="8" width="2" height="2"/><rect x="12" y="8" width="2" height="2"/><rect x="2" y="10" width="2" height="2"/><rect x="12" y="10" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="10" y="12" width="2" height="2"/><rect x="6" y="14" width="4" height="2"/><rect x="4" y="16" width="2" height="2"/><rect x="10" y="16" width="2" height="2"/><rect x="2" y="18" width="2" height="2"/><rect x="12" y="18" width="2" height="2"/><rect x="2" y="20" width="2" height="2"/><rect x="12" y="20" width="2" height="2"/></svg></a>
           , shipping the platform{" "}
           <span
             className="hero-keyword"

@@ -1204,14 +1204,21 @@ a:hover { opacity: .85; }
   transition: opacity var(--transition-fast);
 }
 .hero-company-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--ink3);
-  text-underline-offset: .12em;
-  transition: text-decoration-color var(--transition-fast);
+  color: #F0386B;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
 }
 .hero-company-link:hover {
-  text-decoration-color: var(--ink);
+  opacity: .8;
+}
+.hero-dna {
+  display: inline-block;
+  width: .55em;
+  height: auto;
+  margin-left: .15em;
+  vertical-align: baseline;
+  color: #F0386B;
+  image-rendering: pixelated;
 }
 
 /* Hero stripe */
