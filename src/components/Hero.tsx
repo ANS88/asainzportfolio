@@ -1,48 +1,47 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-const TOOLTIP_ITEMS = [
-  "clinical decision support systems",
-  "genetic testing interpretation tools",
-  "patient portals",
-  "symptom trackers",
-  "process execution & automatization software",
+const STRIPE_ITEMS = [
+  "Clinical Decision Support Systems",
+  "Patient Portals",
+  "Symptom Trackers",
+  "Clinical Trials Triage",
+  "Wet Lab Process Execution",
+  "Genetic Testing Interpretation Tools",
 ];
 
 export default function Hero() {
-  const [show, setShow] = useState(false);
-  const wordRef = useRef<HTMLSpanElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimating(true);
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % STRIPE_ITEMS.length);
+        setAnimating(false);
+      }, 400);
+    }, 2600);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="hero">
       <AnimateOnScroll animation="fade-up">
         <h1>
           I lead design and research for{" "}
-          <span
-            ref={wordRef}
-            className="hero-keyword"
-            onMouseEnter={() => setShow(true)}
-            onMouseLeave={() => setShow(false)}
-          >
-            complex
-            {show && (
-              <span className="hero-keyword-tooltip">
-                <svg className="hero-tooltip-border" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6,4 C20,1 50,5 75,2 C88,3 95,2 97,7 C99,28 98,55 97,78 C98,90 96,97 92,98 C70,100 45,97 22,99 C10,98 3,100 2,95 C0,75 1,48 2,25 C1,12 2,6 6,4Z" fill="#F0386B" stroke="#F0386B" strokeWidth="2.2" strokeLinecap="round" />
-                </svg>
-                <span className="hero-tooltip-items">
-                  {TOOLTIP_ITEMS.map((item, i) => (
-                    <span key={i} className="hero-tooltip-item">{item}</span>
-                  ))}
-                </span>
-              </span>
-            )}
-          </span>
-          <span className="hero-after-keyword">, high-stakes products.</span>
+          <span className="hero-keyword">complex</span>, high-stakes products.
         </h1>
       </AnimateOnScroll>
+
+      <div className="hero-stripe">
+        <div className={`hero-stripe-item ${animating ? "hero-stripe-exit" : "hero-stripe-enter"}`}>
+          {STRIPE_ITEMS[activeIndex]}
+        </div>
+      </div>
+
       <AnimateOnScroll animation="fade-up" delay={300}>
         <p className="hero-sub">Systems thinker and builder. Currently leading UX for the scientists and lab staff behind millions of patient results, making them faster and more accurate at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>.</p>
       </AnimateOnScroll>
