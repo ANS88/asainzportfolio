@@ -207,11 +207,15 @@ function CaseStudySection({ section }: { section: SectionType }) {
           </AnimateOnScroll>
         )}
         <div className={`cs-section-body${videosClass}`}>
-          {section.content.map((content, i) => (
-            <AnimateOnScroll key={i} animation="fade-up">
-              <ContentBlock content={content} />
-            </AnimateOnScroll>
-          ))}
+          {videoCount >= 3 && allVideos
+            ? section.content.map((content, i) => (
+                <ContentBlock key={i} content={content} />
+              ))
+            : section.content.map((content, i) => (
+                <AnimateOnScroll key={i} animation="fade-up">
+                  <ContentBlock content={content} />
+                </AnimateOnScroll>
+              ))}
         </div>
       </section>
     </>

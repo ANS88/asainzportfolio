@@ -861,12 +861,9 @@ a:hover { opacity: .85; }
   flex-wrap: wrap;
   justify-content: center;
 }
-.cs-section-body--videos-row > .aos {
+.cs-section-body--videos-row > .cs-video-block {
   flex: 0 0 min(260px, 100%);
-  width: auto;
   overflow: hidden;
-}
-.cs-section-body--videos-row .cs-video-block {
   border-radius: 24px;
 }
 .cs-section-body--videos-row .cs-video-wrapper {
@@ -877,7 +874,7 @@ a:hover { opacity: .85; }
   .cs-section-body--videos-row {
     gap: 1.5rem;
   }
-  .cs-section-body--videos-row > .aos {
+  .cs-section-body--videos-row > .cs-video-block {
     flex: 0 0 min(220px, 80%);
   }
 }
