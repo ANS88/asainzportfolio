@@ -863,6 +863,7 @@ a:hover { opacity: .85; }
 }
 .cs-section-body--videos-row > * {
   flex: 0 0 min(260px, 100%);
+  width: auto;
   overflow: hidden;
 }
 .cs-section-body--videos-row .cs-video-block {
