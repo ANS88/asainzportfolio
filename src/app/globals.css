@@ -858,11 +858,11 @@ a:hover { opacity: .85; }
   max-width: none;
   gap: 2.5rem;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .cs-section-body--videos-row > * {
-  flex: 0 1 260px;
-  min-width: 0;
+  flex: 0 0 min(260px, 100%);
   overflow: hidden;
 }
 .cs-section-body--videos-row .cs-video-block {
@@ -872,19 +872,12 @@ a:hover { opacity: .85; }
   padding-bottom: 177%;
   height: 0;
 }
-@media (max-width: 900px) {
-  .cs-section-body--videos-row {
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-  .cs-section-body--videos-row > * {
-    flex: 0 1 220px;
-  }
-}
 @media (max-width: 600px) {
+  .cs-section-body--videos-row {
+    gap: 1.5rem;
+  }
   .cs-section-body--videos-row > * {
-    flex: 0 1 280px;
+    flex: 0 0 min(220px, 80%);
   }
 }
 .cs-video-block {
