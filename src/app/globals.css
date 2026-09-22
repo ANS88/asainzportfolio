@@ -428,6 +428,121 @@ a:hover { opacity: .85; }
 }
 .featured-links a:hover { border-bottom-color: var(--accent); }
 
+/* ═══ WORK VIEW TOGGLE ═══ */
+.work-view-toggle {
+  display: flex;
+  gap: .25rem;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+.work-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.work-view-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink3);
+}
+.work-view-btn--active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(196, 168, 240, .08);
+}
+
+/* ═══ WORK LIST VIEW ═══ */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.work-list-group {
+  display: flex;
+  flex-direction: column;
+}
+.work-list-company {
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--ink3);
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.work-list-row {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .85rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--ink);
+  transition: all var(--transition-fast);
+}
+.work-list-row:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+.work-list-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.work-list-dot {
+  flex: 1;
+  border-bottom: 1px dotted var(--border);
+  min-width: 2rem;
+  align-self: center;
+  margin-bottom: 2px;
+}
+.work-list-role {
+  font-family: var(--sans);
+  font-size: .8rem;
+  color: var(--ink3);
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+.work-list-row:hover .work-list-role {
+  color: var(--accent-soft);
+}
+.work-list-year {
+  font-family: var(--mono);
+  font-size: .8rem;
+  color: var(--ink3);
+  flex-shrink: 0;
+  min-width: 3rem;
+  text-align: right;
+  transition: color var(--transition-fast);
+}
+.work-list-row:hover .work-list-year {
+  color: var(--accent-soft);
+}
+@media (max-width: 600px) {
+  .work-list-row {
+    flex-wrap: wrap;
+    gap: .25rem .5rem;
+  }
+  .work-list-dot {
+    display: none;
+  }
+  .work-list-role {
+    order: 3;
+    width: 100%;
+    font-size: .75rem;
+  }
+}
+
 /* ═══ CASE STUDY PREVIEW CARDS ═══ */
 .cs-card-grid { display: grid; gap: 2rem; }
 .cs-preview-card {

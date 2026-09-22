@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContactBlock from "@/components/ContactBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { HoverVideoLocal, HoverVideoEmbed, HoverVideoEmbedRow } from "@/components/HoverVideo";
+import WorkViewToggle from "@/components/WorkViewToggle";
 import { caseStudyList } from "@/data/case-studies";
 
 export const metadata: Metadata = {
@@ -31,45 +31,7 @@ export default function Work() {
         <hr className="section-line" />
 
         <section>
-          <div className="cs-card-grid">
-            {caseStudyList.map((study) => (
-              <AnimateOnScroll key={study.slug} animation="fade-up">
-                <a href={`/work/${study.slug}`} className="cs-preview-card">
-                  {study.previewVideos && study.previewVideos.length > 0 ? (
-                    <HoverVideoEmbedRow sources={study.previewVideos} />
-                  ) : study.previewVideo && study.previewVideo.startsWith("/") ? (
-                    <HoverVideoLocal src={study.previewVideo} />
-                  ) : study.previewVideo ? (
-                    <HoverVideoEmbed src={study.previewVideo} />
-                  ) : study.previewImage ? (
-                    <div className="cs-preview-image">
-                      <img
-                        src={study.previewImage}
-                        alt={study.title}
-                        loading="lazy"
-                        style={study.previewCrop ? {
-                          objectPosition: study.previewCrop.position || "center",
-                          ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
-                        } : undefined}
-                      />
-                    </div>
-                  ) : null}
-                  <div className="cs-preview-body">
-                    <div className="cs-preview-label">{study.company} &middot; {study.timeline}</div>
-                    <div className="cs-preview-title">{study.title}</div>
-                    <p className="cs-preview-stakes">{study.stakesLine}</p>
-                    {study.tags && study.tags.length > 0 && (
-                      <div className="cs-preview-tags">
-                        {study.tags.map((tag) => (
-                          <span key={tag} className="cs-hero-tag">{tag}</span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </a>
-              </AnimateOnScroll>
-            ))}
-          </div>
+          <WorkViewToggle studies={caseStudyList} />
         </section>
 
       </div>
