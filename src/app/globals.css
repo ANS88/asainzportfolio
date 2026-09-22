@@ -973,11 +973,13 @@ a:hover { opacity: .85; }
   max-width: none;
   gap: 2.5rem;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 .cs-section-body--videos-row > .cs-video-block {
-  flex: 0 0 min(260px, 100%);
+  flex: 1 1 0;
+  max-width: 260px;
+  min-width: 0;
   overflow: hidden;
   border-radius: 24px;
 }
@@ -987,10 +989,10 @@ a:hover { opacity: .85; }
 }
 @media (max-width: 600px) {
   .cs-section-body--videos-row {
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .cs-section-body--videos-row > .cs-video-block {
-    flex: 0 0 min(220px, 80%);
+    border-radius: 16px;
   }
 }
 .cs-video-block {
