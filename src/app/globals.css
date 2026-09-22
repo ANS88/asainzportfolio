@@ -1215,12 +1215,13 @@ a:hover { opacity: .85; }
 }
 .hero-dna {
   display: inline-block;
-  width: .55em;
+  width: .5em;
   height: auto;
-  margin-left: .15em;
-  vertical-align: baseline;
+  margin-left: .2em;
+  vertical-align: middle;
   color: #F0386B;
   image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 /* Hero stripe */
