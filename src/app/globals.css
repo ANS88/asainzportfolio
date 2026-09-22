@@ -1203,6 +1203,16 @@ a:hover { opacity: .85; }
   cursor: pointer;
   transition: opacity var(--transition-fast);
 }
+.hero-company-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ink3);
+  text-underline-offset: .12em;
+  transition: text-decoration-color var(--transition-fast);
+}
+.hero-company-link:hover {
+  text-decoration-color: var(--ink);
+}
 
 /* Hero stripe */
 .hero-stripe {

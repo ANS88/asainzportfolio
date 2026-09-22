@@ -32,15 +32,17 @@ export default function Hero() {
     <div className="hero">
       <AnimateOnScroll animation="fade-up">
         <h1>
-          I lead design and research for{" "}
+          I am a systems thinker and builder. Currently, leading design and research at{" "}
+          <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer" className="hero-company-link">Natera</a>
+          , shipping the platform{" "}
           <span
             className="hero-keyword"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            complex
+            tools
           </span>
-          , high-stakes products.
+          {" "}that power 50+ genomics labs and millions of patient results.
         </h1>
       </AnimateOnScroll>
 
@@ -50,10 +52,6 @@ export default function Hero() {
           <MarqueeTrack />
         </div>
       </div>
-
-      <AnimateOnScroll animation="fade-up" delay={300}>
-        <p className="hero-sub">Systems thinker and builder. Leading a team that builds tools for scientists and lab teams to deliver fast, accurate results to patients.</p>
-      </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={450}>
         <div className="hero-links">
           <a href="mailto:sainz.nag@gmail.com">Email</a>
