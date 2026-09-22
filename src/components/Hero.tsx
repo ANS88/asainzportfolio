@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const STRIPE_ITEMS = [
@@ -12,33 +12,42 @@ const STRIPE_ITEMS = [
   "Genetic Testing Interpretation Tools",
 ];
 
-export default function Hero() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
+function MarqueeTrack() {
+  return (
+    <span className="hero-stripe-track" aria-hidden="true">
+      {STRIPE_ITEMS.map((item, i) => (
+        <span key={i} className="hero-stripe-item">
+          {item}
+          <span className="hero-stripe-sep">/</span>
+        </span>
+      ))}
+    </span>
+  );
+}
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimating(true);
-      setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % STRIPE_ITEMS.length);
-        setAnimating(false);
-      }, 400);
-    }, 2600);
-    return () => clearInterval(interval);
-  }, []);
+export default function Hero() {
+  const [hovering, setHovering] = useState(false);
 
   return (
     <div className="hero">
       <AnimateOnScroll animation="fade-up">
         <h1>
           I lead design and research for{" "}
-          <span className="hero-keyword">complex</span>, high-stakes products.
+          <span
+            className="hero-keyword"
+            onMouseEnter={() => setHovering(true)}
+            onMouseLeave={() => setHovering(false)}
+          >
+            complex
+          </span>
+          , high-stakes products.
         </h1>
       </AnimateOnScroll>
 
-      <div className="hero-stripe">
-        <div className={`hero-stripe-item ${animating ? "hero-stripe-exit" : "hero-stripe-enter"}`}>
-          {STRIPE_ITEMS[activeIndex]}
+      <div className={`hero-stripe${hovering ? " hero-stripe--visible" : ""}`}>
+        <div className="hero-stripe-marquee">
+          <MarqueeTrack />
+          <MarqueeTrack />
         </div>
       </div>
 
