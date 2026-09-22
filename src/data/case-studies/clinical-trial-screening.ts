@@ -23,7 +23,7 @@ export const clinicalTrialScreening: CaseStudy = {
     { value: "0→1", metric: "Product built from scratch" },
   ],
 
-  tags: ["AI/ML", "Clinical Trials", "Internal Tooling", "Healthcare", "0→1"],
+  tags: ["AI/ML", "Clinical Trials", "Internal Tooling", "Healthcare", "0→1", "Workflow analysis"],
 
   sections: [
     {

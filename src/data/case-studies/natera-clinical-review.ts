@@ -215,5 +215,7 @@ export const nateraClinicalReview: CaseStudy = {
     "Clinical workflows",
     "Lab operations",
     "Regulated design",
+    "Contextual inquiry",
+    "Distributed cognition",
   ],
 };

@@ -208,5 +208,7 @@ export const unifiedPatientPortal: CaseStudy = {
     "Patient portal",
     "Regulated design",
     "Genetic testing",
+    "Usability testing",
+    "Journey mapping",
   ],
 };

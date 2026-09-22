@@ -168,5 +168,6 @@ export const identityPortal: CaseStudy = {
     "Foster care",
     "Participatory design",
     "Information architecture",
+    "Card sorting",
   ],
 };

@@ -241,5 +241,6 @@ export const perimenopauseTracking: CaseStudy = {
     "Femtech",
     "Diary study",
     "Mixed methods",
+    "Thematic analysis",
   ],
 };

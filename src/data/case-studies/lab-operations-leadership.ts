@@ -24,7 +24,7 @@ export const labOperationsLeadership: CaseStudy = {
     { value: "50%", metric: "Reduction in report turnaround time" },
   ],
 
-  tags: ["Design Leadership", "Internal Tooling", "Lab Operations", "Regulated Design", "Team Building"],
+  tags: ["Design Leadership", "Internal Tooling", "Lab Operations", "Regulated Design", "Team Building", "Ethnography"],
 
   sections: [
     {

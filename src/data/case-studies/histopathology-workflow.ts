@@ -227,5 +227,6 @@ export const histopathologyWorkflow: CaseStudy = {
     "Lab operations",
     "Histopathology",
     "Contextual inquiry",
+    "Ethnography",
   ],
 };
