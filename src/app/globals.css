@@ -861,7 +861,7 @@ a:hover { opacity: .85; }
   flex-wrap: wrap;
   justify-content: center;
 }
-.cs-section-body--videos-row > * {
+.cs-section-body--videos-row > .aos {
   flex: 0 0 min(260px, 100%);
   width: auto;
   overflow: hidden;
@@ -877,7 +877,7 @@ a:hover { opacity: .85; }
   .cs-section-body--videos-row {
     gap: 1.5rem;
   }
-  .cs-section-body--videos-row > * {
+  .cs-section-body--videos-row > .aos {
     flex: 0 0 min(220px, 80%);
   }
 }
