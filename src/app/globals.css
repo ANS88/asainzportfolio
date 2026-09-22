@@ -1141,9 +1141,7 @@ a:hover { opacity: .85; }
   font-size: clamp(1.4rem, 3.5vw, 2.6rem);
   font-weight: 500;
   font-style: normal;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--paper);
-  text-stroke: 2px var(--paper);
+  color: var(--paper);
   padding: 0 .2rem;
 }
 .hero-stripe-sep {
