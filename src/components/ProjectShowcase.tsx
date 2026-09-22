@@ -130,11 +130,6 @@ function CollageCard({
 export default function ProjectShowcase() {
   return (
     <section className="collage-section">
-      <p className="section-subtitle">
-        I do my best work amid ambiguity and entangled systems, in pursuit of
-        clarity.
-      </p>
-
       <div className="collage-grid">
         {gridSlots.map((slot) => {
           const study = studyMap[slot.slug];

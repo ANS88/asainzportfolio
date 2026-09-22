@@ -43,9 +43,6 @@ export default function FeaturedWork() {
   return (
     <section>
       <AnimateOnScroll animation="fade-up">
-        <p className="section-subtitle">I do my best work amid ambiguity and entangled systems, in pursuit of clarity.</p>
-      </AnimateOnScroll>
-      <AnimateOnScroll animation="fade-up">
         <div className="transform-table">
           <div className="transform-header">
             <span>From</span>
