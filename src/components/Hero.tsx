@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       <AnimateOnScroll animation="fade-up" delay={300}>
-        <p className="hero-sub">Systems thinker and builder. Currently leading UX for the scientists and lab staff behind millions of patient results, making them faster and more accurate at <a href="https://www.natera.com" target="_blank" rel="noopener noreferrer">Natera</a>.</p>
+        <p className="hero-sub">Systems thinker and builder. Leading a team that builds tools for scientists and lab teams to deliver fast, accurate results to patients.</p>
       </AnimateOnScroll>
       <AnimateOnScroll animation="fade-up" delay={450}>
         <div className="hero-links">
