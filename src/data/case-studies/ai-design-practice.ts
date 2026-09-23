@@ -5,7 +5,7 @@ export const aiDesignPractice: CaseStudy = {
   title: "Integrating AI into Design Practice",
   shortTitle: "AI in Design Practice",
   stakesLine:
-    "AI changed what a design team can do at its existing size. I defined where it creates leverage, where it creates risk, and built the operating rules that keep those two separated.",
+    "Contextual inquiry across 3 clinical divisions generates 40+ hours of session recordings per quarter. Synthesis was the bottleneck — 2–3 weeks of manual transcription, affinity diagramming, and thematic coding before a single finding reached a product team. I built the framework for where AI enters that pipeline and where it doesn't.",
   judgment:
     "Defined the operating model for AI adoption across five practice areas — production accelerates, judgment stays human",
   role: "Senior UX Design & Research Manager",
@@ -35,7 +35,7 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>The question isn't whether to adopt AI but where in the design lifecycle it creates leverage and where it creates risk.</p>",
+          data: "<p>A 6-person design and research team covers clinical review, lab workflows, patient portal, and histopathology across Natera's pipeline. The constraint isn't talent — it's hours. AI changes the arithmetic on transcription, affinity clustering, prototype scaffolding, and documentation, but in a HIPAA-regulated environment processing PHI-adjacent data, every integration point needs explicit data boundaries.</p>",
         },
         {
           type: "image",
@@ -54,7 +54,7 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>I mapped the entire design lifecycle and identified where AI creates genuine leverage versus where it introduces risk. The result is a framework across five practice areas, each with clear boundaries between what AI does and what humans own.</p>",
+          data: "<p>Audited every repeating task across five practice areas — research, prototyping, design systems, content, ops — and classified each as production (volume-bound, pattern-matchable) or judgment (requires domain context, clinical accuracy, or design intent). The classification determines what AI touches and what it doesn't.</p>",
         },
         {
           type: "image",
@@ -73,13 +73,13 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>The highest-leverage application. Synthesis has historically been the bottleneck between fieldwork and design direction — two to three weeks per study. AI produces first-pass affinity clusters and traceable quote banks within a day. The researcher's role shifts from mechanical coding to adjudication.</p>",
+          data: "<p>Before: a contextual inquiry study across 15 lab technicians produces ~20 hours of recordings and 80+ pages of field notes. Manual transcription, open coding in Dovetail, affinity diagramming in FigJam, thematic analysis writeup — 2–3 weeks before findings reach stakeholders. After: recordings run through compliant transcription (de-identified before any model sees them), Claude generates candidate affinity clusters and quote banks with source timestamps. The researcher validates clusters against their field memory, catches over-weighted themes, and traces every finding back to raw evidence. Synthesis-to-insight: 1–2 days. No AI-generated theme ships without a human researcher having verified the source trail.</p>",
         },
         {
           type: "image",
           data: {
             src: "/images/case-studies/ai-design-practice/synthesis-flow.svg",
-            alt: "Before and after: manual synthesis taking 2-3 weeks versus AI-assisted synthesis in 1-2 days",
+            alt: "Before: 2-3 weeks manual transcription, coding, diagramming. After: 1-2 days with AI-assisted clustering and human validation",
           },
         },
       ],
@@ -92,7 +92,7 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>AI-assisted coding collapses the distance between a design idea and an interactive artifact. For state-heavy enterprise workflows, static mockups systematically under-represent the thing being designed. AI makes it economical to build in real code what previously justified only a click-through mockup.</p>",
+          data: "<p>Clinical Review has 12 workflow states, 4 user roles (genetic counselor, lab director, clinical scientist, medical director), and conditional branching on variant pathogenicity classification. A Figma click-through can't represent that — it flattens the state machine into a linear happy path. AI-assisted prototyping (Claude Code building against our React component library) produces interactive builds with real branching logic, role-based views, and edge states. Usability testing on these prototypes catches issues — like the GC-to-lab-director escalation flow breaking on multi-gene panels — that flat mockups structurally cannot surface.</p>",
         },
       ],
     },
@@ -104,7 +104,7 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>AI generates component variants, checks against standards, and drafts documentation. Upstream, designers use AI to read the production codebase before redesigning — eliminating a class of rework. AI lowers the fluency barrier enough that designers can ship small, reviewable production changes directly.</p>",
+          data: "<p>Downstream: AI generates button/input/table variants from design tokens, runs WCAG 2.1 AA contrast checks against our purple-on-dark palette, and drafts component API documentation that the system chronically lacked. Upstream: designers use AI to read the Vue.js production codebase — understanding how a LabVantage integration component actually handles barcode scan events before redesigning the scan-confirm flow. This eliminates \"the design assumed something the code doesn't do\" rework. Designers now ship spacing, token, and copy fixes as merge requests reviewed by engineering — AI makes the diffs small enough to be correct and reviewable without hand-holding.</p>",
         },
       ],
     },
@@ -116,7 +116,7 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>AI drafts instrumental writing — reports, UX copy variants, annotations — which the team edits with judgment, never forwards. Before design reviews, designers run structured AI prompts as critique partners: heuristic evaluation, accessibility pass, edge-case analysis. This raises the floor of what human critique time gets spent on.</p>",
+          data: "<p>Clinical-adjacent UX copy goes through human review with domain context: \"heterozygous\" vs. \"carrier\" vs. \"one copy detected\" each land differently for a genetic counselor versus a patient. AI generates 8–10 copy variants in seconds; the content designer selects and edits with clinical literacy the model doesn't have. Before design reviews, designers run structured prompts — Nielsen's heuristics against the current screen, WCAG audit, \"what would a first-time lab tech misread here\" — and arrive at critique with the surface issues already caught, so human review time focuses on workflow logic and domain accuracy.</p>",
         },
       ],
     },
@@ -138,11 +138,11 @@ export const aiDesignPractice: CaseStudy = {
           data: {
             title: "Five rules across all practice areas",
             items: [
-              "Data boundaries are absolute — no PHI or patient data enters any AI tool",
-              "AI output is always a draft — requires human review by someone accountable",
-              "Provenance is tracked — deliverables note where AI assisted",
-              "Tooling is centrally approved but individually explored",
-              "Skill-building is deliberate — prompt craft and model-limitation literacy",
+              "Data boundaries are absolute — no PHI, patient identifiers, or lab sample data enters any AI tool; research recordings are de-identified through approved HIPAA-compliant transcription before processing",
+              "AI output is always a draft — affinity clusters, code, copy, and documentation require sign-off by the accountable researcher or designer before leaving the team",
+              "Provenance is tracked — research reports and design specs note which sections used AI-assisted drafting so review calibration is honest",
+              "Tooling is centrally approved (Claude, GitHub Copilot, Whisper) with a lightweight RFC process for proposing additions",
+              "Skill-building is deliberate — prompt engineering, model-limitation literacy, and AI-assisted prototyping are tracked team competencies with quarterly assessment",
             ],
           },
         },
@@ -156,17 +156,17 @@ export const aiDesignPractice: CaseStudy = {
       content: [
         {
           type: "text",
-          data: "<p>Integrating AI into design practice is an operating-model decision about where machine speed serves human judgment. Done right, it lets a team of fixed size do deeper research, test truer prototypes, and ship quality fixes that previously died in backlogs.</p>",
+          data: "<p>For a team designing clinical tools where a missed variant classification or a confusing patient result has downstream consequences, the framework converts AI speed into research depth and prototype fidelity — not into skipping steps. Synthesis that took 3 weeks now takes 2 days. Prototypes that were flat mockups now have real state machines. Small production fixes that died in sprint backlogs now ship as designer-authored MRs. The team size didn't change; the work it can do did.</p>",
         },
       ],
     },
   ],
 
   myRole:
-    "Defined the AI integration framework across five practice areas; set the governance rules and data boundaries; led skill-building and adoption across the design and research team.",
+    "Defined the AI integration framework across five practice areas; set governance rules and HIPAA-compliant data boundaries; led adoption across the design and research team; established prompt engineering and model-limitation literacy as team competencies.",
 
   owned:
-    "AI integration framework, governance rules, data boundaries, production-vs-judgment operating model, team skill-building.",
+    "AI integration framework, governance rules, data boundaries, production-vs-judgment operating model, team skill-building and quarterly competency assessment.",
 
   tags: [
     "AI integration",

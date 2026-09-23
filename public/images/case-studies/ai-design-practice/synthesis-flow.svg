@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" fill="none">
   <style>
     .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
     .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
     .title { font-size: 22px; font-weight: 400; fill: #ffffff; }
     .sub { font-size: 11px; fill: #777; letter-spacing: 0.06em; text-transform: uppercase; }
     .item { font-size: 13px; fill: #aaa; }
+    .tool { font-size: 11px; fill: #666; font-style: italic; }
     .time { font-size: 36px; font-weight: 400; fill: #ffffff; }
     .time-label { font-size: 11px; fill: #666; letter-spacing: 0.06em; text-transform: uppercase; }
     .arrow { font-size: 28px; fill: #ffffff; text-anchor: middle; }
@@ -14,54 +15,61 @@
   <!-- Dot texture -->
   <circle cx="120" cy="40" r="1.5" fill="#ffffff" opacity="0.04"/>
   <circle cx="860" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
-  <circle cx="480" cy="340" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="480" cy="360" r="1.5" fill="#ffffff" opacity="0.04"/>
 
   <!-- BEFORE column -->
   <text x="60" y="42" class="serif title">Before</text>
-  <text x="60" y="60" class="sans sub">Manual synthesis</text>
-  <path d="M58,48 C105,45 160,50 220,47" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  <text x="60" y="60" class="sans sub">Manual synthesis · 15 participants</text>
+  <path d="M58,48 C105,45 160,50 260,47" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
 
-  <!-- Steps -->
-  <text x="60" y="104" class="sans item">Transcribe hours of recordings</text>
-  <text x="60" y="136" class="sans item">Hand-code affinity clusters</text>
-  <text x="60" y="168" class="sans item">Draft themes from scratch</text>
-  <text x="60" y="200" class="sans item">Chase quote provenance</text>
-  <text x="60" y="232" class="sans item">Write up findings</text>
+  <!-- Steps with tools -->
+  <text x="60" y="104" class="sans item">Transcribe 20+ hrs of recordings</text>
+  <text x="60" y="120" class="sans tool">Manual / Rev.com</text>
+
+  <text x="60" y="152" class="sans item">Open-code transcripts</text>
+  <text x="60" y="168" class="sans tool">Dovetail</text>
+
+  <text x="60" y="200" class="sans item">Affinity diagram 80+ pages of notes</text>
+  <text x="60" y="216" class="sans tool">FigJam, physical wall</text>
+
+  <text x="60" y="248" class="sans item">Thematic analysis writeup</text>
+  <text x="60" y="264" class="sans tool">Google Docs, team review</text>
 
   <!-- Time -->
-  <text x="60" y="300" class="serif time">2–3 wks</text>
-  <text x="60" y="320" class="sans time-label">Per study</text>
+  <text x="60" y="320" class="serif time">2–3 wks</text>
+  <text x="60" y="340" class="sans time-label">Per study</text>
 
   <!-- Arrow -->
-  <text x="420" y="190" class="serif arrow">→</text>
-  <path d="M380,186 C400,183 440,183 460,186" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
+  <text x="420" y="200" class="serif arrow">→</text>
+  <path d="M380,196 C400,193 440,193 460,196" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
 
   <!-- AFTER column -->
   <text x="530" y="42" class="serif title">After</text>
-  <text x="530" y="60" class="sans sub">AI-assisted synthesis</text>
+  <text x="530" y="60" class="sans sub">AI-assisted · same rigor</text>
   <path d="M528,48 C575,45 630,50 690,47" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
 
   <!-- Steps with role tags -->
-  <text x="530" y="104" class="sans item">Auto-transcription</text>
-  <text x="788" y="104" class="sans sub" style="fill:#555">AI</text>
+  <text x="530" y="104" class="sans item">De-identify, transcribe</text>
+  <text x="530" y="120" class="sans tool">HIPAA-compliant pipeline</text>
+  <text x="830" y="104" class="sans sub" style="fill:#555">AI</text>
 
-  <text x="530" y="136" class="sans item">First-pass clusters + quote banks</text>
-  <text x="788" y="136" class="sans sub" style="fill:#555">AI</text>
+  <text x="530" y="152" class="sans item">Candidate affinity clusters + quote banks</text>
+  <text x="530" y="168" class="sans tool">Claude, with source timestamps</text>
+  <text x="830" y="152" class="sans sub" style="fill:#555">AI</text>
 
-  <text x="530" y="168" class="sans item">Validate against field memory</text>
-  <text x="788" y="168" class="sans sub" style="fill:#ddd">Human</text>
+  <text x="530" y="200" class="sans item">Validate clusters vs. field memory</text>
+  <text x="530" y="216" class="sans tool">Researcher adjudication</text>
+  <text x="830" y="200" class="sans sub" style="fill:#ddd">Human</text>
 
-  <text x="530" y="200" class="sans item">Pressure-test interpretations</text>
-  <text x="788" y="200" class="sans sub" style="fill:#ddd">Human</text>
-
-  <text x="530" y="232" class="sans item">Trace findings to evidence</text>
-  <text x="788" y="232" class="sans sub" style="fill:#ddd">Human</text>
+  <text x="530" y="248" class="sans item">Trace every finding to raw evidence</text>
+  <text x="530" y="264" class="sans tool">Source trail verification</text>
+  <text x="830" y="248" class="sans sub" style="fill:#ddd">Human</text>
 
   <!-- Time -->
-  <text x="530" y="300" class="serif time">1–2 days</text>
-  <text x="530" y="320" class="sans time-label">Per study</text>
+  <text x="530" y="320" class="serif time">1–2 days</text>
+  <text x="530" y="340" class="sans time-label">Per study</text>
 
   <!-- Bottom note -->
-  <path d="M200,352 C320,348 460,356 600,350 C700,346 760,352 800,349" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
-  <text x="480" y="372" class="serif note">speed changes; rigor doesn't — AI-generated synthesis is a draft, never a finding</text>
+  <path d="M200,370 C320,366 460,374 600,368 C700,364 760,370 800,367" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
+  <text x="480" y="392" class="serif note">no AI-generated theme ships without a researcher verifying the source trail</text>
 </svg>

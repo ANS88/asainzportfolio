@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" fill="none">
   <style>
     .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
     .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
@@ -6,8 +6,9 @@
     .sub { font-size: 11px; fill: #777; letter-spacing: 0.06em; text-transform: uppercase; }
     .item { font-size: 13px; fill: #bbb; }
     .item-sub { font-size: 11px; fill: #666; }
-    .x-label { font-size: 13px; fill: #999; text-anchor: middle; }
-    .outcome { font-size: 14px; fill: #ccc; }
+    .finding { font-size: 12px; fill: #aaa; }
+    .finding-label { font-size: 10px; fill: #666; letter-spacing: 0.06em; text-transform: uppercase; }
+    .outcome { font-size: 13px; fill: #ccc; }
     .note { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
   </style>
 
@@ -15,48 +16,52 @@
   <circle cx="100" cy="40" r="1.5" fill="#ffffff" opacity="0.04"/>
   <circle cx="860" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
 
-  <!-- Before: Conference room research -->
-  <text x="60" y="42" class="serif title">Conference room</text>
-  <text x="60" y="60" class="sans sub">How research happened before</text>
+  <!-- Before: Remote research -->
+  <text x="60" y="42" class="serif title">Remote research</text>
+  <text x="60" y="60" class="sans sub">How it worked before</text>
   <path d="M58,48 C105,45 190,50 250,47" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
-  <text x="60" y="100" class="sans item">Interviews</text>
-  <text x="60" y="118" class="sans item-sub">Staff describe the system they adapted to</text>
+  <text x="60" y="100" class="sans item">Stakeholder interviews</text>
+  <text x="60" y="118" class="sans item-sub">Lab directors describe LabVantage screens</text>
+  <text x="60" y="134" class="sans item-sub">they memorized, not workflow they need</text>
 
-  <text x="60" y="150" class="sans item">Screen recordings</text>
-  <text x="60" y="168" class="sans item-sub">See clicks, miss the centrifuge competing for attention</text>
+  <text x="60" y="166" class="sans item">Screen recordings</text>
+  <text x="60" y="184" class="sans item-sub">See clicks and navigation, miss the centrifuge</text>
+  <text x="60" y="200" class="sans item-sub">cycle, glove changes, bench-to-screen transitions</text>
 
-  <text x="60" y="200" class="sans item">Assumptions</text>
-  <text x="60" y="218" class="sans item-sub">Redesign a workflow you've never seen in person</text>
-
-  <!-- X mark -->
-  <path d="M355,146 L375,172" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
-  <path d="M375,146 L355,172" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
-  <text x="365" y="200" class="sans x-label">Incomplete</text>
+  <text x="60" y="232" class="sans item">Workaround blindness</text>
+  <text x="60" y="250" class="sans item-sub">Staff say "the system is fine" because they've</text>
+  <text x="60" y="266" class="sans item-sub">adapted — workarounds are invisible in interviews</text>
 
   <!-- Arrow -->
-  <path d="M410,155 C430,152 450,152 470,155" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
+  <path d="M410,170 C430,167 450,167 470,170" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
 
   <!-- After: In-lab ethnography -->
-  <text x="520" y="42" class="serif title">In the lab</text>
-  <text x="520" y="60" class="sans sub">Ethnography as methodology</text>
+  <text x="520" y="42" class="serif title">In-lab ethnography</text>
+  <text x="520" y="60" class="sans sub">6+ full-shift sessions</text>
   <path d="M518,48 C565,45 650,50 710,47" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
 
   <text x="520" y="100" class="sans item">Full-shift shadowing</text>
-  <text x="520" y="118" class="sans item-sub">6+ sessions across multiple labs</text>
+  <text x="520" y="118" class="sans item-sub">Accessioning, histopathology, QC labs</text>
+  <text x="520" y="134" class="sans item-sub">Watch physical-digital handoff patterns</text>
 
-  <text x="520" y="150" class="sans item">Workaround observation</text>
-  <text x="520" y="168" class="sans item-sub">Watch where they work around the software</text>
+  <text x="520" y="166" class="sans item">Workaround mapping</text>
+  <text x="520" y="184" class="sans item-sub">Techs work around LabVantage, not with it —</text>
+  <text x="520" y="200" class="sans item-sub">sticky notes on scanners, paper checklists on benches</text>
 
-  <text x="520" y="200" class="sans item">Physical-digital handoffs</text>
-  <text x="520" y="218" class="sans item-sub">Gloves on, barcode scanner, bench reality</text>
+  <text x="520" y="232" class="sans item">Physical anchor discovery</text>
+  <text x="520" y="250" class="sans item-sub">Barcode scanner = navigation anchor of every</text>
+  <text x="520" y="266" class="sans item-sub">workflow step; software treated scans as data input</text>
 
-  <!-- Outcome -->
-  <path d="M518,244 C565,241 700,245 800,242" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round"/>
-  <text x="520" y="272" class="sans outcome">Became Natera's standard for lab-facing design</text>
-  <text x="520" y="296" class="sans outcome">Earned trust that changed feedback quality permanently</text>
+  <!-- Key finding -->
+  <path d="M518,290 C565,287 750,291 860,288" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.12" stroke-linecap="round"/>
+
+  <text x="520" y="314" class="sans finding-label">Key finding</text>
+  <text x="520" y="334" class="sans finding">Scan-confirm cycles organized every process step.</text>
+  <text x="520" y="352" class="sans finding">Redesigning scans as navigation events (not data input)</text>
+  <text x="520" y="370" class="sans finding">restructured the entire histopathology interface.</text>
 
   <!-- Bottom note -->
-  <path d="M200,330 C320,326 460,334 600,328 C720,324 800,330 840,327" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
-  <text x="480" y="352" class="serif note">you can't redesign a five-stage histopathology workflow from a conference room</text>
+  <path d="M200,386 C320,382 460,390 600,384 C720,380 800,386 840,383" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
+  <text x="480" y="398" class="serif note">became Natera's standard methodology for lab-facing design — adopted across product teams</text>
 </svg>

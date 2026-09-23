@@ -1,77 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
   <style>
     .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
     .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .legacy { font-size: 15px; font-weight: 400; fill: #999; }
+    .legacy { font-size: 14px; font-weight: 400; fill: #999; }
     .legacy-sub { font-size: 11px; fill: #555; }
+    .legacy-pain { font-size: 10px; fill: #664444; font-style: italic; }
     .unified { font-size: 22px; font-weight: 400; fill: #ffffff; }
     .unified-sub { font-size: 12px; fill: #888; }
     .result { font-size: 32px; font-weight: 400; fill: #ffffff; }
     .result-label { font-size: 11px; fill: #666; letter-spacing: 0.06em; text-transform: uppercase; }
+    .reframe { font-size: 13px; fill: #aaa; }
+    .reframe-sub { font-size: 11px; fill: #666; }
     .note { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
   </style>
 
   <!-- Dot texture -->
   <circle cx="100" cy="40" r="1.5" fill="#ffffff" opacity="0.04"/>
   <circle cx="860" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
-  <circle cx="480" cy="360" r="1.5" fill="#ffffff" opacity="0.04"/>
 
   <!-- Legacy systems (left) -->
-  <!-- System 1 -->
-  <path d="M68,58 C72,54 242,53 246,58 C250,62 252,108 246,112 C240,116 74,117 68,112 C62,107 64,62 68,58Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
-  <text x="84" y="82" class="sans legacy">Legacy system 1</text>
-  <text x="84" y="100" class="sans legacy-sub">Variant review tool</text>
+  <path d="M68,44 C72,40 252,39 256,44 C260,48 262,98 256,102 C250,106 74,107 68,102 C62,97 64,48 68,44Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="66" class="sans legacy">Variant review tool</text>
+  <text x="84" y="82" class="sans legacy-sub">Pathogenicity classification UI</text>
+  <text x="84" y="96" class="sans legacy-pain">Copy patient ID to clipboard →</text>
 
-  <!-- System 2 -->
-  <path d="M68,138 C72,134 242,133 246,138 C250,142 252,188 246,192 C240,196 74,197 68,192 C62,187 64,142 68,138Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
-  <text x="84" y="162" class="sans legacy">Legacy system 2</text>
-  <text x="84" y="180" class="sans legacy-sub">Report generation</text>
+  <path d="M68,122 C72,118 252,117 256,122 C260,126 262,176 256,180 C250,184 74,185 68,180 C62,175 64,126 68,122Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="144" class="sans legacy">Report generation system</text>
+  <text x="84" y="160" class="sans legacy-sub">Clinical report templating</text>
+  <text x="84" y="174" class="sans legacy-pain">Paste patient ID, re-enter context →</text>
 
-  <!-- System 3 -->
-  <path d="M68,218 C72,214 242,213 246,218 C250,222 252,268 246,272 C240,276 74,277 68,272 C62,267 64,222 68,218Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
-  <text x="84" y="242" class="sans legacy">Legacy system 3</text>
-  <text x="84" y="260" class="sans legacy-sub">QC dashboard</text>
+  <path d="M68,200 C72,196 252,195 256,200 C260,204 262,254 256,258 C250,262 74,263 68,258 C62,253 64,204 68,200Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="222" class="sans legacy">QC dashboard</text>
+  <text x="84" y="238" class="sans legacy-sub">Pipeline metrics, batch status</text>
+  <text x="84" y="252" class="sans legacy-pain">Different login, no shared state →</text>
 
-  <!-- System 4 -->
-  <path d="M68,298 C72,294 242,293 246,298 C250,302 252,348 246,352 C240,356 74,357 68,352 C62,347 64,302 68,298Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
-  <text x="84" y="322" class="sans legacy">Legacy system 4</text>
-  <text x="84" y="340" class="sans legacy-sub">Lab tracking spreadsheet</text>
+  <path d="M68,278 C72,274 252,273 256,278 C260,282 262,332 256,336 C250,340 74,341 68,336 C62,331 64,282 68,278Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="300" class="sans legacy">Lab tracking spreadsheet</text>
+  <text x="84" y="316" class="sans legacy-sub">Manual case tracking in Excel</text>
+  <text x="84" y="330" class="sans legacy-pain">Version conflicts, no audit trail</text>
 
   <!-- Arrows converging -->
-  <path d="M254,85 C300,88 340,120 380,155" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
-  <path d="M254,165 C300,168 340,172 380,180" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
-  <path d="M254,245 C300,242 340,228 380,210" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
-  <path d="M254,325 C300,318 340,280 380,240" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M264,72 C300,78 340,120 380,155" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M264,150 C300,158 340,168 380,180" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M264,228 C300,225 340,218 380,210" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M264,306 C300,298 340,268 380,240" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
 
-  <!-- Unified system (center-right) -->
-  <path d="M395,110 C400,104 660,102 665,110 C670,118 674,290 665,298 C656,306 404,308 395,298 C386,288 390,116 395,110Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.25" stroke-linecap="round"/>
+  <!-- Unified system -->
+  <path d="M395,100 C400,94 660,92 665,100 C670,108 674,290 665,298 C656,306 404,308 395,298 C386,288 390,106 395,100Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.25" stroke-linecap="round"/>
 
-  <text x="420" y="158" class="serif unified">Clinical Review</text>
-  <text x="420" y="180" class="sans unified-sub">One unified platform</text>
+  <text x="420" y="144" class="serif unified">Clinical Review</text>
+  <text x="420" y="166" class="sans unified-sub">Variant review + report gen + QC + tracking</text>
+  <text x="420" y="184" class="sans unified-sub">One view per case, one context, one login</text>
 
-  <path d="M418,192 C445,190 550,194 630,190" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
+  <path d="M418,196 C445,194 550,198 630,194" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
 
-  <!-- Results inside the box -->
-  <text x="420" y="232" class="serif result">50%</text>
-  <text x="420" y="252" class="sans result-label">Faster turnaround</text>
+  <text x="420" y="228" class="serif result">50%</text>
+  <text x="420" y="248" class="sans result-label">Faster turnaround</text>
 
-  <text x="560" y="232" class="serif result">88</text>
-  <text x="560" y="252" class="sans result-label">SUS score</text>
+  <text x="560" y="228" class="serif result">88</text>
+  <text x="560" y="248" class="sans result-label">SUS score</text>
 
-  <text x="420" y="286" class="sans unified-sub">3.5M+ tests reported/year</text>
+  <text x="420" y="286" class="sans unified-sub">3.5M+ tests reported/year · 3 divisions · 15 user roles</text>
 
-  <!-- Right side: approach -->
-  <text x="720" y="158" class="serif" style="font-size:16px;fill:#ffffff">The reframe</text>
-  <text x="720" y="182" class="sans" style="font-size:12px;fill:#888">UI polish request →</text>
-  <text x="720" y="200" class="sans" style="font-size:12px;fill:#888">Platform investment</text>
-  <path d="M718,164 C750,162 810,166 850,163" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
-  <text x="720" y="232" class="sans" style="font-size:12px;fill:#888">Map the system,</text>
-  <text x="720" y="248" class="sans" style="font-size:12px;fill:#888">not the screen.</text>
-  <text x="720" y="276" class="sans" style="font-size:12px;fill:#888">Understand the work</text>
-  <text x="720" y="292" class="sans" style="font-size:12px;fill:#888">well enough to replace</text>
-  <text x="720" y="308" class="sans" style="font-size:12px;fill:#888">the old tools entirely.</text>
+  <!-- Right side: the reframe -->
+  <text x="720" y="130" class="serif" style="font-size:16px;fill:#ffffff">The reframe</text>
+  <path d="M718,138 C750,136 830,140 870,137" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
+
+  <text x="720" y="166" class="sans reframe">Came in as:</text>
+  <text x="720" y="184" class="sans reframe-sub">"Improve the variant review UI"</text>
+
+  <text x="720" y="216" class="sans reframe">Reframed to:</text>
+  <text x="720" y="234" class="sans reframe-sub">Distributed cognition problem —</text>
+  <text x="720" y="250" class="sans reframe-sub">4 tools, context fragmented,</text>
+  <text x="720" y="266" class="sans reframe-sub">patient IDs copy-pasted between</text>
+  <text x="720" y="282" class="sans reframe-sub">tabs per case</text>
+
+  <text x="720" y="314" class="sans reframe">Method:</text>
+  <text x="720" y="332" class="sans reframe-sub">Contextual inquiry, 2,000+ hrs</text>
+  <text x="720" y="348" class="sans reframe-sub">accumulated observation</text>
 
   <!-- Bottom note -->
-  <path d="M200,372 C320,368 460,376 600,370 C720,366 800,372 840,369" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
-  <text x="480" y="394" class="serif note">internal tools accumulate debt faster because there's no market pressure to clean them up</text>
+  <path d="M200,388 C320,384 460,392 600,386 C720,382 800,388 840,385" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
+  <text x="480" y="412" class="serif note">clinical scientists were switching between 4 applications per case, mentally stitching context</text>
 </svg>
