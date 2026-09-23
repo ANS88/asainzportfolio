@@ -1306,7 +1306,11 @@ a:hover { opacity: .85; }
 }
 .metrics-dot { color: var(--accent-soft); }
 .hero-links {
-  display: inline;
+  display: block;
+  margin-top: .75rem;
+  font-family: var(--font-sans);
+  font-size: .45em;
+  letter-spacing: .04em;
 }
 .hero-text-link {
   color: var(--ink3);
