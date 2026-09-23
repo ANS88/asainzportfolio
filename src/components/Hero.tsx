@@ -43,22 +43,17 @@ export default function Hero() {
             tools
           </span>
           {" "}that power 50+ genomics labs and millions of patient results.
-          <span className="hero-app-links">
-            <a href="mailto:sainz.nag@gmail.com" className="hero-app-icon" aria-label="Email">
-              <svg viewBox="0 0 16 12" fill="currentColor"><rect x="0" y="0" width="16" height="12"/><rect x="2" y="0" width="2" height="2" fill="var(--paper)"/><rect x="12" y="0" width="2" height="2" fill="var(--paper)"/><rect x="4" y="2" width="2" height="2" fill="var(--paper)"/><rect x="10" y="2" width="2" height="2" fill="var(--paper)"/><rect x="6" y="4" width="4" height="2" fill="var(--paper)"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="LinkedIn">
-              <svg viewBox="0 0 14 14" fill="currentColor"><rect x="1" y="0" width="2" height="2"/><rect x="1" y="4" width="2" height="10"/><rect x="5" y="2" width="2" height="12"/><rect x="7" y="2" width="2" height="2"/><rect x="9" y="2" width="2" height="12"/></svg>
-            </a>
-            <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="Substack">
-              <svg viewBox="0 0 14 16" fill="currentColor"><rect x="1" y="1" width="12" height="2"/><rect x="1" y="5" width="12" height="2"/><rect x="1" y="9" width="2" height="2"/><rect x="11" y="9" width="2" height="2"/><rect x="3" y="11" width="2" height="2"/><rect x="9" y="11" width="2" height="2"/><rect x="5" y="13" width="4" height="2"/></svg>
-            </a>
-            <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="Scholar">
-              <svg viewBox="0 0 16 14" fill="currentColor"><rect x="12" y="0" width="2" height="2"/><rect x="0" y="2" width="16" height="2"/><rect x="4" y="4" width="8" height="2"/><rect x="6" y="6" width="4" height="2"/><rect x="4" y="8" width="8" height="2"/><rect x="2" y="10" width="12" height="4"/></svg>
-            </a>
-            <a href="https://github.com/ANS88" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="0" width="2" height="2"/><rect x="16" y="0" width="2" height="2"/><rect x="4" y="2" width="16" height="2"/><rect x="2" y="4" width="20" height="2"/><rect x="0" y="6" width="24" height="12"/><rect x="2" y="18" width="20" height="2"/><rect x="4" y="20" width="16" height="2"/><rect x="6" y="22" width="12" height="2"/><rect x="6" y="4" width="4" height="2" fill="var(--paper)"/><rect x="14" y="4" width="4" height="2" fill="var(--paper)"/><rect x="4" y="6" width="16" height="2" fill="var(--paper)"/><rect x="6" y="8" width="12" height="2" fill="var(--paper)"/><rect x="8" y="10" width="8" height="2" fill="var(--paper)"/><rect x="10" y="12" width="4" height="2" fill="var(--paper)"/><rect x="4" y="14" width="2" height="2" fill="var(--paper)"/><rect x="10" y="14" width="4" height="2" fill="var(--paper)"/><rect x="4" y="16" width="16" height="2" fill="var(--paper)"/><rect x="6" y="18" width="4" height="2" fill="var(--paper)"/><rect x="14" y="18" width="4" height="2" fill="var(--paper)"/></svg>
-            </a>
+          <span className="hero-links">
+            {" / "}
+            <a href="mailto:sainz.nag@gmail.com" className="hero-text-link">Email</a>
+            {" / "}
+            <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="hero-text-link">LinkedIn</a>
+            {" / "}
+            <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="hero-text-link">Substack</a>
+            {" / "}
+            <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="hero-text-link">Scholar</a>
+            {" / "}
+            <a href="https://github.com/ANS88" target="_blank" rel="noopener noreferrer" className="hero-text-link">GitHub</a>
           </span>
         </h1>
       </AnimateOnScroll>
