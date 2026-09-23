@@ -43,6 +43,23 @@ export default function Hero() {
             tools
           </span>
           {" "}that power 50+ genomics labs and millions of patient results.
+          <span className="hero-app-links">
+            <a href="mailto:sainz.nag@gmail.com" className="hero-app-icon" aria-label="Email">
+              <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="10"/><rect x="1" y="3" width="2" height="2" fill="var(--paper)"/><rect x="13" y="3" width="2" height="2" fill="var(--paper)"/><rect x="3" y="5" width="2" height="2" fill="var(--paper)"/><rect x="11" y="5" width="2" height="2" fill="var(--paper)"/><rect x="5" y="7" width="2" height="2" fill="var(--paper)"/><rect x="9" y="7" width="2" height="2" fill="var(--paper)"/><rect x="7" y="9" width="2" height="2" fill="var(--paper)"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 16 16" fill="currentColor"><rect x="2" y="2" width="3" height="3"/><rect x="2" y="7" width="3" height="7"/><rect x="7" y="7" width="3" height="7"/><rect x="10" y="9" width="2" height="2"/><rect x="12" y="7" width="2" height="4"/><rect x="10" y="7" width="2" height="2"/><rect x="12" y="5" width="2" height="2"/><rect x="10" y="5" width="2" height="2"/></svg>
+            </a>
+            <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="Substack">
+              <svg viewBox="0 0 16 16" fill="currentColor"><rect x="3" y="2" width="10" height="2"/><rect x="3" y="6" width="10" height="2"/><rect x="3" y="10" width="2" height="4"/><rect x="7" y="8" width="2" height="2"/><rect x="11" y="10" width="2" height="4"/></svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="Scholar">
+              <svg viewBox="0 0 16 16" fill="currentColor"><rect x="6" y="1" width="4" height="2"/><rect x="4" y="3" width="2" height="2"/><rect x="10" y="3" width="2" height="2"/><rect x="2" y="5" width="2" height="2"/><rect x="12" y="5" width="2" height="2"/><rect x="1" y="7" width="14" height="2"/><rect x="3" y="9" width="10" height="2"/><rect x="5" y="11" width="6" height="2"/><rect x="7" y="13" width="2" height="2"/></svg>
+            </a>
+            <a href="https://github.com/ANS88" target="_blank" rel="noopener noreferrer" className="hero-app-icon" aria-label="GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor"><rect x="5" y="1" width="6" height="2"/><rect x="3" y="3" width="2" height="2"/><rect x="11" y="3" width="2" height="2"/><rect x="1" y="5" width="2" height="4"/><rect x="13" y="5" width="2" height="4"/><rect x="3" y="9" width="2" height="2"/><rect x="11" y="9" width="2" height="2"/><rect x="5" y="11" width="2" height="2"/><rect x="9" y="11" width="2" height="2"/><rect x="3" y="5" width="2" height="2" fill="var(--paper)"/><rect x="5" y="5" width="2" height="2"/><rect x="9" y="5" width="2" height="2"/><rect x="11" y="5" width="2" height="2" fill="var(--paper)"/><rect x="5" y="13" width="6" height="2"/></svg>
+            </a>
+          </span>
         </h1>
       </AnimateOnScroll>
 
@@ -52,14 +69,6 @@ export default function Hero() {
           <MarqueeTrack />
         </div>
       </div>
-      <AnimateOnScroll animation="fade-up" delay={450}>
-        <div className="hero-links">
-          <a href="mailto:sainz.nag@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://womenshealthcomputed.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
-          <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
-        </div>
-      </AnimateOnScroll>
     </div>
   );
 }
