@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <style>
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .domain { font-size: 24px; font-weight: 400; fill: #ffffff; }
+    .domain-sub { font-size: 11px; fill: #777; letter-spacing: 0.06em; text-transform: uppercase; }
+    .step { font-size: 13px; fill: #bbb; }
+    .step-sub { font-size: 11px; fill: #666; }
+    .user { font-size: 11px; fill: #888; font-style: italic; }
+    .conn { font-size: 11px; fill: #666; text-anchor: middle; letter-spacing: 0.06em; text-transform: uppercase; }
+    .note { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
+  </style>
+
+  <!-- Dot texture -->
+  <circle cx="100" cy="50" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="880" cy="70" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="480" cy="380" r="1.5" fill="#ffffff" opacity="0.04"/>
+
+  <!-- WET LAB blob -->
+  <path d="M80,60 C200,42 380,42 420,60 C460,78 462,290 420,310 C378,330 200,330 80,310 C-40,290 -40,78 80,60Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.12" stroke-linecap="round"/>
+
+  <text x="100" y="92" class="serif domain">Wet Lab</text>
+  <text x="100" y="110" class="sans domain-sub">Physical processing</text>
+  <text x="100" y="138" class="sans user">Lab technicians, scientists</text>
+
+  <!-- Wet lab steps -->
+  <circle cx="108" cy="172" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="122" y="177" class="sans step">Accessioning</text>
+  <text x="122" y="193" class="sans step-sub">Sample intake &amp; logging</text>
+
+  <path d="M108,200 C106,212 110,216 108,226" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+
+  <circle cx="108" cy="238" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="122" y="243" class="sans step">Preparation &amp; Sequencing</text>
+  <text x="122" y="259" class="sans step-sub">DNA extraction, library prep</text>
+
+  <path d="M108,266 C106,278 110,282 108,292" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+
+  <circle cx="108" cy="304" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="122" y="309" class="sans step">Histopathology</text>
+  <text x="122" y="325" class="sans step-sub">Tissue validation, micro dissection</text>
+
+  <!-- Connection between domains -->
+  <path d="M430,185 C460,182 490,178 520,182 C550,186 560,188 530,185" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
+  <text x="480" y="172" class="sans conn">Sample data flows →</text>
+
+  <!-- DRY LAB blob -->
+  <path d="M540,60 C660,42 860,42 900,60 C940,78 942,290 900,310 C858,330 660,330 540,310 C420,290 420,78 540,60Z" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.12" stroke-linecap="round"/>
+
+  <text x="570" y="92" class="serif domain">Dry Lab</text>
+  <text x="570" y="110" class="sans domain-sub">Analysis &amp; reporting</text>
+  <text x="570" y="138" class="sans user">Bioinformaticians, genetic counselors</text>
+
+  <!-- Dry lab steps -->
+  <circle cx="578" cy="172" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="592" y="177" class="sans step">Computational Analysis</text>
+  <text x="592" y="193" class="sans step-sub">Variant calling, pipeline QC</text>
+
+  <path d="M578,200 C576,212 580,216 578,226" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+
+  <circle cx="578" cy="238" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="592" y="243" class="sans step">Variant Interpretation</text>
+  <text x="592" y="259" class="sans step-sub">Clinical significance review</text>
+
+  <path d="M578,266 C576,278 580,282 578,292" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+
+  <circle cx="578" cy="304" r="3" fill="#ffffff" opacity="0.2"/>
+  <text x="592" y="309" class="sans step">Clinical Report</text>
+  <text x="592" y="325" class="sans step-sub">Patient-facing results</text>
+
+  <!-- Bottom note -->
+  <path d="M180,370 C300,366 460,374 600,368 C720,364 800,370 840,367" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
+  <text x="480" y="396" class="serif note">a sample mishandled in the wet lab produces data that misleads the dry lab</text>
+</svg>

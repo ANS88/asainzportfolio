@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" fill="none">
+  <style>
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .legacy { font-size: 15px; font-weight: 400; fill: #999; }
+    .legacy-sub { font-size: 11px; fill: #555; }
+    .unified { font-size: 22px; font-weight: 400; fill: #ffffff; }
+    .unified-sub { font-size: 12px; fill: #888; }
+    .result { font-size: 32px; font-weight: 400; fill: #ffffff; }
+    .result-label { font-size: 11px; fill: #666; letter-spacing: 0.06em; text-transform: uppercase; }
+    .note { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
+  </style>
+
+  <!-- Dot texture -->
+  <circle cx="100" cy="40" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="860" cy="60" r="1.5" fill="#ffffff" opacity="0.04"/>
+  <circle cx="480" cy="360" r="1.5" fill="#ffffff" opacity="0.04"/>
+
+  <!-- Legacy systems (left) -->
+  <!-- System 1 -->
+  <path d="M68,58 C72,54 242,53 246,58 C250,62 252,108 246,112 C240,116 74,117 68,112 C62,107 64,62 68,58Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="82" class="sans legacy">Legacy system 1</text>
+  <text x="84" y="100" class="sans legacy-sub">Variant review tool</text>
+
+  <!-- System 2 -->
+  <path d="M68,138 C72,134 242,133 246,138 C250,142 252,188 246,192 C240,196 74,197 68,192 C62,187 64,142 68,138Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="162" class="sans legacy">Legacy system 2</text>
+  <text x="84" y="180" class="sans legacy-sub">Report generation</text>
+
+  <!-- System 3 -->
+  <path d="M68,218 C72,214 242,213 246,218 C250,222 252,268 246,272 C240,276 74,277 68,272 C62,267 64,222 68,218Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="242" class="sans legacy">Legacy system 3</text>
+  <text x="84" y="260" class="sans legacy-sub">QC dashboard</text>
+
+  <!-- System 4 -->
+  <path d="M68,298 C72,294 242,293 246,298 C250,302 252,348 246,352 C240,356 74,357 68,352 C62,347 64,302 68,298Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+  <text x="84" y="322" class="sans legacy">Legacy system 4</text>
+  <text x="84" y="340" class="sans legacy-sub">Lab tracking spreadsheet</text>
+
+  <!-- Arrows converging -->
+  <path d="M254,85 C300,88 340,120 380,155" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M254,165 C300,168 340,172 380,180" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M254,245 C300,242 340,228 380,210" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+  <path d="M254,325 C300,318 340,280 380,240" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.18" stroke-linecap="round"/>
+
+  <!-- Unified system (center-right) -->
+  <path d="M395,110 C400,104 660,102 665,110 C670,118 674,290 665,298 C656,306 404,308 395,298 C386,288 390,116 395,110Z" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.25" stroke-linecap="round"/>
+
+  <text x="420" y="158" class="serif unified">Clinical Review</text>
+  <text x="420" y="180" class="sans unified-sub">One unified platform</text>
+
+  <path d="M418,192 C445,190 550,194 630,190" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
+
+  <!-- Results inside the box -->
+  <text x="420" y="232" class="serif result">50%</text>
+  <text x="420" y="252" class="sans result-label">Faster turnaround</text>
+
+  <text x="560" y="232" class="serif result">88</text>
+  <text x="560" y="252" class="sans result-label">SUS score</text>
+
+  <text x="420" y="286" class="sans unified-sub">3.5M+ tests reported/year</text>
+
+  <!-- Right side: approach -->
+  <text x="720" y="158" class="serif" style="font-size:16px;fill:#ffffff">The reframe</text>
+  <text x="720" y="182" class="sans" style="font-size:12px;fill:#888">UI polish request →</text>
+  <text x="720" y="200" class="sans" style="font-size:12px;fill:#888">Platform investment</text>
+  <path d="M718,164 C750,162 810,166 850,163" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12" stroke-linecap="round"/>
+  <text x="720" y="232" class="sans" style="font-size:12px;fill:#888">Map the system,</text>
+  <text x="720" y="248" class="sans" style="font-size:12px;fill:#888">not the screen.</text>
+  <text x="720" y="276" class="sans" style="font-size:12px;fill:#888">Understand the work</text>
+  <text x="720" y="292" class="sans" style="font-size:12px;fill:#888">well enough to replace</text>
+  <text x="720" y="308" class="sans" style="font-size:12px;fill:#888">the old tools entirely.</text>
+
+  <!-- Bottom note -->
+  <path d="M200,372 C320,368 460,376 600,370 C720,366 800,372 840,369" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1" stroke-linecap="round"/>
+  <text x="480" y="394" class="serif note">internal tools accumulate debt faster because there's no market pressure to clean them up</text>
+</svg>
