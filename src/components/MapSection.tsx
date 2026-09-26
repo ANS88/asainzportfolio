@@ -150,13 +150,6 @@ function ValenciaScene() {
       <path d="M36,168 Q100,178 164,168" stroke="#5aafdb" strokeWidth="0.7" opacity="0.3" fill="none" />
       <path d="M42,174 Q100,182 158,174" stroke="#5aafdb" strokeWidth="0.5" opacity="0.2" fill="none" />
       <path d="M48,180 Q100,186 152,180" stroke="#5aafdb" strokeWidth="0.4" opacity="0.15" fill="none" />
-      <circle cx="152" cy="78" r="8" fill="#2a6b3a" />
-      <circle cx="147" cy="74" r="3.5" fill="#e88020" />
-      <circle cx="157" cy="76" r="3" fill="#e88020" />
-      <g fill="white" opacity="0.6">
-        <circle cx="160" cy="72" r="2" />
-        <circle cx="144" cy="80" r="1.8" />
-      </g>
       <rect x={PX} y="157" width={PW} height="6" fill="#d8d0c0" opacity="0.6" />
     </g>
   );
