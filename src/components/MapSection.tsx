@@ -166,12 +166,17 @@ function ValenciaScene() {
       {/* Structural ribs */}
       <path d="M50,142 Q100,88 150,142" fill="none" stroke={C} strokeWidth="0.5" opacity="0.2" />
       <path d="M68,142 Q100,105 132,142" fill="none" stroke={C} strokeWidth="0.4" opacity="0.15" />
-      {/* Inner dome */}
-      <ellipse cx="100" cy="140" rx="42" ry="30" fill={C} fillOpacity="0.08" stroke={C} strokeWidth="1" opacity="0.5" />
-      {/* Pupil structure */}
-      <circle cx="100" cy="140" r="16" fill={C} fillOpacity="0.18" stroke={C} strokeWidth="1" opacity="0.6" />
-      <circle cx="100" cy="140" r="8" fill={C} fillOpacity="0.25" stroke={C} strokeWidth="0.5" opacity="0.4" />
-      <circle cx="100" cy="140" r="3" fill={C} fillOpacity="0.35" />
+      {/* Glass facade panels */}
+      <g opacity="0.5">
+        <rect x="72" y="125" width="8" height="22" rx="1" fill={C} fillOpacity="0.15" stroke={C} strokeWidth="0.5" />
+        <rect x="82" y="121" width="8" height="26" rx="1" fill={C} fillOpacity="0.15" stroke={C} strokeWidth="0.5" />
+        <rect x="92" y="119" width="8" height="28" rx="1" fill={C} fillOpacity="0.18" stroke={C} strokeWidth="0.5" />
+        <rect x="102" y="119" width="8" height="28" rx="1" fill={C} fillOpacity="0.15" stroke={C} strokeWidth="0.5" />
+        <rect x="112" y="121" width="8" height="26" rx="1" fill={C} fillOpacity="0.15" stroke={C} strokeWidth="0.5" />
+        <rect x="122" y="125" width="8" height="22" rx="1" fill={C} fillOpacity="0.15" stroke={C} strokeWidth="0.5" />
+      </g>
+      {/* Entrance arch */}
+      <path d="M90,158 Q100,142 110,158" fill={C} fillOpacity="0.12" stroke={C} strokeWidth="0.6" opacity="0.4" />
       {/* Reflections in pool */}
       <path d="M36,168 Q100,178 164,168" stroke={C} strokeWidth="0.7" opacity="0.15" fill="none" />
       <path d="M42,174 Q100,182 158,174" stroke={C} strokeWidth="0.5" opacity="0.1" fill="none" />

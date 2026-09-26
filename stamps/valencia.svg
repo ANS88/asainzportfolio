@@ -40,12 +40,17 @@
   <!-- Structural ribs -->
   <path d="M100,230 Q200,148 300,230" fill="none" stroke="#ccc8bc" stroke-width="0.8" opacity="0.5"/>
   <path d="M130,230 Q200,170 270,230" fill="none" stroke="#ccc8bc" stroke-width="0.6" opacity="0.4"/>
-  <!-- Inner dome -->
-  <ellipse cx="200" cy="228" rx="65" ry="45" fill="#b8c8d8" stroke="#8098a8" stroke-width="1.5"/>
-  <!-- Pupil -->
-  <circle cx="200" cy="228" r="24" fill="#3a6888" stroke="#285878" stroke-width="1.5"/>
-  <circle cx="200" cy="228" r="12" fill="#5a98c0"/>
-  <circle cx="200" cy="228" r="5" fill="#e8e4dc"/>
+  <!-- Glass facade panels -->
+  <g opacity="0.5">
+    <rect x="150" y="195" width="14" height="40" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="168" y="188" width="14" height="47" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="186" y="185" width="14" height="50" rx="2" fill="#9ac8e0" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="204" y="185" width="14" height="50" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="222" y="188" width="14" height="47" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="240" y="195" width="14" height="40" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+  </g>
+  <!-- Entrance arch -->
+  <path d="M180,250 Q200,220 220,250" fill="#6898b8" opacity="0.6" stroke="#5888a8" stroke-width="0.8"/>
   <!-- Reflection in pool -->
   <path d="M90,270 Q200,300 310,270" fill="#e8e4dc" opacity="0.12"/>
   <path d="M100,285 Q200,310 300,285" fill="#e8e4dc" opacity="0.08"/>
