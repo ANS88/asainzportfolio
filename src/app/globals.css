@@ -276,58 +276,29 @@ a:hover { opacity: .85; }
 /* Experience blocks */
 .experience-block {
   max-width: 640px;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   border-bottom: 1px solid var(--border);
 }
 .experience-block:last-child {
   border-bottom: none;
 }
-.experience-header {
-  margin-bottom: 1rem;
-}
-.experience-company {
+.experience-headline {
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--ink);
-  margin-bottom: .25rem;
+  margin-bottom: .5rem;
 }
-.experience-role {
-  font-size: .9rem;
-  color: var(--ink2);
-}
-.experience-dates {
-  font-family: var(--sans);
-  font-size: .7rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--accent);
-  margin-top: .35rem;
-}
-.experience-list {
-  list-style: none;
+.experience-snippets {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding: 0;
+  gap: .2rem;
 }
-.experience-list li {
+.experience-snippets p {
   font-size: .9rem;
-  line-height: 1.65;
+  line-height: 1.55;
   color: var(--ink2);
-  padding-left: 1rem;
-  position: relative;
-}
-.experience-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: .55em;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
+  margin: 0;
 }
 
 .about-prose {

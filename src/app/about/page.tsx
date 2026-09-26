@@ -72,44 +72,30 @@ export default function About() {
 
           <AnimateOnScroll animation="fade-up">
             <div className="experience-block">
-              <div className="experience-header">
-                <div className="experience-company">Natera</div>
-                <div className="experience-role">Senior UX Design &amp; Research Manager</div>
-                <div className="experience-dates">Jan 2025 &ndash; Present</div>
+              <div className="experience-headline">Natera &middot; Senior UX Design &amp; Research Manager &middot; 2025&ndash;Now</div>
+              <div className="experience-snippets">
+                <p>Leading design and research for genomic testing tools. Our research cut lab turnaround 15% and boosted staff efficiency 50%.</p>
               </div>
-              <ul className="experience-list">
-                <li>Drove design strategy and roadmap for genomic testing tools, leading a cross-disciplinary team to ship end-to-end product experiences.</li>
-                <li>Research-informed decisions cut lab turnaround 15% and improved staff efficiency 50% across clinical workflows.</li>
-              </ul>
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
             <div className="experience-block">
-              <div className="experience-header">
-                <div className="experience-company">Natera</div>
-                <div className="experience-role">Senior Product Designer &amp; UX Researcher</div>
-                <div className="experience-dates">Nov 2021 &ndash; Jan 2025</div>
+              <div className="experience-headline">Natera &middot; Senior Product Designer &amp; UX Researcher &middot; 2021&ndash;2025</div>
+              <div className="experience-snippets">
+                <p>Shipped Natera&apos;s first patient portal. Support calls dropped 30%.</p>
+                <p>Clinical reporting tools used daily by genetic counselors and lab directors.</p>
               </div>
-              <ul className="experience-list">
-                <li>Designed end-to-end clinical reporting interfaces for genetic counselors, lab directors, and operations teams across germline and somatic product lines.</li>
-                <li>Led 0-to-1 product design for Natera&apos;s first patient portal; design improvements reduced support calls 30%.</li>
-                <li>Built HIPAA-aware design frameworks balancing regulatory compliance with usability for safety-critical genomics workflows.</li>
-              </ul>
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
             <div className="experience-block">
-              <div className="experience-header">
-                <div className="experience-company">Cincinnati Children&apos;s Hospital Medical Center</div>
-                <div className="experience-role">UX Researcher &amp; Designer</div>
-                <div className="experience-dates">Jan 2019 &ndash; 2021</div>
+              <div className="experience-headline">Cincinnati Children&apos;s Hospital &middot; UX Researcher &amp; Designer &middot; 2019&ndash;2021</div>
+              <div className="experience-snippets">
+                <p>Turned complex genomic data into clinical-grade interfaces, side by side with lab scientists.</p>
+                <p>UX research across NIH and PCORI-funded rare disease projects.</p>
               </div>
-              <ul className="experience-list">
-                <li>Led UX research and interaction design across NIH- and PCORI-funded projects on cystic fibrosis and rare diseases &mdash; using ethnography, interviews, and quantitative analysis.</li>
-                <li>Designed a DNA sequencing analysis platform translating complex genomic data workflows into clinical-grade interfaces in close partnership with wet lab and dry lab scientists.</li>
-              </ul>
             </div>
           </AnimateOnScroll>
         </section>
