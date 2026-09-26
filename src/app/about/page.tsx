@@ -64,10 +64,9 @@ export default function About() {
         {/* Experience */}
         <section>
           <AnimateOnScroll>
-            <div className="experience-label-row">
-              <div className="label">Relevant experience</div>
-              <a href="/adriana-navarro-sainz-resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download">Download resume &darr;</a>
-            </div>
+            <div className="label">Experience</div>
+            <div className="section-title">Experience</div>
+            <a href="/adriana-navarro-sainz-resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download">Download resume &darr;</a>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
