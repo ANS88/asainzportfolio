@@ -1976,7 +1976,7 @@ section { padding: 5rem 0; }
   cursor: pointer;
   display: block;
   width: 100%;
-  transition: transform .35s cubic-bezier(.25,.46,.45,.94), filter .35s ease;
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94);
 }
 .stamp-cell:nth-child(1) .stamp-card { transform: rotate(-2.5deg); }
 .stamp-cell:nth-child(2) .stamp-card { transform: rotate(1.8deg); }
@@ -1986,32 +1986,43 @@ section { padding: 5rem 0; }
 .stamp-cell:nth-child(6) .stamp-card { transform: rotate(2.2deg); }
 .stamp-card:hover {
   transform: scale(1.08) rotate(0deg) !important;
-  filter: brightness(1.2);
   z-index: 2;
 }
 .stamp-card--active {
   transform: scale(1.06) rotate(0deg) !important;
-  filter: brightness(1.12);
   z-index: 2;
 }
 .stamp-svg {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,.45));
-  transition: filter .35s ease;
+  filter: grayscale(1) sepia(1) hue-rotate(225deg) saturate(0.8) brightness(0.75) drop-shadow(0 4px 16px rgba(0,0,0,.45));
+  transition: filter .6s cubic-bezier(.25,.46,.45,.94);
 }
 .stamp-card:hover .stamp-svg,
 .stamp-card--active .stamp-svg {
-  filter: drop-shadow(0 8px 24px rgba(196,168,240,.18));
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.2));
+}
+.stamp-card:focus-visible .stamp-svg {
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.2));
 }
 .stamp-detail {
   display: flex;
   flex-wrap: wrap;
   gap: .4rem;
-  margin-top: .75rem;
   justify-content: center;
-  animation: tooltipIn .25s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .3s ease, margin-top .3s ease;
+  margin-top: 0;
+}
+.stamp-cell:hover .stamp-detail,
+.stamp-cell:focus-within .stamp-detail,
+.stamp-detail--visible {
+  max-height: 150px;
+  opacity: 1;
+  margin-top: .75rem;
 }
 
 @media (max-width: 700px) {
