@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <mask id="perf">
+      <rect width="400" height="500" fill="white"/>
+      <circle cx="0" cy="0" r="7" fill="black"/><circle cx="0" cy="500" r="7" fill="black"/><circle cx="20" cy="0" r="7" fill="black"/><circle cx="20" cy="500" r="7" fill="black"/><circle cx="40" cy="0" r="7" fill="black"/><circle cx="40" cy="500" r="7" fill="black"/><circle cx="60" cy="0" r="7" fill="black"/><circle cx="60" cy="500" r="7" fill="black"/><circle cx="80" cy="0" r="7" fill="black"/><circle cx="80" cy="500" r="7" fill="black"/><circle cx="100" cy="0" r="7" fill="black"/><circle cx="100" cy="500" r="7" fill="black"/><circle cx="120" cy="0" r="7" fill="black"/><circle cx="120" cy="500" r="7" fill="black"/><circle cx="140" cy="0" r="7" fill="black"/><circle cx="140" cy="500" r="7" fill="black"/><circle cx="160" cy="0" r="7" fill="black"/><circle cx="160" cy="500" r="7" fill="black"/><circle cx="180" cy="0" r="7" fill="black"/><circle cx="180" cy="500" r="7" fill="black"/><circle cx="200" cy="0" r="7" fill="black"/><circle cx="200" cy="500" r="7" fill="black"/><circle cx="220" cy="0" r="7" fill="black"/><circle cx="220" cy="500" r="7" fill="black"/><circle cx="240" cy="0" r="7" fill="black"/><circle cx="240" cy="500" r="7" fill="black"/><circle cx="260" cy="0" r="7" fill="black"/><circle cx="260" cy="500" r="7" fill="black"/><circle cx="280" cy="0" r="7" fill="black"/><circle cx="280" cy="500" r="7" fill="black"/><circle cx="300" cy="0" r="7" fill="black"/><circle cx="300" cy="500" r="7" fill="black"/><circle cx="320" cy="0" r="7" fill="black"/><circle cx="320" cy="500" r="7" fill="black"/><circle cx="340" cy="0" r="7" fill="black"/><circle cx="340" cy="500" r="7" fill="black"/><circle cx="360" cy="0" r="7" fill="black"/><circle cx="360" cy="500" r="7" fill="black"/><circle cx="380" cy="0" r="7" fill="black"/><circle cx="380" cy="500" r="7" fill="black"/><circle cx="400" cy="0" r="7" fill="black"/><circle cx="400" cy="500" r="7" fill="black"/><circle cx="0" cy="20" r="7" fill="black"/><circle cx="400" cy="20" r="7" fill="black"/><circle cx="0" cy="40" r="7" fill="black"/><circle cx="400" cy="40" r="7" fill="black"/><circle cx="0" cy="60" r="7" fill="black"/><circle cx="400" cy="60" r="7" fill="black"/><circle cx="0" cy="80" r="7" fill="black"/><circle cx="400" cy="80" r="7" fill="black"/><circle cx="0" cy="100" r="7" fill="black"/><circle cx="400" cy="100" r="7" fill="black"/><circle cx="0" cy="120" r="7" fill="black"/><circle cx="400" cy="120" r="7" fill="black"/><circle cx="0" cy="140" r="7" fill="black"/><circle cx="400" cy="140" r="7" fill="black"/><circle cx="0" cy="160" r="7" fill="black"/><circle cx="400" cy="160" r="7" fill="black"/><circle cx="0" cy="180" r="7" fill="black"/><circle cx="400" cy="180" r="7" fill="black"/><circle cx="0" cy="200" r="7" fill="black"/><circle cx="400" cy="200" r="7" fill="black"/><circle cx="0" cy="220" r="7" fill="black"/><circle cx="400" cy="220" r="7" fill="black"/><circle cx="0" cy="240" r="7" fill="black"/><circle cx="400" cy="240" r="7" fill="black"/><circle cx="0" cy="260" r="7" fill="black"/><circle cx="400" cy="260" r="7" fill="black"/><circle cx="0" cy="280" r="7" fill="black"/><circle cx="400" cy="280" r="7" fill="black"/><circle cx="0" cy="300" r="7" fill="black"/><circle cx="400" cy="300" r="7" fill="black"/><circle cx="0" cy="320" r="7" fill="black"/><circle cx="400" cy="320" r="7" fill="black"/><circle cx="0" cy="340" r="7" fill="black"/><circle cx="400" cy="340" r="7" fill="black"/><circle cx="0" cy="360" r="7" fill="black"/><circle cx="400" cy="360" r="7" fill="black"/><circle cx="0" cy="380" r="7" fill="black"/><circle cx="400" cy="380" r="7" fill="black"/><circle cx="0" cy="400" r="7" fill="black"/><circle cx="400" cy="400" r="7" fill="black"/><circle cx="0" cy="420" r="7" fill="black"/><circle cx="400" cy="420" r="7" fill="black"/><circle cx="0" cy="440" r="7" fill="black"/><circle cx="400" cy="440" r="7" fill="black"/><circle cx="0" cy="460" r="7" fill="black"/><circle cx="400" cy="460" r="7" fill="black"/><circle cx="0" cy="480" r="7" fill="black"/><circle cx="400" cy="480" r="7" fill="black"/>
+    </mask>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="3" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="saturate" values="0" in="n" result="m"/>
+      <feBlend mode="soft-light" in="SourceGraphic" in2="m"/>
+    </filter>
+    <clipPath id="art-clip">
+      <rect x="32" y="32" width="336" height="332" rx="1"/>
+    </clipPath>
+  </defs>
+  <g mask="url(#perf)">
+    <rect width="400" height="500" fill="#f5f0e8"/>
+    <rect x="28" y="28" width="344" height="340" fill="#ddd8cc" rx="2"/>
+    <g clip-path="url(#art-clip)" filter="url(#grain)">
+      <rect x="32" y="32" width="336" height="332" fill="#aaa"/>
+      
+  <!-- Night sky -->
+  <rect x="32" y="32" width="336" height="332" fill="#1a2438"/>
+  <rect x="32" y="32" width="336" height="140" fill="#243050" opacity="0.6"/>
+  <!-- Stars -->
+  <g fill="white">
+    <circle cx="80" cy="55" r="1.5" opacity="0.7"/>
+    <circle cx="140" cy="42" r="1" opacity="0.5"/>
+    <circle cx="270" cy="58" r="1.2" opacity="0.6"/>
+    <circle cx="320" cy="45" r="1.5" opacity="0.7"/>
+    <circle cx="350" cy="72" r="1" opacity="0.5"/>
+    <circle cx="100" cy="78" r="0.8" opacity="0.4"/>
+    <circle cx="240" cy="38" r="1.3" opacity="0.6"/>
+    <circle cx="180" cy="52" r="1" opacity="0.5"/>
+  </g>
+  <!-- Moon -->
+  <circle cx="310" cy="68" r="18" fill="#e8dcc8" opacity="0.9"/>
+  <circle cx="318" cy="62" r="16" fill="#1a2438"/>
+  <!-- Distant mountain -->
+  <path d="M32,250 Q100,190 180,220 Q250,175 320,210 Q360,200 368,215 L368,364 L32,364Z" fill="#3a4860" opacity="0.5"/>
+  <!-- Mount Royal -->
+  <path d="M60,310 L120,195 L160,220 L195,185 L230,210 L280,200 L340,310Z" fill="#4a6080" opacity="0.8"/>
+  <path d="M60,310 L120,195 L160,220 L195,185 L230,210 L280,200 L340,310" fill="none" stroke="#5a7898" stroke-width="1"/>
+  <!-- Trees on mountain -->
+  <g fill="#3a5068" opacity="0.6">
+    <polygon points="90,290 96,270 102,290"/>
+    <polygon points="108,275 114,252 120,275"/>
+    <polygon points="130,260 136,240 142,260"/>
+    <polygon points="252,265 258,242 264,265"/>
+    <polygon points="275,275 282,255 289,275"/>
+    <polygon points="300,288 306,268 312,288"/>
+  </g>
+  <!-- Snow on peak -->
+  <path d="M185,195 L195,185 L205,192" fill="white" fill-opacity="0.2"/>
+  <!-- Illuminated cross -->
+  <line x1="195" y1="165" x2="195" y2="185" stroke="white" stroke-width="4" opacity="0.95"/>
+  <line x1="186" y1="173" x2="204" y2="173" stroke="white" stroke-width="4" opacity="0.95"/>
+  <!-- Cross glow -->
+  <circle cx="195" cy="175" r="25" fill="white" opacity="0.06"/>
+  <circle cx="195" cy="175" r="14" fill="white" opacity="0.08"/>
+  <!-- Old Montreal rooftops -->
+  <g fill="#8a4a38">
+    <!-- Row of buildings -->
+    <path d="M45,364 L45,295 L55,285 L65,295 L65,300 L75,300 L75,290 L85,280 L95,290 L95,300 L105,300 L105,364"/>
+    <path d="M105,364 L105,305 L115,295 L125,305 L125,310 L135,310 L135,295 L145,285 L155,295 L155,364"/>
+    <path d="M245,364 L245,300 L255,290 L265,300 L265,305 L275,305 L275,290 L285,280 L295,290 L295,300 L305,300 L305,364"/>
+    <path d="M305,364 L305,298 L315,288 L325,298 L325,305 L340,305 L340,295 L352,288 L360,298 L360,364"/>
+  </g>
+  <!-- Windows in buildings -->
+  <g fill="#e8c868" opacity="0.7">
+    <rect x="50" y="302" width="6" height="8" rx="1"/>
+    <rect x="58" y="302" width="6" height="8" rx="1"/>
+    <rect x="80" y="296" width="6" height="8" rx="1"/>
+    <rect x="88" y="296" width="6" height="8" rx="1"/>
+    <rect x="50" y="320" width="6" height="8" rx="1"/>
+    <rect x="58" y="320" width="6" height="8" rx="1"/>
+    <rect x="110" y="312" width="6" height="8" rx="1"/>
+    <rect x="118" y="312" width="6" height="8" rx="1"/>
+    <rect x="140" y="302" width="6" height="8" rx="1"/>
+    <rect x="148" y="302" width="6" height="8" rx="1"/>
+    <rect x="252" y="308" width="6" height="8" rx="1"/>
+    <rect x="260" y="308" width="6" height="8" rx="1"/>
+    <rect x="280" y="298" width="6" height="8" rx="1"/>
+    <rect x="288" y="298" width="6" height="8" rx="1"/>
+    <rect x="312" y="304" width="6" height="8" rx="1"/>
+    <rect x="345" y="302" width="6" height="8" rx="1"/>
+    <rect x="353" y="302" width="6" height="8" rx="1"/>
+  </g>
+  <!-- Spiral staircase -->
+  <g stroke="#6a3828" stroke-width="1.5" fill="none">
+    <path d="M165,364 L165,300"/>
+    <path d="M175,364 L175,300"/>
+    <path d="M165,310 Q170,305 175,310"/>
+    <path d="M165,320 Q170,315 175,320"/>
+    <path d="M165,330 Q170,325 175,330"/>
+    <path d="M165,340 Q170,335 175,340"/>
+    <path d="M165,350 Q170,345 175,350"/>
+  </g>
+  <!-- Maple leaf accent -->
+  <g transform="translate(195,320) scale(0.9)" fill="#c84030" opacity="0.85">
+    <path d="M0,-15 L3,-8 L10,-10 L7,-4 L14,-2 L8,2 L10,8 L4,6 L0,14 L-4,6 L-10,8 L-8,2 L-14,-2 L-7,-4 L-10,-10 L-3,-8Z"/>
+    <line x1="0" y1="14" x2="0" y2="22" stroke="#c84030" stroke-width="1.5"/>
+  </g>
+  <!-- Snow on ground -->
+  <rect x="32" y="356" width="336" height="8" fill="white" opacity="0.15"/>
+
+    </g>
+    <rect x="30" y="30" width="340" height="336" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="0.75" rx="1"/>
+    <!-- City name - converted to paths would happen in production; using web-safe fonts -->
+    <text x="200" y="410" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="32" fill="#2a2a2a" letter-spacing="3" font-weight="700">MONTREAL</text>
+    <text x="200" y="434" text-anchor="middle" font-family="'Libre Franklin', Arial, sans-serif" font-size="12" fill="#777" letter-spacing="4" font-weight="400">CANADA</text>
+    <text x="370" y="470" text-anchor="end" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#2a2a2a" font-weight="700">$1.20</text>
+    <text x="200" y="486" text-anchor="middle" font-family="'Libre Franklin', Arial, sans-serif" font-size="9" fill="#aaa" letter-spacing="2.5" font-weight="400">CITIES SERIES &#xB7; 2026</text>
+  </g>
+</svg>

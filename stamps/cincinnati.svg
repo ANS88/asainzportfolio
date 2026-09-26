@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <mask id="perf">
+      <rect width="400" height="500" fill="white"/>
+      <circle cx="0" cy="0" r="7" fill="black"/><circle cx="0" cy="500" r="7" fill="black"/><circle cx="20" cy="0" r="7" fill="black"/><circle cx="20" cy="500" r="7" fill="black"/><circle cx="40" cy="0" r="7" fill="black"/><circle cx="40" cy="500" r="7" fill="black"/><circle cx="60" cy="0" r="7" fill="black"/><circle cx="60" cy="500" r="7" fill="black"/><circle cx="80" cy="0" r="7" fill="black"/><circle cx="80" cy="500" r="7" fill="black"/><circle cx="100" cy="0" r="7" fill="black"/><circle cx="100" cy="500" r="7" fill="black"/><circle cx="120" cy="0" r="7" fill="black"/><circle cx="120" cy="500" r="7" fill="black"/><circle cx="140" cy="0" r="7" fill="black"/><circle cx="140" cy="500" r="7" fill="black"/><circle cx="160" cy="0" r="7" fill="black"/><circle cx="160" cy="500" r="7" fill="black"/><circle cx="180" cy="0" r="7" fill="black"/><circle cx="180" cy="500" r="7" fill="black"/><circle cx="200" cy="0" r="7" fill="black"/><circle cx="200" cy="500" r="7" fill="black"/><circle cx="220" cy="0" r="7" fill="black"/><circle cx="220" cy="500" r="7" fill="black"/><circle cx="240" cy="0" r="7" fill="black"/><circle cx="240" cy="500" r="7" fill="black"/><circle cx="260" cy="0" r="7" fill="black"/><circle cx="260" cy="500" r="7" fill="black"/><circle cx="280" cy="0" r="7" fill="black"/><circle cx="280" cy="500" r="7" fill="black"/><circle cx="300" cy="0" r="7" fill="black"/><circle cx="300" cy="500" r="7" fill="black"/><circle cx="320" cy="0" r="7" fill="black"/><circle cx="320" cy="500" r="7" fill="black"/><circle cx="340" cy="0" r="7" fill="black"/><circle cx="340" cy="500" r="7" fill="black"/><circle cx="360" cy="0" r="7" fill="black"/><circle cx="360" cy="500" r="7" fill="black"/><circle cx="380" cy="0" r="7" fill="black"/><circle cx="380" cy="500" r="7" fill="black"/><circle cx="400" cy="0" r="7" fill="black"/><circle cx="400" cy="500" r="7" fill="black"/><circle cx="0" cy="20" r="7" fill="black"/><circle cx="400" cy="20" r="7" fill="black"/><circle cx="0" cy="40" r="7" fill="black"/><circle cx="400" cy="40" r="7" fill="black"/><circle cx="0" cy="60" r="7" fill="black"/><circle cx="400" cy="60" r="7" fill="black"/><circle cx="0" cy="80" r="7" fill="black"/><circle cx="400" cy="80" r="7" fill="black"/><circle cx="0" cy="100" r="7" fill="black"/><circle cx="400" cy="100" r="7" fill="black"/><circle cx="0" cy="120" r="7" fill="black"/><circle cx="400" cy="120" r="7" fill="black"/><circle cx="0" cy="140" r="7" fill="black"/><circle cx="400" cy="140" r="7" fill="black"/><circle cx="0" cy="160" r="7" fill="black"/><circle cx="400" cy="160" r="7" fill="black"/><circle cx="0" cy="180" r="7" fill="black"/><circle cx="400" cy="180" r="7" fill="black"/><circle cx="0" cy="200" r="7" fill="black"/><circle cx="400" cy="200" r="7" fill="black"/><circle cx="0" cy="220" r="7" fill="black"/><circle cx="400" cy="220" r="7" fill="black"/><circle cx="0" cy="240" r="7" fill="black"/><circle cx="400" cy="240" r="7" fill="black"/><circle cx="0" cy="260" r="7" fill="black"/><circle cx="400" cy="260" r="7" fill="black"/><circle cx="0" cy="280" r="7" fill="black"/><circle cx="400" cy="280" r="7" fill="black"/><circle cx="0" cy="300" r="7" fill="black"/><circle cx="400" cy="300" r="7" fill="black"/><circle cx="0" cy="320" r="7" fill="black"/><circle cx="400" cy="320" r="7" fill="black"/><circle cx="0" cy="340" r="7" fill="black"/><circle cx="400" cy="340" r="7" fill="black"/><circle cx="0" cy="360" r="7" fill="black"/><circle cx="400" cy="360" r="7" fill="black"/><circle cx="0" cy="380" r="7" fill="black"/><circle cx="400" cy="380" r="7" fill="black"/><circle cx="0" cy="400" r="7" fill="black"/><circle cx="400" cy="400" r="7" fill="black"/><circle cx="0" cy="420" r="7" fill="black"/><circle cx="400" cy="420" r="7" fill="black"/><circle cx="0" cy="440" r="7" fill="black"/><circle cx="400" cy="440" r="7" fill="black"/><circle cx="0" cy="460" r="7" fill="black"/><circle cx="400" cy="460" r="7" fill="black"/><circle cx="0" cy="480" r="7" fill="black"/><circle cx="400" cy="480" r="7" fill="black"/>
+    </mask>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="5" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="saturate" values="0" in="n" result="m"/>
+      <feBlend mode="soft-light" in="SourceGraphic" in2="m"/>
+    </filter>
+    <clipPath id="art-clip">
+      <rect x="32" y="32" width="336" height="332" rx="1"/>
+    </clipPath>
+  </defs>
+  <g mask="url(#perf)">
+    <rect width="400" height="500" fill="#f5f0e8"/>
+    <rect x="28" y="28" width="344" height="340" fill="#ddd8cc" rx="2"/>
+    <g clip-path="url(#art-clip)" filter="url(#grain)">
+      <rect x="32" y="32" width="336" height="332" fill="#aaa"/>
+      
+  <!-- Sky -->
+  <rect x="32" y="32" width="336" height="332" fill="#e8dcc8"/>
+  <rect x="32" y="32" width="336" height="160" fill="#d8c8a8" opacity="0.5"/>
+  <!-- Warm sun -->
+  <circle cx="200" cy="72" r="40" fill="#f0d8a0" opacity="0.6"/>
+  <circle cx="200" cy="72" r="28" fill="#f8e8c0" opacity="0.7"/>
+  <!-- Clouds -->
+  <g fill="white" opacity="0.4">
+    <ellipse cx="100" cy="68" rx="30" ry="10"/>
+    <ellipse cx="120" cy="65" rx="20" ry="8"/>
+    <ellipse cx="310" cy="80" rx="28" ry="9"/>
+  </g>
+  <!-- Background skyline -->
+  <g fill="#8a6858" opacity="0.4">
+    <rect x="80" y="200" width="18" height="60"/>
+    <rect x="102" y="210" width="14" height="50"/>
+    <rect x="55" y="215" width="20" height="45"/>
+    <rect x="280" y="205" width="16" height="55"/>
+    <rect x="300" y="210" width="20" height="50"/>
+    <rect x="325" y="218" width="14" height="42"/>
+  </g>
+  <!-- River -->
+  <rect x="32" y="300" width="336" height="64" fill="#4a8898"/>
+  <!-- River highlights -->
+  <path d="M32,320 Q100,315 200,322 Q300,328 368,318" fill="none" stroke="#6ab0c4" stroke-width="1" opacity="0.4"/>
+  <path d="M32,338 Q120,332 200,340 Q280,346 368,336" fill="none" stroke="#6ab0c4" stroke-width="0.8" opacity="0.3"/>
+  <!-- Roebling Bridge -->
+  <!-- Towers -->
+  <rect x="120" y="205" width="20" height="115" fill="#8a6848"/>
+  <rect x="260" y="205" width="20" height="115" fill="#8a6848"/>
+  <!-- Gothic arch tops -->
+  <path d="M120,205 L130,185 L140,205" fill="#8a6848" stroke="#6a4838" stroke-width="1"/>
+  <path d="M260,205 L270,185 L280,205" fill="#8a6848" stroke="#6a4838" stroke-width="1"/>
+  <!-- Finials -->
+  <line x1="130" y1="178" x2="130" y2="185" stroke="#6a4838" stroke-width="2"/>
+  <line x1="270" y1="178" x2="270" y2="185" stroke="#6a4838" stroke-width="2"/>
+  <!-- Tower arch openings -->
+  <path d="M125,225 Q130,215 135,225" fill="#e8dcc8" stroke="#6a4838" stroke-width="0.8"/>
+  <path d="M125,245 Q130,235 135,245" fill="#e8dcc8" stroke="#6a4838" stroke-width="0.8"/>
+  <path d="M265,225 Q270,215 275,225" fill="#e8dcc8" stroke="#6a4838" stroke-width="0.8"/>
+  <path d="M265,245 Q270,235 275,245" fill="#e8dcc8" stroke="#6a4838" stroke-width="0.8"/>
+  <!-- Tower outlines -->
+  <rect x="120" y="205" width="20" height="115" fill="none" stroke="#6a4838" stroke-width="1.5"/>
+  <rect x="260" y="205" width="20" height="115" fill="none" stroke="#6a4838" stroke-width="1.5"/>
+  <!-- Main cables -->
+  <path d="M130,190 Q200,275 270,190" fill="none" stroke="#6a4838" stroke-width="3"/>
+  <!-- Suspender cables -->
+  <line x1="155" y1="218" x2="155" y2="300" stroke="#6a4838" stroke-width="0.8" opacity="0.6"/>
+  <line x1="175" y1="235" x2="175" y2="300" stroke="#6a4838" stroke-width="0.8" opacity="0.6"/>
+  <line x1="200" y1="248" x2="200" y2="300" stroke="#6a4838" stroke-width="0.8" opacity="0.6"/>
+  <line x1="225" y1="235" x2="225" y2="300" stroke="#6a4838" stroke-width="0.8" opacity="0.6"/>
+  <line x1="245" y1="218" x2="245" y2="300" stroke="#6a4838" stroke-width="0.8" opacity="0.6"/>
+  <!-- Bridge deck -->
+  <rect x="80" y="296" width="240" height="8" fill="#8a6848"/>
+  <line x1="80" y1="296" x2="320" y2="296" stroke="#6a4838" stroke-width="1"/>
+  <line x1="80" y1="304" x2="320" y2="304" stroke="#6a4838" stroke-width="0.8"/>
+  <!-- Railing detail -->
+  <g stroke="#6a4838" stroke-width="0.6" opacity="0.5">
+    <line x1="90" y1="296" x2="90" y2="300"/><line x1="100" y1="296" x2="100" y2="300"/>
+    <line x1="110" y1="296" x2="110" y2="300"/><line x1="150" y1="296" x2="150" y2="300"/>
+    <line x1="160" y1="296" x2="160" y2="300"/><line x1="190" y1="296" x2="190" y2="300"/>
+    <line x1="210" y1="296" x2="210" y2="300"/><line x1="240" y1="296" x2="240" y2="300"/>
+    <line x1="250" y1="296" x2="250" y2="300"/><line x1="290" y1="296" x2="290" y2="300"/>
+    <line x1="300" y1="296" x2="300" y2="300"/><line x1="310" y1="296" x2="310" y2="300"/>
+  </g>
+  <!-- Riverbank -->
+  <path d="M32,300 Q55,295 80,300" fill="#6a8050" opacity="0.4"/>
+  <path d="M320,300 Q345,295 368,300" fill="#6a8050" opacity="0.4"/>
+
+    </g>
+    <rect x="30" y="30" width="340" height="336" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="0.75" rx="1"/>
+    <!-- City name - converted to paths would happen in production; using web-safe fonts -->
+    <text x="200" y="410" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="32" fill="#2a2a2a" letter-spacing="3" font-weight="700">CINCINNATI</text>
+    <text x="200" y="434" text-anchor="middle" font-family="'Libre Franklin', Arial, sans-serif" font-size="12" fill="#777" letter-spacing="4" font-weight="400">OHIO, USA</text>
+    <text x="370" y="470" text-anchor="end" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#2a2a2a" font-weight="700">55¢</text>
+    <text x="200" y="486" text-anchor="middle" font-family="'Libre Franklin', Arial, sans-serif" font-size="9" fill="#aaa" letter-spacing="2.5" font-weight="400">CITIES SERIES &#xB7; 2026</text>
+  </g>
+</svg>

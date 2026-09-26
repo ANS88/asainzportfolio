@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cities Series 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Franklin:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Libre Franklin', Arial, sans-serif;
+      background: #e8ddd0;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(200,180,150,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(180,160,130,0.2) 0%, transparent 60%);
+      color: #3a3530;
+    }
+
+    /* Paper texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.6;
+      z-index: 1000;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #2a2520;
+    }
+
+    header p {
+      font-size: 0.85rem;
+      color: #8a8078;
+      letter-spacing: 0.2em;
+      margin-top: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .stamp-wrap {
+      cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.35s ease;
+      position: relative;
+    }
+
+    .stamp-wrap:nth-child(1) { transform: rotate(-1.5deg); }
+    .stamp-wrap:nth-child(2) { transform: rotate(0.8deg); }
+    .stamp-wrap:nth-child(3) { transform: rotate(-0.5deg); }
+    .stamp-wrap:nth-child(4) { transform: rotate(1.2deg); }
+    .stamp-wrap:nth-child(5) { transform: rotate(-0.8deg); }
+    .stamp-wrap:nth-child(6) { transform: rotate(1deg); }
+
+    .stamp-wrap:hover {
+      transform: scale(1.06) rotate(0deg) !important;
+      filter: drop-shadow(0 12px 30px rgba(0,0,0,0.25));
+      z-index: 10;
+    }
+
+    .stamp-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(30, 25, 20, 0.88);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-height: 90vh;
+      max-width: 90vw;
+      filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+      animation: lb-in 0.3s ease;
+    }
+
+    @keyframes lb-in {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .lightbox .close-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.15em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 0 1rem 3rem;
+      font-size: 0.75rem;
+      color: #a8a098;
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; padding: 0 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; max-width: 320px; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CITIES SERIES</h1>
+    <p>COMMEMORATIVE STAMPS &middot; 2026</p>
+  </header>
+
+  <div class="grid">
+    <div class="stamp-wrap" data-src="guadalajara.svg">
+      <img src="guadalajara.svg" alt="Guadalajara, Mexico — Cathedral with papel picado"/>
+    </div>
+    <div class="stamp-wrap" data-src="valencia.svg">
+      <img src="valencia.svg" alt="Valencia, Spain — City of Arts and Sciences"/>
+    </div>
+    <div class="stamp-wrap" data-src="montreal.svg">
+      <img src="montreal.svg" alt="Montreal, Canada — Mount Royal with illuminated cross"/>
+    </div>
+    <div class="stamp-wrap" data-src="cincinnati.svg">
+      <img src="cincinnati.svg" alt="Cincinnati, Ohio — Roebling Suspension Bridge"/>
+    </div>
+    <div class="stamp-wrap" data-src="portland.svg">
+      <img src="portland.svg" alt="Portland, Oregon — Mount Hood with evergreen forest"/>
+    </div>
+    <div class="stamp-wrap" data-src="san-francisco.svg">
+      <img src="san-francisco.svg" alt="San Francisco, California — Golden Gate Bridge"/>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="" id="lb-img"/>
+    <span class="close-hint">CLICK ANYWHERE TO CLOSE</span>
+  </div>
+
+  <footer>
+    ORIGINAL ARTWORK &middot; ALL ILLUSTRATIONS HAND-DRAWN IN SVG &middot; ADRIANA NAVARRO SAINZ
+  </footer>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+
+    document.querySelectorAll('.stamp-wrap').forEach(wrap => {
+      wrap.addEventListener('click', () => {
+        lbImg.src = wrap.dataset.src;
+        lbImg.alt = wrap.querySelector('img').alt;
+        lb.classList.add('open');
+      });
+    });
+
+    lb.addEventListener('click', () => {
+      lb.classList.remove('open');
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lb.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
