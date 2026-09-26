@@ -44,7 +44,6 @@ export default function Hero() {
           </span>
           {" "}that power 50+ genomics labs and millions of patient results.
           <span className="hero-links">
-            {" / "}
             <a href="mailto:sainz.nag@gmail.com" className="hero-text-link">Email</a>
             {" / "}
             <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer" className="hero-text-link">LinkedIn</a>
