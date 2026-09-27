@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const histopathologyWorkflow: CaseStudy = {
   slug: "histopathology-workflow",
@@ -10,7 +11,7 @@ export const histopathologyWorkflow: CaseStudy = {
   timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/histopathology-workflow/user-flow.svg",
+  previewImage: asset("/images/case-studies/histopathology-workflow/user-flow.svg"),
   previewVideo: "https://player.vimeo.com/video/1169727354?h=e903c04ee8&autoplay=1&loop=1&muted=1&background=1",
 
   impact: [
@@ -99,7 +100,7 @@ export const histopathologyWorkflow: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/histopathology-workflow/user-flow.svg",
+            src: asset("/images/case-studies/histopathology-workflow/user-flow.svg"),
             alt: "End-to-end user flow diagram mapping the histopathology pipeline from tissue validation through micro dissection, with branching logic for slides versus blocks",
           },
         },
@@ -155,7 +156,7 @@ export const histopathologyWorkflow: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/histopathology-workflow/design-principles.svg",
+            src: asset("/images/case-studies/histopathology-workflow/design-principles.svg"),
             alt: "Design principles guiding the histopathology workflow redesign",
           },
         },

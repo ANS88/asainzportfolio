@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const identityPortal: CaseStudy = {
   slug: "identity-portal",
@@ -11,7 +12,7 @@ export const identityPortal: CaseStudy = {
   company: "Live Well Collaborative",
   companyDescription:
     "In partnership with CCHMC and HCJFS",
-  previewImage: "/images/case-studies/identity-portal/overview.png",
+  previewImage: asset("/images/case-studies/identity-portal/overview.png"),
   previewCrop: { position: "50% 28%", scale: 1.4 },
   previewVideo: "https://www.youtube.com/embed/jbXdF-C4E6c?si=i3luNWnFNpHDUD-a&autoplay=1&loop=1&mute=1&playlist=jbXdF-C4E6c",
 
@@ -45,14 +46,14 @@ export const identityPortal: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/overview.png",
+            src: asset("/images/case-studies/identity-portal/overview.png"),
             alt: "Overview of the IDENTITY portal system",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/overview2.png",
+            src: asset("/images/case-studies/identity-portal/overview2.png"),
             alt: "Secondary overview of the IDENTITY portal system",
           },
         },
@@ -91,7 +92,7 @@ export const identityPortal: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/arch.png",
+            src: asset("/images/case-studies/identity-portal/arch.png"),
             alt: "Information architecture diagram for the IDENTITY portal",
           },
         },
@@ -102,21 +103,21 @@ export const identityPortal: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/cardsorting.png",
+            src: asset("/images/case-studies/identity-portal/cardsorting.png"),
             alt: "Card sorting activity with participants from both organizations",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/cardsorting2.png",
+            src: asset("/images/case-studies/identity-portal/cardsorting2.png"),
             alt: "Card sorting results and clustering analysis",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/identity-portal/mapping.png",
+            src: asset("/images/case-studies/identity-portal/mapping.png"),
             alt: "Information architecture mapping from research synthesis",
           },
         },

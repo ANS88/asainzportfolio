@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const clinicalTrialScreening: CaseStudy = {
   slug: "clinical-trial-screening",
@@ -14,7 +15,7 @@ export const clinicalTrialScreening: CaseStudy = {
   timeline: "2024–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewVideo: "/videos/clinical-trial-screening/walkthrough.mov",
+  previewVideo: asset("/videos/clinical-trial-screening/walkthrough.mov"),
 
   impact: [
     { value: "80%", metric: "Fewer patients to manually review" },
@@ -38,7 +39,7 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/clinical-trial-screening/current-process.png",
+            src: asset("/images/case-studies/clinical-trial-screening/current-process.png"),
             alt: "Current 5-step manual screening process: Datamart Alert, ClinicalIQ Data Extraction, ClinVerify Record Review, Salesforce Update, and Site Outreach",
             caption: "The existing process — five manual handoffs from LIMS alert to site outreach, with the bottlenecks at steps 2 and 3",
           },
@@ -122,7 +123,7 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/clinical-trial-screening/walkthrough.mov",
+            src: asset("/videos/clinical-trial-screening/walkthrough.mov"),
             caption: "Trial Pilot prototype walkthrough — from patient queue to criteria review to evidence verification",
             autoplay: true,
           },
@@ -157,7 +158,7 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/clinical-trial-screening/walkthrough-2.mov",
+            src: asset("/videos/clinical-trial-screening/walkthrough-2.mov"),
             caption: "Evidence review — verifying AI matches against source documents inline",
             autoplay: true,
           },
@@ -165,7 +166,7 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/clinical-trial-screening/next-steps.png",
+            src: asset("/images/case-studies/clinical-trial-screening/next-steps.png"),
             alt: "Patient record review showing inclusion criteria matched against evidence, with a clinical progress note open in the document panel",
             caption: "The in-record review streamlined for I/E criteria — each match links to the source document, opened inline for verification",
           },
@@ -218,7 +219,7 @@ export const clinicalTrialScreening: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/clinical-trial-screening/impact-opportunity.png",
+            src: asset("/images/case-studies/clinical-trial-screening/impact-opportunity.png"),
             alt: "Impact across four stakeholders: Natera (new revenue stream), Life Science Partners (faster enrollment), Providers (patient access to trials), Patients (faster outreach, better outcomes)",
             caption: "Value created across four stakeholders — from Natera's revenue growth to faster patient access to clinical trials",
           },

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
 
@@ -11,7 +12,7 @@ export default function MoreWork({ currentSlug }: { currentSlug: string }) {
       <h2 className="more-work-heading">Wanna see more?</h2>
       <div className="more-work-grid">
         {others.map((study) => (
-          <a
+          <Link
             key={study.slug}
             href={`/work/${study.slug}`}
             className="more-work-card"
@@ -31,7 +32,7 @@ export default function MoreWork({ currentSlug }: { currentSlug: string }) {
               <span className="more-work-company">{study.company}</span>
               <span className="more-work-title">{study.title}</span>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

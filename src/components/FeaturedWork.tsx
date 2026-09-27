@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const transformations = [
@@ -50,20 +51,20 @@ export default function FeaturedWork() {
             <span>To</span>
           </div>
           {transformations.map((t) => (
-            <a key={t.slug} href={`/work/${t.slug}`} className="transform-row">
+            <Link key={t.slug} href={`/work/${t.slug}`} className="transform-row">
               <span className="transform-from">{t.from}</span>
               <span className="transform-project">{t.project}</span>
               <span className="transform-to">{t.to}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="fade-up">
         <div style={{ marginTop: "2rem" }}>
-          <a href="/work" className="view-all-link">
+          <Link href="/work" className="view-all-link">
             All work &rarr;
-          </a>
+          </Link>
         </div>
       </AnimateOnScroll>
     </section>

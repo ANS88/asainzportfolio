@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const pages = [
@@ -25,12 +26,12 @@ export default function SiteNav() {
       <div className="site-nav-grid">
         {pages.map((page, i) => (
           <AnimateOnScroll key={i} animation="fade-up">
-            <a href={page.href} className="site-nav-card">
+            <Link href={page.href} className="site-nav-card">
               <div className="site-nav-tag">{page.tag}</div>
               <div className="site-nav-title">{page.title}</div>
               <div className="site-nav-desc">{page.description}</div>
               <span className="site-nav-arrow">&rarr;</span>
-            </a>
+            </Link>
           </AnimateOnScroll>
         ))}
       </div>
