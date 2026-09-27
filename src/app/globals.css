@@ -2568,72 +2568,52 @@ section { padding: 5rem 0; }
   .blowout-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ── Project Collage Grid ── */
-.collage-section {
-  padding: 2rem 0 0;
+/* ── Home work grid ── */
+.work-showcase {
+  padding: 2.5rem 0 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
-.collage-section > .section-subtitle {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 clamp(1.5rem, 5vw, 4rem);
-}
 
-.collage-grid {
+.work-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 720px 400px 280px 280px;
-  grid-template-areas:
-    "b b b b b b b b h h h h"
-    "a a a a a d d d d d d d"
-    "e e e e e e f f f f f f"
-    "g g g g g g c c c c c c";
-  gap: 25px;
-  padding: 2.5rem clamp(1rem, 3vw, 3rem) 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 2.5vw, 2rem);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-.collage-cell {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.collage-card {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 16px;
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   text-decoration: none;
   color: inherit;
-  transition: transform .4s cubic-bezier(.4, 0, .2, 1);
-}
-.collage-card:hover {
-  transform: scale(1.015);
-  z-index: 2;
 }
 
-.collage-media-wrap {
-  position: absolute;
-  inset: 0;
+.work-card-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 14px;
   background: var(--cream);
+  outline: 1px solid var(--border);
+  outline-offset: -1px;
+  isolation: isolate;
 }
-.collage-media {
+.work-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform .8s cubic-bezier(.4, 0, .2, 1);
   transform: scale(var(--crop-scale, 1));
+  transition: transform .7s cubic-bezier(.4, 0, .2, 1);
 }
-.collage-card:hover .collage-media { transform: scale(calc(var(--crop-scale, 1) * 1.06)); }
+.work-card:hover .work-card-img,
+.work-card:focus-visible .work-card-img {
+  transform: scale(calc(var(--crop-scale, 1) * 1.04));
+}
 
 .sc-iframe {
   position: absolute;
@@ -2641,13 +2621,12 @@ section { padding: 5rem 0; }
   width: 116%;
   height: 116%;
   border: none;
+  pointer-events: none;
 }
 .sc-video-row {
   display: flex;
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
   overflow: hidden;
 }
@@ -2658,108 +2637,56 @@ section { padding: 5rem 0; }
   inset: auto;
   width: auto;
   height: 120%;
-  margin-top: -10%;
-  margin-left: -20%;
-  margin-right: -20%;
+  margin: -10% -20% 0;
 }
 
-.collage-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 30%,
-    rgba(35, 12, 51, .2) 55%,
-    rgba(35, 12, 51, .82) 100%
-  );
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .35s ease;
-}
-.collage-card:hover .collage-overlay {
-  opacity: 1;
-}
-
-.collage-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.25rem 1.5rem;
+.work-card-body {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity .35s ease, transform .35s ease;
+  gap: .35rem;
 }
-.collage-card:hover .collage-label {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.collage-meta {
-  font-size: .55rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  color: rgba(255, 255, 255, .6);
-}
-.collage-title {
-  font-family: var(--sans);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.2;
+.work-card-title {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink2);
   transition: color var(--transition-fast);
 }
-.collage-card:hover .collage-title { color: var(--accent2); }
+.work-card:hover .work-card-title,
+.work-card:focus-visible .work-card-title { color: var(--accent2); }
 
-.collage-transform {
+.work-card-meta {
   display: flex;
-  align-items: center;
-  gap: .4rem;
-  font-size: .75rem;
-  font-weight: 600;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  font-size: .7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--ink3);
 }
-.collage-from { color: rgba(255, 255, 255, .5); }
-.collage-arr { color: rgba(255, 255, 255, .3); font-size: .65rem; }
-.collage-to { color: var(--accent); }
+.work-card-transform { color: var(--accent); }
+
+.work-card:focus-visible { outline: none; }
+.work-card:focus-visible .work-card-media {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 
 .sc-footer {
   margin-top: 3rem;
   padding-bottom: 1rem;
-  max-width: 900px;
+  max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.5rem, 5vw, 4rem);
-  padding-right: clamp(1.5rem, 5vw, 4rem);
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
 }
 
-@media (max-width: 768px) {
-  .collage-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 240px 200px 180px 180px;
-    grid-template-areas:
-      "h b"
-      "a d"
-      "e f"
-      "g c";
-    gap: 4px;
-    padding: 1.5rem 0.75rem 0;
-  }
-  .collage-title { font-size: 1rem; }
-  .collage-label { padding: 0.75rem 1rem; }
-}
-
-@media (max-width: 480px) {
-  .collage-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 200px);
-    grid-template-areas:
-      "a" "b" "c" "d" "e" "f" "g" "h";
-    gap: 4px;
-  }
+@media (max-width: 640px) {
+  .work-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .work-card { gap: .8rem; }
 }
 
 /* ── More Work (case study footer nav) ── */

@@ -15,25 +15,20 @@ const transformLabels: Record<string, { from: string; to: string }> = {
   "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
 };
 
-interface GridSlot {
-  slug: string;
-  gridArea: string;
-}
-
-const gridSlots: GridSlot[] = [
-  { slug: "clinical-trial-screening", gridArea: "a" },
-  { slug: "unified-patient-portal", gridArea: "b" },
-  { slug: "histopathology-workflow", gridArea: "c" },
-  { slug: "identity-portal", gridArea: "d" },
-  { slug: "perimenopause-tracking", gridArea: "e" },
-  { slug: "ai-design-practice", gridArea: "f" },
-  { slug: "lab-operations-leadership", gridArea: "g" },
-  { slug: "natera-clinical-review", gridArea: "h" },
+const order = [
+  "unified-patient-portal",
+  "natera-clinical-review",
+  "clinical-trial-screening",
+  "identity-portal",
+  "perimenopause-tracking",
+  "ai-design-practice",
+  "lab-operations-leadership",
+  "histopathology-workflow",
 ];
 
 const studyMap = Object.fromEntries(caseStudyList.map((s) => [s.slug, s]));
 
-function CollageCard({
+function WorkCard({
   study,
 }: {
   study: CaseStudy;
@@ -60,11 +55,8 @@ function CollageCard({
   }, []);
 
   return (
-    <a
-      href={`/work/${study.slug}`}
-      className="collage-card"
-    >
-      <div className="collage-media-wrap">
+    <a href={`/work/${study.slug}`} className="work-card">
+      <div className="work-card-media">
         {study.previewVideos && study.previewVideos.length > 0 ? (
           <div className="sc-video-row">
             {study.previewVideos.map((src, i) => (
@@ -85,7 +77,7 @@ function CollageCard({
             muted
             loop
             playsInline
-            className="collage-media"
+            className="work-card-img"
           />
         ) : isEmbed ? (
           <iframe
@@ -98,9 +90,9 @@ function CollageCard({
         ) : study.previewImage ? (
           <img
             src={study.previewImage}
-            alt={study.title}
+            alt=""
             loading="lazy"
-            className="collage-media"
+            className="work-card-img"
             style={study.previewCrop ? {
               objectPosition: study.previewCrop.position || "center",
               ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
@@ -109,19 +101,16 @@ function CollageCard({
         ) : null}
       </div>
 
-      <div className="collage-overlay" />
-      <div className="collage-label">
-        <span className="collage-meta">
-          {study.company} &middot; {study.timeline}
-        </span>
-        <h3 className="collage-title">{study.title}</h3>
-        {labels && (
-          <div className="collage-transform">
-            <span className="collage-from">{labels.from}</span>
-            <span className="collage-arr">&rarr;</span>
-            <span className="collage-to">{labels.to}</span>
-          </div>
-        )}
+      <div className="work-card-body">
+        <h3 className="work-card-title">{study.title}</h3>
+        <div className="work-card-meta">
+          <span>{study.company}</span>
+          {labels && (
+            <span className="work-card-transform">
+              {labels.from} <span aria-hidden="true">&rarr;</span> {labels.to}
+            </span>
+          )}
+        </div>
       </div>
     </a>
   );
@@ -129,21 +118,12 @@ function CollageCard({
 
 export default function ProjectShowcase() {
   return (
-    <section className="collage-section">
-      <div className="collage-grid">
-        {gridSlots.map((slot) => {
-          const study = studyMap[slot.slug];
+    <section className="work-showcase">
+      <div className="work-grid">
+        {order.map((slug) => {
+          const study = studyMap[slug];
           if (!study) return null;
-          return (
-            <div
-              key={slot.slug}
-              className="collage-cell"
-              data-slug={slot.slug}
-              style={{ gridArea: slot.gridArea }}
-            >
-              <CollageCard study={study} />
-            </div>
-          );
+          return <WorkCard key={slug} study={study} />;
         })}
       </div>
 
