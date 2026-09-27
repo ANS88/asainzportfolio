@@ -22,7 +22,7 @@ const experiments = [
     title: "femswarm",
     description:
       "A swarm of AI research agents, each named for a woman who changed history, that scouts papers, trials, launches, and funding in women's health every week for my Substack.",
-    url: asset("/femswarm/index.html"),
+    url: asset("/femswarm"),
     image: asset("/images/playground/femswarm-preview.png"),
     tags: ["AI agents", "Research ops", "Women's health"],
   },
