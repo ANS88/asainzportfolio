@@ -16,12 +16,22 @@ export const metadata: Metadata = {
   },
 };
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const experiments = [
+  {
+    title: "femswarm",
+    description:
+      "A swarm of AI research agents, each named for a woman who changed history, that scouts papers, trials, launches, and funding in women's health every week for my Substack.",
+    url: `${base}/femswarm/`,
+    image: `${base}/images/playground/femswarm-preview.png`,
+    tags: ["AI agents", "Research ops", "Women's health"],
+  },
   {
     title: "Menopause Is Hot Now",
     description: "An interactive exploration of posting activity in the menopause subreddit.",
     url: "https://menopauseishotnow.vercel.app/",
-    image: "/videos/menopause-demo-640.gif",
+    image: `${base}/videos/menopause-demo-640.gif`,
     tags: ["Data viz", "Reddit", "Menopause"],
   },
 ];
