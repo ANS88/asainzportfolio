@@ -4,6 +4,7 @@ import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
 import FavoriteReads from "@/components/FavoriteReads";
 import MapSection from "@/components/MapSection";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About, Adriana Navarro Sainz",
@@ -38,7 +39,7 @@ export default function About() {
             <div className="about-intro">
               <div className="about-intro-photo">
                 <img
-                  src="/images/profile-purple.png"
+                  src={asset("/images/profile-purple.png")}
                   alt="Adriana Sainz"
                   width={320}
                   height={320}
@@ -66,7 +67,7 @@ export default function About() {
           <AnimateOnScroll>
             <div className="experience-label-row">
               <div className="label">Relevant experience</div>
-              <a href="/adriana-navarro-sainz-resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-download">Download resume &darr;</a>
+              <a href={asset("/adriana-navarro-sainz-resume.pdf")} target="_blank" rel="noopener noreferrer" className="resume-download">Download resume &darr;</a>
             </div>
           </AnimateOnScroll>
 

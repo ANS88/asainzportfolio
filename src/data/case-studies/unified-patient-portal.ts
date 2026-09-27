@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const unifiedPatientPortal: CaseStudy = {
   slug: "unified-patient-portal",
@@ -10,7 +11,7 @@ export const unifiedPatientPortal: CaseStudy = {
   timeline: "0 → 1 (2023–2024)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/unified-patient-portal/iterations.png",
+  previewImage: asset("/images/case-studies/unified-patient-portal/iterations.png"),
   previewVideo: "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&background=1",
   previewVideos: [
     "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=0s",
@@ -111,21 +112,21 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/unified-patient-portal/designprinciples.png",
+            src: asset("/images/case-studies/unified-patient-portal/designprinciples.png"),
             alt: "Design principles framework distilled from discovery research",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/unified-patient-portal/personalexi.png",
+            src: asset("/images/case-studies/unified-patient-portal/personalexi.png"),
             alt: "Lexi persona document — digitally engaged pregnant patient",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/unified-patient-portal/userjourneylexi.png",
+            src: asset("/images/case-studies/unified-patient-portal/userjourneylexi.png"),
             alt: "Lexi’s end-to-end genetic testing journey map",
           },
         },
@@ -144,7 +145,7 @@ export const unifiedPatientPortal: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/unified-patient-portal/iterations.png",
+            src: asset("/images/case-studies/unified-patient-portal/iterations.png"),
             alt: "Prototype iterations tested during usability sessions",
           },
         },

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
@@ -60,7 +61,7 @@ function CollageCard({
   }, []);
 
   return (
-    <a
+    <Link
       href={`/work/${study.slug}`}
       className="collage-card"
     >
@@ -123,7 +124,7 @@ function CollageCard({
           </div>
         )}
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -148,9 +149,9 @@ export default function ProjectShowcase() {
       </div>
 
       <div className="sc-footer">
-        <a href="/work" className="view-all-link">
+        <Link href="/work" className="view-all-link">
           All work &rarr;
-        </a>
+        </Link>
       </div>
     </section>
   );

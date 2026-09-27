@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const nateraClinicalReview: CaseStudy = {
   slug: "natera-clinical-review",
@@ -10,8 +11,8 @@ export const nateraClinicalReview: CaseStudy = {
   timeline: "0 → 1 (2024–2025)",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
-  previewVideo: "/videos/clinical-review/clip-00.mp4",
+  previewImage: asset("/images/case-studies/natera-clinical-review/workflow-flow.svg"),
+  previewVideo: asset("/videos/clinical-review/clip-00.mp4"),
 
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },
@@ -29,7 +30,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/clinical-review/clip-00.mp4",
+            src: asset("/videos/clinical-review/clip-00.mp4"),
             autoplay: true,
             caption: "",
           },
@@ -93,7 +94,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/natera-clinical-review/distributed-cognition-map.svg",
+            src: asset("/images/case-studies/natera-clinical-review/distributed-cognition-map.svg"),
             alt: "As-is map of the manual review workflow showing information flowing across two roles, four tools, and the handoffs between them",
           },
         },
@@ -120,14 +121,14 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/natera-clinical-review/workflow-flow.svg",
+            src: asset("/images/case-studies/natera-clinical-review/workflow-flow.svg"),
             alt: "End-to-end flow diagram showing the manual review process from GC login through case booking, editing, flag escalation, LD review, and report release",
           },
         },
         {
           type: "video",
           data: {
-            src: "/videos/clinical-review/clip-02.mp4",
+            src: asset("/videos/clinical-review/clip-02.mp4"),
             autoplay: true,
             caption: "",
           },
@@ -135,7 +136,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/clinical-review/snippet-02.mp4",
+            src: asset("/videos/clinical-review/snippet-02.mp4"),
             autoplay: true,
             caption: "",
           },
@@ -143,7 +144,7 @@ export const nateraClinicalReview: CaseStudy = {
         {
           type: "video",
           data: {
-            src: "/videos/clinical-review/clip-03.mp4",
+            src: asset("/videos/clinical-review/clip-03.mp4"),
             autoplay: true,
             caption: "",
           },

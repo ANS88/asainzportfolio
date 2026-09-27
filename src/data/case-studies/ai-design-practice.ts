@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const aiDesignPractice: CaseStudy = {
   slug: "ai-design-practice",
@@ -12,7 +13,7 @@ export const aiDesignPractice: CaseStudy = {
   timeline: "2024–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/ai-design-practice/ai-lifecycle.svg",
+  previewImage: asset("/images/case-studies/ai-design-practice/ai-lifecycle.svg"),
   previewCrop: { position: "50% 38%", scale: 1.8 },
 
   impact: [
@@ -23,7 +24,7 @@ export const aiDesignPractice: CaseStudy = {
   ],
 
   heroImage: {
-    src: "/images/case-studies/ai-design-practice/ai-lifecycle.svg",
+    src: asset("/images/case-studies/ai-design-practice/ai-lifecycle.svg"),
     alt: "AI lifecycle diagram showing five practice areas orbiting a human judgment core",
   },
 
@@ -40,7 +41,7 @@ export const aiDesignPractice: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/ai-design-practice/production-vs-judgment.svg",
+            src: asset("/images/case-studies/ai-design-practice/production-vs-judgment.svg"),
             alt: "Two-column diagram: production work (AI accelerates) versus judgment work (humans own)",
           },
         },
@@ -59,7 +60,7 @@ export const aiDesignPractice: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/ai-design-practice/five-areas.svg",
+            src: asset("/images/case-studies/ai-design-practice/five-areas.svg"),
             alt: "Five practice areas showing what AI accelerates versus what humans own in each",
           },
         },
@@ -78,7 +79,7 @@ export const aiDesignPractice: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/ai-design-practice/synthesis-flow.svg",
+            src: asset("/images/case-studies/ai-design-practice/synthesis-flow.svg"),
             alt: "Before: 2-3 weeks manual transcription, coding, diagramming. After: 1-2 days with AI-assisted clustering and human validation",
           },
         },
@@ -129,7 +130,7 @@ export const aiDesignPractice: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/ai-design-practice/governance-framework.svg",
+            src: asset("/images/case-studies/ai-design-practice/governance-framework.svg"),
             alt: "Five governance rules: data boundaries, draft-never-final, provenance tracking, centrally approved tooling, and deliberate skill-building",
           },
         },

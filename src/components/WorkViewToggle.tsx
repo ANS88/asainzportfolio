@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { HoverVideoLocal, HoverVideoEmbed, HoverVideoEmbedRow } from "./HoverVideo";
@@ -56,7 +57,7 @@ export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
         <div className="cs-card-grid">
           {studies.map((study) => (
             <AnimateOnScroll key={study.slug} animation="fade-up">
-              <a href={`/work/${study.slug}`} className="cs-preview-card">
+              <Link href={`/work/${study.slug}`} className="cs-preview-card">
                 {study.previewVideos && study.previewVideos.length > 0 ? (
                   <HoverVideoEmbedRow sources={study.previewVideos} />
                 ) : study.previewVideo && study.previewVideo.startsWith("/") ? (
@@ -88,7 +89,7 @@ export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
                     </div>
                   )}
                 </div>
-              </a>
+              </Link>
             </AnimateOnScroll>
           ))}
         </div>
@@ -98,12 +99,12 @@ export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
             <div key={group.company} className="work-list-group">
               <div className="work-list-company">{group.company}</div>
               {group.items.map((study) => (
-                <a key={study.slug} href={`/work/${study.slug}`} className="work-list-row">
+                <Link key={study.slug} href={`/work/${study.slug}`} className="work-list-row">
                   <span className="work-list-title">{study.title}</span>
                   <span className="work-list-dot" />
                   <span className="work-list-role">{study.role}</span>
                   <span className="work-list-year">{extractYear(study.timeline)}</span>
-                </a>
+                </Link>
               ))}
             </div>
           ))}
