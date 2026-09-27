@@ -8,7 +8,7 @@ export default function FemswarmFeature() {
     <section className="femswarm-feature">
       <AnimateOnScroll animation="fade-up">
         <a
-          href={asset("/femswarm/index.html")}
+          href={asset("/femswarm")}
           target="_blank"
           rel="noopener noreferrer"
           className="femswarm-card"
