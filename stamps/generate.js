@@ -158,12 +158,17 @@ const valencia = `
   <!-- Structural ribs -->
   <path d="M100,230 Q200,148 300,230" fill="none" stroke="#ccc8bc" stroke-width="0.8" opacity="0.5"/>
   <path d="M130,230 Q200,170 270,230" fill="none" stroke="#ccc8bc" stroke-width="0.6" opacity="0.4"/>
-  <!-- Inner dome -->
-  <ellipse cx="200" cy="228" rx="65" ry="45" fill="#b8c8d8" stroke="#8098a8" stroke-width="1.5"/>
-  <!-- Pupil -->
-  <circle cx="200" cy="228" r="24" fill="#3a6888" stroke="#285878" stroke-width="1.5"/>
-  <circle cx="200" cy="228" r="12" fill="#5a98c0"/>
-  <circle cx="200" cy="228" r="5" fill="#e8e4dc"/>
+  <!-- Glass facade panels -->
+  <g opacity="0.5">
+    <rect x="150" y="195" width="14" height="40" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="168" y="188" width="14" height="47" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="186" y="185" width="14" height="50" rx="2" fill="#9ac8e0" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="204" y="185" width="14" height="50" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="222" y="188" width="14" height="47" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+    <rect x="240" y="195" width="14" height="40" rx="2" fill="#8ab8d8" stroke="#6898b8" stroke-width="0.6"/>
+  </g>
+  <!-- Entrance arch -->
+  <path d="M180,250 Q200,220 220,250" fill="#6898b8" opacity="0.6" stroke="#5888a8" stroke-width="0.8"/>
   <!-- Reflection in pool -->
   <path d="M90,270 Q200,300 310,270" fill="#e8e4dc" opacity="0.12"/>
   <path d="M100,285 Q200,310 300,285" fill="#e8e4dc" opacity="0.08"/>
@@ -172,24 +177,6 @@ const valencia = `
   <path d="M50,310 Q130,305 200,312 Q270,318 350,310" fill="none" stroke="#5aafdb" stroke-width="0.6" opacity="0.3"/>
   <path d="M50,330 Q140,324 200,330 Q260,336 350,330" fill="none" stroke="#5aafdb" stroke-width="0.5" opacity="0.25"/>
   <path d="M50,348 Q150,342 200,348 Q250,354 350,348" fill="none" stroke="#5aafdb" stroke-width="0.5" opacity="0.2"/>
-  <!-- Orange tree left -->
-  <line x1="62" y1="260" x2="62" y2="195" stroke="#6a4a30" stroke-width="3"/>
-  <circle cx="62" cy="190" r="22" fill="#2a6b3a"/>
-  <circle cx="52" cy="185" r="5" fill="#e88020"/>
-  <circle cx="70" cy="182" r="4.5" fill="#e88020"/>
-  <circle cx="58" cy="198" r="4" fill="#e88020"/>
-  <!-- Orange tree right -->
-  <line x1="340" y1="260" x2="340" y2="200" stroke="#6a4a30" stroke-width="2.5"/>
-  <circle cx="340" cy="195" r="18" fill="#2a6b3a"/>
-  <circle cx="332" cy="190" r="4.5" fill="#e88020"/>
-  <circle cx="348" cy="192" r="4" fill="#e88020"/>
-  <!-- Orange blossom accents -->
-  <g fill="white" opacity="0.7">
-    <circle cx="75" cy="178" r="2.5"/>
-    <circle cx="48" cy="192" r="2"/>
-    <circle cx="350" cy="186" r="2.5"/>
-    <circle cx="330" cy="198" r="2"/>
-  </g>
   <!-- Walkway -->
   <rect x="32" y="252" width="336" height="10" fill="#d8d0c0" opacity="0.6"/>
   <line x1="32" y1="262" x2="368" y2="262" stroke="#b0a890" stroke-width="0.8"/>
