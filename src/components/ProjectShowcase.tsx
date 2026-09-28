@@ -4,114 +4,86 @@ import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
-const transformLabels: Record<string, { from: string; to: string }> = {
-  "natera-clinical-review": { from: "Fragmented", to: "Unified" },
-  "unified-patient-portal": { from: "Invisible", to: "Empowered" },
-  "histopathology-workflow": { from: "Hands-on", to: "Hands-off" },
-  "identity-portal": { from: "Scattered", to: "Connected" },
-  "perimenopause-tracking": { from: "Measured", to: "Understood" },
-  "ai-design-practice": { from: "Manual", to: "Augmented" },
-  "lab-operations-leadership": { from: "Zero", to: "Embedded" },
-  "clinical-trial-screening": { from: "Tedious", to: "Targeted" },
-};
+type Mode = "shot" | "flat" | "cover";
 
-const order = [
-  "unified-patient-portal",
-  "natera-clinical-review",
-  "clinical-trial-screening",
-  "identity-portal",
-  "perimenopause-tracking",
-  "ai-design-practice",
-  "lab-operations-leadership",
-  "histopathology-workflow",
+interface Preview {
+  slug: string;
+  stage: "light" | "dark";
+  mode: Mode;
+  src?: string;
+}
+
+const previews: Preview[] = [
+  { slug: "unified-patient-portal", stage: "light", mode: "shot" },
+  { slug: "natera-clinical-review", stage: "light", mode: "shot" },
+  { slug: "clinical-trial-screening", stage: "light", mode: "shot" },
+  { slug: "identity-portal", stage: "light", mode: "shot", src: asset("/images/case-studies/identity-portal/overview2.png") },
+  { slug: "perimenopause-tracking", stage: "light", mode: "cover", src: asset("/images/case-studies/perimenopause-tracking/hero.jpg") },
+  { slug: "ai-design-practice", stage: "dark", mode: "flat" },
+  { slug: "lab-operations-leadership", stage: "dark", mode: "flat" },
+  { slug: "histopathology-workflow", stage: "light", mode: "shot" },
 ];
 
 const studyMap = Object.fromEntries(caseStudyList.map((s) => [s.slug, s]));
 
-function WorkCard({
-  study,
-}: {
-  study: CaseStudy;
-}) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const labels = transformLabels[study.slug];
+function years(timeline: string) {
+  const found = Array.from(new Set(timeline.match(/\d{4}/g) ?? []));
+  return found.length > 1 ? `${found[0]}–${found[found.length - 1]}` : found[0] ?? "";
+}
 
-  const isLocalVideo =
-    study.previewVideo && study.previewVideo.startsWith("/");
-  const isEmbed =
-    study.previewVideo && !study.previewVideo.startsWith("/");
+function mediaFor(study: CaseStudy, preview: Preview) {
+  if (preview.src) return { src: preview.src, video: false };
+  if (study.previewVideo?.startsWith("/")) return { src: study.previewVideo, video: true };
+  return study.previewImage ? { src: study.previewImage, video: false } : null;
+}
+
+function WorkCard({ study, preview }: { study: CaseStudy; preview: Preview }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const media = mediaFor(study, preview);
 
   useEffect(() => {
-    if (!videoRef.current) return;
+    const video = videoRef.current;
+    if (!video) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) videoRef.current?.play().catch(() => {});
-        else videoRef.current?.pause();
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
       },
       { threshold: 0.3 }
     );
-    observer.observe(videoRef.current);
+    observer.observe(video);
     return () => observer.disconnect();
   }, []);
 
+  const meta = [study.company, years(study.timeline)].filter(Boolean).join(" · ");
+
   return (
     <Link href={`/work/${study.slug}`} className="work-card">
-      <div className="work-card-media">
-        {study.previewVideos && study.previewVideos.length > 0 ? (
-          <div className="sc-video-row">
-            {study.previewVideos.map((src, i) => (
-              <iframe
-                key={i}
-                src={src}
-                allow="autoplay; encrypted-media"
-                tabIndex={-1}
-                loading="lazy"
-                className="sc-iframe"
+      <div className={`work-card-media work-card-media--${preview.stage} work-card-media--${preview.mode}`}>
+        {media && (
+          <div className="work-card-stage">
+            {media.video ? (
+              <video
+                ref={videoRef}
+                src={media.src}
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="work-card-shot"
               />
-            ))}
+            ) : (
+              <img src={media.src} alt="" loading="lazy" className="work-card-shot" />
+            )}
           </div>
-        ) : isLocalVideo ? (
-          <video
-            ref={videoRef}
-            src={study.previewVideo}
-            muted
-            loop
-            playsInline
-            className="work-card-img"
-          />
-        ) : isEmbed ? (
-          <iframe
-            src={study.previewVideo}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            allowFullScreen
-            loading="lazy"
-            className="sc-iframe"
-          />
-        ) : study.previewImage ? (
-          <img
-            src={study.previewImage}
-            alt=""
-            loading="lazy"
-            className="work-card-img"
-            style={study.previewCrop ? {
-              objectPosition: study.previewCrop.position || "center",
-              ...study.previewCrop.scale ? { '--crop-scale': study.previewCrop.scale } as React.CSSProperties : {},
-            } : undefined}
-          />
-        ) : null}
+        )}
       </div>
 
       <div className="work-card-body">
         <h3 className="work-card-title">{study.title}</h3>
-        <div className="work-card-meta">
-          <span>{study.company}</span>
-          {labels && (
-            <span className="work-card-transform">
-              {labels.from} <span aria-hidden="true">&rarr;</span> {labels.to}
-            </span>
-          )}
-        </div>
+        <div className="work-card-meta">{meta}</div>
       </div>
     </Link>
   );
@@ -121,10 +93,10 @@ export default function ProjectShowcase() {
   return (
     <section className="work-showcase">
       <div className="work-grid">
-        {order.map((slug) => {
-          const study = studyMap[slug];
+        {previews.map((preview) => {
+          const study = studyMap[preview.slug];
           if (!study) return null;
-          return <WorkCard key={slug} study={study} />;
+          return <WorkCard key={preview.slug} study={study} preview={preview} />;
         })}
       </div>
 
