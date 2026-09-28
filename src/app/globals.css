@@ -2855,3 +2855,68 @@ section { padding: 5rem 0; }
 /* Selection highlight — placed last to override Tailwind preflight */
 *::selection { background: #F0386B; color: #fff; }
 *::-moz-selection { background: #F0386B; color: #fff; }
+
+/* ── femswarm feature (home) ── */
+.femswarm-feature {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 3rem clamp(1rem, 3vw, 3rem) 0;
+}
+.femswarm-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--warm);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color var(--transition-medium), transform var(--transition-medium);
+}
+.femswarm-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.femswarm-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.femswarm-media { aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; background: var(--cream); }
+.femswarm-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .8s cubic-bezier(.4, 0, .2, 1);
+}
+.femswarm-card:hover .femswarm-media img { transform: scale(1.04); }
+.femswarm-body { padding: 2rem clamp(1.5rem, 3vw, 2.5rem) 2rem 0; }
+.femswarm-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--ink2);
+  margin: .5rem 0 1rem;
+  transition: color var(--transition-fast);
+}
+.femswarm-card:hover .femswarm-title { color: var(--accent2); }
+.femswarm-desc { font-size: .95rem; line-height: 1.6; color: var(--ink); max-width: 46ch; margin-bottom: 1.25rem; }
+.femswarm-agents { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.femswarm-agents li {
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: rgba(196, 168, 240, .1);
+  padding: .25rem .6rem;
+  border-radius: 4px;
+}
+@media (max-width: 800px) {
+  .femswarm-card { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .femswarm-body { padding: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .femswarm-card, .femswarm-media img { transition: none; }
+  .femswarm-card:hover { transform: none; }
+  .femswarm-card:hover .femswarm-media img { transform: none; }
+}

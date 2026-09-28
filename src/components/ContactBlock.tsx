@@ -1,4 +1,5 @@
 import AnimateOnScroll from "./AnimateOnScroll";
+import { asset } from "@/lib/asset";
 
 export default function ContactBlock() {
   return (
@@ -14,7 +15,7 @@ export default function ContactBlock() {
               <a href="https://www.linkedin.com/in/adrianans/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://womenshealthcomputed.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
               <a href="https://scholar.google.com/citations?user=6ec-wJ8AAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
-              <a href="/adriana-navarro-sainz-resume.pdf" target="_blank" rel="noopener noreferrer">Resume &darr;</a>
+              <a href={asset("/adriana-navarro-sainz-resume.pdf")} target="_blank" rel="noopener noreferrer">Resume &darr;</a>
             </div>
           </AnimateOnScroll>
         </div>

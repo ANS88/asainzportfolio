@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const perimenopauseTracking: CaseStudy = {
   slug: "perimenopause-tracking",
@@ -13,10 +14,10 @@ export const perimenopauseTracking: CaseStudy = {
   timeline: "0 → 1 (Oct 2024 – Feb 2025)",
   company: "University of Cincinnati & Clue App",
   companyDescription: "Dissertation research",
-  previewImage: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",
+  previewImage: asset("/images/case-studies/perimenopause-tracking/thematicanalysis.png"),
   previewCrop: { position: "35% 22%", scale: 1.6 },
   heroImage: {
-    src: "/images/case-studies/perimenopause-tracking/hero.jpg",
+    src: asset("/images/case-studies/perimenopause-tracking/hero.jpg"),
     alt: "Clue app perimenopause mode — cycle tracking, symptom logging, and health education screens",
   },
 
@@ -41,7 +42,7 @@ export const perimenopauseTracking: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/perimenopause-tracking/processdetail.png",
+            src: asset("/images/case-studies/perimenopause-tracking/processdetail.png"),
             alt: "Detailed breakdown of the research process and methodology",
             caption: "Research process, detailed breakdown",
           },
@@ -134,7 +135,7 @@ export const perimenopauseTracking: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/perimenopause-tracking/thematicanalysis.png",
+            src: asset("/images/case-studies/perimenopause-tracking/thematicanalysis.png"),
             alt: "Thematic analysis map from diary study and exit interviews",
             caption: "Thematic analysis",
           },
@@ -142,14 +143,14 @@ export const perimenopauseTracking: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/perimenopause-tracking/findings2.png",
+            src: asset("/images/case-studies/perimenopause-tracking/findings2.png"),
             alt: "Secondary findings visualization from perimenopause tracking study",
           },
         },
         {
           type: "image",
           data: {
-            src: "/images/case-studies/perimenopause-tracking/usage.png",
+            src: asset("/images/case-studies/perimenopause-tracking/usage.png"),
             alt: "App usage patterns across daily and sporadic trackers",
             caption: "Tracking usage patterns",
           },
@@ -157,7 +158,7 @@ export const perimenopauseTracking: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/perimenopause-tracking/susscore.png",
+            src: asset("/images/case-studies/perimenopause-tracking/susscore.png"),
             alt: "SUS score distribution, average 88.3 against 68 benchmark",
             caption: "SUS score results",
           },

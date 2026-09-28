@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { caseStudyList } from "@/data/case-studies";
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 type Mode = "shot" | "flat" | "cover";
 
@@ -17,8 +19,8 @@ const previews: Preview[] = [
   { slug: "unified-patient-portal", stage: "light", mode: "shot" },
   { slug: "natera-clinical-review", stage: "light", mode: "shot" },
   { slug: "clinical-trial-screening", stage: "light", mode: "shot" },
-  { slug: "identity-portal", stage: "light", mode: "shot", src: "/images/case-studies/identity-portal/overview2.png" },
-  { slug: "perimenopause-tracking", stage: "light", mode: "cover", src: "/images/case-studies/perimenopause-tracking/hero.jpg" },
+  { slug: "identity-portal", stage: "light", mode: "shot", src: asset("/images/case-studies/identity-portal/overview2.png") },
+  { slug: "perimenopause-tracking", stage: "light", mode: "cover", src: asset("/images/case-studies/perimenopause-tracking/hero.jpg") },
   { slug: "ai-design-practice", stage: "dark", mode: "flat" },
   { slug: "lab-operations-leadership", stage: "dark", mode: "flat" },
   { slug: "histopathology-workflow", stage: "light", mode: "shot" },
@@ -58,7 +60,7 @@ function WorkCard({ study, preview }: { study: CaseStudy; preview: Preview }) {
   const meta = [study.company, years(study.timeline)].filter(Boolean).join(" · ");
 
   return (
-    <a href={`/work/${study.slug}`} className="work-card">
+    <Link href={`/work/${study.slug}`} className="work-card">
       <div className={`work-card-media work-card-media--${preview.stage} work-card-media--${preview.mode}`}>
         {media && (
           <div className="work-card-stage">
@@ -83,7 +85,7 @@ function WorkCard({ study, preview }: { study: CaseStudy; preview: Preview }) {
         <h3 className="work-card-title">{study.title}</h3>
         <div className="work-card-meta">{meta}</div>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -99,9 +101,9 @@ export default function ProjectShowcase() {
       </div>
 
       <div className="sc-footer">
-        <a href="/work" className="view-all-link">
+        <Link href="/work" className="view-all-link">
           All work &rarr;
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import type { CaseStudy } from "@/types/case-study";
+import { asset } from "@/lib/asset";
 
 export const labOperationsLeadership: CaseStudy = {
   slug: "lab-operations-leadership",
@@ -14,7 +15,7 @@ export const labOperationsLeadership: CaseStudy = {
   timeline: "2023–2025",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
-  previewImage: "/images/case-studies/lab-operations-leadership/team-structure.svg",
+  previewImage: asset("/images/case-studies/lab-operations-leadership/team-structure.svg"),
   previewCrop: { position: "50% 55%", scale: 1.6 },
 
   impact: [
@@ -35,7 +36,7 @@ export const labOperationsLeadership: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/lab-operations-leadership/pipeline-flow.svg",
+            src: asset("/images/case-studies/lab-operations-leadership/pipeline-flow.svg"),
             alt: "Wet lab to dry lab pipeline: accessioning through sequencing through variant interpretation to clinical report",
           },
         },
@@ -54,7 +55,7 @@ export const labOperationsLeadership: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/lab-operations-leadership/ethnography.svg",
+            src: asset("/images/case-studies/lab-operations-leadership/ethnography.svg"),
             alt: "Conference room research versus in-lab ethnography: shadowing full shifts across accessioning, QC, and histopathology",
           },
         },
@@ -73,7 +74,7 @@ export const labOperationsLeadership: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/lab-operations-leadership/four-to-one.svg",
+            src: asset("/images/case-studies/lab-operations-leadership/four-to-one.svg"),
             alt: "Four legacy systems — variant review tool, report generator, QC dashboard, tracking spreadsheet — consolidated into unified Clinical Review",
           },
         },
@@ -96,7 +97,7 @@ export const labOperationsLeadership: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/lab-operations-leadership/hiring-journey.svg",
+            src: asset("/images/case-studies/lab-operations-leadership/hiring-journey.svg"),
             alt: "Phase 1: solo, audit and ship. Phase 2: first hires, split wet/dry lab. Phase 3: embedded practice with research, cross-domain reviews",
           },
         },
@@ -108,7 +109,7 @@ export const labOperationsLeadership: CaseStudy = {
         {
           type: "image",
           data: {
-            src: "/images/case-studies/lab-operations-leadership/team-structure.svg",
+            src: asset("/images/case-studies/lab-operations-leadership/team-structure.svg"),
             alt: "Designers embedded in wet lab and dry lab engineering squads, connected by shared design system, research ops, critique rituals",
           },
         },

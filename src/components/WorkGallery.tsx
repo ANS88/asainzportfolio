@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState, useCallback, useEffect } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { caseStudyList } from "@/data/case-studies";
@@ -100,7 +101,7 @@ export default function WorkGallery() {
 
       <div className="work-gallery-track" ref={trackRef}>
         {caseStudyList.map((study) => (
-          <a
+          <Link
             key={study.slug}
             href={`/work/${study.slug}`}
             className="work-gallery-card"
@@ -139,13 +140,13 @@ export default function WorkGallery() {
                 </span>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
       <AnimateOnScroll animation="fade-up">
         <div style={{ marginTop: "1.5rem" }}>
-          <a href="/work" className="view-all-link">All work &rarr;</a>
+          <Link href="/work" className="view-all-link">All work &rarr;</Link>
         </div>
       </AnimateOnScroll>
 
@@ -212,12 +213,12 @@ export default function WorkGallery() {
                 </div>
               )}
 
-              <a
+              <Link
                 href={`/work/${expanded.slug}`}
                 className="blowout-cta"
               >
                 Read case study &rarr;
-              </a>
+              </Link>
             </div>
           </div>
         </div>
