@@ -16,7 +16,7 @@ export default function FemswarmFeature() {
           <div className="femswarm-media">
             <img
               src={asset("/images/playground/femswarm-preview.png")}
-              alt="The femswarm research desk: five illustrated agents, Trota, Elion, Lamarr, Walker, and Wells"
+              alt="femswarm: five illustrated AI research agents, Trota, Elion, Lamarr, Walker, and Wells"
               loading="lazy"
             />
           </div>
@@ -33,7 +33,7 @@ export default function FemswarmFeature() {
                 <li key={a}>{a}</li>
               ))}
             </ul>
-            <span className="view-all-link">Open the research desk &rarr;</span>
+            <span className="view-all-link">Read this week&rsquo;s edition &rarr;</span>
           </div>
         </a>
       </AnimateOnScroll>
