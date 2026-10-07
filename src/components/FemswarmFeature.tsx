@@ -1,7 +1,7 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 import { asset } from "@/lib/asset";
 
-const AGENTS = ["Trota", "Elion", "Lamarr", "Walker", "Wells"];
+const AGENTS = ["Trota", "Gilbreth", "Elion", "Lamarr", "Walker", "Wells"];
 
 export default function FemswarmFeature() {
   return (
@@ -16,7 +16,7 @@ export default function FemswarmFeature() {
           <div className="femswarm-media">
             <img
               src={asset("/images/playground/femswarm-preview.png")}
-              alt="femswarm: five illustrated AI research agents, Trota, Elion, Lamarr, Walker, and Wells"
+              alt="femswarm: six illustrated AI research agents, Trota, Gilbreth, Elion, Lamarr, Walker, and Wells"
               loading="lazy"
             />
           </div>
