@@ -150,6 +150,14 @@ h2.sec { font: 400 26px/1.15 var(--display); margin: 0 0 14px; text-wrap: balanc
 .slot .what { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
 .slot .prob { grid-column: 1 / -1; font-size: 12.5px; color: var(--warn); margin-top: 4px; }
 .slot.pending { background: transparent; border-style: dashed; }
+button.slot { appearance: none; font: inherit; color: inherit; text-align: left; width: 100%; cursor: pointer; transition: border-color .15s ease, transform .15s ease; }
+button.slot:hover { border-color: var(--ac); transform: translateY(-1px); }
+button.slot .go { grid-column: 1 / -1; font-size: 12px; color: var(--ac); margin-top: 4px; opacity: 0; transition: opacity .15s ease; }
+button.slot:hover .go, button.slot:focus-visible .go { opacity: 1; }
+.desk, .cover { scroll-margin-top: 76px; }
+.flash { animation: flash 1.4s ease; }
+@keyframes flash { 0%, 40% { box-shadow: 0 0 0 3px var(--ac, var(--ink)); } 100% { box-shadow: 0 0 0 0 transparent; } }
+@media (prefers-reduced-motion: reduce) { button.slot, .flash { transition: none; animation: none; } }
 .slot.pending .mini { filter: grayscale(1); opacity: .55; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
 .dot.warn { background: var(--warn); }
@@ -484,7 +492,7 @@ function cover(W) {
     head = `${n} finds from the week of ${md(W.w)}`;
     stand = "No editor's note was written this week.";
   }
-  return `<header class="cover">
+  return `<header class="cover" id="cover">
       <div class="eyebrow"><span class="label">Issue ${issue(W.w)} · ${esc(range(W.w))}, ${year(W.w)}</span>${status}</div>
       <h1 class="headline ${head.length > 110 ? "long" : ""}">${esc(head)}</h1>
       ${stand ? `<p class="standfirst">${esc(stand)}</p>` : ""}
@@ -495,11 +503,15 @@ function cover(W) {
 }
 
 function tracker(W) {
+  const hasDesks = W.items.length || W.runs.length;   // same rule desks() uses to render the sections
   return `<div class="tracker" aria-label="Who has reported this week">${keys.map(k => {
     const st = slotStatus(W, k);
-    return `<div class="slot ${st.pending ? "pending" : ""}" ${tint(k)}><span class="mini">${face(k)}</span>
+    // each card jumps to that agent's section of the edition (Wells: back to her note at the top)
+    const target = k === "wells" ? "cover" : `desk-${k}`, canJump = k === "wells" || hasDesks;
+    const tag = canJump ? "button" : "div";
+    return `<${tag} class="slot ${st.pending ? "pending" : ""}" ${tint(k)} ${canJump ? `data-jump="${target}" aria-label="Jump to ${esc(agents[k].name)}'s ${k === "wells" ? "editor's note" : "finds"}"` : ""}><span class="mini">${face(k)}</span>
       <span class="who">${esc(agents[k].name)} <span class="label">${DAY[k].slice(0, 3)}</span></span>
-      <span class="what"><span class="dot ${st.dot}"></span>${esc(st.text)}</span>${st.prob ? `<span class="prob">${esc(st.prob)}</span>` : ""}</div>`;
+      <span class="what"><span class="dot ${st.dot}"></span>${esc(st.text)}</span>${st.prob ? `<span class="prob">${esc(st.prob)}</span>` : ""}${canJump ? `<span class="go" aria-hidden="true">${k === "wells" ? "Back to the note" : "See her finds"} &darr;</span>` : ""}</${tag}>`;
   }).join("")}</div>`;
 }
 
@@ -538,7 +550,7 @@ function desks(W) {
         <h4 class="ttl">${link(i)}</h4><p class="sum">${esc(i.summary)}</p></li>`).join("")}</ul>
         ${items.length > 5 ? `<button class="btn more" data-more="${k}">${state.open.has(k) ? "Show fewer" : `Show all ${items.length}`}</button>` : ""}`
       : `<p class="quiet">${run ? "Nothing new cleared the bar this week." : W.current ? `Reports on ${DAY[k]}.` : "Did not run this week."}</p>`;
-    return `<article class="desk" ${tint(k)}>
+    return `<article class="desk" id="desk-${k}" ${tint(k)}>
       <div class="desk-head"><span class="face">${face(k)}</span><div><h3>${esc(a.name)}</h3>
         <div class="sub"><span>${esc(a.role)}</span>${run ? `<span class="num">${esc(wmd(run.timestamp))} · ${+run.kept || 0} kept of ${+run.candidates || 0} new</span>` : ""}</div></div></div>
       ${note ? `<p class="note">${esc(note.note)}</p>` : ""}
@@ -599,6 +611,16 @@ function route() {
 
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-go]"); if (g) { go(g.dataset.go); return; }
+  const j = e.target.closest("[data-jump]");
+  if (j) {
+    const el = document.getElementById(j.dataset.jump);
+    if (el) {
+      const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      el.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" });
+      el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    }
+    return;
+  }
   const m = e.target.closest("[data-more]");
   if (m) { const k = m.dataset.more; state.open.has(k) ? state.open.delete(k) : state.open.add(k); renderEdition(); }
 });
