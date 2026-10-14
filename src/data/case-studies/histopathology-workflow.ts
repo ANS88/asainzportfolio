@@ -14,6 +14,16 @@ export const histopathologyWorkflow: CaseStudy = {
   previewImage: asset("/images/case-studies/histopathology-workflow/user-flow.svg"),
   previewVideo: "https://player.vimeo.com/video/1169727354?h=e903c04ee8&autoplay=1&loop=1&muted=1&background=1",
 
+  orbit: {
+    order: 8,
+    cardTitle: "Histopathology Lab",
+    summary:
+      "Made the case for in-lab ethnography and redesigned a pipeline that ran on spreadsheets and manual queues.",
+    year: "2024–25",
+    thumbnail: asset("/images/case-studies/histopathology-workflow/user-flow.svg"),
+    weights: { design: 0.5, research: 0.9, leadership: 0.5 },
+  },
+
   impact: [
     { value: "5", metric: "Workflow stages redesigned end-to-end" },
     { value: "6+", metric: "Shadowing sessions with lab staff" },

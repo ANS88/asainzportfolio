@@ -43,6 +43,24 @@ export interface CaseStudy {
   myRole?: string;
   owned?: string;
   tags?: string[];
+
+  // Home page orbit carousel
+  orbit?: OrbitMeta;
+}
+
+export interface OrbitMeta {
+  /** Position in the orbit; lower comes first. */
+  order: number;
+  cardTitle: string;
+  summary: string;
+  year: string;
+  thumbnail: string;
+  /** "dark" for line drawings meant for a dark background. */
+  tone?: "light" | "dark";
+  /** "cover" fills the frame; default "contain" shows the whole image. */
+  fit?: "contain" | "cover";
+  /** 0 to 1 per category id from ORBIT_CATEGORIES. */
+  weights: Record<string, number>;
 }
 
 export interface CaseStudySection {

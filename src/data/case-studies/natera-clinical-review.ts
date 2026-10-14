@@ -14,6 +14,16 @@ export const nateraClinicalReview: CaseStudy = {
   previewImage: asset("/images/case-studies/natera-clinical-review/workflow-flow.svg"),
   previewVideo: asset("/videos/clinical-review/clip-00.mp4"),
 
+  orbit: {
+    order: 2,
+    cardTitle: "Clinical Review",
+    summary:
+      "Reframed a usability audit into a platform investment that replaced four legacy tools and halved report turnaround.",
+    year: "2024–25",
+    thumbnail: asset("/images/case-studies/natera-clinical-review/workflow-flow.svg"),
+    weights: { design: 0.7, research: 0.6, leadership: 0.8 },
+  },
+
   impact: [
     { value: "50%", metric: "Reduction in turnaround time" },
     { value: "3.5M+", metric: "Tests reported/year" },

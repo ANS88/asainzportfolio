@@ -21,6 +21,17 @@ export const perimenopauseTracking: CaseStudy = {
     alt: "Clue app perimenopause mode — cycle tracking, symptom logging, and health education screens",
   },
 
+  orbit: {
+    order: 5,
+    cardTitle: "Perimenopause Study",
+    summary:
+      "Ran a two-week diary study with 40 women to find what an 88.3 usability score was hiding.",
+    year: "2024–25",
+    thumbnail: asset("/images/case-studies/perimenopause-tracking/hero.jpg"),
+    fit: "cover",
+    weights: { design: 0.1, research: 1.0, leadership: 0.2 },
+  },
+
   impact: [
     { value: "40", metric: "Participants, two-week diary protocol" },
     { value: "1,977", metric: "Tracking events analyzed" },

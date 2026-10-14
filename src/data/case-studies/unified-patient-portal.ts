@@ -19,6 +19,16 @@ export const unifiedPatientPortal: CaseStudy = {
     "https://player.vimeo.com/video/1169731248?autoplay=1&loop=1&muted=1&controls=0#t=200s",
   ],
 
+  orbit: {
+    order: 1,
+    cardTitle: "Patient Portal",
+    summary:
+      "Used a federal compliance mandate to fund Natera's first patient portal, giving patients visibility into their own genetic tests.",
+    year: "2023–24",
+    thumbnail: asset("/images/case-studies/unified-patient-portal/iterations.png"),
+    weights: { design: 0.9, research: 0.4, leadership: 0.6 },
+  },
+
   impact: [
     { value: "181K", metric: "Patient accounts" },
     { value: "100%", metric: "Women’s Health patients viewed results" },
