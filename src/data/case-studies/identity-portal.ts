@@ -16,6 +16,16 @@ export const identityPortal: CaseStudy = {
   previewCrop: { position: "50% 28%", scale: 1.4 },
   previewVideo: "https://www.youtube.com/embed/jbXdF-C4E6c?si=i3luNWnFNpHDUD-a&autoplay=1&loop=1&mute=1&playlist=jbXdF-C4E6c",
 
+  orbit: {
+    order: 4,
+    cardTitle: "IDENTITY Portal",
+    summary:
+      "Designed a secure portal so foster children's medical and legal records stop moving by mail.",
+    year: "2017",
+    thumbnail: asset("/images/case-studies/identity-portal/overview2.png"),
+    weights: { design: 0.8, research: 0.7, leadership: 0.1 },
+  },
+
   impact: [
     { value: "18", metric: "Participants in card sort activity" },
     { value: "15", metric: "Users tested interactive prototype" },

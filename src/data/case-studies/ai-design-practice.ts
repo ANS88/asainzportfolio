@@ -10,11 +10,22 @@ export const aiDesignPractice: CaseStudy = {
   judgment:
     "Defined the operating model for AI adoption across five practice areas — production accelerates, judgment stays human",
   role: "Senior UX Design & Research Manager",
-  timeline: "2024–2025",
+  timeline: "2026",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewImage: asset("/images/case-studies/ai-design-practice/ai-lifecycle.svg"),
   previewCrop: { position: "50% 38%", scale: 1.8 },
+
+  orbit: {
+    order: 6,
+    cardTitle: "AI in Design Practice",
+    summary:
+      "Defined how the team adopts AI across five practice areas: production speeds up, judgment stays human.",
+    year: "2026",
+    thumbnail: asset("/images/case-studies/ai-design-practice/ai-lifecycle.svg"),
+    tone: "dark",
+    weights: { design: 0.2, research: 0.2, leadership: 0.9 },
+  },
 
   impact: [
     { value: "5", metric: "Practice areas with AI integration" },

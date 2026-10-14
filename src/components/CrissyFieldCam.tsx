@@ -24,7 +24,7 @@ export default function CrissyFieldCam() {
             href="https://www.parksconservancy.org/parks/park-web-cams"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ fontFamily: "var(--mono)", fontSize: ".6rem", color: "var(--accent)" }}
+            style={{ fontFamily: "var(--mono)", fontSize: ".6875rem", color: "var(--accent)" }}
           >
             Parks Conservancy ↗
           </a>

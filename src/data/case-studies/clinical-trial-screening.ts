@@ -12,10 +12,20 @@ export const clinicalTrialScreening: CaseStudy = {
   judgment:
     "The hardest design problem wasn't the AI — it was making the AI's reasoning legible enough for clinicians to trust, question, and override it",
   role: "Design Lead",
-  timeline: "2024–2025",
+  timeline: "2026",
   company: "Natera",
   companyDescription: "Genetic testing & biotech",
   previewVideo: asset("/videos/clinical-trial-screening/walkthrough.mov"),
+
+  orbit: {
+    order: 3,
+    cardTitle: "Trial Screening",
+    summary:
+      "Designed an AI screening tool that matches oncology patients to trials while clinicians keep the final call.",
+    year: "2026",
+    thumbnail: asset("/images/case-studies/clinical-trial-screening/current-process.png"),
+    weights: { design: 0.9, research: 0.2, leadership: 0.3 },
+  },
 
   impact: [
     { value: "80%", metric: "Fewer patients to manually review" },

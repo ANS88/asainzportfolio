@@ -18,6 +18,17 @@ export const labOperationsLeadership: CaseStudy = {
   previewImage: asset("/images/case-studies/lab-operations-leadership/team-structure.svg"),
   previewCrop: { position: "50% 55%", scale: 1.6 },
 
+  orbit: {
+    order: 7,
+    cardTitle: "Design for Lab Ops",
+    summary:
+      "Built Natera's lab-operations design practice from scratch while shipping tools for 50+ labs.",
+    year: "2023–25",
+    thumbnail: asset("/images/case-studies/lab-operations-leadership/team-structure.svg"),
+    tone: "dark",
+    weights: { design: 0.3, research: 0.4, leadership: 1.0 },
+  },
+
   impact: [
     { value: "3.5M+", metric: "Tests reported per year across lab operations" },
     { value: "50+", metric: "Labs served by tools I designed" },
