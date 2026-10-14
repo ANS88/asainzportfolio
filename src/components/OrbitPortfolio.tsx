@@ -148,7 +148,7 @@ function createSim(): Sim {
 const lensLabel = (lensId: string) =>
   lensId === "all" ? "All work" : ORBIT_CATEGORIES.find((c) => c.id === lensId)?.label ?? lensId;
 
-export default function OrbitPortfolio() {
+export default function OrbitPortfolio({ showFooter = true }: { showFooter?: boolean }) {
   const hydrated = useHydrated();
   return (
     <section className="orbit-section" aria-labelledby="orbit-heading">
@@ -156,11 +156,13 @@ export default function OrbitPortfolio() {
         Selected work
       </h2>
       {hydrated ? <Orbit /> : <OrbitFallback />}
-      <div className="sc-footer">
-        <Link href="/work" className="view-all-link">
-          Every case study &rarr;
-        </Link>
-      </div>
+      {showFooter && (
+        <div className="sc-footer">
+          <Link href="/work" className="view-all-link">
+            Every case study &rarr;
+          </Link>
+        </div>
+      )}
     </section>
   );
 }
