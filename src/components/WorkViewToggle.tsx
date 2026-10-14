@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import { HoverVideoLocal, HoverVideoEmbed, HoverVideoEmbedRow } from "./HoverVideo";
+import OrbitPortfolio from "./OrbitPortfolio";
 import type { CaseStudy } from "@/types/case-study";
 
 function extractYear(timeline: string): string {
@@ -22,16 +23,28 @@ function groupByCompany(studies: CaseStudy[]): { company: string; items: CaseStu
 }
 
 export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
-  const [view, setView] = useState<"grid" | "list">("grid");
+  const [view, setView] = useState<"orbit" | "grid" | "list">("orbit");
   const groups = groupByCompany(studies);
 
   return (
     <>
       <div className="work-view-toggle">
         <button
+          className={`work-view-btn${view === "orbit" ? " work-view-btn--active" : ""}`}
+          onClick={() => setView("orbit")}
+          aria-label="Orbit view"
+          aria-pressed={view === "orbit"}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <ellipse cx="8" cy="8" rx="7" ry="3.5" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="8" cy="11.5" r="2" fill="currentColor" />
+          </svg>
+        </button>
+        <button
           className={`work-view-btn${view === "grid" ? " work-view-btn--active" : ""}`}
           onClick={() => setView("grid")}
           aria-label="Grid view"
+          aria-pressed={view === "grid"}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <rect x="1" y="1" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
@@ -44,6 +57,7 @@ export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
           className={`work-view-btn${view === "list" ? " work-view-btn--active" : ""}`}
           onClick={() => setView("list")}
           aria-label="List view"
+          aria-pressed={view === "list"}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <line x1="1" y1="3" x2="15" y2="3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -53,7 +67,9 @@ export default function WorkViewToggle({ studies }: { studies: CaseStudy[] }) {
         </button>
       </div>
 
-      {view === "grid" ? (
+      {view === "orbit" ? (
+        <OrbitPortfolio showFooter={false} />
+      ) : view === "grid" ? (
         <div className="cs-card-grid">
           {studies.map((study) => (
             <AnimateOnScroll key={study.slug} animation="fade-up">
