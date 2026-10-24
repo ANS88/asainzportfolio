@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteOpenGraph, siteTwitter } from "@/lib/og";
 import ContactBlock from "@/components/ContactBlock";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import WorkViewToggle from "@/components/WorkViewToggle";
@@ -9,10 +10,12 @@ export const metadata: Metadata = {
   description:
     "Case studies from 10 years designing complex, high-stakes products: genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
   openGraph: {
+    ...siteOpenGraph,
     description:
       "Case studies from 10 years designing complex, high-stakes products: genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
   },
   twitter: {
+    ...siteTwitter,
     description:
       "Case studies from 10 years designing complex, high-stakes products: genetic testing portals, lab workflows, and clinical decision support at Natera and Cincinnati Children's.",
   },

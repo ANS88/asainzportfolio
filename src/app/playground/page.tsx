@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteOpenGraph, siteTwitter } from "@/lib/og";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import ContactBlock from "@/components/ContactBlock";
 import { asset } from "@/lib/asset";
@@ -8,10 +9,12 @@ export const metadata: Metadata = {
   description:
     "Experiments, side projects, and things I'm building outside of work.",
   openGraph: {
+    ...siteOpenGraph,
     description:
       "Experiments, side projects, and things I'm building outside of work.",
   },
   twitter: {
+    ...siteTwitter,
     description:
       "Experiments, side projects, and things I'm building outside of work.",
   },

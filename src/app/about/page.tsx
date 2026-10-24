@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteOpenGraph, siteTwitter } from "@/lib/og";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import PublicationsSection from "@/components/PublicationsSection";
 import ContactBlock from "@/components/ContactBlock";
@@ -11,10 +12,12 @@ export const metadata: Metadata = {
   description:
     "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   openGraph: {
+    ...siteOpenGraph,
     description:
       "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   },
   twitter: {
+    ...siteTwitter,
     description:
       "Adriana Navarro Sainz. Design and research leader. PhD in HCI, 12 products shipped, 3.5M+ tests reported/yr. Based in San Francisco.",
   },
