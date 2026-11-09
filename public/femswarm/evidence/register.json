@@ -1,5 +1,5 @@
 {
- "built": "2026-11-06",
+ "built": "2026-11-09",
  "levels": {
   "0": "Claimed",
   "1": "Technical",
@@ -598,6 +598,57 @@
      "scout": "elion",
      "date_found": "2026-10-27",
      "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.1001/jamanetworkopen.2026.41062",
+   "entry": "yes",
+   "name": "Generative AI maternal health chatbot",
+   "category": "AI product (commercial)",
+   "condition": "Maternal health support in pregnancy and postpartum",
+   "area": "Pregnancy & birth",
+   "tech": "Generative AI chatbot",
+   "use": "Maternal health consultation and support",
+   "level": 4,
+   "stage": "Randomized trial",
+   "external": "Yes",
+   "population": "400 participants from 49 US states and District of Columbia, aged 14+, pregnant or parenting infant <6 months, racially/ethnically minoritized groups; 50% parenting infant at enrollment, mean age 32.6 years",
+   "peer": "Yes",
+   "ux": "Compared with active control (monthly children's books); evaluated satisfaction and usefulness from patient perspective",
+   "result": "ChatGPT 5.5 received higher correctness scores than DeepSeek V3 in Stage 1; primary outcomes were anxiety and depression symptoms at 12 months (full results not provided in excerpt)",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "Not stated",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42981095/",
+   "title": "Generative Artificial Intelligence and Maternal Health Outcomes in Pregnant and Postpartum Individuals: A Randomized Clinical Trial.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "JAMA network open",
+   "flags": "Randomized Controlled Trial",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQek5URnRZYjlPVERGODlFWGJiX2pZU2I0XzZfTGdzcmZOMWxrTDRWSkV6NF82bk5mOU9QOFI4bllXM0xxcTdCY2dUVDJxR1ZSVURyNXFRbmhiWkFGeldldG1sdWRkQkxad2duY1JfU3FGZHVJdk9RZU9QV2kzTGxMU25QWERXSTlmSjg3Nk5lRTE2Ml9MT25SN19zdkJmWGtpUjB4cDV1V0JBeTlKdkE5R1owZGpzOWNKMXhmSjdjbU43MUNxcjU0UU10V2xsbU55Q2xvNWtn?oc=5",
+     "title": "Birmingham university spin-out secures £1.1m to develop new hormone diagnostic tests",
+     "scout": "walker",
+     "date_found": "2026-09-27",
+     "source": "Greater Birmingham Chambers of Commerce"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS3RVVF9LOVk1UGRPQXBVOFpYRC1aOXNQSUlQZnpkVERMN0pDT3hXMjRyamNJRUY0NWNYNVU2VEVQbU16Q0ZNNk4zdGI5Zk1BcnhkMU5NU1h4TnhuQjdOdTZ6MEJaYnhGcmU2R0tSaXdleWc0TUQxY1J5eGxXbnZRenpYbGltbWph?oc=5",
+     "title": "This AI Breast Cancer Risk Test Is Finally Available Nationwide, and You Can Order It From Home",
+     "scout": "lamarr",
+     "date_found": "2026-10-14",
+     "source": "Oprah Daily"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42981095/",
+     "title": "Generative Artificial Intelligence and Maternal Health Outcomes in Pregnant and Postpartum Individuals: A Randomized Clinical Trial.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "JAMA network open"
     }
    ]
   },
@@ -2785,6 +2836,265 @@
    ]
   },
   {
+   "find": "doi:10.1371/journal.pdig.0001502",
+   "entry": "yes",
+   "name": "Autoregressive Hidden Markov model for menstrual cycle phase mapping",
+   "category": "AI/ML research model",
+   "condition": "Menstrual cycle tracking and characterization",
+   "area": "Gynecologic & hormonal",
+   "tech": "Autoregressive Hidden Markov model (arHMM)",
+   "use": "Mapping menstrual cycle phases from urinary hormone trajectories",
+   "level": 2,
+   "stage": "Development and validation study",
+   "external": "Yes",
+   "population": "Over 3800 cycles from over 1100 individuals using at-home menstrual cycle tracking technology",
+   "peer": "Yes",
+   "ux": "",
+   "result": "arHMM-derived phases reproduced expected hormonal patterns within follicular, periovulatory, and luteal phases; phase-based timing for hormone testing outperformed conventional cycle day-based testing in capturing luteinizing hormone surge and post-ovulatory progesterone rise; identified phase-speci",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42986809/",
+   "title": "Modeling menstrual cycle phases from urinary hormone trajectories using an autoregressive hidden Markov model.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "PLOS digital health",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42986809/",
+     "title": "Modeling menstrual cycle phases from urinary hormone trajectories using an autoregressive hidden Markov model.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "PLOS digital health"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.1177/24731242261442842",
+   "entry": "yes",
+   "name": "InovCares",
+   "category": "AI product (commercial)",
+   "condition": "Maternal health in under-resourced settings; maternal health equity",
+   "area": "Pregnancy & birth",
+   "tech": "Mobile-first technology with artificial intelligence-assisted assessments",
+   "use": "Integrated maternal health intervention with AI risk flagging and referral coordination",
+   "level": 2,
+   "stage": "12-month pilot study",
+   "external": "Yes",
+   "population": "605 pregnant people in two federally qualified health centers in Texas; partnerships with payer and local community organizations",
+   "peer": "Yes",
+   "ux": "Codesign, bilingual tools, AI integration; training and digital literacy support were critical; strong patient and provider engagement from codesign and bilingual approach",
+   "result": "Strong patient and provider engagement; AI flagged risks and coordinated referrals; payer and institutional partnerships enabled integration with reimbursement and workflow systems; AI and digital tools can promote equity if developed intentionally but expose gaps in infrastructure and resources",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "InovCares",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42979087/",
+   "title": "Reimagining Maternal Health Through Technology, Community, and System Partnership: Lessons from the InovCares Care Model.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Health equity",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42979087/",
+     "title": "Reimagining Maternal Health Through Technology, Community, and System Partnership: Lessons from the InovCares Care Model.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Health equity"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.3389/fpubh.2026.1961647",
+   "entry": "yes",
+   "name": "ChatGPT 5.5 and DeepSeek V3",
+   "category": "AI product (commercial)",
+   "condition": "Postpartum health consultation and nursing decision support",
+   "area": "Postpartum & mental health",
+   "tech": "Large language models",
+   "use": "Postpartum health consultation and nursing care plan development",
+   "level": 2,
+   "stage": "Three-stage cross-sectional evaluation",
+   "external": "Yes",
+   "population": "30 guideline-based questions, 120 postpartum women consultations, 120 de-identified retrospective clinical cases",
+   "peer": "Yes",
+   "ux": "Evaluated by clinical experts and postpartum women using blinded assessment; Stage 2 included patient perspective evaluation for satisfaction and usefulness",
+   "result": "Stage 1: ChatGPT 5.5 higher correctness (4.00 ± 0.00 vs 3.88 ± 0.33, p=0.002); DeepSeek V3 higher on completeness, clinical management appropriateness, and safety (all p<0.001) but responses more difficult to read; Stage 2: ChatGPT 5.5 higher patient satisfaction/usefulness and clinician correctness",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "ChatGPT 5.5; DeepSeek V3",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42978698/",
+   "title": "Beyond accuracy: a three-stage evaluation of large language models for postpartum health consultation and nursing decision support.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Frontiers in public health",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42978698/",
+     "title": "Beyond accuracy: a three-stage evaluation of large language models for postpartum health consultation and nursing decision support.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Frontiers in public health"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.2196/97878",
+   "entry": "yes",
+   "name": "Five large language models for infertility health education",
+   "category": "AI product (commercial)",
+   "condition": "Patient health education for infertility",
+   "area": "Fertility & IVF",
+   "tech": "Large language models (DeepSeek-R1, ChatGPT GPT-5.2 Plus, Kimi 2.5, Qwen 3, Gemini 3)",
+   "use": "Generating health education materials for patients with infertility",
+   "level": 2,
+   "stage": "Comparative evaluation study",
+   "external": "Yes",
+   "population": "Health education texts generated for 6 dimensions and 93 items based on reproductive health literacy framework; evaluated in Chinese and English",
+   "peer": "Yes",
+   "ux": "Content quality evaluated by reproductive medicine experts in double-blinded manner across accuracy, comprehensiveness, and humanistic care dimensions; readability assessed using multiple indices (Flesch Reading Ease, Gunning Fog Index, Flesch-Kincaid Grade Level)",
+   "result": "Systematic evaluation of readability and content quality of LLM-generated health education materials identified model strengths and limitations for infertility education",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "DeepSeek-R1; ChatGPT (GPT-5.2 Plus); Kimi 2.5; Qwen 3; Gemini 3",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42971940/",
+   "title": "Evaluating the Performance of Five Leading Large Language Models in Generating Health Education Materials for Patients With Infertility: Comparative Analysis.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Journal of medical Internet research",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42971940/",
+     "title": "Evaluating the Performance of Five Leading Large Language Models in Generating Health Education Materials for Patients With Infertility: Comparative Analysis.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Journal of medical Internet research"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.2196/101829",
+   "entry": "yes",
+   "name": "Machine learning-based miscarriage risk stratification model for PCOS",
+   "category": "AI/ML research model",
+   "condition": "Miscarriage risk prediction in PCOS after fresh embryo transfer",
+   "area": "Fertility & IVF",
+   "tech": "Machine learning algorithms including Extreme Gradient Boosting (XGBoost)",
+   "use": "Risk stratification and prediction for clinical pregnancy outcomes",
+   "level": 2,
+   "stage": "Multicenter development, geographic external validation, and prospective temporal validation",
+   "external": "Yes",
+   "population": "Development: 7241 clinical pregnancy IVF/ICSI cycles (973 miscarriages); external validation: 1170 cycles (146 miscarriages); prospective temporal validation: 500 cycles (62 miscarriages)",
+   "peer": "Yes",
+   "ux": "",
+   "result": "XGBoost model achieved highest test-set ROC-AUC (0.712) and accuracy of 65.2%; key predictive variables included total gonadotropin dose, initial gonadotropin dose, total sperm count, progressive motile sperm count, and infertility duration; findings interpreted as exploratory due to small test samp",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42987309/",
+   "title": "Miscarriage Risk Prediction for Women With Polycystic Ovary Syndrome Who Achieve Clinical Pregnancy After Fresh Embryo Transfer: Multicenter Development, Geographic External Validation, and Prospective Temporal Validation Study.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Journal of medical Internet research",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42987309/",
+     "title": "Miscarriage Risk Prediction for Women With Polycystic Ovary Syndrome Who Achieve Clinical Pregnancy After Fresh Embryo Transfer: Multicenter Development, Geographic External Validation, and Prospective Temporal Validation Study.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Journal of medical Internet research"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.1016/j.ejogrb.2026.115521",
+   "entry": "yes",
+   "name": "Machine learning diagnostic model for endometriosis using circadian rhythm biomarkers",
+   "category": "AI/ML research model",
+   "condition": "Endometriosis diagnosis",
+   "area": "Gynecologic & hormonal",
+   "tech": "Machine learning algorithms (four types) with weighted gene co-expression network analysis",
+   "use": "Diagnostic biomarker identification for endometriosis",
+   "level": 2,
+   "stage": "Algorithm development and external validation",
+   "external": "Yes",
+   "population": "Training cohort with evaluation in three independent GEO validation cohorts",
+   "peer": "Yes",
+   "ux": "",
+   "result": "SMC2, SUV39H2, and TIMELESS identified as candidate molecular biomarkers demonstrating favorable diagnostic performance across three independent validation sets; computational analysis suggested higher enrichment of B cells and CD8+ T cells and lower Tregs and NK cells in endometriosis samples; sing",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42994179/",
+   "title": "Identification and validation of circadian rhythm-related diagnostic biomarkers for endometriosis through integrating machine learning and single-cell analysis.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "European journal of obstetrics, gynecology, and reproductive biology",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42994179/",
+     "title": "Identification and validation of circadian rhythm-related diagnostic biomarkers for endometriosis through integrating machine learning and single-cell analysis.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "European journal of obstetrics, gynecology, and reproductive biology"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.4274/tjod.galenos.2026.10663",
+   "entry": "yes",
+   "name": "Machine learning models for IVF outcome prediction in unexplained infertility",
+   "category": "AI/ML research model",
+   "condition": "Clinical pregnancy prediction in unexplained infertility after IVF",
+   "area": "Fertility & IVF",
+   "tech": "Five machine learning algorithms: light gradient boosting machine (LGBM), random forest, logistic regression, extra trees classifier, and eXtreme gradient boosting",
+   "use": "Predicting clinical pregnancy outcomes to enhance early treatment decision-making and patient counseling",
+   "level": 2,
+   "stage": "Development and retrospective analysis",
+   "external": "No",
+   "population": "145 couples with unexplained infertility from a single-center IVF clinic",
+   "peer": "Yes",
+   "ux": "",
+   "result": "LGBM model achieved highest test-set ROC-AUC of 0.712 and accuracy of 65.2%; key predictive variables included total gonadotropin dose, initial gonadotropin dose, total sperm count, progressive motile sperm count, and infertility duration; findings interpreted as exploratory due to small test sample",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42969655/",
+   "title": "Machine learning prediction of IVF outcomes in unexplained infertility.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Turkish journal of obstetrics and gynecology",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42969655/",
+     "title": "Machine learning prediction of IVF outcomes in unexplained infertility.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Turkish journal of obstetrics and gynecology"
+    }
+   ]
+  },
+  {
    "find": "doi:10.2196/102863",
    "entry": "yes",
    "name": "MotherHeat Alert app",
@@ -3225,6 +3535,80 @@
      "scout": "trota",
      "date_found": "2026-11-02",
      "source": "Behavioral sciences (Basel, Switzerland)"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.1016/j.pec.2026.110375",
+   "entry": "yes",
+   "name": "Patient Advocate App",
+   "category": "Digital tool (non-AI)",
+   "condition": "Black maternal health disparities; communication barriers in prenatal and postpartum care",
+   "area": "Pregnancy & birth",
+   "tech": "Digital patient advocacy platform",
+   "use": "Pre-visit preparation, real-time symptom documentation, post-visit follow-up",
+   "level": 1,
+   "stage": "Discussion paper proposing evaluation",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "Yes",
+   "ux": "Described as supporting engagement; paper recommends testing for usability, accuracy, and equitable access",
+   "result": "Proposed as potentially helping to mitigate communication barriers contributing to racial disparities in maternal outcomes; no empirical results reported",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "Patient Advocate App",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42987778/",
+   "title": "Digital patient advocacy and Black maternal health: Reimagining communication infrastructure in prenatal and postpartum care.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Patient education and counseling",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42987778/",
+     "title": "Digital patient advocacy and Black maternal health: Reimagining communication infrastructure in prenatal and postpartum care.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Patient education and counseling"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.1371/journal.pdig.0001821",
+   "entry": "yes",
+   "name": "HERA (Health Engagement and Reflective Agent)",
+   "category": "AI/ML research model",
+   "condition": "Menstrual-cycle-related conditions and menopausal symptoms",
+   "area": "Gynecologic & hormonal",
+   "tech": "Multi-agent digital health framework with adaptive agents and rule-based modules",
+   "use": "Supporting engagement, behavior change, and equitable self-management in menstrual and menopausal health",
+   "level": 1,
+   "stage": "Conceptual framework with staged evaluation plan",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "Yes",
+   "ux": "Patient-facing design treating equity and engagement as first-class; designed to integrate self-monitoring, deliver personalized feedback, surface governed guidance, monitor equity, and coordinate hand-offs to clinicians and occupational-health services",
+   "result": "Proposes HERA as a design reference distinguishing technically feasible from aspirational elements with a staged, threshold-gated evaluation plan",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42986821/",
+   "title": "Supporting engagement, behavior change, and equitable self-management in menstrual and menopausal health: A multi-agent digital-health framework.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "PLOS digital health",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42986821/",
+     "title": "Supporting engagement, behavior change, and equitable self-management in menstrual and menopausal health: A multi-agent digital-health framework.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "PLOS digital health"
     }
    ]
   },
@@ -5143,50 +5527,6 @@
      "scout": "lamarr",
      "date_found": "2026-10-14",
      "source": "STAT"
-    }
-   ]
-  },
-  {
-   "find": "news:57b358c994b680b9",
-   "entry": "yes",
-   "name": "AI breast cancer risk test",
-   "category": "AI product (commercial)",
-   "condition": "breast cancer risk assessment",
-   "area": "Cancer & screening",
-   "tech": "AI for cancer risk assessment",
-   "use": "At-home breast cancer risk screening",
-   "level": 0,
-   "stage": "Launch",
-   "external": "n/a",
-   "population": "Not stated",
-   "peer": "n/a",
-   "ux": "At-home ordering available",
-   "result": "Now available nationwide for at-home ordering",
-   "regulatory": "Not stated",
-   "verification": "Machine-tagged",
-   "tagged_by": "backfill",
-   "note": "",
-   "product": "Not stated",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS3RVVF9LOVk1UGRPQXBVOFpYRC1aOXNQSUlQZnpkVERMN0pDT3hXMjRyamNJRUY0NWNYNVU2VEVQbU16Q0ZNNk4zdGI5Zk1BcnhkMU5NU1h4TnhuQjdOdTZ6MEJaYnhGcmU2R0tSaXdleWc0TUQxY1J5eGxXbnZRenpYbGltbWph?oc=5",
-   "title": "This AI Breast Cancer Risk Test Is Finally Available Nationwide, and You Can Order It From Home",
-   "scout": "lamarr",
-   "date_found": "2026-10-14",
-   "source": "Oprah Daily",
-   "flags": "news",
-   "sources": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQek5URnRZYjlPVERGODlFWGJiX2pZU2I0XzZfTGdzcmZOMWxrTDRWSkV6NF82bk5mOU9QOFI4bllXM0xxcTdCY2dUVDJxR1ZSVURyNXFRbmhiWkFGeldldG1sdWRkQkxad2duY1JfU3FGZHVJdk9RZU9QV2kzTGxMU25QWERXSTlmSjg3Nk5lRTE2Ml9MT25SN19zdkJmWGtpUjB4cDV1V0JBeTlKdkE5R1owZGpzOWNKMXhmSjdjbU43MUNxcjU0UU10V2xsbU55Q2xvNWtn?oc=5",
-     "title": "Birmingham university spin-out secures £1.1m to develop new hormone diagnostic tests",
-     "scout": "walker",
-     "date_found": "2026-09-27",
-     "source": "Greater Birmingham Chambers of Commerce"
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS3RVVF9LOVk1UGRPQXBVOFpYRC1aOXNQSUlQZnpkVERMN0pDT3hXMjRyamNJRUY0NWNYNVU2VEVQbU16Q0ZNNk4zdGI5Zk1BcnhkMU5NU1h4TnhuQjdOdTZ6MEJaYnhGcmU2R0tSaXdleWc0TUQxY1J5eGxXbnZRenpYbGltbWph?oc=5",
-     "title": "This AI Breast Cancer Risk Test Is Finally Available Nationwide, and You Can Order It From Home",
-     "scout": "lamarr",
-     "date_found": "2026-10-14",
-     "source": "Oprah Daily"
     }
    ]
   },
@@ -7336,6 +7676,43 @@
      "scout": "trota",
      "date_found": "2026-11-02",
      "source": "Complementary therapies in medicine"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.2196/92476",
+   "entry": "yes",
+   "name": "Scoping review of digital health interventions for maternal health outcomes in Southeast Asia LMICs",
+   "category": "Evidence review",
+   "condition": "Maternal health in low- and middle-income countries",
+   "area": "Pregnancy & birth",
+   "tech": "Digital health interventions (primarily mobile apps and SMS)",
+   "use": "Improving maternal health outcomes",
+   "level": null,
+   "stage": "Scoping review",
+   "external": "n/a",
+   "population": "25 studies from 7 Southeast Asia LMICs published January 2005 through May 2025",
+   "peer": "Yes",
+   "ux": "",
+   "result": "Mobile apps and SMS most commonly used (22 of 25 studies, 88%); 14 studies (56%) reported outcomes across more than one proximal-intermediate-distal framework domain; intermediate outcomes reported most frequently (23 studies, 92%)",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "trota",
+   "note": "",
+   "product": "Multiple DHIs reviewed",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42976329/",
+   "title": "Maternal Health Outcomes of Digital Health Interventions in Low- and Middle-Income Countries in Southeast Asia: Scoping Review.",
+   "scout": "trota",
+   "date_found": "2026-11-09",
+   "source": "Asian/Pacific Island nursing journal",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42976329/",
+     "title": "Maternal Health Outcomes of Digital Health Interventions in Low- and Middle-Income Countries in Southeast Asia: Scoping Review.",
+     "scout": "trota",
+     "date_found": "2026-11-09",
+     "source": "Asian/Pacific Island nursing journal"
     }
    ]
   }
