@@ -1,5 +1,5 @@
 {
- "built": "2026-11-10",
+ "built": "2026-11-11",
  "levels": {
   "0": "Claimed",
   "1": "Technical",
@@ -691,6 +691,13 @@
      "scout": "elion",
      "date_found": "2026-11-10",
      "source": "ClinicalTrials.gov"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPQUpIZ0R5V1kzVGpRRUNRQ2lxUEI0SnRCSTBJYnlCdS1rbU9TME5GbXZ3SjF6c21uQmtiaXY3TnpiWk9Ib1A0OENZRXRleS1nZzJTRmRjR19IZWZHcWw1VnpoQmtmQ1hRbnh2V3M3QzBMWHBkXzhVbC1sTVBtYmFnTkIyQlJhMlRIeDR5WWdVRzdzU2sybXBpUG50djVINHpCdW1fR1VIZGt2QWtqeXhqWWg2d2dWaU5zUzBsVV9WVXNCTWVzcTJoZVRnOFU?oc=5",
+     "title": "Meet Nesma Amin, founder of the first Egyptian-speaking app for women’s reproductive health",
+     "scout": "lamarr",
+     "date_found": "2026-11-11",
+     "source": "EnterpriseAM"
     }
    ]
   },
@@ -5300,50 +5307,6 @@
    ]
   },
   {
-   "find": "news:a6d924658cbc3da4",
-   "entry": "yes",
-   "name": "Oura AI advisor chatbot for women's health",
-   "category": "AI product (commercial)",
-   "condition": "Women's health using biometric data",
-   "area": "Cross-condition",
-   "tech": "AI chatbot, biometric data integration",
-   "use": "Clinical decision support using wearable biometric data",
-   "level": 0,
-   "stage": "Product launch",
-   "external": "Not stated",
-   "population": "Not stated",
-   "peer": "n/a",
-   "ux": "",
-   "result": "Launched AI advisor chatbot for women's health",
-   "regulatory": "Not stated",
-   "verification": "Machine-tagged",
-   "tagged_by": "backfill",
-   "note": "",
-   "product": "Oura",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVjNsN0FRRnZpNkhhSTBza3h1cmJ6aEYtaUYza2dXTW13aFR0QS1OWlBBRG04Q0VZNU1zUGw4cWF2ZFF0NmxDUzJPblJTM0JaSnBXdG9ic3E0eVIzUC0zVEtVSXFQczAxN1hxMENhaVY0b2NDTnRVMWNWY3JrT09uRFlKeGVoV2t2b2ZEYVhLUG53STgzS2ozZzJEdEl6dndXT3hDV05iX0RhaVZiaG1NaUZpM1ZfQQ?oc=5",
-   "title": "Oura launches advisor chatbot for women's health using biometric data",
-   "scout": "lamarr",
-   "date_found": "2026-10-07",
-   "source": "NewsBytes",
-   "flags": "news",
-   "sources": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMkxxbHJoZ3VPMDBhNHF6ZUs1WnBNRnRxZ3FCcjdrN1Q3dU9wa3N4bWFmckJSLTJnWUNGVUN1Q1N4SEsyWEdhOHFXOURSaXBBaHRTMjB1LU9zTVhrbXV0LWoxaGZCcEtKVlFqTVBfUXRGYjJuaTY4ejJCUGlQMHpGRE5zVE5hSUIxakNSSkwtMk1udzZ4alZocTJTRQ?oc=5",
-     "title": "ŌURA Launches IPO of 50 Million Shares at $40 to $44 Range",
-     "scout": "lamarr",
-     "date_found": "2026-09-27",
-     "source": "citybiz"
-    },
-    {
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVjNsN0FRRnZpNkhhSTBza3h1cmJ6aEYtaUYza2dXTW13aFR0QS1OWlBBRG04Q0VZNU1zUGw4cWF2ZFF0NmxDUzJPblJTM0JaSnBXdG9ic3E0eVIzUC0zVEtVSXFQczAxN1hxMENhaVY0b2NDTnRVMWNWY3JrT09uRFlKeGVoV2t2b2ZEYVhLUG53STgzS2ozZzJEdEl6dndXT3hDV05iX0RhaVZiaG1NaUZpM1ZfQQ?oc=5",
-     "title": "Oura launches advisor chatbot for women's health using biometric data",
-     "scout": "lamarr",
-     "date_found": "2026-10-07",
-     "source": "NewsBytes"
-    }
-   ]
-  },
-  {
    "find": "news:56576c5c098235ef",
    "entry": "yes",
    "name": "Freyya Pelvic Floor Monitor",
@@ -6860,6 +6823,94 @@
      "scout": "elion",
      "date_found": "2026-11-03",
      "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "news:4429211a9f62d5d3",
+   "entry": "yes",
+   "name": "Counsel Health",
+   "category": "AI product (commercial)",
+   "condition": "AI care",
+   "area": "Cross-condition",
+   "tech": "AI",
+   "use": "Care support",
+   "level": 0,
+   "stage": "Acquisition",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "lamarr",
+   "note": "",
+   "product": "Oura Counsel Health",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOclhLdnhFeVkxV1k5c3MxYkJDczF6am1lemlMTUpYSWp4dFlVTE1HM0xjZTdhNGFFQ0FoMFJvbmgtMFZndWxlazVOeTJsbmxVNGRrVUlXd0k0MXNzc0tTUTlhNnluR0FpNUxJdWpCbHRaWnBZNzdyd0E0LTZyOWNpbA?oc=5",
+   "title": "Oura to buy AI care startup Counsel Health for $625M",
+   "scout": "lamarr",
+   "date_found": "2026-11-11",
+   "source": "Endpoints News",
+   "flags": "news",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMkxxbHJoZ3VPMDBhNHF6ZUs1WnBNRnRxZ3FCcjdrN1Q3dU9wa3N4bWFmckJSLTJnWUNGVUN1Q1N4SEsyWEdhOHFXOURSaXBBaHRTMjB1LU9zTVhrbXV0LWoxaGZCcEtKVlFqTVBfUXRGYjJuaTY4ejJCUGlQMHpGRE5zVE5hSUIxakNSSkwtMk1udzZ4alZocTJTRQ?oc=5",
+     "title": "ŌURA Launches IPO of 50 Million Shares at $40 to $44 Range",
+     "scout": "lamarr",
+     "date_found": "2026-09-27",
+     "source": "citybiz"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVjNsN0FRRnZpNkhhSTBza3h1cmJ6aEYtaUYza2dXTW13aFR0QS1OWlBBRG04Q0VZNU1zUGw4cWF2ZFF0NmxDUzJPblJTM0JaSnBXdG9ic3E0eVIzUC0zVEtVSXFQczAxN1hxMENhaVY0b2NDTnRVMWNWY3JrT09uRFlKeGVoV2t2b2ZEYVhLUG53STgzS2ozZzJEdEl6dndXT3hDV05iX0RhaVZiaG1NaUZpM1ZfQQ?oc=5",
+     "title": "Oura launches advisor chatbot for women's health using biometric data",
+     "scout": "lamarr",
+     "date_found": "2026-10-07",
+     "source": "NewsBytes"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOclhLdnhFeVkxV1k5c3MxYkJDczF6am1lemlMTUpYSWp4dFlVTE1HM0xjZTdhNGFFQ0FoMFJvbmgtMFZndWxlazVOeTJsbmxVNGRrVUlXd0k0MXNzc0tTUTlhNnluR0FpNUxJdWpCbHRaWnBZNzdyd0E0LTZyOWNpbA?oc=5",
+     "title": "Oura to buy AI care startup Counsel Health for $625M",
+     "scout": "lamarr",
+     "date_found": "2026-11-11",
+     "source": "Endpoints News"
+    }
+   ]
+  },
+  {
+   "find": "news:7817da7e38c61166",
+   "entry": "yes",
+   "name": "Helium Health AI-Powered Maternal Healthcare Initiative",
+   "category": "AI product (commercial)",
+   "condition": "Maternal healthcare",
+   "area": "Pregnancy & birth",
+   "tech": "AI",
+   "use": "Maternal healthcare",
+   "level": 0,
+   "stage": "Funding news",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "lamarr",
+   "note": "",
+   "product": "Helium Health",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYVRQbWZCQ3d1Sm5CUjZVei1ScGRSUG1tc0xQUEx0dWU4bFF6bEtkWGc0MUQxUG5FendqZjE5YS1TQjhUUHJ3MzVUVGQxbFlZR0pCLUxXemd5RWdOdWJFc3RDTzk3YkRYNHRlTFZQQk9HOE83THdIZ2g2ZG9UNlppN3hlaDAtVzJxdGNBNmh1Y2lLallNLXFiNUFESnV6QQ?oc=5",
+   "title": "Google Backs Helium Health’s AI-Powered Maternal Healthcare Initiative",
+   "scout": "lamarr",
+   "date_found": "2026-11-11",
+   "source": "Femtech Insider",
+   "flags": "news",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYVRQbWZCQ3d1Sm5CUjZVei1ScGRSUG1tc0xQUEx0dWU4bFF6bEtkWGc0MUQxUG5FendqZjE5YS1TQjhUUHJ3MzVUVGQxbFlZR0pCLUxXemd5RWdOdWJFc3RDTzk3YkRYNHRlTFZQQk9HOE83THdIZ2g2ZG9UNlppN3hlaDAtVzJxdGNBNmh1Y2lLallNLXFiNUFESnV6QQ?oc=5",
+     "title": "Google Backs Helium Health’s AI-Powered Maternal Healthcare Initiative",
+     "scout": "lamarr",
+     "date_found": "2026-11-11",
+     "source": "Femtech Insider"
     }
    ]
   },
