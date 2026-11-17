@@ -1,5 +1,5 @@
 {
- "built": "2026-11-16",
+ "built": "2026-11-17",
  "levels": {
   "0": "Claimed",
   "1": "Technical",
@@ -735,6 +735,43 @@
      "scout": "trota",
      "date_found": "2026-11-16",
      "source": "The Lancet. Digital health"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.37737/ace.26015",
+   "entry": "yes",
+   "name": "Medical chatbot service for medicine use in pregnancy and lactation",
+   "category": "Digital tool (non-AI)",
+   "condition": "Medicine use information during pregnancy and lactation",
+   "area": "Pregnancy & birth",
+   "tech": "Rule-based chatbot system with predefined response patterns",
+   "use": "Provides medicine use recommendations to pregnant and lactating women",
+   "level": 4,
+   "stage": "User experience and safety evaluation",
+   "external": "Yes",
+   "population": "1,000 records (419 pregnant women, 581 lactating women) in Japan, December 2021 to August 2022",
+   "peer": "Yes",
+   "ux": "Overall satisfaction 93.9%; high satisfaction across consultation categories",
+   "result": "No post-use health problems reported; overall satisfaction 93.9% with no significant difference between pregnant and lactating women (P = .866)",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "gilbreth",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/43022444/",
+   "title": "Consultation Categories, Satisfaction, and Post-use Health Problems of Medical Chatbot Service Providing Medicine Use Recommendations for Women during Pregnancy and Lactation in Japan.",
+   "scout": "gilbreth",
+   "date_found": "2026-11-17",
+   "source": "Annals of clinical epidemiology",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/43022444/",
+     "title": "Consultation Categories, Satisfaction, and Post-use Health Problems of Medical Chatbot Service Providing Medicine Use Recommendations for Women during Pregnancy and Lactation in Japan.",
+     "scout": "gilbreth",
+     "date_found": "2026-11-17",
+     "source": "Annals of clinical epidemiology"
     }
    ]
   },
