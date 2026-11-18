@@ -1,5 +1,5 @@
 {
- "built": "2026-11-17",
+ "built": "2026-11-18",
  "levels": {
   "0": "Claimed",
   "1": "Technical",
@@ -7362,6 +7362,80 @@
      "scout": "elion",
      "date_found": "2026-11-17",
      "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "news:cc318b3b0c656b16",
+   "entry": "yes",
+   "name": "Natural Cycles Smart Ring",
+   "category": "Device (AI not stated)",
+   "condition": "Fertility tracking",
+   "area": "Fertility & IVF",
+   "tech": "Not stated",
+   "use": "Wearable ring for cycle tracking",
+   "level": 0,
+   "stage": "Product launch",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "Not stated",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "lamarr",
+   "note": "",
+   "product": "Natural Cycles Smart Ring",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaDd0Z1NtMWZ5aVdEYXFESGtrS2ZDc0VFNWlUU2x3ZVhfeDAwbUFyVmhTTTZPTnpsd1lBc3JhcWFxbFhUNGdVeDlzY3Qxa2ZEckZpLW03UDlya3BNdWV4SWJNVGF5dnZXQ1pkVDBDV0szek9Kd0Rxb3ZweTJCZUVkTWhuWWhDX2xOalpYcA?oc=5",
+   "title": "Natural Cycles Launches Smart Ring, NextGen Wearable Band",
+   "scout": "lamarr",
+   "date_found": "2026-11-18",
+   "source": "Femtech Insider",
+   "flags": "news",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaDd0Z1NtMWZ5aVdEYXFESGtrS2ZDc0VFNWlUU2x3ZVhfeDAwbUFyVmhTTTZPTnpsd1lBc3JhcWFxbFhUNGdVeDlzY3Qxa2ZEckZpLW03UDlya3BNdWV4SWJNVGF5dnZXQ1pkVDBDV0szek9Kd0Rxb3ZweTJCZUVkTWhuWWhDX2xOalpYcA?oc=5",
+     "title": "Natural Cycles Launches Smart Ring, NextGen Wearable Band",
+     "scout": "lamarr",
+     "date_found": "2026-11-18",
+     "source": "Femtech Insider"
+    }
+   ]
+  },
+  {
+   "find": "news:372e687a74683fd1",
+   "entry": "yes",
+   "name": "Longevitix women's health extension",
+   "category": "AI product (commercial)",
+   "condition": "Women's health",
+   "area": "Cross-condition",
+   "tech": "AI platform",
+   "use": "Women's health AI platform extension",
+   "level": 0,
+   "stage": "Product launch",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "Not stated",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "lamarr",
+   "note": "",
+   "product": "Longevitix",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQW5xVW1KcGxGR01sMjlQSFJyQU02RFhpV1NkcmVzQXI0VWVadDVvYVc2WUY1dTE0djZfY1JkRXU0RTkya0pzMDROOTViQ09XUENnNnA4NmpDcUxsamw2OVc2eHF5N1gzcGdUVW5XMzdQQlEtenJ3VGxiMk9TQmJ0NHFtNDhxMnFwclBtd1owWm5UVjdCSDlKbk5DTTRINkZTdHVndEZjT3hnZlZTVmVoTA?oc=5",
+   "title": "Longevitix launches women’s health extension to AI platform",
+   "scout": "lamarr",
+   "date_found": "2026-11-18",
+   "source": "FemTech World",
+   "flags": "news",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQW5xVW1KcGxGR01sMjlQSFJyQU02RFhpV1NkcmVzQXI0VWVadDVvYVc2WUY1dTE0djZfY1JkRXU0RTkya0pzMDROOTViQ09XUENnNnA4NmpDcUxsamw2OVc2eHF5N1gzcGdUVW5XMzdQQlEtenJ3VGxiMk9TQmJ0NHFtNDhxMnFwclBtd1owWm5UVjdCSDlKbk5DTTRINkZTdHVndEZjT3hnZlZTVmVoTA?oc=5",
+     "title": "Longevitix launches women’s health extension to AI platform",
+     "scout": "lamarr",
+     "date_found": "2026-11-18",
+     "source": "FemTech World"
     }
    ]
   },
