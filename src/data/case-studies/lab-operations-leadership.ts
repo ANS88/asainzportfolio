@@ -21,6 +21,7 @@ export const labOperationsLeadership: CaseStudy = {
   orbit: {
     order: 7,
     cardTitle: "Design for Lab Ops",
+    headline: "Building Natera's lab design practice from scratch",
     summary:
       "Built Natera's lab-operations design practice from scratch while shipping tools for 50+ labs.",
     year: "2023–25",

@@ -17,6 +17,7 @@ export const histopathologyWorkflow: CaseStudy = {
   orbit: {
     order: 8,
     cardTitle: "Histopathology Lab",
+    headline: "Taking design research into the lab",
     summary:
       "Made the case for in-lab ethnography and redesigned a pipeline that ran on spreadsheets and manual queues.",
     year: "2024–25",

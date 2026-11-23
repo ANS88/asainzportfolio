@@ -19,6 +19,7 @@ export const aiDesignPractice: CaseStudy = {
   orbit: {
     order: 6,
     cardTitle: "AI in Design Practice",
+    headline: "Speeding up design work while keeping judgment human",
     summary:
       "Defined how the team adopts AI across five practice areas: production speeds up, judgment stays human.",
     year: "2026",

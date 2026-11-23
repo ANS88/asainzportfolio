@@ -1,16 +1,5 @@
-import Hero from "@/components/Hero";
-import ContactBlock from "@/components/ContactBlock";
-import OrbitPortfolio from "@/components/OrbitPortfolio";
-import FemswarmFeature from "@/components/FemswarmFeature";
+import CareerTimeline from "@/components/CareerTimeline";
+
 export default function Home() {
-  return (
-    <>
-      <div className="container">
-        <Hero />
-        <OrbitPortfolio />
-        <FemswarmFeature />
-      </div>
-      <ContactBlock />
-    </>
-  );
+  return <CareerTimeline />;
 }

@@ -22,6 +22,7 @@ export const unifiedPatientPortal: CaseStudy = {
   orbit: {
     order: 1,
     cardTitle: "Patient Portal",
+    headline: "Giving patients a view into their own genetic tests",
     summary:
       "Used a federal compliance mandate to fund Natera's first patient portal, giving patients visibility into their own genetic tests.",
     year: "2023–24",

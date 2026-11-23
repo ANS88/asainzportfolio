@@ -52,6 +52,8 @@ export interface OrbitMeta {
   /** Position in the orbit; lower comes first. */
   order: number;
   cardTitle: string;
+  /** Outcome-led headline for the home timeline. */
+  headline: string;
   summary: string;
   year: string;
   thumbnail: string;

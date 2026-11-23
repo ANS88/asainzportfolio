@@ -20,6 +20,7 @@ export const clinicalTrialScreening: CaseStudy = {
   orbit: {
     order: 3,
     cardTitle: "Trial Screening",
+    headline: "Making AI screening clinicians can trust and override",
     summary:
       "Designed an AI screening tool that matches oncology patients to trials while clinicians keep the final call.",
     year: "2026",
