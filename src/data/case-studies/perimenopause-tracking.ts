@@ -24,6 +24,7 @@ export const perimenopauseTracking: CaseStudy = {
   orbit: {
     order: 5,
     cardTitle: "Perimenopause Study",
+    headline: "Finding what a high usability score was hiding",
     summary:
       "Ran a two-week diary study with 40 women to find what an 88.3 usability score was hiding.",
     year: "2024–25",

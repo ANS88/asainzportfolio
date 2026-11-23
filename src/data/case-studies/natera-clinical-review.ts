@@ -17,6 +17,7 @@ export const nateraClinicalReview: CaseStudy = {
   orbit: {
     order: 2,
     cardTitle: "Clinical Review",
+    headline: "Turning a usability audit into a platform for 3.5M tests a year",
     summary:
       "Reframed a usability audit into a platform investment that replaced four legacy tools and halved report turnaround.",
     year: "2024–25",

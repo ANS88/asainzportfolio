@@ -3224,3 +3224,144 @@ section { padding: 5rem 0; }
   .orbit-card .orbit-frame { transition: none; }
   .orbit-panel, .orbit-panel.is-leaving { animation: none; }
 }
+
+/* ═══ CAREER TIMELINE (home) ═══ */
+.tl { --tl-gap: clamp(3rem, 6vw, 6rem); position: relative; }
+.tl-scroller { scroll-behavior: auto; outline: none; }
+.tl-scroller:focus-visible { outline: 2px solid var(--accent2); outline-offset: -6px; }
+.tl-track {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 7rem clamp(1.5rem, 5vw, 4rem) 4rem;
+}
+.tl-intro { max-width: 34rem; }
+.tl-intro-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink2);
+}
+.tl-intro-text { margin-top: 1rem; font-size: 1.05rem; line-height: 1.6; color: var(--ink2); }
+.tl-intro-text a, .tl-intro-links a, .tl-contact-links a, .tl-contact-more a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.tl-intro-text a:hover, .tl-intro-links a:hover, .tl-contact-links a:hover, .tl-contact-more a:hover { color: var(--accent2); }
+.tl-intro-links { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-top: 1.25rem; font-size: .9rem; }
+.tl-hint { display: none; }
+
+.tl-list { list-style: none; display: flex; flex-direction: column; gap: 3.5rem; padding: 0; }
+.tl-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.tl-card:focus-visible { outline: none; }
+.tl-card:focus-visible .tl-media { outline: 2px solid var(--accent2); outline-offset: 4px; }
+.tl-media {
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+}
+.tl-card:hover .tl-media { transform: translateY(-4px); }
+.tl-when {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.25rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+.tl-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.tl-headline {
+  margin-top: .55rem;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 1.8vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink2);
+  transition: color var(--transition-fast);
+}
+.tl-card:hover .tl-headline, .tl-card:focus-visible .tl-headline { color: var(--accent2); }
+.tl-role { margin-top: .45rem; font-size: .8rem; color: var(--ink3); }
+.tl-summary { margin-top: .6rem; font-size: .95rem; line-height: 1.55; color: var(--ink2); }
+
+.tl-contact-title { font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.5rem); font-weight: 400; line-height: 1; color: var(--ink2); }
+.tl-contact-links, .tl-contact-more { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: 1.25rem; font-size: 1rem; }
+.tl-contact-more { font-size: .9rem; }
+.tl-progress { display: none; }
+
+/* Desktop with a mouse or trackpad: one screen, the timeline runs sideways. */
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .tl { height: 100vh; height: 100dvh; }
+  .tl-scroller {
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-padding-inline: clamp(1.5rem, 5vw, 4rem);
+  }
+  .tl-scroller::-webkit-scrollbar { display: none; }
+  .tl-track {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--tl-gap);
+    width: max-content;
+    height: 100%;
+    padding: 6rem clamp(1.5rem, 5vw, 4rem) 4rem;
+  }
+  .tl-intro { flex: 0 0 min(30rem, 34vw); }
+  .tl-hint {
+    display: inline-flex;
+    gap: .5rem;
+    margin-top: 2.5rem;
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink3);
+  }
+  .tl-hint span { animation: tl-nudge 1.8s ease-in-out infinite; }
+  .tl-list { flex-direction: row; gap: var(--tl-gap); }
+  .tl-item { flex: 0 0 clamp(17rem, 23vw, 21rem); }
+  .tl-summary { display: none; }
+  /* A continuous line runs through every year marker into the next entry. */
+  .tl-when::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin-right: calc(-1 * var(--tl-gap));
+    background: var(--border);
+  }
+  .tl-contact { flex: 0 0 min(26rem, 32vw); padding-right: clamp(1.5rem, 5vw, 4rem); }
+  .tl-progress {
+    display: block;
+    position: fixed;
+    left: clamp(1.5rem, 5vw, 4rem);
+    right: clamp(1.5rem, 5vw, 4rem);
+    bottom: 1.75rem;
+    height: 2px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .tl-progress span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+}
+@keyframes tl-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@media (prefers-reduced-motion: reduce) {
+  .tl-hint span { animation: none; }
+  .tl-media { transition: none; }
+}

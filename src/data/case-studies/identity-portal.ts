@@ -19,6 +19,7 @@ export const identityPortal: CaseStudy = {
   orbit: {
     order: 4,
     cardTitle: "IDENTITY Portal",
+    headline: "Getting foster children's records off paper",
     summary:
       "Designed a secure portal so foster children's medical and legal records stop moving by mail.",
     year: "2017",
