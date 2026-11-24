@@ -850,6 +850,43 @@
    ]
   },
   {
+   "find": "NCT07516041:Recently updated, now COMPLETED",
+   "entry": "yes",
+   "name": "Training Supported by Metaverse and Virtual Reality in the Digital Breastfeeding Museum",
+   "category": "Device (AI not stated)",
+   "condition": "Breastfeeding education and self-efficacy",
+   "area": "Postpartum & mental health",
+   "tech": "Virtual Reality Headset (Meta Quest 2)",
+   "use": "Breastfeeding education and training",
+   "level": 4,
+   "stage": "Completed trial",
+   "external": "Not stated",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "Not stated",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "",
+   "url": "https://clinicaltrials.gov/study/NCT07516041",
+   "title": "[Recently updated, now COMPLETED] Long-Term Effects of Digital Breastfeeding Education on Breastfeeding Problems, Self-Efficacy, and Motivation",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "Recently updated, now COMPLETED",
+   "sources": [
+    {
+     "url": "https://clinicaltrials.gov/study/NCT07516041",
+     "title": "[Recently updated, now COMPLETED] Long-Term Effects of Digital Breastfeeding Education on Breastfeeding Problems, Self-Efficacy, and Motivation",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
    "find": "doi:10.1093/jamia/ocag180",
    "entry": "yes",
    "name": "Study of patient trust in AI-generated health education during pregnancy and postpartum",
@@ -7692,50 +7729,6 @@
    ]
   },
   {
-   "find": "NCT05607771:Recently updated, now SUSPENDED",
-   "entry": "yes",
-   "name": "DaVitri automated vitrification system",
-   "category": "Device (AI not stated)",
-   "condition": "Fertility issues",
-   "area": "Fertility & IVF",
-   "tech": "Automated vitrification device for embryo cryopreservation",
-   "use": "Semi-automated embryo vitrification for fertility treatment",
-   "level": 0,
-   "stage": "Trial suspended",
-   "external": "n/a",
-   "population": "Not stated",
-   "peer": "n/a",
-   "ux": "",
-   "result": "",
-   "regulatory": "Not stated",
-   "verification": "Machine-tagged",
-   "tagged_by": "elion",
-   "note": "",
-   "product": "Overture Life DaVitri",
-   "url": "https://clinicaltrials.gov/study/NCT05607771",
-   "title": "[Recently updated, now SUSPENDED] DaVitri: Semi-Automated Vitrificacion Clinical Study",
-   "scout": "elion",
-   "date_found": "2026-11-17",
-   "source": "ClinicalTrials.gov",
-   "flags": "Recently updated, now SUSPENDED",
-   "sources": [
-    {
-     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNengySzRMcmNWYU9KMHYtQUdPeHJyNW5DTEFvWVdCMHdfbWRCOW85ZUtTNERxa1BWQXdES1RFMWNlUU5IZkhyV0RYZ2VrdVFOTkhwYi1YNjZDWFlsdWU0ck1QcGRGZDYxS3JvM09aNlFoazF3bnFFZ3RmY3RJdVFYdy13TTM2ak1tMnMyWUlvSnNvclBKMW1wMFdjRWY4QVlyY0E?oc=5",
-     "title": "Overture Life Launches Robot-Assisted Fertilization Technology in the US",
-     "scout": "lamarr",
-     "date_found": "2026-10-28",
-     "source": "Femtech Insider"
-    },
-    {
-     "url": "https://clinicaltrials.gov/study/NCT05607771",
-     "title": "[Recently updated, now SUSPENDED] DaVitri: Semi-Automated Vitrificacion Clinical Study",
-     "scout": "elion",
-     "date_found": "2026-11-17",
-     "source": "ClinicalTrials.gov"
-    }
-   ]
-  },
-  {
    "find": "NCT07842224:Status changed RECRUITING to ACTIVE_NOT_RECRUITING",
    "entry": "yes",
    "name": "Digitally Enabled District (DED 2.0)",
@@ -7958,6 +7951,57 @@
    ]
   },
   {
+   "find": "NCT05633316:Recently updated, now TERMINATED",
+   "entry": "yes",
+   "name": "ICSIA (Automated Intracytoplasmic Sperm Injection)",
+   "category": "Device (AI not stated)",
+   "condition": "Female infertility",
+   "area": "Fertility & IVF",
+   "tech": "Automated intracytoplasmic sperm injection device",
+   "use": "Assisted reproductive technology for infertility treatment",
+   "level": 0,
+   "stage": "Trial terminated",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "Overture Life ICSIA",
+   "url": "https://clinicaltrials.gov/study/NCT05633316",
+   "title": "[Recently updated, now TERMINATED] Automated Intracytoplasmic Sperm Injection (ICSIA)",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "Recently updated, now TERMINATED",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNengySzRMcmNWYU9KMHYtQUdPeHJyNW5DTEFvWVdCMHdfbWRCOW85ZUtTNERxa1BWQXdES1RFMWNlUU5IZkhyV0RYZ2VrdVFOTkhwYi1YNjZDWFlsdWU0ck1QcGRGZDYxS3JvM09aNlFoazF3bnFFZ3RmY3RJdVFYdy13TTM2ak1tMnMyWUlvSnNvclBKMW1wMFdjRWY4QVlyY0E?oc=5",
+     "title": "Overture Life Launches Robot-Assisted Fertilization Technology in the US",
+     "scout": "lamarr",
+     "date_found": "2026-10-28",
+     "source": "Femtech Insider"
+    },
+    {
+     "url": "https://clinicaltrials.gov/study/NCT05607771",
+     "title": "[Recently updated, now SUSPENDED] DaVitri: Semi-Automated Vitrificacion Clinical Study",
+     "scout": "elion",
+     "date_found": "2026-11-17",
+     "source": "ClinicalTrials.gov"
+    },
+    {
+     "url": "https://clinicaltrials.gov/study/NCT05633316",
+     "title": "[Recently updated, now TERMINATED] Automated Intracytoplasmic Sperm Injection (ICSIA)",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
    "find": "doi:10.1186/s12889-026-28821-z",
    "entry": "yes",
    "name": "Be a Mom",
@@ -8028,6 +8072,154 @@
      "scout": "gilbreth",
      "date_found": "2026-11-24",
      "source": "JMIR research protocols"
+    }
+   ]
+  },
+  {
+   "find": "NCT07947095:New trial registered",
+   "entry": "yes",
+   "name": "Calisda",
+   "category": "Digital tool (non-AI)",
+   "condition": "Menopause symptoms",
+   "area": "Menopause & midlife",
+   "tech": "Digital health intervention",
+   "use": "Treatment of menopause symptoms",
+   "level": 0,
+   "stage": "Trial registered",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "Gaia AG Calisda",
+   "url": "https://clinicaltrials.gov/study/NCT07947095",
+   "title": "[New trial registered] Investigating the Effectiveness of Calisda, a Digital Health Intervention for Patients With Menopause Symptoms",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "New trial registered",
+   "sources": [
+    {
+     "url": "https://clinicaltrials.gov/study/NCT07947095",
+     "title": "[New trial registered] Investigating the Effectiveness of Calisda, a Digital Health Intervention for Patients With Menopause Symptoms",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "NCT07873177:Status changed NOT_YET_RECRUITING to RECRUITING",
+   "entry": "yes",
+   "name": "Internet-delivered Cognitive Behavioural Therapy",
+   "category": "Digital tool (non-AI)",
+   "condition": "Menopausal vasomotor symptoms",
+   "area": "Menopause & midlife",
+   "tech": "Internet-delivered CBT program",
+   "use": "Treatment of menopausal vasomotor symptoms",
+   "level": 0,
+   "stage": "Trial recruiting",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "",
+   "url": "https://clinicaltrials.gov/study/NCT07873177",
+   "title": "[Status changed NOT_YET_RECRUITING to RECRUITING] Internet-Delivered CBT Program for Menopausal Vasomotor Symptoms",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "Status changed NOT_YET_RECRUITING to RECRUITING",
+   "sources": [
+    {
+     "url": "https://clinicaltrials.gov/study/NCT07873177",
+     "title": "[Status changed NOT_YET_RECRUITING to RECRUITING] Internet-Delivered CBT Program for Menopausal Vasomotor Symptoms",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "NCT07956143:New trial registered",
+   "entry": "yes",
+   "name": "Stelo SPARK Study",
+   "category": "Device (AI not stated)",
+   "condition": "Type 2 diabetes, prediabetes, perimenopause",
+   "area": "Cross-condition",
+   "tech": "Glucose biosensor",
+   "use": "Monitoring glucose levels and behavioral effects of glucose visibility",
+   "level": 0,
+   "stage": "Trial registered",
+   "external": "n/a",
+   "population": "Type 2 diabetes, prediabetes, perimenopause, healthy adults",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "DexCom Stelo",
+   "url": "https://clinicaltrials.gov/study/NCT07956143",
+   "title": "[New trial registered] Stelo SPARK Study: Behavioral and Glycemic Effects of Glucose Visibility",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "New trial registered",
+   "sources": [
+    {
+     "url": "https://clinicaltrials.gov/study/NCT07956143",
+     "title": "[New trial registered] Stelo SPARK Study: Behavioral and Glycemic Effects of Glucose Visibility",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
+    }
+   ]
+  },
+  {
+   "find": "NCT07875894:Status changed NOT_YET_RECRUITING to RECRUITING",
+   "entry": "yes",
+   "name": "Digitally Augmented Core Stabilization",
+   "category": "Digital tool (non-AI)",
+   "condition": "Postmenopausal osteoporosis",
+   "area": "Menopause & midlife",
+   "tech": "Digitally augmented exercise intervention",
+   "use": "Balance training and core stabilization in women with osteoporosis",
+   "level": 0,
+   "stage": "Trial recruiting",
+   "external": "n/a",
+   "population": "Women with postmenopausal osteoporosis",
+   "peer": "n/a",
+   "ux": "",
+   "result": "",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "elion",
+   "note": "",
+   "product": "",
+   "url": "https://clinicaltrials.gov/study/NCT07875894",
+   "title": "[Status changed NOT_YET_RECRUITING to RECRUITING] Effects of Sensorimotor Balance Training vs Digitally Augmented Core Stabilization in Women With Osteoporosis",
+   "scout": "elion",
+   "date_found": "2026-11-24",
+   "source": "ClinicalTrials.gov",
+   "flags": "Status changed NOT_YET_RECRUITING to RECRUITING",
+   "sources": [
+    {
+     "url": "https://clinicaltrials.gov/study/NCT07875894",
+     "title": "[Status changed NOT_YET_RECRUITING to RECRUITING] Effects of Sensorimotor Balance Training vs Digitally Augmented Core Stabilization in Women With Osteoporosis",
+     "scout": "elion",
+     "date_found": "2026-11-24",
+     "source": "ClinicalTrials.gov"
     }
    ]
   },
