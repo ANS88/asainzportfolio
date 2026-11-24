@@ -813,6 +813,43 @@
    ]
   },
   {
+   "find": "doi:10.2196/97650",
+   "entry": "yes",
+   "name": "mMitra",
+   "category": "Digital tool (non-AI)",
+   "condition": "Postpartum family planning knowledge",
+   "area": "Postpartum & mental health",
+   "tech": "Mobile phone automated voice-messaging",
+   "use": "Deliver pregnancy and postpartum care information to address misconceptions and lack of knowledge regarding postpartum family planning methods",
+   "level": 4,
+   "stage": "Realist evaluation of implemented program",
+   "external": "Yes",
+   "population": "Socioeconomically vulnerable women in Mumbai metropolitan area; cohort follow-up survey data analyzed",
+   "peer": "Yes",
+   "ux": "Realist evaluation examining whether, how, why, for whom, and in what contexts mMitra affects postpartum family planning awareness",
+   "result": "Quantitative findings from realist evaluation presented using moderator analysis and structural equation models to test context-mechanism-outcome configurations",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "gilbreth",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/43050687/",
+   "title": "Mobile Health for Postpartum Contraception Knowledge in India (mMitra): Realist Evaluation Using Moderation Analysis and Structural Equation Models.",
+   "scout": "gilbreth",
+   "date_found": "2026-11-24",
+   "source": "JMIR human factors",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/43050687/",
+     "title": "Mobile Health for Postpartum Contraception Knowledge in India (mMitra): Realist Evaluation Using Moderation Analysis and Structural Equation Models.",
+     "scout": "gilbreth",
+     "date_found": "2026-11-24",
+     "source": "JMIR human factors"
+    }
+   ]
+  },
+  {
    "find": "doi:10.1093/jamia/ocag180",
    "entry": "yes",
    "name": "Study of patient trust in AI-generated health education during pregnancy and postpartum",
@@ -4365,6 +4402,80 @@
    ]
   },
   {
+   "find": "arxiv:2611.28870",
+   "entry": "yes",
+   "name": "Large language models (LLMs) in postpartum care",
+   "category": "AI/ML research model",
+   "condition": "Postpartum health information seeking",
+   "area": "Postpartum & mental health",
+   "tech": "Large language models",
+   "use": "Health information intermediary for postpartum women",
+   "level": 1,
+   "stage": "Conceptual analysis",
+   "external": "n/a",
+   "population": "Not stated",
+   "peer": "Preprint",
+   "ux": "Examines how LLMs shape epistemic coordination and transitions to formal care in fragmented postpartum care systems",
+   "result": "LLMs identified as emerging intermediaries within postpartum care infrastructure; evaluation should examine information quality, epistemic coordination, and distribution of responsibility",
+   "regulatory": "n/a",
+   "verification": "Machine-tagged",
+   "tagged_by": "gilbreth",
+   "note": "",
+   "product": "",
+   "url": "https://arxiv.org/abs/2611.28870",
+   "title": "Postpartum Sense-Making and AI in a Fragmented Care System",
+   "scout": "gilbreth",
+   "date_found": "2026-11-24",
+   "source": "arXiv (HCI)",
+   "flags": "HCI; preprint, not peer reviewed",
+   "sources": [
+    {
+     "url": "https://arxiv.org/abs/2611.28870",
+     "title": "Postpartum Sense-Making and AI in a Fragmented Care System",
+     "scout": "gilbreth",
+     "date_found": "2026-11-24",
+     "source": "arXiv (HCI)"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.2196/96880",
+   "entry": "yes",
+   "name": "Be Well, Mommy",
+   "category": "Digital tool (non-AI)",
+   "condition": "Perinatal mood and anxiety disorders",
+   "area": "Postpartum & mental health",
+   "tech": "Mobile interactive booklet",
+   "use": "Support postpartum mental health, early detection of mental health issues, expand access to support",
+   "level": 1,
+   "stage": "Feasibility assessment",
+   "external": "No",
+   "population": "15 first-time female parents and 5 health care providers in Southeast Georgia",
+   "peer": "Yes",
+   "ux": "Mixed acceptability; birthing parents described booklet as supportive and easy to use; qualitative feasibility project with focus groups and provider interviews",
+   "result": "Mixed acceptability findings revealed; designed to raise mental health awareness, normalize postpartum emotional challenges, and facilitate help-seeking",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "gilbreth",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/43055755/",
+   "title": "An Interactive Booklet for Addressing Postpartum Mood and Anxiety Disorders: Feasibility Assessment Using the APEASE Criteria.",
+   "scout": "gilbreth",
+   "date_found": "2026-11-24",
+   "source": "JMIR formative research",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/43055755/",
+     "title": "An Interactive Booklet for Addressing Postpartum Mood and Anxiety Disorders: Feasibility Assessment Using the APEASE Criteria.",
+     "scout": "gilbreth",
+     "date_found": "2026-11-24",
+     "source": "JMIR formative research"
+    }
+   ]
+  },
+  {
    "find": "NCT07833345:New trial registered",
    "entry": "yes",
    "name": "EmbryoInsights Plus (AI euploid embryo selection)",
@@ -7880,6 +7991,43 @@
      "scout": "trota",
      "date_found": "2026-11-24",
      "source": "BMC public health"
+    }
+   ]
+  },
+  {
+   "find": "doi:10.2196/107570",
+   "entry": "yes",
+   "name": "IVF Support Study (IVFSS) online intervention",
+   "category": "Digital tool (non-AI)",
+   "condition": "Psychosocial burden of in vitro fertilization",
+   "area": "Fertility & IVF",
+   "tech": "Online intervention",
+   "use": "Reduce psychosocial burden of IVF for patients, partners, and social supporters",
+   "level": 0,
+   "stage": "Protocol; mixed methods study in development",
+   "external": "Not stated",
+   "population": "Female patients undergoing IVF treatment, partners, and social supporters",
+   "peer": "Yes",
+   "ux": "Protocol describes prospective longitudinal surveys and interviews to understand emotions, coping strategies, and support needs",
+   "result": "Study aims to understand coping strategies and emotions across IVF cycle; to identify risk and protective factors; and to build online intervention based on evidence",
+   "regulatory": "Not stated",
+   "verification": "Machine-tagged",
+   "tagged_by": "gilbreth",
+   "note": "",
+   "product": "",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/43069753/",
+   "title": "Understanding Emotions and Coping for Patients, Partners, and Social Supporters During In Vitro Fertilization: Protocol for a Mixed Methods Study.",
+   "scout": "gilbreth",
+   "date_found": "2026-11-24",
+   "source": "JMIR research protocols",
+   "flags": "",
+   "sources": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/43069753/",
+     "title": "Understanding Emotions and Coping for Patients, Partners, and Social Supporters During In Vitro Fertilization: Protocol for a Mixed Methods Study.",
+     "scout": "gilbreth",
+     "date_found": "2026-11-24",
+     "source": "JMIR research protocols"
     }
    ]
   },
